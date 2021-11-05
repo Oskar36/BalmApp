@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
             val intent=Intent(this, a_mapa::class.java)
             finish()
             startActivity(intent)
+            //prueba
         }
     }
 }
