@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
         android:layout_marginEnd="108dp"
-        android:text="Fin del juego"
+        android:text="@string/fin_del_juego"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="160dp"
-        android:text="Continuar"
+        android:text="@string/continuar"
         app:layout_constraintStart_toStartOf="@+id/txtfin_titulo"
         app:layout_constraintTop_toBottomOf="@+id/txtfin_titulo" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="100dp"
-        android:text="Repetir"
+        android:text="@string/repetir"
         app:layout_constraintStart_toStartOf="@+id/btnfin_continuar"
         app:layout_constraintTop_toBottomOf="@+id/btnfin_continuar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

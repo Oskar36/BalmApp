@@ -23,7 +23,7 @@
         android:id="@+id/txtmain_titulo"
         android:layout_width="154dp"
         android:layout_height="61dp"
-        android:text="BalmApp"
+        android:text="@string/balmapp"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/fl_main"
