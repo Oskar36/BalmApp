@@ -1,11 +1,9 @@
 package com.example.balmapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.balmapp.databinding.ActivityMainBinding
-import com.example.balmapp.databinding.LMapaBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        val fragment= f_modo()
+        cargarfragment(fragment)
 
     }
     private fun cargarfragment(fragment: Fragment) {
