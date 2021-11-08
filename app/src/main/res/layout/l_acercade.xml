@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".a_acercade">
+
+    <TextView
+        android:id="@+id/txtapodo_titulo"
+        android:layout_width="163dp"
+        android:layout_height="43dp"
+        android:text="BalmApp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/txtacercade_descr"
+        android:layout_width="278dp"
+        android:layout_height="303dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium neque eget eros commodo tristique. Sed vel nibh nec mi aliquam finibus a vitae erat. Etiam purus justo, dictum ac risus quis, bibendum tincidunt quam. Morbi mollis tempor risus, a iaculis mi consequat sed. Quisque ac ex ac tortor viverra ultricies. Donec venenatis dolor id ultrices fermentum. Nullam volutpat tortor ut ipsum aliquam vulputate. Aliquam erat volutpat. Curabitur nec nisl ipsum. Mauris ultrices massa vel lorem bibendum commodo. Mauris sed lorem a tellus auctor iaculis nec commodo felis. Quisque ullamcorper sodales turpis, ut viverra justo pulvinar pharetra. Morbi sodales, tortor luctus aliquam vulputate, sem nisl iaculis mi, sed porttitor odio ligula ac neque.  Ut ut urna eu mi efficitur iaculis. Sed non accumsan sem. Donec quis malesuada arcu. Morbi id congue nisl, eu sollicitudin est. Aliquam quis tempus neque, quis bibendum nunc. Etiam massa metus, mattis nec erat quis, commodo bibendum arcu. Nulla fringilla bibendum turpis vel mattis. Cras sagittis metus eget lacus sagittis, at tincidunt neque ultrices. Nam in mauris metus.  Donec eu pellentesque arcu, malesuada molestie diam. Sed id quam sit amet tellus tristique vulputate nec et velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce feugiat lacus nisi, nec vehicula elit luctus vitae. Pellentesque posuere, nunc quis semper auctor, justo lorem convallis dui, in sollicitudin nisl dui et augue. Proin ante odio, euismod eget erat in, placerat ullamcorper ligula. Donec turpis orci, dignissim eget dui vitae, porta sollicitudin ex. Quisque efficitur nunc nec justo ultrices aliquam. Fusce congue sollicitudin suscipit. Mauris nunc tellus, posuere ut leo imperdiet, commodo mattis quam. Phasellus nisi libero, imperdiet nec metus a, lobortis sodales eros. Ut sodales non mi eu molestie. Suspendisse in vehicula nulla."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtapodo_titulo"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <ImageView
+        android:id="@+id/imgacercade_fp"
+        android:layout_width="146dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtacercade_descr"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fptxurdinaga_logo" />
+
+    <ImageView
+        android:id="@+id/imagenacercade_upv"
+        android:layout_width="146dp"
+        android:layout_height="151dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgacercade_fp"
+        app:layout_constraintTop_toBottomOf="@+id/txtacercade_descr"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/upvehulogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
