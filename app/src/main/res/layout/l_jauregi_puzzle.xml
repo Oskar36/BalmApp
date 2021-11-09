@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgkolitza_juego_logo"
+        android:id="@+id/imgjauregi_juego_logo"
         android:layout_width="166dp"
         android:layout_height="113dp"
         android:layout_marginTop="52dp"
@@ -38,78 +38,84 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtkolitza_sopadeletras_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtjauregi_puzzle_titulo" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="297dp"
-        android:layout_height="297dp"
+        android:id="@+id/img_jauregi_img"
+        android:layout_width="234dp"
+        android:layout_height="178dp"
         android:layout_marginTop="28dp"
-        android:src="@drawable/kolitza_letrazopa_img"
+        android:src="@drawable/jauregi_puzzle_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgkolitza_juego_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
-    <TextView
-        android:id="@+id/txt_ermita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="576dp"
-        android:text="@string/txt_ermita"
+    <ImageView
+        android:id="@+id/img_pieza1"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="216dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
-    <TextView
-        android:id="@+id/txt_tontorra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="624dp"
-        android:text="@string/txt_tontorra"
+    <ImageView
+        android:id="@+id/img_pieza2"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="328dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
-    <TextView
-        android:id="@+id/txt_pazkoa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="624dp"
-        android:text="@string/txt_pazkoa"
+    <ImageView
+        android:id="@+id/img_pieza3"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="224dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
-    <TextView
-        android:id="@+id/txt_Pentekoste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="576dp"
-        android:text="@string/txt_Pentekoste"
+    <ImageView
+        android:id="@+id/img_pieza4"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="324dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
-    <TextView
-        android:id="@+id/txt_Erromeria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="576dp"
-        android:text="@string/txt_Erromeria"
+    <ImageView
+        android:id="@+id/img_pieza5"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="224dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
-    <TextView
-        android:id="@+id/txt_Bazkaria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="624dp"
-        android:text="@string/txt_Bazkaria"
+    <ImageView
+        android:id="@+id/img_pieza6"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="324dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
