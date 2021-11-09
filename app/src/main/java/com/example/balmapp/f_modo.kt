@@ -35,14 +35,6 @@ class f_modo : Fragment() {
 
 
     }
-    fun replaceFragment(someFragment: Fragment?) {
-        val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-        if (someFragment != null) {
-            transaction.replace(R.id.fl_modo, someFragment)
-        }
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,13 +47,17 @@ class f_modo : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnmodoLibre.setOnClickListener(){
+           /*
             val intent=Intent(activity, a_mapa::class.java)
             activity?.finish()
             startActivity(intent)
+
+            */
+            NavFrag.IniciarMapa(requireContext())
         }
         binding.btnmodoGuiado.setOnClickListener(){
             val fragment:Fragment=f_modo()
-            replaceFragment(fragment)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
     }
     override fun onDestroyView() {
