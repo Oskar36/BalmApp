@@ -28,5 +28,13 @@
     <string name="txt_finalizar">AMAITU</string>
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
     <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
+    <string name="txtkolitza_sopadeletras_titulo">LETRA-ZOPA</string>
+    <string name="txt_tontorra">Tontorra</string>
+    <string name="txt_pazkoa">Pazkoa</string>
+    <string name="txt_Pentekoste">Pentekoste</string>
+    <string name="txt_Erromeria">Erromeria</string>
+    <string name="txt_Bazkaria">Bazkaria</string>
+    <string name="txt_ermita">Ermita</string>
+
 
 </resources>
