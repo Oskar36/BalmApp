@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f_jauregi_unirjuego">
+
+
+    <TextView
+        android:id="@+id/txtkolitza_juego_explicacion_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/txtkolitza_juego_explicacion_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnsiguiente_kolitza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/txt_finalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imgkolitza_juego_logo"
+        android:layout_width="106dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="160dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/logodantzaris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
+
+
+    <TextView
+        android:id="@+id/txt_texto_Beheko_Solairuak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="212dp"
+
+        android:text="@string/txt_texto_Beheko_Solairuak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_texto_Erdiko_Solairua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_texto_Erdiko_Solairua"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Beheko_Solairuak" />
+
+    <TextView
+        android:id="@+id/txt_texto_Azken_Solairua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_texto_Azken_Solairua"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Erdiko_Solairua" />
+
+    <TextView
+        android:id="@+id/txt_texto_Fatxada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_texto_Fatxada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Azken_Solairua"  />
+
+
+
+    <TextView
+        android:id="@+id/txt_texto_Gelak_Egongelak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="212dp"
+        android:text="@string/txt_texto_Gelak_Egongelak"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_texto_Balkoi..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_texto_Balkoi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Gelak_Egongelak" />
+
+    <TextView
+        android:id="@+id/txt_texto_Sotoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_texto_Sotoa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Balkoi..." />
+
+    <TextView
+        android:id="@+id/txt_texto_Gambara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_texto_Gambara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Sotoa"  />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

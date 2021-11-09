@@ -29,6 +29,19 @@
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
     <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
     <string name="txtkolitza_sopadeletras_titulo">LETRA-ZOPA</string>
+    <string name="txtjauregi_puzzle_titulo">PUZZLEA</string>
+    <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
+    <string name="txt_texto_Erdiko_Solairua">Erdiko Solairuak</string>
+    <string name="txt_texto_Azken_Solairua">Azken Solairuak</string>
+    <string name="txt_texto_Fatxada">Fatxada</string>
+    <string name="txt_texto_Gelak_Egongelak">Gelak eta Egongelak</string>
+
+    <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren "/br"
+        armarria eta 2 biga</string>
+    <string name="txt_texto_Sotoa">Sotoa eta animaliak  \n
+        gordetzeko lekua</string>
+    <string name="txt_texto_Gambara">Gambara</string>
+
     <string name="txt_tontorra">Tontorra</string>
     <string name="txt_pazkoa">Pazkoa</string>
     <string name="txt_Pentekoste">Pentekoste</string>
