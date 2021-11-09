@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BalmApp">
         <activity
+            android:name=".a_juegos"
+            android:exported="true" />
+        <activity
             android:name=".a_acercade"
             android:exported="true" />
 
