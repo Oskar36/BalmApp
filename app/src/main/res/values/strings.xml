@@ -18,4 +18,7 @@
     <string name="puente_explicacion">puente_explicacion</string>
     <string name="monte_explicacion">monte_explicacion</string>
     <string name="jauregi_explicacion">jauregi_explicacion</string>
+    <string name="cambiar_modo">Cambiar modo</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="desconectar">Desconectar</string>
 </resources>

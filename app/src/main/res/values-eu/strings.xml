@@ -16,4 +16,7 @@
     <string name="puente_explicacion">puente_explicacion</string>
     <string name="monte_explicacion">monte_explicacion</string>
     <string name="jauregi_explicacion">jauregi_explicacion</string>
+    <string name="cambiar_modo">Aldatu modua</string>
+    <string name="acerca_de">Honi buruz</string>
+    <string name="desconectar">Deskonektatu</string>
 </resources>
