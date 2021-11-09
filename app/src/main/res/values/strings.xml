@@ -20,4 +20,13 @@
     <string name="monte_explicacion">monte_explicacion</string>
     <string name="jauregi_explicacion">jauregi_explicacion</string>
     <string name="procesion_explicacion">procesion_explicacion</string>
+
+
+    <string name="txt_texto_pazkoa">Pazkoa</string>
+    <string name="txt_texto_bazkaria">Bazkaria</string>
+    <string name="txt_texto_erromeria">Erromeria</string>
+    <string name="txt_finalizar">AMAITU</string>
+    <string name="txt_siguientejuego">Hurrengo jokoa</string>
+    <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
+
 </resources>

@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/txtjauregi_explicacion_titulo"
+        android:id="@+id/txtkolitza_juego_explicacion_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnjauregi_explicacion_jugar"
+        android:id="@+id/btnsiguiente_kolitza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtjauregi_explicacion" />
 
     <ImageView
-        android:id="@+id/imgjauregi_explicacion_logo"
+        android:id="@+id/imgkolitza_juego_logo"
         android:layout_width="166dp"
         android:layout_height="113dp"
         android:layout_marginTop="52dp"
@@ -37,7 +37,7 @@
         android:contentDescription="@string/todo"
         android:src="@drawable/logodantzaris"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtjauregi_explicacion_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
     <TextView
         android:id="@+id/txtjauregi_explicacion"
@@ -48,5 +48,5 @@
         android:text="@string/explicacion"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_explicacion_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/imgkolitza_juego_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
