@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="botones" >
+        <item name="android:background">@drawable/boton</item>
+        <item name="backgroundTint">@color/secondaryColor</item>
+    </style>
+    <style name="splashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="android:windowBackground">
+            @drawable/splashscreen
+        </item>
+    </style>
+
+</resources>

@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BalmApp">
         <activity
+            android:name=".a_juegos"
+            android:exported="true" />
+        <activity
             android:name=".a_acercade"
             android:exported="true" />
 
@@ -23,10 +26,14 @@
 
         <activity
             android:name=".a_mapa"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"/>
+        <activity
+            android:name=".splash"
+            android:exported="true"
+            android:theme="@style/splashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

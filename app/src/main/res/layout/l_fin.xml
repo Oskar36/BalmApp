@@ -8,27 +8,33 @@
     tools:context=".f_fin">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtfin_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/fin_del_juego"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="129dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnfin_continuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="266dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="160dp"
+        android:text="@string/continuar"
+        app:layout_constraintStart_toStartOf="@+id/txtfin_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/txtfin_titulo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnfin_repetir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="361dp" />
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/repetir"
+        app:layout_constraintStart_toStartOf="@+id/btnfin_continuar"
+        app:layout_constraintTop_toBottomOf="@+id/btnfin_continuar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

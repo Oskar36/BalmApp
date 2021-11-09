@@ -11,7 +11,7 @@
         android:id="@+id/txtapodo_apodotext"
         android:layout_width="163dp"
         android:layout_height="43dp"
-        android:text="Apodo:"
+        android:text="@string/apodo"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,13 +33,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtapodo_apodotext"
         app:layout_constraintVertical_bias="0.049"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnapodo_jugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugar"
+        android:text="@string/jugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.738"
