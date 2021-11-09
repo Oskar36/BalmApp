@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import com.example.balmapp.databinding.ActivityMainBinding
 import com.example.balmapp.databinding.LMapaBinding
@@ -10,6 +11,7 @@ import com.example.balmapp.databinding.LMapaBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
