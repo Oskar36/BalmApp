@@ -5,11 +5,11 @@
     android:id="@+id/frameLayout7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".f_kolitza_juego_sopaletras">
+    tools:context=".f_jauregi_puzzle">
 
 
     <TextView
-        android:id="@+id/txtkolitza_sopadeletras_titulo"
+        android:id="@+id/txtjauregi_puzzle_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnsiguiente_jauregi"
+        android:id="@+id/btnsiguiente_kolitza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
