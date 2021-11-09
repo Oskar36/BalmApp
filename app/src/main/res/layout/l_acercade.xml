@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".a_acercade">
+
+    <TextView
+        android:id="@+id/txtapodo_titulo"
+        android:layout_width="163dp"
+        android:layout_height="43dp"
+        android:text="@string/balmapp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/txtacercade_descr"
+        android:layout_width="278dp"
+        android:layout_height="303dp"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_pretium_neque_eget_eros_commodo_tristique_sed_vel_nibh_nec_mi_aliquam_finibus_a_vitae_erat_etiam_purus_justo_dictum_ac_risus_quis_bibendum_tincidunt_quam_morbi_mollis_tempor_risus_a_iaculis_mi_consequat_sed_quisque_ac_ex_ac_tortor_viverra_ultricies_donec_venenatis_dolor_id_ultrices_fermentum_nullam_volutpat_tortor_ut_ipsum_aliquam_vulputate_aliquam_erat_volutpat_curabitur_nec_nisl_ipsum_mauris_ultrices_massa_vel_lorem_bibendum_commodo_mauris_sed_lorem_a_tellus_auctor_iaculis_nec_commodo_felis_quisque_ullamcorper_sodales_turpis_ut_viverra_justo_pulvinar_pharetra_morbi_sodales_tortor_luctus_aliquam_vulputate_sem_nisl_iaculis_mi_sed_porttitor_odio_ligula_ac_neque_ut_ut_urna_eu_mi_efficitur_iaculis_sed_non_accumsan_sem_donec_quis_malesuada_arcu_morbi_id_congue_nisl_eu_sollicitudin_est_aliquam_quis_tempus_neque_quis_bibendum_nunc_etiam_massa_metus_mattis_nec_erat_quis_commodo_bibendum_arcu_nulla_fringilla_bibendum_turpis_vel_mattis_cras_sagittis_metus_eget_lacus_sagittis_at_tincidunt_neque_ultrices_nam_in_mauris_metus_donec_eu_pellentesque_arcu_malesuada_molestie_diam_sed_id_quam_sit_amet_tellus_tristique_vulputate_nec_et_velit_pellentesque_habitant_morbi_tristique_senectus_et_netus_et_malesuada_fames_ac_turpis_egestas_fusce_feugiat_lacus_nisi_nec_vehicula_elit_luctus_vitae_pellentesque_posuere_nunc_quis_semper_auctor_justo_lorem_convallis_dui_in_sollicitudin_nisl_dui_et_augue_proin_ante_odio_euismod_eget_erat_in_placerat_ullamcorper_ligula_donec_turpis_orci_dignissim_eget_dui_vitae_porta_sollicitudin_ex_quisque_efficitur_nunc_nec_justo_ultrices_aliquam_fusce_congue_sollicitudin_suscipit_mauris_nunc_tellus_posuere_ut_leo_imperdiet_commodo_mattis_quam_phasellus_nisi_libero_imperdiet_nec_metus_a_lobortis_sodales_eros_ut_sodales_non_mi_eu_molestie_suspendisse_in_vehicula_nulla"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtapodo_titulo"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <ImageView
+        android:id="@+id/imgacercade_fp"
+        android:layout_width="146dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtacercade_descr"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fptxurdinaga_logo"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/imagenacercade_upv"
+        android:layout_width="146dp"
+        android:layout_height="151dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgacercade_fp"
+        app:layout_constraintTop_toBottomOf="@+id/txtacercade_descr"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/upvehulogo"
+        android:contentDescription="@string/todo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

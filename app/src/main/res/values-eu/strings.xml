@@ -1,24 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">BalmApp</string>
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="nueva_partida">Nueva partida</string>
-    <string name="modo_libre">Modo libre</string>
-    <string name="modo_guiado">Modo guiado</string>
-    <string name="fin_del_juego">Fin del juego</string>
-    <string name="continuar">Continuar</string>
-    <string name="repetir">Repetir</string>
-    <string name="balmapp" translatable="false">BalmApp</string>
+    <string name="nueva_partida">Joko berria</string>
+    <string name="modo_libre">Modu librea</string>
+    <string name="modo_guiado">Modo gidatua</string>
+    <string name="fin_del_juego">Jokoaren amaiera</string>
+    <string name="continuar">Jarraitu</string>
+    <string name="repetir">Errepikatu</string>
     <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_pretium_neque_eget_eros_commodo_tristique_sed_vel_nibh_nec_mi_aliquam_finibus_a_vitae_erat_etiam_purus_justo_dictum_ac_risus_quis_bibendum_tincidunt_quam_morbi_mollis_tempor_risus_a_iaculis_mi_consequat_sed_quisque_ac_ex_ac_tortor_viverra_ultricies_donec_venenatis_dolor_id_ultrices_fermentum_nullam_volutpat_tortor_ut_ipsum_aliquam_vulputate_aliquam_erat_volutpat_curabitur_nec_nisl_ipsum_mauris_ultrices_massa_vel_lorem_bibendum_commodo_mauris_sed_lorem_a_tellus_auctor_iaculis_nec_commodo_felis_quisque_ullamcorper_sodales_turpis_ut_viverra_justo_pulvinar_pharetra_morbi_sodales_tortor_luctus_aliquam_vulputate_sem_nisl_iaculis_mi_sed_porttitor_odio_ligula_ac_neque_ut_ut_urna_eu_mi_efficitur_iaculis_sed_non_accumsan_sem_donec_quis_malesuada_arcu_morbi_id_congue_nisl_eu_sollicitudin_est_aliquam_quis_tempus_neque_quis_bibendum_nunc_etiam_massa_metus_mattis_nec_erat_quis_commodo_bibendum_arcu_nulla_fringilla_bibendum_turpis_vel_mattis_cras_sagittis_metus_eget_lacus_sagittis_at_tincidunt_neque_ultrices_nam_in_mauris_metus_donec_eu_pellentesque_arcu_malesuada_molestie_diam_sed_id_quam_sit_amet_tellus_tristique_vulputate_nec_et_velit_pellentesque_habitant_morbi_tristique_senectus_et_netus_et_malesuada_fames_ac_turpis_egestas_fusce_feugiat_lacus_nisi_nec_vehicula_elit_luctus_vitae_pellentesque_posuere_nunc_quis_semper_auctor_justo_lorem_convallis_dui_in_sollicitudin_nisl_dui_et_augue_proin_ante_odio_euismod_eget_erat_in_placerat_ullamcorper_ligula_donec_turpis_orci_dignissim_eget_dui_vitae_porta_sollicitudin_ex_quisque_efficitur_nunc_nec_justo_ultrices_aliquam_fusce_congue_sollicitudin_suscipit_mauris_nunc_tellus_posuere_ut_leo_imperdiet_commodo_mattis_quam_phasellus_nisi_libero_imperdiet_nec_metus_a_lobortis_sodales_eros_ut_sodales_non_mi_eu_molestie_suspendisse_in_vehicula_nulla">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium neque eget eros commodo tristique. Sed vel nibh nec mi aliquam finibus a vitae erat. Etiam purus justo, dictum ac risus quis, bibendum tincidunt quam. Morbi mollis tempor risus, a iaculis mi consequat sed. Quisque ac ex ac tortor viverra ultricies. Donec venenatis dolor id ultrices fermentum. Nullam volutpat tortor ut ipsum aliquam vulputate. Aliquam erat volutpat. Curabitur nec nisl ipsum. Mauris ultrices massa vel lorem bibendum commodo. Mauris sed lorem a tellus auctor iaculis nec commodo felis. Quisque ullamcorper sodales turpis, ut viverra justo pulvinar pharetra. Morbi sodales, tortor luctus aliquam vulputate, sem nisl iaculis mi, sed porttitor odio ligula ac neque. Ut ut urna eu mi efficitur iaculis. Sed non accumsan sem. Donec quis malesuada arcu. Morbi id congue nisl, eu sollicitudin est. Aliquam quis tempus neque, quis bibendum nunc. Etiam massa metus, mattis nec erat quis, commodo bibendum arcu. Nulla fringilla bibendum turpis vel mattis. Cras sagittis metus eget lacus sagittis, at tincidunt neque ultrices. Nam in mauris metus. Donec eu pellentesque arcu, malesuada molestie diam. Sed id quam sit amet tellus tristique vulputate nec et velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce feugiat lacus nisi, nec vehicula elit luctus vitae. Pellentesque posuere, nunc quis semper auctor, justo lorem convallis dui, in sollicitudin nisl dui et augue. Proin ante odio, euismod eget erat in, placerat ullamcorper ligula. Donec turpis orci, dignissim eget dui vitae, porta sollicitudin ex. Quisque efficitur nunc nec justo ultrices aliquam. Fusce congue sollicitudin suscipit. Mauris nunc tellus, posuere ut leo imperdiet, commodo mattis quam. Phasellus nisi libero, imperdiet nec metus a, lobortis sodales eros. Ut sodales non mi eu molestie. Suspendisse in vehicula nulla.</string>
-    <string name="todo">TODO</string>
-    <string name="apodo">Apodo:</string>
-    <string name="titulo">TITULO</string>
-    <string name="jugar">Jugar</string>
+    <string name="todo">DENA</string>
+    <string name="apodo">Ezizena:</string>
+    <string name="titulo">TITULUA</string>
+    <string name="jugar">Jokatu</string>
     <string name="putxero_explicacion">putxero_explicacion</string>
     <string name="explicacion">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="puente_explicacion">puente_explicacion</string>
     <string name="monte_explicacion">monte_explicacion</string>
     <string name="jauregi_explicacion">jauregi_explicacion</string>
-    <string name="cambiar_modo">Cambiar modo</string>
-    <string name="acerca_de">Acerca de</string>
-    <string name="desconectar">Desconectar</string>
+    <string name="cambiar_modo">Aldatu modua</string>
+    <string name="acerca_de">Honi buruz</string>
+    <string name="desconectar">Deskonektatu</string>
 </resources>

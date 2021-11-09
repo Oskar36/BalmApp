@@ -1,8 +1,14 @@
 package com.example.balmapp
 
+import android.Manifest
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
 import com.example.balmapp.databinding.LMapaBinding
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
@@ -75,21 +81,24 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         gmap = googleMap
-        gmap!!.setMinZoomPreference(15f)
-        val location1 = LatLng(   43.192611, -3.195056)
-        val marker1 = MarkerOptions().position(location1).title("1.Gunea").snippet("Balmasedako Zubi Zaharra")
-        gmap!!.addMarker(marker1)
-        val location2 = LatLng(   43.201861, -3.249361)
-        val marker2 = MarkerOptions().position(location2).title("2.Gunea").snippet("Kolitzako igoera")
-        gmap!!.addMarker(marker2)
-        val location2_1 = LatLng(   43.199778, -3.214444)
-        val marker2_1 = MarkerOptions().position(location2_1).title("2.Gunea helmuga").snippet("Kolitza mendia")
-        gmap!!.addMarker(marker2_1)
-        val location3 = LatLng(   43.194064, -3.194186)
-        val marker3 = MarkerOptions().position(location3).title("3.Gunea").snippet("Horcasitas Jauregia")
-        gmap!!.addMarker(marker3)
-        val location4 = LatLng(   43.192489, -3.197533)
-        val marker4 = MarkerOptions().position(location4).title("4.Gunea").snippet("Aste Santuko Prozesioak")
-        gmap!!.addMarker(marker4)
+        insertarGune(LatLng(   43.192611, -3.195056),"1.Gunea","Balmasedako Zubi Zaharra",gmap!!)
+        insertarGune(LatLng(   43.201861, -3.249361),"2.Gunea","Kolitzako igoera",gmap!!)
+        insertarGune(LatLng(   43.199778, -3.214444),"2.Gunea helmuga","Kolitza mendia",gmap!!)
+        insertarGune(LatLng(   43.194064, -3.194186),"3.Gunea","Horcasitas Jauregia",gmap!!)
+        insertarGune(LatLng(   43.192489, -3.197533),"4.Gunea","Aste Santuko Prozesioak",gmap!!)
+        insertarGune(LatLng(   43.176194, -3.212556),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
+        insertarGune(LatLng(    43.188778, -3.200028),"5.Gunea helmuga","Boinas la Encartada Fabrika museoa",gmap!!)
+        insertarGune(LatLng(    43.193611, -3.194861),"6.Gunea","San Felipe y Santiago eguna",gmap!!)
+        insertarGune(LatLng(     43.196250, -3.192639),"7.Gunea","Balmasedako zaindariaren jaia: San Severino. Putxerak",gmap!!)
+        gmap!!.setMinZoomPreference(12f)
+        gmap!!.moveCamera(CameraUpdateFactory.newLatLng(LatLng(     43.196250, -3.192639)))
+
+        }
+    fun insertarGune(location:LatLng,title:String,snippet:String,mapa:GoogleMap){
+       val localizacion= location
+       val marcador = MarkerOptions().position(localizacion).title(title).snippet(snippet)
+        mapa!!.addMarker(marcador)
+
     }
-}
+    }
+
