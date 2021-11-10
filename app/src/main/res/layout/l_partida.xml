@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".a_partida">
     tools:viewBindingIgnore="true"
+
     <Button
         android:id="@+id/btnpartida_continuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="300dp"
         android:text="@string/continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -22,7 +23,7 @@
         android:id="@+id/btnpartida_nueva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="96dp"
         android:text="@string/nueva_partida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
