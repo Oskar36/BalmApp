@@ -38,7 +38,8 @@ class f_putxero_explicacion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_putxero_explicacion, container, false)
+        _binding = LPutxeroExplicacionBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

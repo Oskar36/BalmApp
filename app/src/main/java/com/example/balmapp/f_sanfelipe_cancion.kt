@@ -38,7 +38,8 @@ class f_sanfelipe_cancion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_sanfelipe_cancion, container, false)
+        _binding = LSanfelipeCancionBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

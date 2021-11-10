@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LApodoBinding
+import com.example.balmapp.databinding.LProcesionJuegoAdivinarAndremariabirjinaBinding
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarJesusBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -41,7 +42,8 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_procesion_juego_adivinar_jesus, container, false)
+        _binding = LProcesionJuegoAdivinarJesusBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

@@ -38,11 +38,9 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(
-            R.layout.l_procesion_juego_adivinar_andremariabirjina,
-            container,
-            false
-        )
+        _binding = LProcesionJuegoAdivinarAndremariabirjinaBinding.inflate(inflater, container, false)
+        return  binding.root
+
     }
 
     companion object {

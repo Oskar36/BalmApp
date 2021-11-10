@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LProcesionJuegoOrdenarBinding
+import com.example.balmapp.databinding.LPuentePuzzleBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,7 +39,8 @@ class f_procesion_ordenar : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_procesion_juego_ordenar, container, false)
+        _binding = LProcesionJuegoOrdenarBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

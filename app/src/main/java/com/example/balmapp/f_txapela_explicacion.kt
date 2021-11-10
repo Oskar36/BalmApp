@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LTxapelaExplicacionBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -38,7 +39,8 @@ class f_txapela_explicacion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_txapela_explicacion, container, false)
+        _binding = LTxapelaExplicacionBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {
