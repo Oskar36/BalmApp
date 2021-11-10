@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnfinalizar_puente"
+        android:id="@+id/btnfinalizarjauregi"
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
