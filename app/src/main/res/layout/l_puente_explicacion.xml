@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".f_puente_explicacion">
 
+    tools:viewBindingIgnore="true"
 
     <TextView
         android:id="@+id/txtpuente_explicacion_titulo"

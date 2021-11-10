@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".f_fin">
 
+    tools:viewBindingIgnore="true"
+
     <TextView
         android:id="@+id/txtfin_titulo"
         android:layout_width="wrap_content"

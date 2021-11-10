@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".f_apodo"
     tools:viewBindingIgnore="true">
+
+    tools:viewBindingIgnore="true"
+
     <TextView
         android:id="@+id/txtapodo_apodotext"
         android:layout_width="163dp"

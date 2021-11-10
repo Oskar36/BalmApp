@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".f_putxero_explicacion">
 
+    tools:viewBindingIgnore="true"
+
 
     <TextView
         android:id="@+id/txtputxero_explicacion_titulo"

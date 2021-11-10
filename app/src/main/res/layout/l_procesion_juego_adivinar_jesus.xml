@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".f_procesion_juego_adivinar_Jesus">
 
+    tools:viewBindingIgnore="true"
 
     <TextView
         android:id="@+id/txtprocesion_adivinar_titulo"

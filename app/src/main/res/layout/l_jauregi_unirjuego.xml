@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".f_jauregi_unirjuego">
 
+    tools:viewBindingIgnore="true"
 
     <TextView
         android:id="@+id/txtkolitza_juego_explicacion_titulo"

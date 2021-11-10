@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".a_juegos">
 
+    tools:viewBindingIgnore="true"
+
     <FrameLayout
         android:id="@+id/framejuegos"
         android:layout_width="0dp"

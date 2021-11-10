@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".f_procesion_explicacion">
 
+    tools:viewBindingIgnore="true"
+
     <TextView
         android:id="@+id/txtprocesion_explicacion_titulo"
         android:layout_width="wrap_content"

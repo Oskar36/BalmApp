@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".a_acercade">
 
+    tools:viewBindingIgnore="true"
+
     <TextView
         android:id="@+id/txtapodo_titulo"
         android:layout_width="163dp"
