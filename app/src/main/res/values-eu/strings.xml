@@ -28,7 +28,7 @@
     <string name="txt_texto_pazkoa">Pazkoa</string>
     <string name="txt_texto_bazkaria">Bazkaria</string>
     <string name="txt_texto_erromeria">Erromeria</string>
-    <string name="txt_finalizar">AMAITU</string>
+    <string name="txt_finalizar">Amaitu</string>
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
     <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
     <string name="txtkolitza_sopadeletras_titulo">LETRA-ZOPA</string>
@@ -73,7 +73,9 @@
     <string name="opcion_2maria">B)Andre Maria Birjina</string>
     <string name="opcion_3maria">C)Uso zuria</string>
     <string name="txttxapela_juego_explicacion_titulo">LOTU IRUDIAK AZALPENEKIN</string>
-
-
+    <string name="Gurutze_bidea">Gurutze bidea</string>
+    <string name="Judasen_hilketa">Judasen hilketa</string>
+    <string name="Azken_afaria">Azken afaria</string>
+    <string name="Jesusen_epaiketa">Jesusen epaiketa</string>
 
 </resources>

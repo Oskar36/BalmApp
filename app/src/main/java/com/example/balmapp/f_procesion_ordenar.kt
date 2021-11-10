@@ -34,7 +34,7 @@ class f_procesion_ordenar : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_procesion_ordenar, container, false)
+        return inflater.inflate(R.layout.l_procesion_juego_ordenar, container, false)
     }
 
     companion object {
