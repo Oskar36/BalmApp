@@ -3,6 +3,9 @@ package com.example.balmapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
+import android.widget.Toast
+import android.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.balmapp.databinding.ActivityMainBinding
 
@@ -17,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         val fragment= f_modo()
         cargarfragment(fragment)
+
+       binding.toolbar.inflateMenu(R.menu.menu)
 
     }
     private fun cargarfragment(fragment: Fragment) {
