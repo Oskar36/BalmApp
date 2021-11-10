@@ -52,7 +52,7 @@
     <string name="txt_ermita">Ermita</string>
     <string name="txapela_explicacion">Historia de la Boina</string>
     <string name="felipe_explicacion">Historia de San Felipe y Santiago</string>
-    <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
+    <string name="asmatu_pertsonaia">Adivina el personaje</string>
     <string name="siguiente_adivinanda">Asmatu hurrengoa</string>
     <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat.
         Gurutzatu egiten naute! Nor ote naiz?</string>
@@ -75,5 +75,5 @@
     <string name="Azken_afaria">Ultima cena</string>
     <string name="Jesusen_epaiketa">El juicio de Jesús</string>
     <string name="san_felipe_y_santiago_cancion">esto esta mal hay que cambiar</string>
-    <string name="putxero_juego">esto esta mal hay que cambiar</string>
+    <string name="putxero_juego">Historia del puchero</string>
 </resources>
