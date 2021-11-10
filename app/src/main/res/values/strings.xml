@@ -3,11 +3,11 @@
     <string name="balmapp" translatable="false">BalmApp</string>
     <string name="app_name" translatable="false">BalmApp</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="nueva_partida">Nueva partida</string>
-    <string name="modo_libre">Modo libre</string>
+    <string name="nueva_partida">Partida berria</string>
+    <string name="modo_libre">Modu librea</string>
     <string name="san_felipe_y_santiago_cancion">San Felipe eta Santiagoren abeztia</string>
     <string name="putxero_juego">Putxera jokua</string>
-    <string name="modo_guiado">Modo guiado</string>
+    <string name="modo_guiado">Modu gidatua</string>
     <string name="fin_del_juego">Jokuaren amaiera</string>
     <string name="continuar">Jarraitu</string>
     <string name="repetir">Errepikatu</string>
@@ -18,7 +18,7 @@
     <string name="putxero_explicacion">Putxera historia</string>
     <string name="explicacion">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="puente_explicacion">Zubiaren historia</string>
-    <string name="monte_explicacion">monte_explicacion</string>
+    <string name="monte_explicacion">Kolitza Mendiaren historia</string>
     <string name="jauregi_explicacion">Horcasitas Jauregiaren historia</string>
     <string name="cambiar_modo">Cambiar modo</string>
     <string name="acerca_de">Acerca de</string>
@@ -30,14 +30,14 @@
     <string name="txapela">Boina</string>
     <string name="san_felipe" translatable="false">San Felipe</string>
     <string name="putxero">Puchero</string>
-    <string name="procesion_explicacion">procesion_explicacion</string>
+    <string name="procesion_explicacion">Prozesioaren historia</string>
     <string name="txt_texto_pazkoa">Pazkoa</string>
     <string name="txt_texto_bazkaria">Bazkaria</string>
     <string name="txt_texto_erromeria">Erromeria</string>
     <string name="txt_finalizar">Amaitu</string>
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
     <string name="txtkolitza_juego_explicacion_titulo">Lotu irudiak hitzekin</string>
-    <string name="txtkolitza_sopadeletras_titulo">LETRA-ZOPA</string>
+    <string name="txtkolitza_sopadeletras_titulo">Letra-zopa</string>
     <string name="txtjauregi_puzzle_titulo">Jauregiaren puzzlea</string>
     <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
     <string name="txt_texto_Erdiko_Solairua">Erdiko Solairuak</string>

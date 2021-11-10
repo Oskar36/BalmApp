@@ -15,7 +15,7 @@
     <string name="putxero_explicacion">putxero_explicacion</string>
     <string name="explicacion">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="puente_explicacion">puente_explicacion</string>
-    <string name="monte_explicacion">monte_explicacion</string>
+    <string name="monte_explicacion">Historia del monte Kolitza</string>
     <string name="jauregi_explicacion">Historia del Palacio Horcasitas</string>
     <string name="cambiar_modo">Cambiar modo</string>
     <string name="acerca_de">Acerca de</string>
@@ -27,7 +27,7 @@
     <string name="txapela">Boina</string>
     <string name="san_felipe" translatable="false">San Felipe</string>
     <string name="putxero">Puchero</string>
-    <string name="procesion_explicacion">procesion_explicacion</string>
+    <string name="procesion_explicacion">Historia de la procesión</string>
     <string name="txt_texto_pazkoa">Pazkoa</string>
     <string name="txt_texto_bazkaria">Bazkaria</string>
     <string name="txt_texto_erromeria">Erromeria</string>
