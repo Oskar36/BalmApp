@@ -36,7 +36,6 @@
         android:layout_height="82dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="160dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/logodantzaris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -47,7 +46,6 @@
         android:layout_height="76dp"
         android:layout_marginTop="140dp"
         android:layout_marginEnd="252dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/kolitza_juego_img1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -58,7 +56,6 @@
         android:layout_height="63dp"
         android:layout_marginTop="300dp"
         android:layout_marginEnd="252dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/kolitza_juego_img2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -69,7 +66,6 @@
         android:layout_height="84dp"
         android:layout_marginTop="216dp"
         android:layout_marginEnd="252dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/kolitza_juego_img3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -81,7 +77,6 @@
         android:layout_height="84dp"
         android:layout_marginTop="532dp"
         android:layout_marginEnd="252dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/kolitza_juego_img4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -92,7 +87,6 @@
         android:layout_height="84dp"
         android:layout_marginTop="448dp"
         android:layout_marginEnd="252dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/kolitza_juego_img5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -103,7 +97,6 @@
         android:layout_height="84dp"
         android:layout_marginTop="364dp"
         android:layout_marginEnd="252dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/kolitza_juego_img6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />

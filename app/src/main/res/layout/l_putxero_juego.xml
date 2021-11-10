@@ -95,7 +95,7 @@
         android:src="@drawable/pimiento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento4"
-        android:contentDescription="@string/todo" />
+        />
 
     <ImageView
         android:id="@+id/img_putxero_alimento5"

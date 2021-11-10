@@ -34,7 +34,6 @@
         android:layout_height="113dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="120dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/logodantzaris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtprocesion_explicacion_titulo" />
