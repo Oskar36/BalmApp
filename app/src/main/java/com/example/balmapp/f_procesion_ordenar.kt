@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [f_kolitzajuego.newInstance] factory method to
+ * Use the [f_procesion_ordenar.newInstance] factory method to
  * create an instance of this fragment.
  */
-class f_kolitzajuego : Fragment() {
+class f_procesion_ordenar : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class f_kolitzajuego : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_kolitzaunir, container, false)
+        return inflater.inflate(R.layout.l_procesion_ordenar, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class f_kolitzajuego : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment f_kolitzajuego.
+         * @return A new instance of fragment f_procesion_ordenar.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            f_kolitzajuego().apply {
+            f_procesion_ordenar().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/puente"
+        android:id="@+id/puente_admin">
+    </item>
+
+    <item android:title="@string/kolitxa"
+        android:id="@+id/kolitxa_menu">
+    </item>
+
+    <item android:title="@string/jauregi"
+        android:id="@+id/jauregi_menu">
+    </item>
+
+    <item android:title="@string/procesion"
+        android:id="@+id/procesion_menu">
+    </item>
+
+    <item android:title="@string/txapela"
+        android:id="@+id/txapela_menu">
+    </item>
+
+    <item android:title="@string/san_felipe"
+        android:id="@+id/san_felipe_menu">
+    </item>
+
+    <item android:title="@string/putxero"
+        android:id="@+id/putxero_menu">
+    </item>
+
+    <item android:title="@string/acerca_de"
+        android:id="@+id/acerca_de_menu">
+    </item>
+
+    <item android:title="@string/desconectar"
+        android:id="@+id/desconectar_menu">
+    </item>
+</menu>

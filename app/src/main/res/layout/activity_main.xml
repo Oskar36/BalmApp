@@ -20,25 +20,13 @@
         app:layout_constraintTop_toTopOf="parent" >
 
         <TextView
+            android:id="@+id/txtmain_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BalmApp"
-            android:textSize="@android:dimen/app_icon_size"
-            android:textColor="@android:color/black">
-        </TextView>
+            android:textColor="@android:color/black"
+            android:textSize="@android:dimen/app_icon_size"></TextView>
     </androidx.appcompat.widget.Toolbar>
-
-    <Button
-
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/botones"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <FrameLayout
@@ -52,17 +40,5 @@
         app:layout_constraintVertical_bias="0.956">
 
     </FrameLayout>
-
-    <TextView
-        android:id="@+id/txtmain_titulo"
-        android:layout_width="154dp"
-        android:layout_height="61dp"
-        android:text="BalmApp"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/fl_main"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

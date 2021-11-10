@@ -20,6 +20,7 @@
 
     <Button
         android:id="@+id/btnfin_continuar"
+        style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -30,6 +31,7 @@
 
     <Button
         android:id="@+id/btnfin_repetir"
+        style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"

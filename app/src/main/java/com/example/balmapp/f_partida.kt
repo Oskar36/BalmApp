@@ -16,7 +16,7 @@ private var _binding: LPartidaBinding? = null
 // This property is only valid between onCreateView and
 // onDestroyView.
 private val binding get() = _binding!!
-class a_partida : Fragment() {
+class f_partida : Fragment() {
     // TODO: Rename and change types of parameters
 
 
@@ -26,17 +26,12 @@ class a_partida : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-       /*
-        binding.btnmodoLibre.setOnClickListener(){
-            val intent= Intent(activity, a_mapa::class.java)
-            activity?.finish()
-            startActivity(intent)
-        }
-        binding.btnmodoGuiado.setOnClickListener(){
+      binding.btnpartidaNueva.setOnClickListener(){
+          NavFrag.IniciarMapa(requireContext())
+      }
+        binding.btnpartidaContinuar.setOnClickListener(){
 
         }
-
-        */
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
