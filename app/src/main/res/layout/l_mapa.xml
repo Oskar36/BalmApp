@@ -9,22 +9,23 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="416dp"
+        android:layout_height="61dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txtmain_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="BalmApp"
             android:textColor="@android:color/black"
-            android:textSize="@android:dimen/app_icon_size"></TextView>
+            android:textSize="40dp"></TextView>
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.gms.maps.MapView
