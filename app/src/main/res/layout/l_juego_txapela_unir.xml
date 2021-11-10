@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f_juego_txapela_unir">
+
+
+    <TextView
+        android:id="@+id/txttxapela_juego_explicacion_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/txtkolitza_juego_explicacion_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnfinalizar_puente"
+        style="@style/botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/txt_finalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="106dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="160dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/logodantzaris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgtxapela_juego_img1"
+        android:layout_width="97dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="252dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/imgtemporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgtxapela_juego_img2"
+        android:layout_width="95dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="252dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/imgtemporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgtxapela_juego_img3"
+        android:layout_width="95dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="252dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/imgtemporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+
+    <ImageView
+        android:id="@+id/imgtxapela_juego_img4"
+        android:layout_width="95dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="532dp"
+        android:layout_marginEnd="252dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/imgtemporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgtxapela_juego_img5"
+        android:layout_width="95dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="448dp"
+        android:layout_marginEnd="252dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/imgtemporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgtxapela_juego_img6"
+        android:layout_width="95dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="252dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/imgtemporal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+
+    <ImageView
+        android:id="@+id/imgaudio1"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgaudio2"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgaudio3"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+
+    <ImageView
+        android:id="@+id/imgaudio4"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="532dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgaudio5"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="448dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+    <ImageView
+        android:id="@+id/imgaudio6"
+        android:layout_width="90dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
