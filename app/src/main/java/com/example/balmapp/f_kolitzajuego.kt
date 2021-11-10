@@ -41,7 +41,8 @@ class f_kolitzajuego : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_kolitzaunir, container, false)
+        _binding = LKolitzaunirBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

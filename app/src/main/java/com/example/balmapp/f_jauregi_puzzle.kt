@@ -42,7 +42,8 @@ class f_jauregi_puzzle : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_jauregi_puzzle, container, false)
+        _binding = LJauregiPuzzleBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

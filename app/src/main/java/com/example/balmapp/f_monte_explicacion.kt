@@ -41,7 +41,8 @@ class f_monte_explicacion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_monte_explicacion, container, false)
+        _binding = LMonteExplicacionBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

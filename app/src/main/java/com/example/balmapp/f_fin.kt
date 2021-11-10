@@ -42,7 +42,8 @@ class f_fin : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_fin, container, false)
+        _binding = LFinBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

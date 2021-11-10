@@ -41,7 +41,8 @@ class f_felipe_explicacion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_felipe_explicacion, container, false)
+        _binding = LFelipeExplicacionBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {

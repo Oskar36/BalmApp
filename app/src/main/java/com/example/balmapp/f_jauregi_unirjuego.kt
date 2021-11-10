@@ -42,7 +42,8 @@ class f_jauregi_unirjuego : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.l_jauregi_unirjuego, container, false)
+        _binding = LJauregiUnirjuegoBinding.inflate(inflater, container, false)
+        return  binding.root
     }
 
     companion object {
