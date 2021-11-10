@@ -11,10 +11,10 @@
     <string name="apodo">Apodo:</string>
     <string name="titulo">TITULO</string>
     <string name="jugar">Jugar</string>
-    <string name="putxero_explicacion">putxero_explicacion</string>
+    <string name="putxero_explicacion">Historia del Puchero</string>
     <string name="explicacion">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
-    <string name="puente_explicacion">puente_explicacion</string>
-    <string name="monte_explicacion">Historia del monte Kolitza</string>
+    <string name="puente_explicacion">Historia del Puente</string>
+    <string name="monte_explicacion">Historia del Monte Kolitza</string>
     <string name="jauregi_explicacion">Historia del Palacio Horcasitas</string>
     <string name="cambiar_modo">Cambiar modo</string>
     <string name="acerca_de">Acerca de</string>
@@ -51,7 +51,7 @@
     <string name="txt_Erromeria">Erromeria</string>
     <string name="txt_Bazkaria">Bazkaria</string>
     <string name="txt_ermita">Ermita</string>
-    <string name="txapela_explicacion">txapela_explicacion</string>
+    <string name="txapela_explicacion">Historia de la Boina</string>
     <string name="felipe_explicacion">Historia de San Felipe y Santiago</string>
     <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
     <string name="siguiente_adivinanda">Asmatu hurrengoa</string>

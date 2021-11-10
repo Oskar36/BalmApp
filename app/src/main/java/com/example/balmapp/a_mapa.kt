@@ -4,6 +4,9 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import com.example.balmapp.databinding.LMapaBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -19,6 +22,12 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
     private var gmap: GoogleMap? = null
     private lateinit var binding: LMapaBinding
     private val MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey"
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_admin, menu)
+        return true
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LMapaBinding.inflate(layoutInflater)
@@ -33,9 +42,12 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         //Binding
         mapView!!.onCreate(mapViewBundle)
         mapView!!.getMapAsync(this)
+       // binding.toolbar.inflateMenu(R.menu.menu_admin)
 
-        binding.toolbar.inflateMenu(R.menu.menu_admin)
+
     }
+
+
     //En caso de que haya problemas con el Bundle
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -96,7 +108,25 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
        val localizacion= location
        val marcador = MarkerOptions().position(localizacion).title(title).snippet(snippet)
         mapa!!.addMarker(marcador)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
+        when (item.itemId){
+            R.id.puente_admin ->      abrirActivityMenu("a_juegos","puente")
+            R.id.kolitxa_menu ->      abrirActivityMenu("a_juegos","kolitza")
+            R.id.jauregi_menu ->      abrirActivityMenu("a_juegos","jauregi")
+            R.id.procesion_menu ->    abrirActivityMenu("a_juegos","procesion")
+            R.id.san_felipe_menu ->   abrirActivityMenu("a_juegos","san felipe")
+            R.id.putxero_menu ->      abrirActivityMenu("a_juegos","puchero")
+            R.id.txapela_menu ->      abrirActivityMenu("a_juegos","boina")
+            R.id.acerca_de_menu ->    abrirActivityMenu("a_acercade","")
+            R.id.desconectar_menu ->  abrirActivityMenu("MainActivity","")
+        }
+        return true
+    }
+    fun abrirActivityMenu(activity: String,juego:String){
+        Sharedapp.prefs.juego=juego
+        NavFrag.IniciarActivity(this,activity)
     }
     }
 

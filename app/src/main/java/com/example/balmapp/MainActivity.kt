@@ -1,8 +1,10 @@
 package com.example.balmapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
+import android.view.MenuItem
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.core.content.ContextCompat
@@ -19,15 +21,6 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val fragment= f_modo()
-        cargarfragment(fragment)
-
-       binding.toolbar.inflateMenu(R.menu.menu)
-
+        NavFrag.cargarfragment(fragment,this,R.id.fl_main)
     }
-    private fun cargarfragment(fragment: Fragment) {
-        val transaction= supportFragmentManager.beginTransaction()
-        transaction.add(R.id.fl_main, fragment)
-        transaction.commit()
-    }
-
 }

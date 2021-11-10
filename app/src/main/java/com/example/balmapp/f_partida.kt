@@ -27,7 +27,7 @@ class f_partida : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
       binding.btnpartidaNueva.setOnClickListener(){
-          NavFrag.IniciarMapa(requireContext())
+          NavFrag.IniciarActivity(requireContext(),"a_mapa")
       }
         binding.btnpartidaContinuar.setOnClickListener(){
 
