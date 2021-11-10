@@ -51,4 +51,28 @@
     <string name="txt_ermita">Ermita</string>
     <string name="txapela_explicacion">txapela_explicacion</string>
     <string name="felipe_explicacion">felipe_explicacion</string>
+
+    <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
+    <string name="siguiente_adivinanda">Adivina el siguiente</string>
+    <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte.
+        ¡Me cruzan! ¿Quien soy?</string>
+    <string name="opcion_1jesus">A)Judas</string>
+    <string name="opcion_2jesus">B)Jose</string>
+    <string name="opcion_3jesus">C)Jessus</string>
+
+    <string name="explicacion_penitenteak">Llevo cruces.
+        Voy en grupo y todos usamos sombreros. Además, vamos descalzos.
+        ¿Quien soy?</string>
+    <string name="opcion_1penitenteak">A)Penitentes</string>
+    <string name="opcion_2penitenteak">B)Los romanos</string>
+    <string name="opcion_3penitenteak">C)Ladrones</string>
+
+    <string name="explicacion_maria">Pertsonaia oso oso garrantzitsu baten ama naiz.
+        Nire semea epaitu eta gurutzatu egiten dute. Nor naiz?</string>
+    <string name="opcion_1maria">A)Maria Magdalena</string>
+    <string name="opcion_2maria">B)Andre Maria Birjina</string>
+    <string name="opcion_3maria">C)Uso zuria</string>
+
+
+
 </resources>

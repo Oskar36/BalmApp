@@ -30,7 +30,7 @@
 
 
     <ImageView
-        android:id="@+id/imgkolitza_juego_logo"
+        android:id="@+id/imgadivinar_penitenteak"
         android:layout_width="106dp"
         android:layout_height="82dp"
         android:layout_marginTop="40dp"
