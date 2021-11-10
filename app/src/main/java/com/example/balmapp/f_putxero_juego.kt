@@ -41,7 +41,13 @@ class f_putxero_juego : Fragment() {
         _binding = LPutxeroJuegoBinding.inflate(inflater, container, false)
         return  binding.root
     }
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        binding.btnPutxerojuego.setOnClickListener(){
+            val fragment:Fragment=f_partida()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

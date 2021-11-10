@@ -36,7 +36,13 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        binding.btnfinalizar.setOnClickListener(){
+            val fragment:Fragment=f_partida()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

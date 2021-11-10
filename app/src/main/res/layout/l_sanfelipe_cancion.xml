@@ -153,5 +153,16 @@
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
         android:importantForAutofill="no" />
 
+    <Button
+        android:id="@+id/btncancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
