@@ -32,17 +32,15 @@
     <string name="txt_finalizar">Terminar</string>
     <string name="txt_siguientejuego">Siguiente juego</string>
     <string name="txtkolitza_juego_explicacion_titulo">Une fotos con las palabras</string>
-    <string name="txtkolitza_sopadeletras_titulo">LETRA-ZOPA</string>
+    <string name="txtkolitza_sopadeletras_titulo">Sopa de letras</string>
     <string name="txtjauregi_puzzle_titulo">Puzzle del Palacio</string>
     <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
     <string name="txt_texto_Erdiko_Solairua">Erdiko Solairuak</string>
     <string name="txt_texto_Azken_Solairua">Azken Solairuak</string>
     <string name="txt_texto_Fatxada">Fatxada</string>
     <string name="txt_texto_Gelak_Egongelak">Gelak eta Egongelak</string>
-    <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren
-        armarria eta 2 biga</string>
-    <string name="txt_texto_Sotoa">Sotoa eta animaliak  \n
-        gordetzeko lekua</string>
+    <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren armarria eta 2 biga</string>
+    <string name="txt_texto_Sotoa">Sotoa eta animaliak gordetzeko lekua</string>
     <string name="txt_texto_Gambara">Gambara</string>
     <string name="txt_tontorra">Tontorra</string>
     <string name="txt_pazkoa">Pazkoa</string>
@@ -54,14 +52,11 @@
     <string name="felipe_explicacion">Historia de San Felipe y Santiago</string>
     <string name="asmatu_pertsonaia">Adivina el personaje</string>
     <string name="siguiente_adivinanda">Asmatu hurrengoa</string>
-    <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat.
-        Gurutzatu egiten naute! Nor ote naiz?</string>
+    <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat. Gurutzatu egiten naute! Nor ote naiz?</string>
     <string name="opcion_1jesus">A)Judas</string>
     <string name="opcion_2jesus">B)Jose</string>
-    <string name="opcion_3jesus">C)Jessus</string>
-    <string name="explicacion_penitenteak">Gurutzeak garraiatzen ditut.
-        Talde batean noa eta guztiok txanoak daramatzagu. Gainera, oinutsik goaz.
-        Nortzuk gara?</string>
+    <string name="opcion_3jesus">C)Jesus</string>
+    <string name="explicacion_penitenteak">Gurutzeak garraiatzen ditut. Talde batean noa eta guztiok txanoak daramatzagu. Gainera, oinutsik goaz. Nortzuk gara?</string>
     <string name="opcion_1penitenteak">A)Penitenteak</string>
     <string name="opcion_2penitenteak">B)Erromatarrak</string>
     <string name="opcion_3penitenteak">C)Lapurrak</string>
@@ -74,6 +69,6 @@
     <string name="Judasen_hilketa">Muerte de Judas</string>
     <string name="Azken_afaria">Ultima cena</string>
     <string name="Jesusen_epaiketa">El juicio de Jesús</string>
-    <string name="san_felipe_y_santiago_cancion">esto esta mal hay que cambiar</string>
+    <string name="san_felipe_y_santiago_cancion">Canción de San Felipe y Santiago</string>
     <string name="putxero_juego">Historia del puchero</string>
 </resources>
