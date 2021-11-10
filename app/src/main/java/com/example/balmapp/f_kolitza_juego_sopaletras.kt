@@ -69,7 +69,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnsiguienteJuego.setOnClickListener(){
-            val fragment:Fragment=f_partida()
+            val fragment:Fragment=f_kolitzajuego()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
     }

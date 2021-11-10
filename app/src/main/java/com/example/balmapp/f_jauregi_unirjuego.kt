@@ -69,8 +69,7 @@ class f_jauregi_unirjuego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizarjauregi.setOnClickListener(){
-            val fragment:Fragment=f_partida()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
     }
 }

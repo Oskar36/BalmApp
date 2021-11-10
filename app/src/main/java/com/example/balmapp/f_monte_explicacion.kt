@@ -47,7 +47,7 @@ class f_monte_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnmonteExplicacionJugar.setOnClickListener(){
-            val fragment:Fragment=f_partida()
+            val fragment:Fragment=f_kolitza_juego_sopaletras()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
     }

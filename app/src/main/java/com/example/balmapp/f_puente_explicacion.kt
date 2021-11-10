@@ -45,7 +45,7 @@ class f_puente_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnpuenteExplicacionJugar.setOnClickListener(){
-            val fragment:Fragment=f_partida()
+            val fragment:Fragment=f_puente_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
     }
