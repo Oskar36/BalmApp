@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtacercade_descr"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/fptxurdinaga_logo"
-        android:contentDescription="@string/todo" />
+       />
 
     <ImageView
         android:id="@+id/imagenacercade_upv"
@@ -55,6 +55,6 @@
         app:layout_constraintTop_toBottomOf="@+id/txtacercade_descr"
         app:layout_constraintVertical_bias="0.333"
         app:srcCompat="@drawable/upvehulogo"
-        android:contentDescription="@string/todo" />
+       />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
