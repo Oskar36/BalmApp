@@ -33,6 +33,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         //Binding
         mapView!!.onCreate(mapViewBundle)
         mapView!!.getMapAsync(this)
+
+        binding.toolbar.inflateMenu(R.menu.menu_admin)
     }
     //En caso de que haya problemas con el Bundle
     override fun onSaveInstanceState(outState: Bundle) {
