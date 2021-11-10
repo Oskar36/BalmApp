@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentActivity
 
 class NavFrag {
     companion object{
-        fun replaceFragment(someFragment: Fragment?, f_activity: FragmentActivity, id:Int) {
-            val fragment: Fragment =f_apodo()
+        fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int) {
+            val fragment: Fragment =someFragment
             f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).commit()
         }
         fun IniciarMapa(context: Context){

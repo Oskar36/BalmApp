@@ -47,16 +47,10 @@ class f_modo : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnmodoLibre.setOnClickListener(){
-           /*
-            val intent=Intent(activity, a_mapa::class.java)
-            activity?.finish()
-            startActivity(intent)
-
-            */
             NavFrag.IniciarMapa(requireContext())
         }
         binding.btnmodoGuiado.setOnClickListener(){
-            val fragment:Fragment=f_modo()
+            val fragment:Fragment=f_apodo()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
     }

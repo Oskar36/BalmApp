@@ -20,12 +20,12 @@
         app:layout_constraintTop_toTopOf="parent" >
 
         <TextView
+            android:id="@+id/txtmain_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BalmApp"
-            android:textSize="@android:dimen/app_icon_size"
-            android:textColor="@android:color/black">
-        </TextView>
+            android:textColor="@android:color/black"
+            android:textSize="@android:dimen/app_icon_size"></TextView>
     </androidx.appcompat.widget.Toolbar>
 
 
