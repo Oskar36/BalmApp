@@ -10,7 +10,23 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_kolitza_juego_sopaletras.xml" value="0.4" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_kolitzajuego.xml" value="0.264" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_mapa.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_puente_puzzle.xml" value="0.264" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_modo.xml" value="0.2" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_modo3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_partida.xml" value="0.264" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_puente_puzzle.xml" value="0.11927083333333334" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/a_juegos.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_acercade.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_explicacion.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_fin.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_explicacion.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_puzzle.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_unirjuego.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_kolitza_juego_sopaletras.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_kolitzajuego.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/menu/menu_admin.xml" value="0.25" />
       </map>
     </option>
   </component>
