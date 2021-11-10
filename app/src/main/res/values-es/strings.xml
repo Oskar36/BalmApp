@@ -15,9 +15,9 @@
     <string name="jugar">Jugar</string>
     <string name="putxero_explicacion">putxero_explicacion</string>
     <string name="explicacion">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
-    <string name="puente_explicacion">puente_explicacion</string>
-    <string name="monte_explicacion">monte_explicacion</string>
-    <string name="jauregi_explicacion">jauregi_explicacion</string>
+    <string name="puente_explicacion">Puente xplicacion</string>
+    <string name="monte_explicacion">Monte explicacion</string>
+    <string name="jauregi_explicacion">Jauregi explicacion</string>
     <string name="cambiar_modo">Cambiar modo</string>
     <string name="acerca_de">Acerca de</string>
     <string name="desconectar">Desconectar</string>
@@ -28,51 +28,51 @@
     <string name="txapela">Boina</string>
     <string name="san_felipe" translatable="false">San Felipe</string>
     <string name="putxero">Puchero</string>
-    <string name="procesion_explicacion">procesion_explicacion</string>
-    <string name="txt_texto_pazkoa">Pazkoa</string>
-    <string name="txt_texto_bazkaria">Bazkaria</string>
-    <string name="txt_texto_erromeria">Erromeria</string>
+    <string name="procesion_explicacion">Procesion explicacion</string>
+    <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
+    <string name="txt_texto_bazkaria">Almuerzo</string>
+    <string name="txt_texto_erromeria">Peregrinaje</string>
     <string name="txt_finalizar">Terminar</string>
-    <string name="txt_siguientejuego">Hurrengo jokoa</string>
-    <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
-    <string name="txtkolitza_sopadeletras_titulo">LETRA-ZOPA</string>
-    <string name="txtjauregi_puzzle_titulo">PUZZLEA</string>
-    <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
+    <string name="txt_siguientejuego">Siguiente juego</string>
+    <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LAS PALABRAS</string>
+    <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
+    <string name="txtjauregi_puzzle_titulo">PUZZLE</string>
+    <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>
     <string name="txt_texto_Erdiko_Solairua">Erdiko Solairuak</string>
-    <string name="txt_texto_Azken_Solairua">Azken Solairuak</string>
-    <string name="txt_texto_Fatxada">Fatxada</string>
-    <string name="txt_texto_Gelak_Egongelak">Gelak eta Egongelak</string>
-    <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren
-        armarria eta 2 biga</string>
-    <string name="txt_texto_Sotoa">Sotoa eta animaliak  \n
-        gordetzeko lekua</string>
+    <string name="txt_texto_Azken_Solairua">Pisos intermedios</string>
+    <string name="txt_texto_Fatxada">Fachada</string>
+    <string name="txt_texto_Gelak_Egongelak">Habitaciones y salones</string>
+    <string name="txt_texto_Balkoi">El balcón principal, la familia
+        abrigo y 2 vigas</string>
+    <string name="txt_texto_Sotoa">Sótano y animales
+        lugar para almacenar</string>
     <string name="txt_texto_Gambara">Gambara</string>
-    <string name="txt_tontorra">Tontorra</string>
-    <string name="txt_pazkoa">Pazkoa</string>
-    <string name="txt_Pentekoste">Pentekoste</string>
-    <string name="txt_Erromeria">Erromeria</string>
-    <string name="txt_Bazkaria">Bazkaria</string>
+    <string name="txt_tontorra">La cumbre</string>
+    <string name="txt_pazkoa">Pascua de Resurrección</string>
+    <string name="txt_Pentekoste">Pentecostés</string>
+    <string name="txt_Erromeria">Peregrinaje</string>
+    <string name="txt_Bazkaria">Almuerzo</string>
     <string name="txt_ermita">Ermita</string>
-    <string name="txapela_explicacion">txapela_explicacion</string>
-    <string name="felipe_explicacion">felipe_explicacion</string>
-    <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
-    <string name="siguiente_adivinanda">Asmatu hurrengoa</string>
-    <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat.
-        Gurutzatu egiten naute! Nor ote naiz?</string>
+    <string name="txapela_explicacion">Boina explicacion</string>
+    <string name="felipe_explicacion">Felipe explicacion</string>
+    <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
+    <string name="siguiente_adivinanda">Adivina el siguiente</string>
+    <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte.
+        ¡Me cruzan! ¿Quién soy?</string>
     <string name="opcion_1jesus">A)Judas</string>
     <string name="opcion_2jesus">B)Jose</string>
-    <string name="opcion_3jesus">C)Jessus</string>
-    <string name="explicacion_penitenteak">Gurutzeak garraiatzen ditut.
-        Talde batean noa eta guztiok txanoak daramatzagu. Gainera, oinutsik goaz.
-        Nortzuk gara?</string>
-    <string name="opcion_1penitenteak">A)Penitenteak</string>
-    <string name="opcion_2penitenteak">B)Erromatarrak</string>
-    <string name="opcion_3penitenteak">C)Lapurrak</string>
-    <string name="explicacion_maria">Pertsonaia oso oso garrantzitsu baten ama naiz.
-        Nire semea epaitu eta gurutzatu egiten dute. Nor naiz?</string>
+    <string name="opcion_3jesus">C)Jesus</string>
+    <string name="explicacion_penitenteak">Llevo cruces.
+        Voy en grupo y todos usamos sombreros. Además, vamos descalzos.
+        ¿Quienes somos?</string>
+    <string name="opcion_1penitenteak">A)Penitentes</string>
+    <string name="opcion_2penitenteak">B)Los romanos</string>
+    <string name="opcion_3penitenteak">C)Los ladrones</string>
+    <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante.
+        Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
     <string name="opcion_1maria">A)Maria Magdalena</string>
-    <string name="opcion_2maria">B)Andre Maria Birjina</string>
-    <string name="opcion_3maria">C)Uso zuria</string>
+    <string name="opcion_2maria">B)Virgen Maria</string>
+    <string name="opcion_3maria">C)Paloma blanca</string>
     <string name="Gurutze_bidea">El camino de la cruz</string>
     <string name="Judasen_hilketa">Muerte de Judas</string>
     <string name="Azken_afaria">Ultima cena</string>
