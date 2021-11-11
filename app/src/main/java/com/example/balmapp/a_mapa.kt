@@ -102,7 +102,15 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         insertarGune(LatLng(     43.196250, -3.192639),"7.Gunea","Balmasedako zaindariaren jaia: San Severino. Putxerak",gmap!!)
         gmap!!.setMinZoomPreference(12f)
         gmap!!.moveCamera(CameraUpdateFactory.newLatLng(LatLng(     43.196250, -3.192639)))
-
+        gmap!!.setOnMarkerClickListener { marker ->
+            if (marker.isInfoWindowShown) {
+                marker.hideInfoWindow()
+            } else {
+                marker.showInfoWindow()
+            }
+            MarcadorJuego(marker.title.toString())
+            true
+         }
         }
     fun insertarGune(location:LatLng,title:String,snippet:String,mapa:GoogleMap){
        val localizacion= location
@@ -128,5 +136,17 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
     }
+    fun MarcadorJuego(gune: String){
+        Toast.makeText(this, "${gune}", Toast.LENGTH_SHORT).show()
+        when (gune){
+            "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
+            "2.Gunea helmuga" ->      abrirActivityMenu("a_juegos","kolitza")
+            "3.Gunea" ->      abrirActivityMenu("a_juegos","jauregi")
+            "4.Gunea" ->    abrirActivityMenu("a_juegos","procesion")
+            "6.Gunea" ->   abrirActivityMenu("a_juegos","san felipe")
+            "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
+            "5.Gunea helmuga" ->      abrirActivityMenu("a_juegos","boina")
+        }
     }
+}
 

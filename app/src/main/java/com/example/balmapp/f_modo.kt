@@ -19,26 +19,13 @@ import com.example.balmapp.databinding.LModoBinding
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [f_modo3.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 
 private var _binding: LModoBinding? = null
-// This property is only valid between onCreateView and
-// onDestroyView.
 private val binding get() = _binding!!
 class f_modo : Fragment() {
-    // TODO: Rename and change types of parameters
-
-    private var _binding: LModoBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-   private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
     }
     override fun onCreateView(
