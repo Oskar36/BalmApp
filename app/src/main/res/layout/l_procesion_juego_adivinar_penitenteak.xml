@@ -43,16 +43,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglogo" />
 
-    <ImageView
-        android:id="@+id/imgaudio1"
-        android:layout_width="339dp"
+    <ImageButton
+        android:id="@+id/imgaudioplay1"
+        style="@style/botones"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/audio"
+        android:layout_marginTop="36dp"
+        android:src="@android:drawable/ic_media_play"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak" />
+        app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imgaudiostop1"
+        style="@style/botones"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
     <TextView
@@ -64,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgaudio1" />
+        app:layout_constraintTop_toBottomOf="@+id/imgaudioplay1" />
     <TextView
         android:id="@+id/txtopcion2"
         android:layout_width="350dp"
@@ -87,17 +102,6 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtopcion2" />
-
-    <ImageView
-        android:id="@+id/imgaudio2"
-        android:layout_width="339dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/audio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtopcion3" />
 
     <Button
         android:id="@+id/btnfinalizar"
