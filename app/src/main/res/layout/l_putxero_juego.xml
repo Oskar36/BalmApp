@@ -57,11 +57,11 @@
         android:id="@+id/img_putxero_alimento8"
         android:layout_width="80dp"
         android:layout_height="71dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
         android:src="@drawable/pimiento"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento4" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_putxerojuego"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/img_putxero_alimento1"
@@ -78,11 +78,11 @@
         android:id="@+id/img_putxero_alimento6"
         android:layout_width="79dp"
         android:layout_height="72dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="86dp"
         android:src="@drawable/patata"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento7"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento7" />
 
     <ImageView
         android:id="@+id/img_putxero_alimento4"
@@ -108,12 +108,12 @@
         android:id="@+id/img_putxero_alimento5"
         android:layout_width="84dp"
         android:layout_height="68dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="86dp"
         android:src="@drawable/morcilla"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento6"
         app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento1" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/img_putxero_alimento3"
@@ -130,11 +130,11 @@
         android:id="@+id/img_putxero_alimento7"
         android:layout_width="80dp"
         android:layout_height="72dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="12dp"
+        android:layout_marginBottom="89dp"
         android:src="@drawable/caramelos"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento8"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento3" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento8" />
 
     <Button
         android:id="@+id/btn_putxerojuego"
