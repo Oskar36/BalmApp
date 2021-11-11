@@ -18,7 +18,7 @@ class NavFrag {
     companion object{
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int) {
             val fragment: Fragment =someFragment
-            f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).commit()
+            f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).addToBackStack(null).commit()
         }
         fun IniciarActivity(context: Context,actividad:String){
             val nombreclase= "com.example.balmapp.$actividad"
@@ -29,7 +29,7 @@ class NavFrag {
         }
         fun cargarfragment(fragment: Fragment,activity: AppCompatActivity,layout: Int) {
             val transaction= activity.supportFragmentManager.beginTransaction()
-            transaction.add(layout, fragment)
+            transaction.replace(layout, fragment).addToBackStack(null)
             transaction.commit()
         }
     }

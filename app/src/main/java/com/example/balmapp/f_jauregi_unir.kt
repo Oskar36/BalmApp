@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LApodoBinding
-import com.example.balmapp.databinding.LJauregiUnirjuegoBinding
+import com.example.balmapp.databinding.LJauregiUnirBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,7 +19,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-private var _binding: LJauregiUnirjuegoBinding? = null
+private var _binding: LJauregiUnirBinding? = null
 // This property is only valid between onCreateView and
 // onDestroyView.
 private val binding get() = _binding!!
@@ -42,7 +42,7 @@ class f_jauregi_unirjuego : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = LJauregiUnirjuegoBinding.inflate(inflater, container, false)
+        _binding = LJauregiUnirBinding.inflate(inflater, container, false)
         return  binding.root
     }
 

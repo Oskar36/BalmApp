@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.balmapp.databinding.LSanfelipeCancionBinding
+import com.example.balmapp.databinding.LFelipeCancionBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-private var _binding: LSanfelipeCancionBinding? = null
+private var _binding: LFelipeCancionBinding? = null
 // This property is only valid between onCreateView and
 // onDestroyView.
 private val binding get() = _binding!!
@@ -38,7 +38,7 @@ class f_sanfelipe_cancion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = LSanfelipeCancionBinding.inflate(inflater, container, false)
+        _binding = LFelipeCancionBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {

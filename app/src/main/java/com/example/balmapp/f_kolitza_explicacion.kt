@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LApodoBinding
-import com.example.balmapp.databinding.LMonteExplicacionBinding
+import com.example.balmapp.databinding.LKolitzaExplicacionBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,7 +19,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-private var _binding: LMonteExplicacionBinding? = null
+private var _binding: LKolitzaExplicacionBinding? = null
 // This property is only valid between onCreateView and
 // onDestroyView.
 private val binding get() = _binding!!
@@ -41,7 +41,7 @@ class f_monte_explicacion : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = LMonteExplicacionBinding.inflate(inflater, container, false)
+        _binding = LKolitzaExplicacionBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
