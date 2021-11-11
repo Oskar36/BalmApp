@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,6 +29,8 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var mediaplayer: MediaPlayer? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +38,11 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+
+
+
+
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -42,7 +50,13 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.Jesus)
+
+
+
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -71,4 +85,29 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
                 }
             }
     }
-}
+
+    override fun onResume() {
+
+        super.onResume()
+
+
+        binding.imgaudioplay1.setOnClickListener(){
+            //Iniciamos el audio
+            mediaplayer!!.start();
+        }
+        binding.imgaudiostop1.setOnClickListener(){
+            //Pausamos el audio
+            mediaplayer!!.pause();
+        }
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+    }
+
+
+    }
+
+
