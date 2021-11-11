@@ -34,12 +34,19 @@ class f_putxero_juego : Fragment() {
         binding.btnPutxerojuego.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
-        val moveLefttoRight = TranslateAnimation(550F, -470F, 0F, 0F)
-        moveLefttoRight.setDuration(30000)
+        val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
+        moveLefttoRight.setDuration(50000)
         moveLefttoRight.setFillAfter(true)
         binding.imgPutxeroTren.startAnimation(moveLefttoRight)
-        binding.imgPutxeroAlimento1.setOnTouchListener(touchListener)
-        binding.imgPutxeroAlimento5.setOnTouchListener(touchListener)
+        binding.imgAlubias.setOnTouchListener(touchListener)
+        binding.imgEspinacas.setOnTouchListener(touchListener)
+        binding.imgManzana.setOnTouchListener(touchListener)
+        binding.imgHuevos.setOnTouchListener(touchListener)
+        binding.imgMorcilla.setOnTouchListener(touchListener)
+        binding.imgPatatas.setOnTouchListener(touchListener)
+        binding.imgCaramelos.setOnTouchListener(touchListener)
+        binding.imgPimiento.setOnTouchListener(touchListener)
+
 
     }
     override fun onDestroyView() {
