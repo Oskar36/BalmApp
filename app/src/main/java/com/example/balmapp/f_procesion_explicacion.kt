@@ -7,6 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LProcesionExplicacionBinding
+import android.graphics.drawable.AnimationDrawable
+
+import android.R
+import android.widget.ImageView
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,6 +54,8 @@ class f_procesion_explicacion : Fragment() {
         binding.btnprocesionExplicacionJugar.setOnClickListener(){
             val fragment:Fragment=f_procesion_juego_adivinar_Jesus()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+
+
         }
     }
     companion object {
