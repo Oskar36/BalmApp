@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import com.example.balmapp.databinding.LProcesionJuegoAdivinarAndremariabirjinaB
 
 private var _binding: LProcesionJuegoAdivinarAndremariabirjinaBinding? = null
 private val binding get() = _binding!!
+private var mediaplayer: MediaPlayer? = null
 
 class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
@@ -34,6 +36,23 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
             val fragment:Fragment=f_procesion_ordenar()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.andremariabirjina)
+    }
+    override fun onResume() {
+
+        super.onResume()
+
+
+        binding.imgaudioplay1.setOnClickListener(){
+            //Iniciamos el audio
+            mediaplayer!!.start();
+        }
+        binding.imgaudiostop1.setOnClickListener(){
+            //Pausamos el audio
+            mediaplayer!!.pause();
+        }
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

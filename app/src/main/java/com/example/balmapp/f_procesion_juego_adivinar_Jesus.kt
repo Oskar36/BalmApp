@@ -2,6 +2,7 @@ package com.example.balmapp
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,8 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     private var mediaplayer: MediaPlayer? = null
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,6 +38,8 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         }
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.jesus)
+
+
 
 
 
