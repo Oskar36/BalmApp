@@ -45,8 +45,13 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
 
         binding.imgaudioplay1.setOnClickListener(){
-            //Iniciamos el audio
-            mediaplayer!!.start();
+            //controlamos que el audio no esta reproduciendose
+            if(mediaPlayer!!.isPlaying()){
+                mediaPlayer!!.seekTo(0);
+            } else {
+                //Iniciamos el audio
+                mediaPlayer!!.start();
+            }
         }
         binding.imgaudiostop1.setOnClickListener(){
             //Pausamos el audio
