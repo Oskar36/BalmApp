@@ -24,19 +24,18 @@
         android:id="@+id/imgputxero_juego_logo"
         android:layout_width="182dp"
         android:layout_height="121dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/logodantzaris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_putxero_titulo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/txt_putxero_titulo" />
 
     <ImageView
         android:id="@+id/img_putxero_tren"
-        android:layout_width="209dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="217dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="4dp"
         android:src="@drawable/tren"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,117 +43,110 @@
 
     <ImageView
         android:id="@+id/img_putxero_putxero"
-        android:layout_width="111dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="87dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="68dp"
         android:src="@drawable/puchero"
         app:layout_constraintEnd_toStartOf="@+id/img_putxero_tren"
-        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgputxero_juego_logo"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/img_putxero_alimento4"
-        android:layout_width="75dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="28dp"
-        android:src="@drawable/huevos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren"
-        />
-
-    <ImageView
-        android:id="@+id/img_putxero_alimento3"
-        android:layout_width="74dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/manzana"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento4"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/img_putxero_alimento2"
-        android:layout_width="79dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/espinacas"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento3"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero"
-        />
-
-    <ImageView
         android:id="@+id/img_putxero_alimento8"
         android:layout_width="80dp"
         android:layout_height="71dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/pimiento"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento4"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento4" />
 
     <ImageView
-        android:id="@+id/img_putxero_alimento5"
-        android:layout_width="84dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/morcilla"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento6"
-        app:layout_constraintHorizontal_bias="0.656"
+        android:id="@+id/img_putxero_alimento1"
+        android:layout_width="83dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/alubias"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento2"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento1"
-        />
-
-    <ImageView
-        android:id="@+id/img_putxero_alimento7"
-        android:layout_width="80dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/caramelos"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento8"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento3"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
 
     <ImageView
         android:id="@+id/img_putxero_alimento6"
         android:layout_width="79dp"
         android:layout_height="72dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/patata"
         app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento7"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento2"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento2" />
 
     <ImageView
-        android:id="@+id/img_putxero_alimento1"
-        android:layout_width="83dp"
+        android:id="@+id/img_putxero_alimento4"
+        android:layout_width="75dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/huevos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
+
+    <ImageView
+        android:id="@+id/img_putxero_alimento2"
+        android:layout_width="79dp"
         android:layout_height="71dp"
-        android:layout_marginTop="72dp"
-        android:src="@drawable/alubias"
-        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento2"
-        app:layout_constraintHorizontal_bias="0.6"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/espinacas"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento3"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
+
+    <ImageView
+        android:id="@+id/img_putxero_alimento5"
+        android:layout_width="84dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/morcilla"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento6"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento1" />
+
+    <ImageView
+        android:id="@+id/img_putxero_alimento3"
+        android:layout_width="74dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/manzana"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento4"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/img_putxero_alimento7"
+        android:layout_width="80dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/caramelos"
+        app:layout_constraintEnd_toStartOf="@+id/img_putxero_alimento8"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_alimento3" />
 
     <Button
         android:id="@+id/btn_putxerojuego"
+        style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/txt_finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        android:text="@string/txt_finalizar"
-        style="@style/botones"/>
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
