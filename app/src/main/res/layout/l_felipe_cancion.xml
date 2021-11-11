@@ -8,28 +8,32 @@
     tools:context=".f_sanfelipe_cancion">
     tools:viewBindingIgnore="true"
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <ImageButton
+        android:id="@+id/play"
+        style="@style/botones"
         android:layout_width="43dp"
         android:layout_height="41dp"
-        android:layout_marginTop="92dp"
         android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck"
-        />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="44dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="92dp"
-        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintHorizontal_bias="0.377"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/pause"
+        style="@style/botones"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -66,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.364"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/pause"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
         android:importantForAutofill="no" />
 
