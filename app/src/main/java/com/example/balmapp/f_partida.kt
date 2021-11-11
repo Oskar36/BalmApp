@@ -9,16 +9,10 @@ import android.view.ViewGroup
 import com.example.balmapp.databinding.LModoBinding
 import com.example.balmapp.databinding.LPartidaBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 private var _binding: LPartidaBinding? = null
-// This property is only valid between onCreateView and
-// onDestroyView.
 private val binding get() = _binding!!
 class f_partida : Fragment() {
-    // TODO: Rename and change types of parameters
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,5 +34,9 @@ class f_partida : Fragment() {
         // Inflate the layout for this fragment
         _binding = LPartidaBinding.inflate(inflater, container, false)
         return  binding.root
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

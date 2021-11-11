@@ -32,5 +32,9 @@ class NavFrag {
             transaction.replace(layout, fragment).addToBackStack(null)
             transaction.commit()
         }
+        fun addFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int) {
+            val fragment: Fragment =someFragment
+            f_activity.supportFragmentManager.beginTransaction().add(id, fragment).addToBackStack(null).commit()
+        }
     }
 }
