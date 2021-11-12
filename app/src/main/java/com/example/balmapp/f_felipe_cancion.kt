@@ -44,12 +44,11 @@ class f_sanfelipe_cancion : Fragment() {
         super.onResume()
 
          mediaPlayer = MediaPlayer.create(context, R.raw.felipe_cancion)
-
        binding.play.setOnClickListener{
            if(mediaPlayer!!.isPlaying()){
                mediaPlayer!!.seekTo(0);
            } else {
-               mediaPlayer!!.start();
+               mediaPlayer!!.start()
            }
        }
         binding.pause.setOnClickListener{

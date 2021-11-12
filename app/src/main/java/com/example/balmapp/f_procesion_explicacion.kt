@@ -5,11 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LProcesionExplicacionBinding
 import android.graphics.drawable.AnimationDrawable
 
-import android.R
 import android.widget.ImageView
 
 
@@ -17,7 +15,7 @@ import android.widget.ImageView
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
+lateinit var animacion : AnimationDrawable
 /**
  * A simple [Fragment] subclass.
  * Use the [f_procesion_explicacion.newInstance] factory method to
@@ -38,6 +36,9 @@ class f_procesion_explicacion : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
+
+
         }
     }
 
@@ -55,8 +56,16 @@ class f_procesion_explicacion : Fragment() {
             val fragment:Fragment=f_procesion_juego_adivinar_Jesus()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
 
-
         }
+
+        NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+
     }
     companion object {
         /**

@@ -1,6 +1,7 @@
 package com.example.balmapp
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
@@ -22,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         val fragment= f_modo()
         NavFrag.cargarfragment(fragment,this,R.id.fl_main)
+
+
+
+
     }
 }

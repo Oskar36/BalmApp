@@ -3,6 +3,8 @@ package com.example.balmapp
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
@@ -36,5 +38,15 @@ class NavFrag {
             val fragment: Fragment =someFragment
             f_activity.supportFragmentManager.beginTransaction().add(id, fragment).addToBackStack(null).commit()
         }
+        fun animacion_dantzaris(imagen: ImageView){
+            val dantzaris = imagen.apply {
+            setBackgroundResource(R.drawable.animaciondantzaris)
+            animacion = background as AnimationDrawable
+        }
+            animacion.start()
+
+        }
     }
 }
+
+

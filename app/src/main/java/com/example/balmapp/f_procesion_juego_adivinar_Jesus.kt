@@ -37,7 +37,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaplayer = MediaPlayer.create(context, R.raw.jesus)
+
 
 
 
@@ -63,20 +63,17 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         super.onResume()
 
 
-        binding.imgaudioplay1.setOnClickListener(){
-            //controlamos que el audio no esta reproduciendose
+        mediaPlayer = MediaPlayer.create(context, R.raw.jesus)
+        binding.imgaudioplay1.setOnClickListener{
             if(mediaPlayer!!.isPlaying()){
                 mediaPlayer!!.seekTo(0);
             } else {
-                //Iniciamos el audio
-                mediaPlayer!!.start();
+                mediaPlayer!!.start()
             }
         }
-        binding.imgaudiostop1.setOnClickListener(){
-            //Pausamos el audio
-            mediaplayer!!.pause();
+        binding.imgaudiostop1.setOnClickListener{
+            mediaPlayer!!.pause()
         }
-
     }
 
     override fun onStart() {
