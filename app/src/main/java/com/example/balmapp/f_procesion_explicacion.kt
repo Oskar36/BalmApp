@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.balmapp.databinding.LProcesionExplicacionBinding
 import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
-
+import android.os.SystemClock
 import android.widget.ImageView
 
 
@@ -60,6 +60,8 @@ class f_procesion_explicacion : Fragment() {
 
         }
 
+
+
         NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_precesion)
@@ -72,6 +74,7 @@ class f_procesion_explicacion : Fragment() {
 
 
     }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

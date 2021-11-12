@@ -38,6 +38,7 @@ class f_sanfelipe_cancion : Fragment() {
         binding.btncancion.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
+
     }
 
     override fun onResume() {

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
+import android.os.CountDownTimer
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
@@ -12,7 +13,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.core.content.ContextCompat.startActivity
-import java.util.*
+
+
 
 
 class NavFrag {
@@ -43,6 +45,16 @@ class NavFrag {
             animacion = background as AnimationDrawable
         }
             animacion.start()
+
+        }
+        fun animacion_dantzaris_parar(imagen: ImageView){
+            val dantzaris = imagen.apply {
+                setBackgroundResource(R.drawable.animaciondantzaris)
+                animacion = background as AnimationDrawable
+            }
+
+            animacion.stop()
+
         }
     }
 }

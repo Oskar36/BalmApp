@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LFelipeExplicacionBinding
 
@@ -38,10 +39,46 @@ class f_felipe_explicacion : Fragment() {
             val fragment:Fragment=f_sanfelipe_cancion()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        NavFrag.animacion_dantzaris(binding.imgfelipeExplicacionLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaplayer = MediaPlayer.create(context, R.raw.sanfelipe_azalpena)
+
         //Iniciamos el audio
-        mediaplayer!!.start();
+        //mediaplayer!!.start()
+        mediaplayer = MediaPlayer.create(context, R.raw.jesus)
+        mediaplayer!!.start()
+
+        val repro= mediaplayer!!.isPlaying
+        //Toast.makeText(requireContext(), repro.toString(), Toast.LENGTH_SHORT).show()
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)        }
+        /*
+        if (repro==false){
+            NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
+            Toast.makeText(requireContext(), "parado", Toast.LENGTH_SHORT).show()
+        }
+        else
+        {
+            Toast.makeText(requireContext(), "puto", Toast.LENGTH_SHORT).show()
+        }
+         */
+
+
+
+      /*
+        if(mediaPlayer!!.isPlaying()){
+            Toast.makeText(requireContext(), "sii", Toast.LENGTH_SHORT).show()
+        } else {
+            println(mediaPlayer!!.isPlaying())
+            Toast.makeText(requireContext(), "noo", Toast.LENGTH_SHORT).show()
+        }
+*/
+
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+
     }
     override fun onDestroyView() {
         super.onDestroyView()
@@ -51,5 +88,7 @@ class f_felipe_explicacion : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer!!.stop()
+        mediaplayer?.release()
+        mediaplayer=null
     }
 }
