@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import com.example.balmapp.databinding.LJauregiExplicacionBinding
 
 private var _binding: LJauregiExplicacionBinding? = null
 private val binding get() = _binding!!
+private var mediaplayer: MediaPlayer? = null
 class f_jauregi_explicacion : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +33,18 @@ class f_jauregi_explicacion : Fragment() {
             val fragment:Fragment=f_jauregi_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.jauregi_azalpena)
+        //Iniciamos el audio
+        mediaplayer!!.start()
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer!!.stop()
     }
 }

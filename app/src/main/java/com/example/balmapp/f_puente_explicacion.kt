@@ -36,12 +36,18 @@ class f_puente_explicacion : Fragment() {
         }
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.zubia_azalpena)
-        mediaplayer!!.start();
+       //Iniciamos el audio
+        mediaplayer!!.start()
 
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
         mediaPlayer!!.stop()
     }
     override fun onResume() {

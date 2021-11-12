@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LProcesionExplicacionBinding
 import android.graphics.drawable.AnimationDrawable
+import android.media.MediaPlayer
 
 import android.widget.ImageView
 
@@ -26,6 +27,7 @@ private var _binding: LProcesionExplicacionBinding? = null
 // This property is only valid between onCreateView and
 // onDestroyView.
 private val binding get() = _binding!!
+private var mediaplayer: MediaPlayer? = null
 class f_procesion_explicacion : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -59,7 +61,10 @@ class f_procesion_explicacion : Fragment() {
         }
 
         NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
-
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.azalpena_precesion)
+        //Iniciamos el audio
+        mediaplayer!!.start()
     }
 
     override fun onStart() {
@@ -85,5 +90,12 @@ class f_procesion_explicacion : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+        mediaPlayer!!.stop()
     }
 }

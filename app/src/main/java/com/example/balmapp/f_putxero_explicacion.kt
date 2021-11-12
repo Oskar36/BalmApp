@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import com.example.balmapp.databinding.LPutxeroExplicacionBinding
 
 private var _binding: LPutxeroExplicacionBinding? = null
 private val binding get() = _binding!!
+private var mediaplayer: MediaPlayer? = null
 
 class f_putxero_explicacion : Fragment() {
 
@@ -31,9 +33,18 @@ class f_putxero_explicacion : Fragment() {
             val fragment:Fragment=f_putxero_juego()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.azalpena_putxero)
+        //Iniciamos el audio
+        mediaplayer!!.start()
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer!!.stop()
     }
 }

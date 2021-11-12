@@ -46,6 +46,10 @@ class f_felipe_explicacion : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+    }
+    override fun onDestroy() {
+        super.onDestroy()
         mediaPlayer!!.stop()
     }
 }
