@@ -23,6 +23,5 @@ class a_juegos : AppCompatActivity() {
             "boina" ->     fragment=f_txapela_explicacion()
         }
         NavFrag.cargarfragment(fragment!!,this,R.id.framejuegos)
-
     }
 }

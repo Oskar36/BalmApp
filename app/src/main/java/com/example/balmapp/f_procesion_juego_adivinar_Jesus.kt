@@ -17,8 +17,7 @@ private val binding get() = _binding!!
 class f_procesion_juego_adivinar_Jesus : Fragment() {
 
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
     private var mediaplayer: MediaPlayer? = null
 
 

@@ -12,8 +12,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.core.content.ContextCompat.startActivity
-
-
+import java.util.*
 
 
 class NavFrag {
@@ -44,7 +43,6 @@ class NavFrag {
             animacion = background as AnimationDrawable
         }
             animacion.start()
-
         }
     }
 }

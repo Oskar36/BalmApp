@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LPutxeroJuegoBinding
 import android.view.animation.TranslateAnimation
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.*
 
 
 private var _binding: LPutxeroJuegoBinding? = null
@@ -64,7 +66,24 @@ class f_putxero_juego : Fragment() {
                 xDelta = x - lParams.leftMargin
                 yDelta = y - lParams.topMargin
             }
+            MotionEvent.ACTION_UP -> {
+                val location = IntArray(2)
+                view.getLocationOnScreen(location)
+                val x = location[0]
+                val y = location[1]
+                val location2 = IntArray(2)
+                binding.imgPutxeroPutxero.getLocationOnScreen(location2)
+                val x2 = location2[0]
+                val y2 = location2[1]
+
+                //Toast.makeText(context, "View: ${x}  Puchero  ${x2} ", Toast.LENGTH_SHORT).show()
+
+                if((x<=(x2+100) && x>=(x2-100)) && (y<=(y2+300) && (y>=y2-40))){
+                    view.isVisible=false
+             }
+            }
             MotionEvent.ACTION_MOVE -> {
+               // Toast.makeText(context, "Puchero top: ${binding.imgPutxeroPutxero.paddingLeft}  ", Toast.LENGTH_SHORT).show()
                 val layoutParams = view
                     .layoutParams as ConstraintLayout.LayoutParams
                 layoutParams.leftMargin = x - xDelta
