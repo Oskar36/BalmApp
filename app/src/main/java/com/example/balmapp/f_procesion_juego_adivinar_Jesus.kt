@@ -36,12 +36,6 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
-        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-
-
-
-
-
 
     }
 
@@ -56,6 +50,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        mediaPlayer!!.stop()
     }
 
     override fun onResume() {
@@ -65,8 +60,9 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
 
         mediaPlayer = MediaPlayer.create(context, R.raw.jesus)
         binding.imgaudioplay1.setOnClickListener{
+
             if(mediaPlayer!!.isPlaying()){
-                mediaPlayer!!.seekTo(0);
+                mediaPlayer!!.seekTo(0)
             } else {
                 mediaPlayer!!.start()
             }
@@ -78,6 +74,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
 
     }
 

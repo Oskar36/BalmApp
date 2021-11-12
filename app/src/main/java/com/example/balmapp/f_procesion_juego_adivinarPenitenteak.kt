@@ -35,31 +35,33 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
             val fragment:Fragment=f_procesion_juego_adivinarAndreMariaBirjina()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
-        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaplayer = MediaPlayer.create(context, R.raw.penitenteak)
+
     }
     override fun onResume() {
 
         super.onResume()
-
-
-        binding.imgaudioplay1.setOnClickListener(){
-            //controlamos que el audio no esta reproduciendose
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaPlayer = MediaPlayer.create(context, R.raw.penitenteak)
+        binding.imgaudioplay1.setOnClickListener{
+        //controlamos que el audio no esta reproduciendose
             if(mediaPlayer!!.isPlaying()){
-                mediaPlayer!!.seekTo(0);
+                mediaPlayer!!.seekTo(0)
             } else {
                 //Iniciamos el audio
-                mediaPlayer!!.start();
+                mediaPlayer!!.start()
             }
         }
-        binding.imgaudiostop1.setOnClickListener(){
+        binding.imgaudiostop1.setOnClickListener{
             //Pausamos el audio
-            mediaplayer!!.pause();
+            mediaPlayer!!.pause()
         }
+
+
 
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        mediaPlayer!!.stop()
     }
 }

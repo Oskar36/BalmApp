@@ -36,31 +36,28 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
             val fragment:Fragment=f_procesion_ordenar()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
-        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaplayer = MediaPlayer.create(context, R.raw.andremariabirjina)
+
     }
     override fun onResume() {
 
         super.onResume()
+        mediaPlayer = MediaPlayer.create(context, R.raw.andremariabirjina)
+        binding.imgaudioplay1.setOnClickListener{
 
-
-        binding.imgaudioplay1.setOnClickListener(){
-            //controlamos que el audio no esta reproduciendose
             if(mediaPlayer!!.isPlaying()){
-                mediaPlayer!!.seekTo(0);
+                mediaPlayer!!.seekTo(0)
             } else {
-                //Iniciamos el audio
-                mediaPlayer!!.start();
+                mediaPlayer!!.start()
             }
         }
-        binding.imgaudiostop1.setOnClickListener(){
-            //Pausamos el audio
-            mediaplayer!!.pause();
+        binding.imgaudiostop1.setOnClickListener{
+            mediaPlayer!!.pause()
         }
 
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        mediaPlayer!!.stop()
     }
 }
