@@ -14,13 +14,12 @@
 
     <ImageView
         android:id="@+id/dantzaris_procesion_ordenar"
-        android:layout_width="wrap_content"
-        android:layout_height="133dp"
+        android:layout_width="166dp"
+        android:layout_height="113dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </ImageView>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <LinearLayout
         android:layout_width="413dp"
