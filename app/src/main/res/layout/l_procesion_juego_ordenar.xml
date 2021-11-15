@@ -25,9 +25,10 @@
     <LinearLayout
         android:layout_width="413dp"
         android:layout_height="600dp"
+        android:layout_marginTop="124dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dantzaris_procesion_ordenar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,6 +86,7 @@
                 app:layout_constraintVertical_bias="1.0"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,44 +146,43 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Gurutze_bidea">
-            </TextView>
+                android:text="@string/Gurutze_bidea"></TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Judasen_hilketa"
-                android:layout_marginLeft="30dp">
-            </TextView>
+                android:layout_marginLeft="30dp"
+                android:text="@string/Judasen_hilketa"></TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:layout_gravity="center">
+            android:gravity="center">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Azken_afaria"
-                >
-            </TextView>
+                android:text="@string/Azken_afaria"></TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Jesusen_epaiketa"
-                android:layout_marginLeft="30dp">
-            </TextView>
+                android:layout_marginLeft="30dp"
+                android:text="@string/Jesusen_epaiketa"></TextView>
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp">
+            android:layout_height="102dp">
 
 
             <Button
