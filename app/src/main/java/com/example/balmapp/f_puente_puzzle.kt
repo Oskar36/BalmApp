@@ -40,6 +40,8 @@ class f_puente_puzzle : Fragment() {
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_zubia)
     }
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

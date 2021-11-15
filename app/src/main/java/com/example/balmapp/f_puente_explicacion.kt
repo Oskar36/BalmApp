@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -37,6 +38,11 @@ class f_puente_explicacion : Fragment() {
             mediaplayer!!.stop()
 
         }
+
+
+
+
+
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgpuenteExplicacionLogo)
 
