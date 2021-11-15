@@ -103,7 +103,7 @@
         android:layout_marginTop="316dp"
         android:src="@drawable/puzzle1_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
@@ -122,10 +122,10 @@
         android:id="@+id/img_pieza6"
         android:layout_width="64dp"
         android:layout_height="52dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="316dp"
         android:src="@drawable/puzzle1_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintHorizontal_bias="0.386"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
@@ -133,10 +133,10 @@
         android:id="@+id/img_pieza"
         android:layout_width="66dp"
         android:layout_height="53dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="388dp"
         android:src="@drawable/puzzle1_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 
@@ -147,7 +147,7 @@
         android:layout_marginTop="388dp"
         android:src="@drawable/puzzle1_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
 

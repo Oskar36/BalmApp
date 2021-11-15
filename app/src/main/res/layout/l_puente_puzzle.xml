@@ -32,92 +32,88 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgjauregi_juego_logo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="52dp"
-        android:src="@drawable/logodantzaris"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpuente_puzzle_titulo" />
-
-    <ImageView
         android:id="@+id/img_puente_img"
         android:layout_width="234dp"
         android:layout_height="178dp"
-        android:layout_marginTop="28dp"
         android:src="@drawable/puente_puzzle_img"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
-
-    <ImageView
-        android:id="@+id/img_pieza1"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="224dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
 
     <ImageView
         android:id="@+id/img_pieza2"
         android:layout_width="122dp"
         android:layout_height="85dp"
-        android:layout_marginTop="328dp"
         android:src="@drawable/puzzle1_img"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
-
-    <ImageView
-        android:id="@+id/img_pieza3"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="224dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
-
-    <ImageView
-        android:id="@+id/img_pieza4"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="324dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726" />
 
     <ImageView
         android:id="@+id/img_pieza5"
         android:layout_width="122dp"
         android:layout_height="85dp"
-        android:layout_marginTop="224dp"
         android:src="@drawable/puzzle1_img"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
 
     <ImageView
         android:id="@+id/img_pieza6"
         android:layout_width="122dp"
         android:layout_height="85dp"
-        android:layout_marginTop="324dp"
         android:src="@drawable/puzzle1_img"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgjauregi_juego_logo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726" />
+
+    <ImageView
+        android:id="@+id/img_pieza4"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726" />
+
+    <ImageView
+        android:id="@+id/img_pieza1"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <ImageView
+        android:id="@+id/img_pieza3"
+        android:layout_width="122dp"
+        android:layout_height="85dp"
+        android:src="@drawable/puzzle1_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
