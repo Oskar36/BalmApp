@@ -26,6 +26,13 @@ class f_jauregi_unirjuego : Fragment() {
         // Inflate the layout for this fragment
         _binding = LJauregiUnirBinding.inflate(inflater, container, false)
         return  binding.root
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imglogo)
+
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

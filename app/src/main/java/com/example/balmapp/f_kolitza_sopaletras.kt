@@ -36,6 +36,13 @@ class f_kolitza_juego_sopaletras : Fragment() {
             val fragment:Fragment=f_kolitzajuego()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imglogo)
+
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

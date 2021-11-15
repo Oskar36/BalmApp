@@ -59,7 +59,8 @@ class f_procesion_explicacion : Fragment() {
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
 
         }
-
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
 
 
         NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
@@ -67,6 +68,10 @@ class f_procesion_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_precesion)
         //Iniciamos el audio
         mediaplayer!!.start()
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)        }
     }
 
     override fun onStart() {

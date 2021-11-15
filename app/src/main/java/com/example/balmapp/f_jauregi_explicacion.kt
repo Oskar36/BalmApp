@@ -33,10 +33,16 @@ class f_jauregi_explicacion : Fragment() {
             val fragment:Fragment=f_jauregi_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imglogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.jauregi_azalpena)
         //Iniciamos el audio
         mediaplayer!!.start()
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

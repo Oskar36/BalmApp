@@ -34,10 +34,17 @@ class f_puente_explicacion : Fragment() {
             val fragment:Fragment=f_puente_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imgpuenteExplicacionLogo)
+
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.zubia_azalpena)
        //Iniciamos el audio
         mediaplayer!!.start()
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgpuenteExplicacionLogo)        }
 
     }
     override fun onDestroyView() {

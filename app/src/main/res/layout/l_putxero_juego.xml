@@ -25,7 +25,6 @@
         android:layout_width="182dp"
         android:layout_height="121dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/logodantzaris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

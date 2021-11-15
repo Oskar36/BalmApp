@@ -33,10 +33,18 @@ class f_monte_explicacion : Fragment() {
             val fragment:Fragment=f_kolitza_juego_sopaletras()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imgmonteExplicacionLogo)
+
+
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
         //Iniciamos el audio
         mediaplayer!!.start()
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgmonteExplicacionLogo)        }
     }
     override fun onDestroyView() {
         super.onDestroyView()
