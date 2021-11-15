@@ -68,22 +68,14 @@ class f_procesion_explicacion : Fragment() {
         NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_precesion)
-<<<<<<< HEAD
-=======
-        //Iniciamos el audio
-        mediaplayer!!.start()
+
 
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)        }
     }
 
-    override fun onStart() {
-        super.onStart()
 
->>>>>>> 35f357f8996e877df11b071a9ee236fad1681f6b
-
-    }
 
 
     companion object {

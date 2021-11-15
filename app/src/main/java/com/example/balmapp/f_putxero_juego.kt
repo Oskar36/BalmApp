@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import androidx.core.view.*
 
 private var _binding: LPutxeroJuegoBinding? = null
 private val binding get() = _binding!!
+private var mediaplayer: MediaPlayer? = null
 
 class f_putxero_juego : Fragment() {
 
@@ -35,9 +37,13 @@ class f_putxero_juego : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnPutxerojuego.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            //paramos el audio
+            mediaplayer!!.stop()
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
 
 
         val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
@@ -103,5 +109,21 @@ class f_putxero_juego : Fragment() {
         }
        binding.frameLayout11.invalidate()
         true
+    }
+    override fun onStart() {
+        super.onStart()
+        //Iniciamos el audio
+        mediaplayer!!.start()
+
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        //liberacion del productor de medios
+        mediaPlayer?.release()
+        mediaplayer = null
+
+
     }
 }

@@ -41,16 +41,13 @@ class f_monte_explicacion : Fragment() {
 
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
-<<<<<<< HEAD
 
-=======
-        //Iniciamos el audio
-        mediaplayer!!.start()
+
 
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgmonteExplicacionLogo)        }
->>>>>>> 35f357f8996e877df11b071a9ee236fad1681f6b
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

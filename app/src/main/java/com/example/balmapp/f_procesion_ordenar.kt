@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import com.example.balmapp.databinding.LPuentePuzzleBinding
 
 private var _binding: LProcesionJuegoOrdenarBinding? = null
 private val binding get() = _binding!!
+private var mediaplayer: MediaPlayer? = null
 
 class f_procesion_ordenar : Fragment() {
 
@@ -31,12 +33,34 @@ class f_procesion_ordenar : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnprocesionordenar.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            //paramos el audio
+            mediaplayer!!.stop()
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
 
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
+
+
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.dantzarisProcesionOrdenar)        }
+    }
+    override fun onStart() {
+        super.onStart()
+        //Iniciamos el audio
+        mediaplayer!!.start()
+
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        //liberacion del productor de medios
+        mediaPlayer?.release()
+        mediaplayer = null
+
+
     }
 }
