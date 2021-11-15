@@ -11,8 +11,8 @@
     <ImageButton
         android:id="@+id/play"
         style="@style/botones"
-        android:layout_width="43dp"
-        android:layout_height="41dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +20,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.139"
-        tools:ignore="ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/pause"
         style="@style/botones"
-        android:layout_width="44dp"
-        android:layout_height="41dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:src="@android:drawable/ic_media_pause"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,127 +34,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.139"
-        tools:ignore="ImageContrastCheck" />
-
-    <TextView
-        android:id="@+id/txtsanfelipe_cancion"
-        android:layout_width="389dp"
-        android:layout_height="536dp"
-        android:layout_marginBottom="28dp"
-        android:lineSpacingExtra="14sp"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting                                      industry. Lorem Ipsum has been the industry's                                     standard dummy text ever since the 1500s, when an unknown                                      printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into                                         electronic typesetting, remaining                                     essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing                                        Lorem Ipsum passages, and more recently with desktop publishing                                     software like Aldus PageMaker including versions of Lorem Ipsum."
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtsanfelipe_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/san_felipe_y_santiago_cancion"
+        android:text="@string/felipe_cancion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra1"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.364"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pause"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra2"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.657"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sanfelipecancion_palabra1"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra3"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sanfelipecancion_palabra2"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra4"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.332"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sanfelipecancion_palabra3"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra5"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.332"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sanfelipecancion_palabra4"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra6"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sanfelipecancion_palabra5"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etxt_sanfelipecancion_palabra7"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.332"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxt_sanfelipecancion_palabra6"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/btncancion"
@@ -167,6 +58,465 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="407dp"
+        android:layout_height="484dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/btncancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtsanfelipe_cancion"
+                android:layout_width="match_parent"
+                android:layout_height="705dp"
+                android:layout_marginTop="32dp"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/felipe_cancion_letra"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra1"
+                    android:layout_width="85dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra1"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra2"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra3"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+                <TextView
+                    android:id="@+id/txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra3"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra4"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra5"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra5"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra6"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra7"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+                <TextView
+                    android:id="@+id/txt8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra7"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra8"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra9"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra9"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra10"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="11"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra11"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra11"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra12"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="13"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra13"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt13"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra13"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra14"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt14"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra15"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt15"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtpalabra15"
+                    tools:ignore="MissingConstraints"></TextView>
+
+                <EditText
+                    android:id="@+id/txtpalabra16"
+                    android:layout_width="83dp"
+                    android:layout_height="27dp"
+                    app:layout_constraintStart_toEndOf="@+id/txt16"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
