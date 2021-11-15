@@ -35,8 +35,8 @@ class f_juego_txapela_unir : Fragment() {
 
 
         //parar animacion cuando pare el audio
-        mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
+        //    mediaplayer!!.setOnCompletionListener {
+         //   NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

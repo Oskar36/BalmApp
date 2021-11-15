@@ -36,9 +36,9 @@ class f_txapela_explicacion : Fragment() {
         NavFrag.animacion_dantzaris(binding.imgtxapelaExplicacionLogo)
 
 
-        //parar animacion cuando pare el audio
+     /*   //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imgtxapelaExplicacionLogo)        }
+            NavFrag.animacion_dantzaris_parar(binding.imgtxapelaExplicacionLogo)        }*/
     }
     override fun onDestroyView() {
         super.onDestroyView()
