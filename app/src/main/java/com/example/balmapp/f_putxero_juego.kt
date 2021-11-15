@@ -36,6 +36,10 @@ class f_putxero_juego : Fragment() {
         binding.btnPutxerojuego.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
+
+
         val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
         moveLefttoRight.setDuration(50000)
         moveLefttoRight.setFillAfter(true)
@@ -49,6 +53,10 @@ class f_putxero_juego : Fragment() {
         binding.imgCaramelos.setOnTouchListener(touchListener)
         binding.imgPimiento.setOnTouchListener(touchListener)
 
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)        }
 
     }
     override fun onDestroyView() {

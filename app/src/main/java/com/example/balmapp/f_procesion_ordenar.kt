@@ -32,5 +32,11 @@ class f_procesion_ordenar : Fragment() {
         binding.btnprocesionordenar.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.dantzarisProcesionOrdenar)        }
     }
 }

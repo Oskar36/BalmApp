@@ -32,6 +32,13 @@ class f_txapela_explicacion : Fragment() {
             val fragment:Fragment=f_juego_txapela_unir()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imgtxapelaExplicacionLogo)
+
+
+        //parar animacion cuando pare el audio
+        mediaplayer!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgtxapelaExplicacionLogo)        }
     }
     override fun onDestroyView() {
         super.onDestroyView()
