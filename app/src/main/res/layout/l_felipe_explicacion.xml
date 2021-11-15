@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/felipe_explicacion"
+        android:text="@string/felipe_explicacion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,8 +24,8 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/jugar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtfelipe_explicacion" />
@@ -41,8 +41,8 @@
 
     <TextView
         android:id="@+id/txtfelipe_explicacion"
-        android:layout_width="328dp"
-        android:layout_height="282dp"
+        android:layout_width="334dp"
+        android:layout_height="363dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="40dp"
         android:text="@string/azalpena_sanfelipe"

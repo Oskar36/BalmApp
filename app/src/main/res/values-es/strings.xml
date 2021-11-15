@@ -52,23 +52,19 @@
         <string name="txt_Erromeria">Peregrinaje</string>
         <string name="txt_Bazkaria">Almuerzo</string>
         <string name="txt_ermita">Ermita</string>
-        <string name="txapela_explicacion">Boina explicacion</string>
-        <string name="felipe_explicacion">Felipe explicacion</string>
+        <string name="txapela_explicacion_titulo">Boina explicacion</string>
+        <string name="felipe_explicacion_titulo">Felipe explicacion</string>
         <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
         <string name="siguiente_adivinanda">Adivina el siguiente</string>
-        <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte.
-        ¡Me cruzan! ¿Quién soy?</string>
+        <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte. ¡Me cruzan! ¿Quién soy?</string>
         <string name="opcion_1jesus">A)Judas</string>
         <string name="opcion_2jesus">B)Jose</string>
         <string name="opcion_3jesus">C)Jesus</string>
-        <string name="explicacion_penitenteak">Llevo cruces.
-        Voy en grupo y todos usamos sombreros. Además, vamos descalzos.
-        ¿Quienes somos?</string>
+        <string name="explicacion_penitenteak">Llevo cruces. Voy en grupo y todos usamos sombreros. Además, vamos descalzos. ¿Quienes somos?</string>
         <string name="opcion_1penitenteak">A)Penitentes</string>
         <string name="opcion_2penitenteak">B)Los romanos</string>
         <string name="opcion_3penitenteak">C)Los ladrones</string>
-        <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante.
-        Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
+        <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante. Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
         <string name="opcion_1maria">A)Maria Magdalena</string>
         <string name="opcion_2maria">B)Virgen Maria</string>
         <string name="opcion_3maria">C)Uso zuria</string>
@@ -163,4 +159,12 @@ Abajo aparecen estos elementos. Lleva cada elemento a su sitio.</string>
 
     <string name="txtjauregi_unir_explicacion">Relaciona lo que aparece en la columna de la izquierda con lo que aparece en la columna de la derecha. Así
 sabréis lo que hay en cada piso.</string>
+
+    <string name="procesion_adivinar_explicacion">¡Hola, amigos! ¿Os atrevéis a jugar con El personaje inventado? Si es así, os aparecerá la descripción de un personaje y tendréis algunas opciones para adivinar quién es el personaje. ¿Listo? ¡Pues adelante!</string>
+
+    <string name="procesion_ordenar_explicacion">¿Que si la actividad anterior era sencilla? Para ir adelante tendréis que hacer una última misión. ¡Si habéis estado atentos lo haréis en la PRIMERA! Sólo tenéis que ordenar los eventos que aparecen de mayor a mayor.</string>
+
+
+
+
 </resources>
