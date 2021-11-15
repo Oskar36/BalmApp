@@ -158,4 +158,9 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
         eta gaur egun San Severino plazan.
  </string>
 
+    <string name="txtjauregi_puzzle_explicacion">En la fotografía aparece el palacio, pero le faltan ventanas, puerta, bigas, escudo de armas, etc.
+Abajo aparecen estos elementos. Lleva cada elemento a su sitio.</string>
+
+    <string name="txtjauregi_unir_explicacion">Relaciona lo que aparece en la columna de la izquierda con lo que aparece en la columna de la derecha. Así
+sabréis lo que hay en cada piso.</string>
 </resources>

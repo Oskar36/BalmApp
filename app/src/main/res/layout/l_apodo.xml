@@ -5,13 +5,11 @@
     android:id="@+id/c_apodo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".f_apodo"
-    >
-    tools:viewBindingIgnore="true"
+    tools:context=".f_apodo">
     <TextView
         android:id="@+id/txtapodo_apodotext"
-        android:layout_width="163dp"
-        android:layout_height="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/apodo"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -20,7 +18,11 @@
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.296"
+        tools:layout_conversion_absoluteHeight="731dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
 
     <EditText
         android:id="@+id/txtapodo_apodo"
@@ -48,4 +50,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtapodo_apodo"
         app:layout_constraintVertical_bias="0.275" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

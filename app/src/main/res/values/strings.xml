@@ -142,6 +142,11 @@ Egunari amaiera emateko, Isiltasunaren Prozesioa ospatzen da, bereziena dena. Er
         ospatzen jarraitu zen. Hasieran frontoian egiten ziren
         eta gaur egun San Severino plazan.
  </string>
+    <string name="txtjauregi_puzzle_explicacion">Argazkian jauregia agertzen da, baina, leihoak, atea, bigak, armarria etab. falta zaizkio.
+Behean elementu horiek agertzen dira. Eraman elementu bakoitza bere lekura.</string>
+
+    <string name="txtjauregi_unir_explicacion">Lotu ezkerreko zutabean agertzen dena eskumako zutabean agertzen denarekin. Horrela
+solairu bakoitzean zer dagoen jakingo duzue.</string>
 
 
 </resources>

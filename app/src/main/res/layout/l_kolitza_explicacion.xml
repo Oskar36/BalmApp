@@ -24,8 +24,8 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/jugar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtmonte_explicacion" />
@@ -34,17 +34,17 @@
         android:id="@+id/imgmonte_explicacion_logo"
         android:layout_width="166dp"
         android:layout_height="113dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtmonte_explicacion_titulo" />
 
     <TextView
         android:id="@+id/txtmonte_explicacion"
-        android:layout_width="328dp"
-        android:layout_height="282dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="385dp"
+        android:layout_height="411dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/azalpena_kolitza"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
