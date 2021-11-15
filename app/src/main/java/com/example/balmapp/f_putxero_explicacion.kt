@@ -32,6 +32,8 @@ class f_putxero_explicacion : Fragment() {
         binding.btnputxeroExplicacionJugar.setOnClickListener(){
             val fragment:Fragment=f_putxero_juego()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            //paramos el audio
+            mediaplayer!!.stop()
         }
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_putxero)
@@ -43,8 +45,22 @@ class f_putxero_explicacion : Fragment() {
         _binding = null
 
     }
-    override fun onDestroy() {
-        super.onDestroy()
-        mediaPlayer!!.stop()
+    override fun onStart() {
+        super.onStart()
+        //Iniciamos el audio
+        mediaplayer!!.start()
+
     }
+
+
+    override fun onStop() {
+        super.onStop()
+        //liberacion del productor de medios
+        mediaPlayer?.release()
+        mediaplayer = null
+
+
+    }
+
+
 }

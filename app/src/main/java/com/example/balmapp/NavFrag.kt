@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
+import android.media.MediaPlayer
 import android.os.CountDownTimer
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -56,6 +57,9 @@ class NavFrag {
             animacion.stop()
 
         }
+
+
+
     }
 }
 

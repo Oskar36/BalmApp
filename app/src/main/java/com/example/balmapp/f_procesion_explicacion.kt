@@ -57,6 +57,8 @@ class f_procesion_explicacion : Fragment() {
         binding.btnprocesionExplicacionJugar.setOnClickListener(){
             val fragment:Fragment=f_procesion_juego_adivinar_Jesus()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            //paramos el audio
+            mediaplayer!!.stop()
 
         }
 
@@ -65,15 +67,9 @@ class f_procesion_explicacion : Fragment() {
         NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_precesion)
-        //Iniciamos el audio
-        mediaplayer!!.start()
-    }
-
-    override fun onStart() {
-        super.onStart()
-
 
     }
+
 
     companion object {
         /**
@@ -99,6 +95,23 @@ class f_procesion_explicacion : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-        mediaPlayer!!.stop()
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        //Iniciamos el audio
+        mediaplayer!!.start()
+
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        //liberacion del productor de medios
+        mediaPlayer?.release()
+        mediaplayer = null
+
+
     }
 }

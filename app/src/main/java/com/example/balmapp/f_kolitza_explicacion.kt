@@ -32,20 +32,35 @@ class f_monte_explicacion : Fragment() {
         binding.btnmonteExplicacionJugar.setOnClickListener(){
             val fragment:Fragment=f_kolitza_juego_sopaletras()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            //paramos el audio
+            mediaplayer!!.stop()
         }
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
-        //Iniciamos el audio
-        mediaplayer!!.start()
+
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
 
     }
-    override fun onDestroy() {
-        super.onDestroy()
-        mediaPlayer!!.stop()
+    override fun onStart() {
+        super.onStart()
+        //Iniciamos el audio
+        mediaplayer!!.start()
+
     }
+
+
+    override fun onStop() {
+        super.onStop()
+        //liberacion del productor de medios
+        mediaPlayer?.release()
+        mediaplayer = null
+
+
+    }
+
+
 
 }

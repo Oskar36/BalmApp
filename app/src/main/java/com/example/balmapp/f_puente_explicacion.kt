@@ -33,11 +33,15 @@ class f_puente_explicacion : Fragment() {
         binding.btnpuenteExplicacionJugar.setOnClickListener(){
             val fragment:Fragment=f_puente_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            //paramos el audio
+            mediaplayer!!.stop()
+
         }
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.zubia_azalpena)
-       //Iniciamos el audio
-        mediaplayer!!.start()
+
+
+
 
     }
     override fun onDestroyView() {
@@ -46,16 +50,27 @@ class f_puente_explicacion : Fragment() {
 
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        mediaPlayer!!.stop()
+
+
+
+
+    override fun onStart() {
+        super.onStart()
+        //Iniciamos el audio
+        mediaplayer!!.start()
+
     }
-    override fun onResume() {
-
-        super.onResume()
 
 
-        }
+    override fun onStop() {
+        super.onStop()
+        //liberacion del productor de medios
+            mediaPlayer?.release()
+             mediaplayer = null
+
+
+    }
+
 
 
 }
