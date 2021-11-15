@@ -20,7 +20,8 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_putxero_juego : Fragment() {
 
-
+    var x0:Float = 0.0f
+    var y0:Float = 0.0f
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -47,8 +48,18 @@ class f_putxero_juego : Fragment() {
 
 
         val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
-        moveLefttoRight.setDuration(50000)
-        moveLefttoRight.setFillAfter(true)
+        moveLefttoRight.duration = 50000
+        moveLefttoRight.fillAfter = true
+
+        binding.imgputxeroJuegoLogo.setOnClickListener(){
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
+               mediaplayer!!.stop()
+            }else{
+                NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
+                mediaplayer!!.start()
+            }
+        }
         binding.imgPutxeroTren.startAnimation(moveLefttoRight)
         binding.imgAlubias.setOnTouchListener(touchListener)
         binding.imgEspinacas.setOnTouchListener(touchListener)
@@ -62,7 +73,10 @@ class f_putxero_juego : Fragment() {
 
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)        }
+            NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
+        }
+
+
 
     }
     override fun onDestroyView() {
@@ -74,6 +88,8 @@ class f_putxero_juego : Fragment() {
     val touchListener = View.OnTouchListener { view, event ->
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
+        val left=view.marginLeft
+        val top=view.marginTop
         when (event.action and MotionEvent.ACTION_MASK) {
             MotionEvent.ACTION_DOWN -> {
                 val lParams = view.layoutParams as ConstraintLayout.LayoutParams
@@ -89,15 +105,20 @@ class f_putxero_juego : Fragment() {
                 binding.imgPutxeroPutxero.getLocationOnScreen(location2)
                 val x2 = location2[0]
                 val y2 = location2[1]
-
-                //Toast.makeText(context, "View: ${x}  Puchero  ${x2} ", Toast.LENGTH_SHORT).show()
-
+                val location3 = IntArray(2)
+                binding.imgManzana.getLocationOnScreen(location3)
+                x0 = location3[0].toFloat()
+                y0 = location3[1].toFloat()
                 if((x<=(x2+100) && x>=(x2-100)) && (y<=(y2+300) && (y>=y2-40))){
-                    view.isVisible=false
-             }
+                    if(Valid(resources.getResourceEntryName(view.id))){
+                        view.isVisible=false
+                    }else{
+                        view.x=x0
+                        view.y=y0
+                    }
+                }
             }
             MotionEvent.ACTION_MOVE -> {
-               // Toast.makeText(context, "Puchero top: ${binding.imgPutxeroPutxero.paddingLeft}  ", Toast.LENGTH_SHORT).show()
                 val layoutParams = view
                     .layoutParams as ConstraintLayout.LayoutParams
                 layoutParams.leftMargin = x - xDelta
@@ -125,5 +146,16 @@ class f_putxero_juego : Fragment() {
         mediaplayer = null
 
 
+    }
+    fun Valid(nombre:String):Boolean{
+        val array_no_validos:List<String> = listOf("manzana","caramelos")
+        array_no_validos.forEach{
+            var comprnombre:String="img_"
+            comprnombre += it
+            if(comprnombre == nombre){
+                return false
+            }
+        }
+        return true
     }
 }

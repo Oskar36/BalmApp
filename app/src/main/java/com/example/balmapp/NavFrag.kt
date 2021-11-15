@@ -53,13 +53,8 @@ class NavFrag {
                 setBackgroundResource(R.drawable.animaciondantzaris)
                 animacion = background as AnimationDrawable
             }
-
             animacion.stop()
-
         }
-
-
-
     }
 }
 
