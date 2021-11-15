@@ -41,19 +41,19 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
 
         super.onResume()
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaPlayer = MediaPlayer.create(context, R.raw.penitenteak)
+        mediaplayer = MediaPlayer.create(context, R.raw.penitenteak)
         binding.imgaudioplay1.setOnClickListener{
         //controlamos que el audio no esta reproduciendose
-            if(mediaPlayer!!.isPlaying()){
-                mediaPlayer!!.seekTo(0)
+            if(mediaplayer!!.isPlaying()){
+                mediaplayer!!.seekTo(0)
             } else {
                 //Iniciamos el audio
-                mediaPlayer!!.start()
+                mediaplayer!!.start()
             }
         }
         binding.imgaudiostop1.setOnClickListener{
             //Pausamos el audio
-            mediaPlayer!!.pause()
+            mediaplayer!!.pause()
         }
 
 
@@ -62,6 +62,6 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        mediaPlayer!!.stop()
+        mediaplayer!!.stop()
     }
 }

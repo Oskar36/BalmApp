@@ -41,23 +41,22 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     override fun onResume() {
 
         super.onResume()
-        mediaPlayer = MediaPlayer.create(context, R.raw.andremariabirjina)
+        mediaplayer = MediaPlayer.create(context, R.raw.andremariabirjina)
         binding.imgaudioplay1.setOnClickListener{
 
-            if(mediaPlayer!!.isPlaying()){
-                mediaPlayer!!.seekTo(0)
+            if(mediaplayer!!.isPlaying()){
+                mediaplayer!!.seekTo(0)
             } else {
-                mediaPlayer!!.start()
+                mediaplayer!!.start()
             }
         }
         binding.imgaudiostop1.setOnClickListener{
-            mediaPlayer!!.pause()
+            mediaplayer!!.pause()
         }
-
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        mediaPlayer!!.stop()
+        mediaplayer!!.stop()
     }
 }

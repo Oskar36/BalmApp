@@ -17,11 +17,8 @@ import androidx.core.view.*
 private var _binding: LPutxeroJuegoBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
-
 class f_putxero_juego : Fragment() {
 
-    var x0:Float = 0.0f
-    var y0:Float = 0.0f
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -70,13 +67,10 @@ class f_putxero_juego : Fragment() {
         binding.imgCaramelos.setOnTouchListener(touchListener)
         binding.imgPimiento.setOnTouchListener(touchListener)
 
-
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
         }
-
-
 
     }
     override fun onDestroyView() {
@@ -88,8 +82,10 @@ class f_putxero_juego : Fragment() {
     val touchListener = View.OnTouchListener { view, event ->
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
-        val left=view.marginLeft
-        val top=view.marginTop
+        var left=0
+        var top=0
+             left=view.left
+             top=view.top
         when (event.action and MotionEvent.ACTION_MASK) {
             MotionEvent.ACTION_DOWN -> {
                 val lParams = view.layoutParams as ConstraintLayout.LayoutParams
@@ -105,16 +101,13 @@ class f_putxero_juego : Fragment() {
                 binding.imgPutxeroPutxero.getLocationOnScreen(location2)
                 val x2 = location2[0]
                 val y2 = location2[1]
-                val location3 = IntArray(2)
-                binding.imgManzana.getLocationOnScreen(location3)
-                x0 = location3[0].toFloat()
-                y0 = location3[1].toFloat()
+
                 if((x<=(x2+100) && x>=(x2-100)) && (y<=(y2+300) && (y>=y2-40))){
                     if(Valid(resources.getResourceEntryName(view.id))){
                         view.isVisible=false
                     }else{
-                        view.x=x0
-                        view.y=y0
+                        view.y=top.toFloat()
+                        view.x=left.toFloat()
                     }
                 }
             }
@@ -142,11 +135,12 @@ class f_putxero_juego : Fragment() {
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
-        mediaPlayer?.release()
+        mediaplayer?.release()
         mediaplayer = null
 
 
     }
+
     fun Valid(nombre:String):Boolean{
         val array_no_validos:List<String> = listOf("manzana","caramelos")
         array_no_validos.forEach{

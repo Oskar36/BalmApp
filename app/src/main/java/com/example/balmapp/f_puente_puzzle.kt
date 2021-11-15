@@ -57,7 +57,7 @@ class f_puente_puzzle : Fragment() {
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
-        mediaPlayer?.release()
+        mediaplayer?.release()
         mediaplayer = null
 
 

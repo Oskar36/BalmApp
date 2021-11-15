@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val fragment= f_modo()
-        NavFrag.cargarfragment(fragment,this,R.id.fl_main)
-
+        NavFrag.Abrirfragment(fragment,this,R.id.fl_main)
 
 
 

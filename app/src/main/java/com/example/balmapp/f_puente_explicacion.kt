@@ -78,7 +78,7 @@ class f_puente_explicacion : Fragment() {
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
-            mediaPlayer?.release()
+        mediaplayer?.release()
              mediaplayer = null
 
 

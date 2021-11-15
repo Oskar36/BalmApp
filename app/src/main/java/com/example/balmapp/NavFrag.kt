@@ -29,16 +29,11 @@ class NavFrag {
                 val clase = Class.forName(nombreclase)
                 val intent = Intent(context, clase)
                 context.startActivity(intent)
-                (context as Activity).finish()
         }
-        fun cargarfragment(fragment: Fragment,activity: AppCompatActivity,layout: Int) {
+        fun Abrirfragment(fragment: Fragment,activity: AppCompatActivity,layout: Int) {
             val transaction= activity.supportFragmentManager.beginTransaction()
-            transaction.replace(layout, fragment).addToBackStack(null)
+            transaction.add(layout, fragment)
             transaction.commit()
-        }
-        fun addFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int) {
-            val fragment: Fragment =someFragment
-            f_activity.supportFragmentManager.beginTransaction().add(id, fragment).addToBackStack(null).commit()
         }
         fun animacion_dantzaris(imagen: ImageView){
             val dantzaris = imagen.apply {
@@ -57,9 +52,6 @@ class NavFrag {
             animacion.stop()
 
         }
-
-
-
     }
 }
 

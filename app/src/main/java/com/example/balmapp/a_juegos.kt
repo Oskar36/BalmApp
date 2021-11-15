@@ -22,6 +22,6 @@ class a_juegos : AppCompatActivity() {
             "puchero" ->   fragment=f_putxero_explicacion()
             "boina" ->     fragment=f_txapela_explicacion()
         }
-        NavFrag.cargarfragment(fragment!!,this,R.id.framejuegos)
+        NavFrag.Abrirfragment(fragment!!,this,R.id.framejuegos)
     }
 }
