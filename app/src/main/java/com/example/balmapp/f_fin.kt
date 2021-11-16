@@ -34,12 +34,28 @@ class f_fin : Fragment() {
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
         binding.btnfinRepetir.setOnClickListener(){
-            val fragment:Fragment=f_partida()
+            val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            Sharedapp.gune.gune=""
         }
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    fun MarcadorJuego(gune: String):Fragment{
+        var fragment:Fragment?=null
+        when (gune){
+            "1.Gunea" ->     fragment=f_puente_puzzle()
+            "2.Gunea 1" ->   fragment=f_kolitza_juego_sopaletras()
+            "2.Gunea 2" ->   fragment=f_kolitzajuego()
+            "3.Gunea 1" ->   fragment=f_jauregi_puzzle()
+            "3.Gunea 2" ->   fragment=f_jauregi_unirjuego()
+            "4.Gunea" ->     fragment=f_procesion_ordenar()
+            "5.Gunea" ->     fragment=f_juego_txapela_unir()
+            "6.Gunea" ->     fragment=f_sanfelipe_cancion()
+            "7.Gunea" ->     fragment=f_putxero_juego()
+        }
+        return fragment!!
     }
 }

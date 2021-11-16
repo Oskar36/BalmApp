@@ -32,9 +32,11 @@ class f_puente_puzzle : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizarPuente.setOnClickListener(){
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
             //paramos el audio
             mediaplayer!!.stop()
+            Sharedapp.gune.gune="1.Gunea"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
 
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio

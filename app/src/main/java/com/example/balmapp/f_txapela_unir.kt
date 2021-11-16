@@ -28,7 +28,9 @@ class f_juego_txapela_unir : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizarPuente.setOnClickListener(){
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            Sharedapp.gune.gune="5.Gunea"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

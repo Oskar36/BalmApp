@@ -26,9 +26,11 @@ class f_procesion_ordenar : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnprocesionordenar.setOnClickListener(){
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
             //paramos el audio
             mediaplayer!!.stop()
+            Sharedapp.gune.gune="4.Gunea"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
         NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio

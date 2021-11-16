@@ -165,6 +165,7 @@ class f_sanfelipe_cancion : Fragment() {
 
 
             //Abrir fragment repetir juego
+            Sharedapp.gune.gune="6.Gunea"
             val fragment:Fragment=f_fin()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
