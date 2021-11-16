@@ -35,47 +35,46 @@ class f_putxero_juego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnPutxerojuego.setOnClickListener(){
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            //NavFrag.IniciarActivity(requireContext(),"a_mapa")
             //paramos el audio
             mediaplayer!!.stop()
+            Sharedapp.gune.gune="8.Gunea"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
+        mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_putxeroa)
 
 
         val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
 
-        //parar y continuar el audio
-        binding.imgputxeroJuegoLogo.setOnClickListener {
+        binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-                mediaplayer!!.stop()
+               mediaplayer!!.stop()
             }else{
-
                 mediaplayer!!.prepare()
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
             }
         }
-        binding.imgPutxeroTren.startAnimation(moveLefttoRight)
-        binding.imgAlubias.setOnTouchListener(touchListener)
-        binding.imgEspinacas.setOnTouchListener(touchListener)
-        binding.imgManzana.setOnTouchListener(touchListener)
-        binding.imgHuevos.setOnTouchListener(touchListener)
-        binding.imgMorcilla.setOnTouchListener(touchListener)
-        binding.imgPatatas.setOnTouchListener(touchListener)
-        binding.imgCaramelos.setOnTouchListener(touchListener)
-        binding.imgPimiento.setOnTouchListener(touchListener)
-
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
+            binding.imgPutxeroTren.startAnimation(moveLefttoRight)
+            binding.imgAlubias.setOnTouchListener(touchListener)
+            binding.imgEspinacas.setOnTouchListener(touchListener)
+            binding.imgManzana.setOnTouchListener(touchListener)
+            binding.imgHuevos.setOnTouchListener(touchListener)
+            binding.imgMorcilla.setOnTouchListener(touchListener)
+            binding.imgPatatas.setOnTouchListener(touchListener)
+            binding.imgCaramelos.setOnTouchListener(touchListener)
+            binding.imgPimiento.setOnTouchListener(touchListener)
         }
-
     }
     override fun onDestroyView() {
         super.onDestroyView()

@@ -26,8 +26,9 @@ class f_sanfelipe_cancion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btncancion.setOnClickListener(){
+        binding.btncorregir.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+
         }
 
         //Comprobacion de que las palabras de la cancion esten bien escrita.
@@ -160,6 +161,12 @@ class f_sanfelipe_cancion : Fragment() {
             else{
                 binding.txtpalabra16.setTextColor(Color.parseColor("#00ff00"))
             }
+
+
+
+            //Abrir fragment repetir juego
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
 
 

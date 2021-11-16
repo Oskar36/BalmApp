@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/img_puente_img"
+        android:id="@+id/img_jauregi_foto"
         android:layout_width="234dp"
         android:layout_height="178dp"
         android:src="@drawable/puente_puzzle_img"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.231" />
 
     <ImageView
-        android:id="@+id/img_pieza2"
+        android:id="@+id/img_pieza_escudo"
         android:layout_width="122dp"
         android:layout_height="85dp"
         android:src="@drawable/puzzle1_img"
@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.726" />
 
     <ImageView
-        android:id="@+id/img_pieza5"
+        android:id="@+id/img_pieza_balcon"
         android:layout_width="122dp"
         android:layout_height="85dp"
         android:src="@drawable/puzzle1_img"
@@ -80,7 +80,7 @@
         app:layout_constraintVertical_bias="0.726" />
 
     <ImageView
-        android:id="@+id/img_pieza4"
+        android:id="@+id/img_pieza_columna"
         android:layout_width="122dp"
         android:layout_height="85dp"
         android:src="@drawable/puzzle1_img"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.726" />
 
     <ImageView
-        android:id="@+id/img_pieza1"
+        android:id="@+id/img_pieza_ventana"
         android:layout_width="122dp"
         android:layout_height="85dp"
         android:src="@drawable/puzzle1_img"
@@ -104,7 +104,7 @@
         app:layout_constraintVertical_bias="0.571" />
 
     <ImageView
-        android:id="@+id/img_pieza3"
+        android:id="@+id/img_pieza_puertaventana"
         android:layout_width="122dp"
         android:layout_height="85dp"
         android:src="@drawable/puzzle1_img"
