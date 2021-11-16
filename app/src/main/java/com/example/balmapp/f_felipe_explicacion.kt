@@ -52,27 +52,6 @@ class f_felipe_explicacion : Fragment() {
         //Toast.makeText(requireContext(), repro.toString(), Toast.LENGTH_SHORT).show()
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)        }
-        /*
-        if (repro==false){
-            NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
-            Toast.makeText(requireContext(), "parado", Toast.LENGTH_SHORT).show()
-        }
-        else
-        {
-            Toast.makeText(requireContext(), "puto", Toast.LENGTH_SHORT).show()
-        }
-         */
-
-
-
-      /*
-        if(mediaPlayer!!.isPlaying()){
-            Toast.makeText(requireContext(), "sii", Toast.LENGTH_SHORT).show()
-        } else {
-            println(mediaPlayer!!.isPlaying())
-            Toast.makeText(requireContext(), "noo", Toast.LENGTH_SHORT).show()
-        }
-*/
 
     }
 

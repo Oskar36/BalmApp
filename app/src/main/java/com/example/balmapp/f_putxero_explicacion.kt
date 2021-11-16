@@ -1,11 +1,13 @@
 package com.example.balmapp
 
+import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LPutxeroExplicacionBinding
 
 
@@ -44,7 +46,26 @@ class f_putxero_explicacion : Fragment() {
 
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imgputxeroExplicacionLogo)        }
+            NavFrag.animacion_dantzaris_parar(binding.imgputxeroExplicacionLogo)
+            }
+
+        //parar y continuar el audio 
+        binding.imgputxeroExplicacionLogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgputxeroExplicacionLogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgputxeroExplicacionLogo)
+            }
+        }
+
+
+
+
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

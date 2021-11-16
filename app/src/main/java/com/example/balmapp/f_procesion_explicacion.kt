@@ -45,6 +45,21 @@ class f_procesion_explicacion : Fragment() {
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)        }
+
+
+        //parar y continuar el audio
+        binding.imgprocesionExplicacionLogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
+            }
+        }
+
     }
     override fun onDestroy() {
         super.onDestroy()

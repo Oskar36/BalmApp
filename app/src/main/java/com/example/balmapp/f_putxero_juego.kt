@@ -49,13 +49,16 @@ class f_putxero_juego : Fragment() {
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
 
-        binding.imgputxeroJuegoLogo.setOnClickListener(){
+        //parar y continuar el audio
+        binding.imgputxeroJuegoLogo.setOnClickListener {
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-               mediaplayer!!.stop()
+                mediaplayer!!.stop()
             }else{
-                NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
+
+                mediaplayer!!.prepare()
                 mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
             }
         }
         binding.imgPutxeroTren.startAnimation(moveLefttoRight)
@@ -105,14 +108,22 @@ class f_putxero_juego : Fragment() {
                 binding.imgPutxeroPutxero.getLocationOnScreen(location2)
                 val x2 = location2[0]
                 val y2 = location2[1]
-
                 if((x<=(x2+100) && x>=(x2-100)) && (y<=(y2+300) && (y>=y2-40))){
                     if(Valid(resources.getResourceEntryName(view.id))){
                         view.isVisible=false
+                        y0=0.0f
+                        x0=0.0f
                     }else{
                         view.x=x0
                         view.y=y0
+                        y0=0.0f
+                        x0=0.0f
                     }
+                }else{
+                    view.x=x0
+                    view.y=y0
+                    y0=0.0f
+                    x0=0.0f
                 }
             }
             MotionEvent.ACTION_MOVE -> {

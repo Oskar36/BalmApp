@@ -48,6 +48,19 @@ class f_monte_explicacion : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgmonteExplicacionLogo)        }
 
+        //parar y continuar el audio
+        binding.imgmonteExplicacionLogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgmonteExplicacionLogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgmonteExplicacionLogo)
+            }
+        }
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

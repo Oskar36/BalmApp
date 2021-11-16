@@ -62,6 +62,7 @@ class f_jauregi_puzzle : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
         }
+<<<<<<< HEAD
 
         //convertir las piezas en arrastables
         binding.imgPiezaBalcon.setOnTouchListener(touchListener)
@@ -71,6 +72,20 @@ class f_jauregi_puzzle : Fragment() {
         binding.imgPiezaVentana.setOnTouchListener(touchListener)
         binding.imgPiezaPuertaventana.setOnTouchListener(touchListener)
 
+=======
+        //parar y continuar el audio
+        binding.imgjauregiJuegoLogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
+            }
+        }
+>>>>>>> 14c04fef9ce2e60e64b8f5355e7735ae755e91e3
     }
 
     var xDelta: Int = 0

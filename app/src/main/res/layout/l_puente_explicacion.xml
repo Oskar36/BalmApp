@@ -30,14 +30,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtpuente_explicacion" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgpuente_explicacion_logo"
         android:layout_width="166dp"
         android:layout_height="113dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="120dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpuente_explicacion_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtpuente_explicacion_titulo"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtpuente_explicacion"

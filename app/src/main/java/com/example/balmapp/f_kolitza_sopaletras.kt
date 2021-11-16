@@ -49,6 +49,19 @@ class f_kolitza_juego_sopaletras : Fragment() {
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
+
+        //parar y continuar el audio
+        binding.imglogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imglogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imglogo)
+            }
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()
