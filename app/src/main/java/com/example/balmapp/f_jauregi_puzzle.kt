@@ -55,6 +55,18 @@ class f_jauregi_puzzle : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
         }
+        //parar y continuar el audio
+        binding.imgjauregiJuegoLogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
+            }
+        }
     }
 
     override fun onDestroyView() {

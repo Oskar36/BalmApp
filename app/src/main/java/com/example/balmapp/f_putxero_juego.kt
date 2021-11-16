@@ -49,13 +49,16 @@ class f_putxero_juego : Fragment() {
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
 
-        binding.imgputxeroJuegoLogo.setOnClickListener(){
+        //parar y continuar el audio
+        binding.imgputxeroJuegoLogo.setOnClickListener {
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-               mediaplayer!!.stop()
+                mediaplayer!!.stop()
             }else{
-                NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
+
+                mediaplayer!!.prepare()
                 mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
             }
         }
         binding.imgPutxeroTren.startAnimation(moveLefttoRight)

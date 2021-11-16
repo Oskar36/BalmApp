@@ -39,10 +39,6 @@ class f_puente_explicacion : Fragment() {
 
         }
 
-
-
-
-
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgpuenteExplicacionLogo)
 
@@ -50,11 +46,22 @@ class f_puente_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.zubia_azalpena)
 
 
-
-
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgpuenteExplicacionLogo)        }
+
+        //parar y continuar el audio
+        binding.imgpuenteExplicacionLogo.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgpuenteExplicacionLogo)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgpuenteExplicacionLogo)
+            }
+        }
 
     }
     override fun onDestroyView() {

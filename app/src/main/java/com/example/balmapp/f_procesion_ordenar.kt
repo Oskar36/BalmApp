@@ -30,14 +30,25 @@ class f_procesion_ordenar : Fragment() {
             //paramos el audio
             mediaplayer!!.stop()
         }
+        NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.kolitza_azalpena)
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.dantzarisProcesionOrdenar)
         }
-        //inicio de la animacion
-        NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
+        //parar y continuar el audio
+        binding.dantzarisProcesionOrdenar.setOnClickListener {
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.dantzarisProcesionOrdenar)
+                mediaplayer!!.stop()
+            }else{
+
+                mediaplayer!!.prepare()
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
+            }
+        }
     }
 
     override fun onStop() {

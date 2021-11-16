@@ -49,7 +49,7 @@ class f_putxero_explicacion : Fragment() {
             NavFrag.animacion_dantzaris_parar(binding.imgputxeroExplicacionLogo)
             }
 
-
+        //parar y continuar el audio 
         binding.imgputxeroExplicacionLogo.setOnClickListener {
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroExplicacionLogo)
