@@ -127,6 +127,7 @@ class f_putxero_juego : Fragment() {
         }
        binding.frameLayout11.invalidate()
         true
+
     }
     override fun onStart() {
         super.onStart()
