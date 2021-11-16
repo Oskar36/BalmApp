@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LFinBinding
 
@@ -28,9 +29,9 @@ class f_fin : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        Toast.makeText(requireContext(), "${Sharedapp.gune.gune}", Toast.LENGTH_SHORT).show()
         binding.btnfinContinuar.setOnClickListener(){
-            val fragment:Fragment=f_partida()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
         binding.btnfinRepetir.setOnClickListener(){
             val fragment:Fragment=f_partida()

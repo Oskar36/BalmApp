@@ -28,6 +28,7 @@ class f_sanfelipe_cancion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btncorregir.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+
         }
 
         //Comprobacion de que las palabras de la cancion esten bien escrita.
