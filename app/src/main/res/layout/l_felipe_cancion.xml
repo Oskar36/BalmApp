@@ -59,6 +59,19 @@
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btncorregir"
+        style="@style/botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/txt_corregir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
         android:layout_width="407dp"
         android:layout_height="484dp"
@@ -78,8 +91,9 @@
             <TextView
                 android:id="@+id/txtsanfelipe_cancion"
                 android:layout_width="match_parent"
-                android:layout_height="705dp"
-                android:layout_marginTop="32dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
                 android:lineSpacingExtra="6sp"
                 android:text="@string/felipe_cancion_letra"
                 android:textSize="20sp"
@@ -108,8 +122,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra1"
-                    android:layout_width="85dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt1"
                     app:layout_constraintTop_toTopOf="parent"
@@ -121,7 +135,7 @@
                     android:id="@+id/txt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -130,8 +144,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra2"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt2"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -158,8 +173,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra3"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt3"
                     app:layout_constraintTop_toTopOf="parent"
@@ -171,7 +186,7 @@
                     android:id="@+id/txt4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -180,8 +195,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra4"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt4"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -208,8 +224,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra5"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt5"
                     app:layout_constraintTop_toTopOf="parent"
@@ -223,7 +239,7 @@
                     android:id="@+id/txt6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="6"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -232,8 +248,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra6"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt6"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -262,8 +279,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra7"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt7"
                     app:layout_constraintTop_toTopOf="parent"
@@ -275,7 +292,7 @@
                     android:id="@+id/txt8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="8"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -284,8 +301,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra8"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt8"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -313,8 +331,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra9"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt9"
                     app:layout_constraintTop_toTopOf="parent"
@@ -329,7 +347,7 @@
                     android:id="@+id/txt10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="10"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -338,8 +356,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra10"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt10"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -369,8 +388,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra11"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt11"
                     app:layout_constraintTop_toTopOf="parent"
@@ -384,7 +403,7 @@
                     android:id="@+id/txt12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="12"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -393,8 +412,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra12"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt12"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -423,8 +443,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra13"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt13"
                     app:layout_constraintTop_toTopOf="parent"
@@ -439,7 +459,7 @@
                     android:id="@+id/txt14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="14"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -448,8 +468,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra14"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt14"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
@@ -481,8 +502,8 @@
 
                 <EditText
                     android:id="@+id/txtpalabra15"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt15"
                     app:layout_constraintTop_toTopOf="parent"
@@ -498,7 +519,7 @@
                     android:id="@+id/txt16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="80dp"
                     android:text="16"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -507,8 +528,9 @@
 
                 <EditText
                     android:id="@+id/txtpalabra16"
-                    android:layout_width="83dp"
-                    android:layout_height="27dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
                     app:layout_constraintStart_toEndOf="@+id/txt16"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
