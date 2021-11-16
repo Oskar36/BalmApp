@@ -40,7 +40,7 @@ class NavFrag {
             setBackgroundResource(R.drawable.animaciondantzaris)
             animacion = background as AnimationDrawable
         }
-            animacion.run()
+            animacion.start()
 
         }
         fun animacion_dantzaris_parar(imagen: ImageView){

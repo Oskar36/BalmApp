@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txttxapela_explicacion" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgtxapela_explicacion_logo"
         android:layout_width="166dp"
         android:layout_height="113dp"
