@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -79,13 +80,16 @@ class f_putxero_juego : Fragment() {
     }
     var xDelta: Int=0
     var yDelta: Int=0
+    var x0=0.0f
+    var y0=0.0f
+    @SuppressLint("ClickableViewAccessibility")
     val touchListener = View.OnTouchListener { view, event ->
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
-        var left=0
-        var top=0
-             left=view.left
-             top=view.top
+        if(x0==0.0f){
+            x0=view.x
+            y0=view.y
+        }
         when (event.action and MotionEvent.ACTION_MASK) {
             MotionEvent.ACTION_DOWN -> {
                 val lParams = view.layoutParams as ConstraintLayout.LayoutParams
@@ -106,8 +110,8 @@ class f_putxero_juego : Fragment() {
                     if(Valid(resources.getResourceEntryName(view.id))){
                         view.isVisible=false
                     }else{
-                        view.y=top.toFloat()
-                        view.x=left.toFloat()
+                        view.x=x0
+                        view.y=y0
                     }
                 }
             }
