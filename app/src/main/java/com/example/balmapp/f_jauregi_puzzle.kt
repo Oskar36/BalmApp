@@ -175,6 +175,8 @@ class f_jauregi_puzzle : Fragment() {
         }
         return location_pieza
     }
+
+
     fun poner_filtro_verde(nombre:String) {
 
         when (nombre) {
@@ -204,9 +206,6 @@ class f_jauregi_puzzle : Fragment() {
         }
 
     }
-
-        
-
 
 
 
