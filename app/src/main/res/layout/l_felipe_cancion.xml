@@ -47,24 +47,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btncancion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/txt_finalizar"
-        style="@style/botones"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btncorregir"
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="290dp"
+
         android:layout_marginBottom="16dp"
         android:text="@string/txt_corregir"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +67,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/btncancion"
+        app:layout_constraintBottom_toTopOf="@+id/btncorregir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
@@ -92,7 +81,8 @@
                 android:id="@+id/txtsanfelipe_cancion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="10dp"
                 android:lineSpacingExtra="6sp"
                 android:text="@string/felipe_cancion_letra"
