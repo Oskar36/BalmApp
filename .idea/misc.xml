@@ -11,13 +11,8 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_cancion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_explicacion.xml" value="0.2" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_fin.xml" value="0.25416666666666665" />
-<<<<<<< HEAD
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_explicacion.xml" value="0.2" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_puzzle.xml" value="0.6184486373165619" />
-=======
-        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_explicacion.xml" value="0.536" />
-        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_puzzle.xml" value="0.6" />
->>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_unir.xml" value="0.4" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_unirjuego.xml" value="0.264" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_juego_txapela_unir.xml" value="0.25416666666666665" />
@@ -31,7 +26,7 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_modo3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_monte_explicacion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_partida.xml" value="0.264" />
-        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_procesion_explicacion.xml" value="0.1" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_procesion_explicacion.xml" value="0.176" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_procesion_juego_adivinar_andremariabirjina.xml" value="0.1" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_procesion_juego_adivinar_jesus.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_procesion_juego_adivinar_penitenteak.xml" value="0.25416666666666665" />
@@ -39,7 +34,7 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_puente_explicacion.xml" value="0.2" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_puente_puzzle.xml" value="0.264" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_putxero_explicacion.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_putxero_juego.xml" value="0.4" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_putxero_juego.xml" value="0.6" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_sanfelipe_cancion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_txapela_explicacion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_txapela_unir.xml" value="0.25416666666666665" />
@@ -48,11 +43,10 @@
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_acercade.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_apodo.xml" value="0.8" />
-        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_cancion.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_explicacion.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_fin.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_explicacion.xml" value="0.12708333333333333" />
-        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_puzzle.xml" value="0.264" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_puzzle.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_unirjuego.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_kolitza_juego_sopaletras.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_kolitzajuego.xml" value="0.12708333333333333" />
