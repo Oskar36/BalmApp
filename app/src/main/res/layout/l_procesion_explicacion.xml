@@ -32,8 +32,7 @@
 
     <ImageButton
         android:id="@+id/imgprocesion_explicacion_logo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
+        style="@style/medidas_dantzaris"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="124dp"
         app:layout_constraintEnd_toEndOf="parent"

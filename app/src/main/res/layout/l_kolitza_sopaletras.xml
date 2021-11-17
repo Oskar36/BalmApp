@@ -33,11 +33,10 @@
 
     <ImageButton
         android:id="@+id/imglogo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="52dp"
+        style="@style/medidas_dantzaris"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtprocesion_adivinar_titulo"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -54,12 +53,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imglogo" />
 
     <TextView
-        android:id="@+id/txt_ermita"
+        android:id="@+id/txt_Pentekoste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="576dp"
-        android:text="@string/txt_ermita"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="564dp"
+        android:text="@string/txt_Pentekoste"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,29 +66,9 @@
         android:id="@+id/txt_tontorra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="624dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="612dp"
         android:text="@string/txt_tontorra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_pazkoa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="624dp"
-        android:text="@string/txt_pazkoa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_Pentekoste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="576dp"
-        android:text="@string/txt_Pentekoste"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,9 +76,29 @@
         android:id="@+id/txt_Erromeria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="576dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="564dp"
         android:text="@string/txt_Erromeria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_pazkoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="612dp"
+        android:text="@string/txt_pazkoa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_ermita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="564dp"
+        android:text="@string/txt_ermita"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,8 +106,8 @@
         android:id="@+id/txt_Bazkaria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="624dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="612dp"
         android:text="@string/txt_Bazkaria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

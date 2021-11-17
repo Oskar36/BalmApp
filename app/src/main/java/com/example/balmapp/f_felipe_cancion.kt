@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ListAdapter
+import android.widget.TextView
 import android.widget.Toast
 import com.example.balmapp.databinding.LFelipeCancionBinding
 
@@ -26,148 +28,56 @@ class f_sanfelipe_cancion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btncancion.setOnClickListener(){
+        binding.btncorregir.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+
         }
 
         //Comprobacion de que las palabras de la cancion esten bien escrita.
         //Cuando las palabras esten mal escritas apareceran en rojo y cuando esten bien saldran en verde.
         binding.btncorregir.setOnClickListener {
             //Palabra 1
-            if(binding.txtpalabra1.text.toString().toLowerCase() != ("mayo")){
-                binding.txtpalabra1.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra1.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt1=ComprobarTextos(binding.txtpalabra1,"mayo")
             //Palabra 2
-            if(binding.txtpalabra2.text.toString().toLowerCase() != ("abril")){
-                binding.txtpalabra2.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra2.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt2=ComprobarTextos(binding.txtpalabra2,"abril")
             //Palabra 3
-            if(binding.txtpalabra3.text.toString().toLowerCase() != ("santiago")){
-                binding.txtpalabra3.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra3.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt3=ComprobarTextos(binding.txtpalabra3,"santiago")
             //Palabra 4
-            if(binding.txtpalabra4.text.toString().toLowerCase() != ("gil")){
-                binding.txtpalabra4.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra4.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt4=ComprobarTextos(binding.txtpalabra4,"gil")
             //Palabra 5
-            if(binding.txtpalabra5.text.toString().toLowerCase() != ("buena")){
-                binding.txtpalabra5.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra5.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt5=ComprobarTextos(binding.txtpalabra5,"buena")
             //Palabra 6
-            if(binding.txtpalabra6.text.toString().toLowerCase() != ("comer")){
-                binding.txtpalabra6.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra6.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt6=ComprobarTextos(binding.txtpalabra6,"comer")
             //Palabra 7
-            if(binding.txtpalabra7.text.toString().toLowerCase() != ("felipe")){
-                binding.txtpalabra7.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra7.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt7=ComprobarTextos(binding.txtpalabra7,"felipe")
             //Palabra 8
-            if(binding.txtpalabra8.text.toString().toLowerCase() != ("san")){
-                binding.txtpalabra8.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra8.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt8=ComprobarTextos(binding.txtpalabra8,"san")
             //Palabra 9
-            if(binding.txtpalabra9.text.toString().toLowerCase() != ("señorita")){
-                binding.txtpalabra9.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra9.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt9=ComprobarTextos(binding.txtpalabra9,"señorita")
             //Palabra 10
-            if(binding.txtpalabra10.text.toString().toLowerCase() != ("peseta")){
-                binding.txtpalabra10.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra10.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt10=ComprobarTextos(binding.txtpalabra10,"peseta")
             //Palabra 11
-            if(binding.txtpalabra11.text.toString().toLowerCase() != ("flores")){
-                binding.txtpalabra11.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra11.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt11=ComprobarTextos(binding.txtpalabra11,"flores")
             //Palabra 12
-            if(binding.txtpalabra12.text.toString().toLowerCase() != ("flores")){
-                binding.txtpalabra12.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra12.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt12=ComprobarTextos(binding.txtpalabra12,"flores")
             //Palabra 13
-            if(binding.txtpalabra13.text.toString().toLowerCase() != ("mocos")){
-                binding.txtpalabra13.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra13.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt13=ComprobarTextos(binding.txtpalabra13,"mocos")
             //Palabra 14
-            if(binding.txtpalabra14.text.toString().toLowerCase() != ("pocos")){
-                binding.txtpalabra14.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra14.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt14=ComprobarTextos(binding.txtpalabra14,"pocos")
             //Palabra 15
-            if(binding.txtpalabra15.text.toString().toLowerCase() != ("viva")){
-                binding.txtpalabra15.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra15.setTextColor(Color.parseColor("#00ff00"))
-            }
-
+            val txt15=ComprobarTextos(binding.txtpalabra15,"viva")
             //Palabra 16
-            if(binding.txtpalabra16.text.toString().toLowerCase() != ("viva")){
-                binding.txtpalabra16.setTextColor(Color.parseColor("#ad0a15"))
-            }
-            else{
-                binding.txtpalabra16.setTextColor(Color.parseColor("#00ff00"))
+            val txt16=ComprobarTextos(binding.txtpalabra16,"viva")
+            val Listatxt= listOf<Boolean>(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
+            if(ComprobarTodos(Listatxt)){
+                //Abrir fragment repetir juego
+                Sharedapp.gune.gune="6.Gunea"
+                val fragment:Fragment=f_fin()
+                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            }else{
+                Toast.makeText(requireContext(), "No todas son correctas", Toast.LENGTH_SHORT).show()
             }
         }
-
-
-
-
-
-
-
     }
     override fun onResume() {
         super.onResume()
@@ -192,5 +102,22 @@ class f_sanfelipe_cancion : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer!!.stop()
+    }
+    fun ComprobarTextos(txt:TextView,respuesta:String):Boolean{
+        if(txt.text.toString().toLowerCase().equals(respuesta)){
+            txt.setTextColor(Color.parseColor("#00ff00"))
+            return true
+        }else{
+            txt.setTextColor(Color.parseColor("#ad0a15"))
+            return false
+        }
+    }
+    fun ComprobarTodos(txtL:List<Boolean>):Boolean{
+        txtL.forEach(){
+            if (!it){
+                return false
+            }
+        }
+        return true
     }
 }

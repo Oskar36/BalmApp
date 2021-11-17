@@ -51,6 +51,13 @@ class f_jauregi_unirjuego : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imglogo)
             }
         }
+
+        binding.btnfinalizarjauregi.setOnClickListener {
+            //Abrir fragment repetir juego
+            Sharedapp.gune.gune="3.Gunea 2"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

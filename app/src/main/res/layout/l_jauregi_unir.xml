@@ -43,10 +43,9 @@
 
     <ImageButton
         android:id="@+id/imglogo"
-        android:layout_width="106dp"
-        android:layout_height="82dp"
+        style="@style/medidas_dantzaris"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtjauregi_unir_titulo"
         tools:ignore="SpeakableTextPresentCheck" />

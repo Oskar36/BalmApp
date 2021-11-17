@@ -31,7 +31,9 @@ class f_kolitzajuego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizarKolitza.setOnClickListener(){
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            Sharedapp.gune.gune="2.Gunea 2"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

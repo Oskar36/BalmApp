@@ -133,15 +133,14 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         NavFrag.IniciarActivity(this,activity)
     }
     fun MarcadorJuego(gune: String){
-        Toast.makeText(this, "${gune}", Toast.LENGTH_SHORT).show()
         when (gune){
             "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
             "2.Gunea helmuga" ->      abrirActivityMenu("a_juegos","kolitza")
             "3.Gunea" ->      abrirActivityMenu("a_juegos","jauregi")
             "4.Gunea" ->    abrirActivityMenu("a_juegos","procesion")
+            "5.Gunea helmuga" ->      abrirActivityMenu("a_juegos","boina")
             "6.Gunea" ->   abrirActivityMenu("a_juegos","san felipe")
             "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
-            "5.Gunea helmuga" ->      abrirActivityMenu("a_juegos","boina")
         }
     }
 }

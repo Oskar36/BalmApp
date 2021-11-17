@@ -40,6 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txttxapela_explicacion_titulo"
         tools:ignore="SpeakableTextPresentCheck" />
+<<<<<<< HEAD
 
     <ScrollView
         android:id="@+id/scrollView4"
@@ -64,6 +65,8 @@
 
         </LinearLayout>
     </ScrollView>
+=======
+>>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

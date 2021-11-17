@@ -17,7 +17,7 @@
         <activity
             android:name=".a_juegos"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"  />
         <activity
             android:name=".a_acercade"
             android:exported="true"

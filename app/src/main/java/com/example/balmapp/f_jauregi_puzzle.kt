@@ -62,8 +62,11 @@ class f_jauregi_puzzle : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
         //convertir las piezas en arrastables
         binding.imgPiezaBalcon.setOnTouchListener(touchListener)
         binding.imgPiezaColumna.setOnTouchListener(touchListener)
@@ -72,7 +75,10 @@ class f_jauregi_puzzle : Fragment() {
         binding.imgPiezaVentana.setOnTouchListener(touchListener)
         binding.imgPiezaPuertaventana.setOnTouchListener(touchListener)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
         //parar y continuar el audio
         binding.imgjauregiJuegoLogo.setOnClickListener {
             if(mediaplayer!!.isPlaying){
@@ -85,7 +91,10 @@ class f_jauregi_puzzle : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
     }
 
     var xDelta: Int = 0
@@ -181,6 +190,8 @@ class f_jauregi_puzzle : Fragment() {
         }
         return location_pieza
     }
+
+
     fun poner_filtro_verde(nombre:String) {
 
         when (nombre) {
@@ -210,9 +221,6 @@ class f_jauregi_puzzle : Fragment() {
         }
 
     }
-
-        
-
 
 
 

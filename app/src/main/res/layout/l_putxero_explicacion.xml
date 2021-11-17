@@ -25,24 +25,32 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="4dp"
         android:text="@string/jugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+=======
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/jugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+>>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
 
     <ImageButton
         android:id="@+id/imgputxero_explicacion_logo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="120dp"
+        style="@style/medidas_dantzaris"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtputxero_explicacion_titulo"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <ScrollView
         android:id="@+id/scrollView4"
+<<<<<<< HEAD
         android:layout_width="409dp"
         android:layout_height="412dp"
         android:layout_marginTop="244dp"
@@ -61,6 +69,35 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgputxero_explicacion_logo" />
 
+=======
+        android:layout_width="407dp"
+        android:layout_height="424dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgputxero_explicacion_logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtputxero_explicacion"
+                android:layout_width="338dp"
+                android:layout_height="873dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/azalpena_putxero"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgputxero_explicacion_logo" />
+
+
+>>>>>>> ce9cf3f3732739a4132a69e10eccc72fa7b88295
         </LinearLayout>
     </ScrollView>
 
