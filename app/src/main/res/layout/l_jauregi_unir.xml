@@ -49,16 +49,6 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/txt_texto_Sotoa"
-        android:layout_width="146dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/txt_texto_Sotoa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Balkoi..." />
-
-    <TextView
         android:id="@+id/txt_texto_Erdiko_Solairua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,11 +90,21 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Azken_Solairua" />
 
     <TextView
+        android:id="@+id/txt_texto_Sotoa"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/txt_texto_Sotoa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Balkoi..." />
+
+    <TextView
         android:id="@+id/txt_texto_Gambara"
         android:layout_width="146dp"
         android:layout_height="22dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="24dp"
         android:text="@string/txt_texto_Gambara"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Sotoa" />
@@ -113,8 +113,8 @@
         android:id="@+id/txt_texto_Balkoi..."
         android:layout_width="146dp"
         android:layout_height="57dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="36dp"
         android:text="@string/txt_texto_Balkoi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Gelak_Egongelak" />
@@ -123,7 +123,7 @@
         android:id="@+id/txt_texto_Gelak_Egongelak"
         android:layout_width="144dp"
         android:layout_height="31dp"
-        android:layout_marginStart="248dp"
+        android:layout_marginStart="232dp"
         android:layout_marginTop="348dp"
         android:text="@string/txt_texto_Gelak_Egongelak"
         app:layout_constraintStart_toStartOf="parent"

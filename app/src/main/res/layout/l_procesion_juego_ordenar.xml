@@ -212,8 +212,8 @@
 
         <TextView
             android:id="@+id/txtprocesion_ordenar_explicacion"
-            android:layout_width="394dp"
-            android:layout_height="90dp"
+            android:layout_width="375dp"
+            android:layout_height="85dp"
             android:layout_marginTop="144dp"
             android:text="@string/procesion_ordenar_explicacion"
             app:layout_constraintEnd_toEndOf="parent"
