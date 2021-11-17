@@ -3,7 +3,6 @@ package com.example.balmapp
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,27 +21,19 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 
 class f_jauregi_puzzle : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LJauregiPuzzleBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnHurrengoa.setOnClickListener() {
+        binding.btnHurrengoa.setOnClickListener {
             Sharedapp.gune.gune="3.Gunea 1"
             val fragment:Fragment=f_fin_intermedio()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
@@ -81,10 +72,10 @@ class f_jauregi_puzzle : Fragment() {
 
     }
 
-    var xDelta: Int = 0
-    var yDelta: Int = 0
-    var x0 = 0.0f
-    var y0 = 0.0f
+    private var xDelta: Int = 0
+    private var yDelta: Int = 0
+    private var x0 = 0.0f
+    private var y0 = 0.0f
 
     @SuppressLint("ClickableViewAccessibility")
     val touchListener = View.OnTouchListener { view, event ->
@@ -140,7 +131,7 @@ class f_jauregi_puzzle : Fragment() {
 
     //dependiendo de la pieza seleccionada marcamos la posicion de la pieza
 
-    fun posicion_pieza(nombre:String):IntArray {
+    private fun posicion_pieza(nombre:String):IntArray {
 
         val location_pieza = IntArray(2)
         when (nombre) {
@@ -153,9 +144,6 @@ class f_jauregi_puzzle : Fragment() {
             return location_pieza}
             "img_pieza_ventana" ->{
             binding.posicionVentana.getLocationOnScreen(location_pieza)
-            return location_pieza}
-            "img_pieza_balcon" ->{
-            binding.posicionBalcon.getLocationOnScreen(location_pieza)
             return location_pieza}
             "img_pieza_puertaventana" ->{
             binding.posicionPuertaventana.getLocationOnScreen(location_pieza)
@@ -173,7 +161,7 @@ class f_jauregi_puzzle : Fragment() {
     }
 
 
-    fun poner_filtro_verde(nombre:String) {
+    private fun poner_filtro_verde(nombre:String) {
 
         when (nombre) {
 
@@ -185,9 +173,6 @@ class f_jauregi_puzzle : Fragment() {
                 }
             "img_pieza_ventana" ->{
                 binding.posicionVentana.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
-                }
-            "img_pieza_balcon" ->{
-                binding.posicionBalcon.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
                 }
             "img_pieza_puertaventana" ->{
                 binding.posicionPuertaventana.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)

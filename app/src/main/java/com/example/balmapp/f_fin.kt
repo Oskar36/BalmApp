@@ -5,15 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LFinBinding
 
 
 
 private var _binding: LFinBinding? = null
 private val binding get() = _binding!!
-private var gune_inermedio:String=""
 class f_fin : Fragment() {
 
     override fun onCreateView(
@@ -38,7 +35,7 @@ class f_fin : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    fun MarcadorJuego(gune: String):Fragment{
+    private fun MarcadorJuego(gune: String):Fragment{
         var fragment:Fragment?=null
         when (gune){
             "1.Gunea" ->     fragment=f_puente_puzzle()

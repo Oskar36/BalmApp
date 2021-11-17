@@ -1,6 +1,5 @@
 package com.example.balmapp
 
-import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LPuenteExplicacionBinding
-import com.example.balmapp.databinding.LPuentePuzzleBinding
 
 
 private var _binding: LPuenteExplicacionBinding? = null
@@ -19,14 +17,14 @@ class f_puente_explicacion : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LPuenteExplicacionBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnpuenteExplicacionJugar.setOnClickListener(){
+        binding.btnpuenteExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_puente_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             //paramos el audio

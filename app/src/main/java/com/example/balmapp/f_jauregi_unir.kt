@@ -19,7 +19,7 @@ class f_jauregi_unirjuego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LJauregiUnirBinding.inflate(inflater, container, false)
         return  binding.root
@@ -31,7 +31,7 @@ class f_jauregi_unirjuego : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_jauregi_unir)
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
-        binding.btnfinalizarjauregi.setOnClickListener(){
+        binding.btnfinalizarjauregi.setOnClickListener{
             Sharedapp.gune.gune="3.Gunea 2"
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
             //paramos el audio

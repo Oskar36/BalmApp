@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LJauregiExplicacionBinding
 
 
@@ -14,22 +13,17 @@ private var _binding: LJauregiExplicacionBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 class f_jauregi_explicacion : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LJauregiExplicacionBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnfinalizarPuente.setOnClickListener(){
+        binding.btnfinalizarPuente.setOnClickListener{
             val fragment:Fragment=f_jauregi_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             //paramos el audio

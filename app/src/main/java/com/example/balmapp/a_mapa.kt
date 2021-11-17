@@ -1,23 +1,19 @@
 package com.example.balmapp
 
-import android.Manifest
-import android.content.pm.PackageManager
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import com.example.balmapp.databinding.LMapaBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 class a_mapa : AppCompatActivity() , OnMapReadyCallback {
-    private lateinit var map: GoogleMap
     private var mapView: MapView? = null
     private var gmap: GoogleMap? = null
     private lateinit var binding: LMapaBinding
@@ -108,10 +104,9 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
             true
          }
         }
-    fun insertarGune(location:LatLng,title:String,snippet:String,mapa:GoogleMap){
-       val localizacion= location
-       val marcador = MarkerOptions().position(localizacion).title(title).snippet(snippet)
-        mapa!!.addMarker(marcador)
+    private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
+        val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
+        mapa.addMarker(marcador)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -128,11 +123,11 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         }
         return true
     }
-    fun abrirActivityMenu(activity: String,juego:String){
+    private fun abrirActivityMenu(activity: String, juego:String){
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
     }
-    fun MarcadorJuego(gune: String){
+    private fun MarcadorJuego(gune: String){
         when (gune){
             "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
             "2.Gunea helmuga" ->      abrirActivityMenu("a_juegos","kolitza")

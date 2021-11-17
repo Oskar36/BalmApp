@@ -1,13 +1,11 @@
 package com.example.balmapp
 
-import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.balmapp.databinding.LPutxeroExplicacionBinding
 
 
@@ -16,22 +14,17 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 
 class f_putxero_explicacion : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LPutxeroExplicacionBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnputxeroExplicacionJugar.setOnClickListener(){
+        binding.btnputxeroExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_putxero_juego()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             //paramos el audio

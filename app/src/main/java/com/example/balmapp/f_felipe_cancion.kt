@@ -1,6 +1,6 @@
 package com.example.balmapp
 
-import android.content.Intent
+
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
 import android.widget.TextView
 import android.widget.Toast
 import com.example.balmapp.databinding.LFelipeCancionBinding
+import java.util.*
 
 
 private var _binding: LFelipeCancionBinding? = null
@@ -21,7 +21,7 @@ class f_sanfelipe_cancion : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LFelipeCancionBinding.inflate(inflater, container, false)
         return  binding.root
@@ -29,7 +29,7 @@ class f_sanfelipe_cancion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btncorregir.setOnClickListener(){
+        binding.btncorregir.setOnClickListener{
             Sharedapp.gune.gune="6.Gunea"
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
@@ -69,7 +69,7 @@ class f_sanfelipe_cancion : Fragment() {
             val txt15=ComprobarTextos(binding.txtpalabra15,"viva")
             //Palabra 16
             val txt16=ComprobarTextos(binding.txtpalabra16,"viva")
-            val Listatxt= listOf<Boolean>(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
+            val Listatxt= listOf(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
             if(ComprobarTodos(Listatxt)){
                 //Abrir fragment repetir juego
 
@@ -84,8 +84,8 @@ class f_sanfelipe_cancion : Fragment() {
         super.onResume()
          mediaPlayer = MediaPlayer.create(context, R.raw.felipe_cancion)
        binding.play.setOnClickListener{
-           if(mediaPlayer!!.isPlaying()){
-               mediaPlayer!!.seekTo(0);
+           if(mediaPlayer!!.isPlaying){
+               mediaPlayer!!.seekTo(0)
            } else {
                mediaPlayer!!.start()
            }
@@ -104,17 +104,17 @@ class f_sanfelipe_cancion : Fragment() {
         super.onDestroy()
         mediaPlayer!!.stop()
     }
-    fun ComprobarTextos(txt:TextView,respuesta:String):Boolean{
-        if(txt.text.toString().toLowerCase().equals(respuesta)){
+    private fun ComprobarTextos(txt:TextView, respuesta:String):Boolean{
+        return if(txt.text.toString().lowercase(Locale.getDefault()) == respuesta){
             txt.setTextColor(Color.parseColor("#00ff00"))
-            return true
+            true
         }else{
             txt.setTextColor(Color.parseColor("#ad0a15"))
-            return false
+            false
         }
     }
-    fun ComprobarTodos(txtL:List<Boolean>):Boolean{
-        txtL.forEach(){
+    private fun ComprobarTodos(txtL:List<Boolean>):Boolean{
+        txtL.forEach{
             if (!it){
                 return false
             }
