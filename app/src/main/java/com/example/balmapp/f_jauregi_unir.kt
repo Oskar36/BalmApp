@@ -26,11 +26,13 @@ class f_jauregi_unirjuego : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_jauregi_unir)
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
         binding.btnfinalizarjauregi.setOnClickListener(){
+            Sharedapp.gune.gune="3.Gunea 2"
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
             //paramos el audio
             mediaplayer!!.stop()
@@ -54,7 +56,6 @@ class f_jauregi_unirjuego : Fragment() {
 
         binding.btnfinalizarjauregi.setOnClickListener {
             //Abrir fragment repetir juego
-            Sharedapp.gune.gune="3.Gunea 2"
             val fragment:Fragment=f_fin()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }

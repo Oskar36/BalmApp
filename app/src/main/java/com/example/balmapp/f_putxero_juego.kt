@@ -34,9 +34,8 @@ class f_putxero_juego : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnPutxerojuego.setOnClickListener(){
-            //NavFrag.IniciarActivity(requireContext(),"a_mapa")
-            //paramos el audio
+
+        binding.btnPutxerojuego.setOnClickListener(){ //paramos el audio
             mediaplayer!!.stop()
             Sharedapp.gune.gune="7.Gunea"
             val fragment:Fragment=f_fin()

@@ -15,12 +15,6 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 
 class f_procesion_juego_adivinarPenitenteak : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -43,12 +43,9 @@ class f_jauregi_puzzle : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnHurrengoa.setOnClickListener() {
-            val fragment: Fragment = f_jauregi_unirjuego()
-            NavFrag.replaceFragment(
-                fragment,
-                requireActivity(),
-                ((view as ViewGroup).parent as View).id
-            )
+            Sharedapp.gune.gune="3.Gunea 1"
+            val fragment:Fragment=f_fin_intermedio()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             //paramos el audio
             mediaplayer!!.stop()
         }
@@ -56,8 +53,6 @@ class f_jauregi_puzzle : Fragment() {
         NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_jauregia)
-
-
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
@@ -78,7 +73,6 @@ class f_jauregi_puzzle : Fragment() {
                 NavFrag.animacion_dantzaris_parar(binding.imgjauregiJuegoLogo)
                 mediaplayer!!.stop()
             }else{
-
                 mediaplayer!!.prepare()
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
@@ -120,15 +114,12 @@ class f_jauregi_puzzle : Fragment() {
                 val y_imagen =   posicion_pieza(resources.getResourceEntryName(view.id))[1]
                 //Ajustar el campo donde se puede quedar la pieza
                 if ((x_pieza <= (x_imagen + 50) && x_pieza >= (x_imagen - 50)) && (y_pieza <= (y_imagen + 50) && (y_pieza >= y_imagen - 50))) {
-
                     //visibilidad de que la pieza esta en el sitio correcto
                     //poner filtro verde en la posicion de la pieza
                     poner_filtro_verde(resources.getResourceEntryName(view.id))
 
                     //desaparece la pieza
                     view.isVisible = false
-
-
 
                 }
             }

@@ -27,6 +27,7 @@ class f_juego_txapela_unir : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         binding.btnfinalizarPuente.setOnClickListener(){
             Sharedapp.gune.gune="5.Gunea"
             val fragment:Fragment=f_fin()

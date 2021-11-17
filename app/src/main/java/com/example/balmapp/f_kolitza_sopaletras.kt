@@ -34,11 +34,13 @@ class f_kolitza_juego_sopaletras : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         binding.btnsiguienteJuego.setOnClickListener(){
-            val fragment:Fragment=f_kolitzajuego()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             //paramos el audio
             mediaplayer!!.stop()
+            Sharedapp.gune.gune="2.Gunea 1"
+            val fragment:Fragment=f_fin_intermedio()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
@@ -56,7 +58,6 @@ class f_kolitza_juego_sopaletras : Fragment() {
                 NavFrag.animacion_dantzaris_parar(binding.imglogo)
                 mediaplayer!!.stop()
             }else{
-
                 mediaplayer!!.prepare()
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imglogo)

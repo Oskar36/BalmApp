@@ -15,20 +15,7 @@ import com.example.balmapp.databinding.LProcesionJuegoAdivinarJesusBinding
 private var _binding: LProcesionJuegoAdivinarJesusBinding? = null
 private val binding get() = _binding!!
 class f_procesion_juego_adivinar_Jesus : Fragment() {
-
-    // TODO: Rename and change types of parameters
-
     private var mediaplayer: MediaPlayer? = null
-
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-
-
-    }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizar.setOnClickListener(){
@@ -37,7 +24,6 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         }
 
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,10 +39,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     }
 
     override fun onResume() {
-
         super.onResume()
-
-
         mediaplayer = MediaPlayer.create(context, R.raw.jesus)
         binding.imgaudioplay1.setOnClickListener{
 

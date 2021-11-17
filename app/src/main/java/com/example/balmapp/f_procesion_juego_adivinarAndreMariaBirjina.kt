@@ -32,8 +32,10 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         binding.btnfinalizar.setOnClickListener(){
-            val fragment:Fragment=f_procesion_ordenar()
+            Sharedapp.gune.gune="4.Gunea 1"
+            val fragment:Fragment=f_fin_intermedio()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
 

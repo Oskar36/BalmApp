@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".f_fin">
-
     tools:viewBindingIgnore="true"
-
     <TextView
         android:id="@+id/txtfin_titulo"
         android:layout_width="wrap_content"
@@ -20,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnfin_siguientejuego"
+        android:id="@+id/btnfin_siguiente"
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,22 +29,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtfin_titulo" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnfin_repetir"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:text="@string/repetir"
-        android:textColor="@color/secondaryColor"
-        app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnfin_siguientejuego"
-        app:strokeColor="@color/secondaryColor"
-        tools:ignore="MissingConstraints" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/btnfin_siguiente" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,10 +25,11 @@ class f_procesion_ordenar : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         binding.btnprocesionordenar.setOnClickListener(){
+            Sharedapp.gune.gune="4.Gunea 2"
             //paramos el audio
             mediaplayer!!.stop()
-            Sharedapp.gune.gune="4.Gunea"
             val fragment:Fragment=f_fin()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }

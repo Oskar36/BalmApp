@@ -31,6 +31,7 @@ class f_puente_puzzle : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         binding.btnfinalizarPuente.setOnClickListener(){
             //paramos el audio
             mediaplayer!!.stop()

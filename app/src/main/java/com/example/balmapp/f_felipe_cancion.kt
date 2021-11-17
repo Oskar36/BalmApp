@@ -28,9 +28,10 @@ class f_sanfelipe_cancion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btncorregir.setOnClickListener(){
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
 
+        binding.btncorregir.setOnClickListener(){
+            Sharedapp.gune.gune="6.Gunea"
+            NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
 
         //Comprobacion de que las palabras de la cancion esten bien escrita.
@@ -71,7 +72,7 @@ class f_sanfelipe_cancion : Fragment() {
             val Listatxt= listOf<Boolean>(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
             if(ComprobarTodos(Listatxt)){
                 //Abrir fragment repetir juego
-                Sharedapp.gune.gune="6.Gunea"
+
                 val fragment:Fragment=f_fin()
                 NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             }else{
