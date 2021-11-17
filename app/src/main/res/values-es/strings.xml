@@ -32,9 +32,9 @@
         <string name="txt_texto_erromeria">Peregrinaje</string>
         <string name="txt_finalizar">Terminar</string>
         <string name="txt_siguientejuego">Siguiente juego</string>
-        <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LAS PALABRAS</string>
+        <string name="txtkolitza_juego_explicacion_titulo">Une las imagenes con los audios</string>
         <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
-        <string name="txtjauregi_puzzle_titulo">PUZZLE</string>
+        <string name="txtjauregi_puzzle_titulo">Puzzle del Puente</string>
         <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>
         <string name="txt_texto_Erdiko_Solairua">Pisos intermedios</string>
         <string name="txt_texto_Azken_Solairua">Ultimos pisos</string>

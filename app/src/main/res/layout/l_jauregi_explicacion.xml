@@ -23,7 +23,7 @@
     <ImageButton
         android:id="@+id/imglogo"
         style="@style/medidas_dantzaris"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo"
@@ -32,10 +32,10 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="409dp"
-        android:layout_height="192dp"
+        android:layout_width="407dp"
+        android:layout_height="226dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="408dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -81,8 +81,8 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/jugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

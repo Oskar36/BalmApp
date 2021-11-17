@@ -17,13 +17,14 @@
         android:layout_marginTop="32dp"
         android:text="@string/txtjauregi_puzzle_titulo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imgpuente_explicacion_logo"
         style="@style/medidas_dantzaris"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtpuente_puzzle_titulo"
