@@ -66,14 +66,21 @@ class f_putxero_juego : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
             binding.imgPutxeroTren.startAnimation(moveLefttoRight)
+
+            //Esto configura el movimiento de todos los alimentos
             binding.imgAlubias.setOnTouchListener(touchListener)
-            binding.imgEspinacas.setOnTouchListener(touchListener)
-            binding.imgManzana.setOnTouchListener(touchListener)
-            binding.imgHuevos.setOnTouchListener(touchListener)
-            binding.imgMorcilla.setOnTouchListener(touchListener)
-            binding.imgPatatas.setOnTouchListener(touchListener)
-            binding.imgCaramelos.setOnTouchListener(touchListener)
             binding.imgPimiento.setOnTouchListener(touchListener)
+            binding.imgMorcilla.setOnTouchListener(touchListener)
+            binding.imgAceite.setOnTouchListener(touchListener)
+            binding.imgArroz.setOnTouchListener(touchListener)
+            binding.imgCebolla.setOnTouchListener(touchListener)
+            binding.imgChorizo.setOnTouchListener(touchListener)
+            binding.imgCostilla.setOnTouchListener(touchListener)
+            binding.imgLechuga.setOnTouchListener(touchListener)
+            binding.imgPepinillo.setOnTouchListener(touchListener)
+            binding.imgSal.setOnTouchListener(touchListener)
+            binding.imgZanahoria.setOnTouchListener(touchListener)
+            binding.imgTomate.setOnTouchListener(touchListener)
         }
     }
     override fun onDestroyView() {
@@ -155,8 +162,10 @@ class f_putxero_juego : Fragment() {
 
     }
 
+
+    //Esto configura las tres imegenes que no deben entrar al puchero
     fun Valid(nombre:String):Boolean{
-        val array_no_validos:List<String> = listOf("manzana","caramelos")
+        val array_no_validos:List<String> = listOf("lechuga","pepinillo", "arroz")
         array_no_validos.forEach{
             var comprnombre:String="img_"
             comprnombre += it
