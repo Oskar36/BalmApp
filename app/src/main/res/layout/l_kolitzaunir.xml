@@ -24,18 +24,16 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="40dp"
         android:text="@string/txt_finalizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <ImageView
         android:id="@+id/imglogo"
         style="@style/medidas_dantzaris"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
@@ -105,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:text="@string/txt_texto_pazkoa"
         app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img1"
         app:layout_constraintTop_toBottomOf="@+id/imglogo" />
@@ -145,7 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="64dp"
         android:text="@string/txt_Pentekoste"
         app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img5"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_ermita" />
