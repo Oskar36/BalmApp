@@ -29,7 +29,6 @@ class f_fin : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Toast.makeText(requireContext(), "${Sharedapp.gune.gune}", Toast.LENGTH_SHORT).show()
         binding.btnfinContinuar.setOnClickListener(){
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
