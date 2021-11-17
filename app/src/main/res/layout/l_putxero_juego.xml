@@ -22,11 +22,10 @@
 
     <ImageButton
         android:id="@+id/imgputxero_juego_logo"
-        android:layout_width="182dp"
-        android:layout_height="121dp"
+        style="@style/medidas_dantzaris"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_putxero_titulo"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -54,134 +53,121 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/img_pimiento"
-        android:layout_width="80dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="305dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/pimiento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
-
-    <ImageView
-        android:id="@+id/img_alubias"
-        android:layout_width="83dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="115dp"
-        android:src="@drawable/alubias"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
-
-    <ImageView
-        android:id="@+id/img_morcilla"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="192dp"
-        android:src="@drawable/morcilla"
+        android:id="@+id/img_zanahoria"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/zanahoria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
 
     <ImageView
         android:id="@+id/img_aceite"
-        android:layout_width="83dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="120dp"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="136dp"
         android:src="@drawable/aceite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
 
     <ImageView
-        android:id="@+id/img_arroz"
-        android:layout_width="81dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="205dp"
-        android:layout_marginTop="125dp"
-        android:src="@drawable/arroz"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
-
-    <ImageView
-        android:id="@+id/img_cebolla"
-        android:layout_width="82dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="305dp"
-        android:layout_marginTop="125dp"
-        android:src="@drawable/cebolla"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
-
-    <ImageView
-        android:id="@+id/img_chorizo"
-        android:layout_width="81dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="205dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/chorizo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
-
-    <ImageView
-        android:id="@+id/img_costilla"
-        android:layout_width="80dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="45dp"
-        android:src="@drawable/costilla"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
-
-    <ImageView
-        android:id="@+id/img_lechuga"
-        android:layout_width="81dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="196dp"
-        android:src="@drawable/lechuga"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
-
-    <ImageView
-        android:id="@+id/img_pepinillo"
-        android:layout_width="68dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/pepinillo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
-
-    <ImageView
-        android:id="@+id/img_sal"
-        android:layout_width="54dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/sal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
-
-    <ImageView
         android:id="@+id/img_tomate"
-        android:layout_width="81dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="40dp"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/tomate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
 
     <ImageView
-        android:id="@+id/img_zanahoria"
-        android:layout_width="81dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="38dp"
-        android:src="@drawable/zanahoria"
+        android:id="@+id/img_pimiento"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="216dp"
+        android:src="@drawable/pimiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
+
+    <ImageView
+        android:id="@+id/img_lechuga"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="212dp"
+        android:src="@drawable/lechuga"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
+
+    <ImageView
+        android:id="@+id/img_costilla"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/costilla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
+
+    <ImageView
+        android:id="@+id/img_alubias"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/alubias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
+
+    <ImageView
+        android:id="@+id/img_chorizo"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="216dp"
+        android:src="@drawable/chorizo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
+
+    <ImageView
+        android:id="@+id/img_cebolla"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="144dp"
+        android:src="@drawable/cebolla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
+
+    <ImageView
+        android:id="@+id/img_arroz"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="144dp"
+        android:src="@drawable/arroz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
+
+    <ImageView
+        android:id="@+id/img_sal"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/sal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
+
+    <ImageView
+        android:id="@+id/img_morcilla"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="212dp"
+        android:src="@drawable/morcilla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_putxero" />
+
+    <ImageView
+        android:id="@+id/img_pepinillo"
+        style="@style/medidas_img_puchero"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/pepinillo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_putxero_tren" />
 
     <Button
         android:id="@+id/btn_putxerojuego"

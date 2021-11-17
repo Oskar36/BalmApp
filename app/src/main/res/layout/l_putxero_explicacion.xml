@@ -33,20 +33,19 @@
 
     <ImageButton
         android:id="@+id/imgputxero_explicacion_logo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="120dp"
+        style="@style/medidas_dantzaris"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtputxero_explicacion_titulo"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="409dp"
-        android:layout_height="408dp"
+        android:layout_width="407dp"
+        android:layout_height="424dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
