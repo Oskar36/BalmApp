@@ -25,11 +25,11 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/jugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtputxero_explicacion" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/imgputxero_explicacion_logo"
@@ -41,15 +41,28 @@
         app:layout_constraintTop_toBottomOf="@+id/txtputxero_explicacion_titulo"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txtputxero_explicacion"
-        android:layout_width="363dp"
-        android:layout_height="392dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/azalpena_putxero"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgputxero_explicacion_logo" />
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="409dp"
+        android:layout_height="412dp"
+        android:layout_marginTop="244dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtputxero_explicacion"
+                style="@style/texto_simple_explicacion"
+                android:text="@string/azalpena_putxero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgputxero_explicacion_logo" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

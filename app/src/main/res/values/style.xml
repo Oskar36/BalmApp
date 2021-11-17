@@ -11,6 +11,21 @@
         </item>
     </style>
 
+    <style name="texto_simple_explicacion" >
+
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_width">340dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+
+    </style>
+
+
+
+
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>

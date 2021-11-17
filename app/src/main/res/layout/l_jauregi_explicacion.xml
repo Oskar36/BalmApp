@@ -20,17 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnfinalizar_puente"
-        style="@style/botones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/jugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtjauregi_explicacion" />
-
     <ImageButton
         android:id="@+id/imglogo"
         android:layout_width="166dp"
@@ -38,21 +27,40 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="120dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txtjauregi_explicacion"
-        android:layout_width="381dp"
-        android:layout_height="222dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/azalpena_jauregi"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="409dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="444dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtjauregi_explicacion"
+                style="@style/texto_simple_explicacion"
+                android:text="@string/azalpena_jauregi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtfelipe_explicacion"
+                style="@style/texto_simple_explicacion"
+                android:text="@string/azalpena_sanfelipe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgfelipe_explicacion_logo" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -68,4 +76,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglogo"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnfinalizar_puente"
+        style="@style/botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/jugar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

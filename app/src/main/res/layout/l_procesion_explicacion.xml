@@ -24,12 +24,11 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/jugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/imgprocesion_explicacion_logo"
@@ -38,36 +37,31 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="124dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtprocesion_explicacion_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtprocesion_explicacion_titulo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="397dp"
-        android:layout_height="418dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/scrollView4"
+        android:layout_width="409dp"
+        android:layout_height="412dp"
+        android:layout_marginTop="244dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgprocesion_explicacion_logo"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txtprocesion_explicacion"
-                android:layout_width="380dp"
-                android:layout_height="613dp"
-                android:layout_marginTop="44dp"
-                android:layout_marginEnd="16dp"
+                style="@style/texto_simple_explicacion"
                 android:text="@string/azalpena_procesion"
-                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgprocesion_explicacion_logo" />
+
         </LinearLayout>
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

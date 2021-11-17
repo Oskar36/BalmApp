@@ -17,7 +17,8 @@
         android:text="@string/monte_explicacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/btnmonte_explicacion_jugar"
@@ -57,12 +58,8 @@
 
             <TextView
                 android:id="@+id/txtmonte_explicacion"
-                android:layout_width="385dp"
-                android:layout_height="411dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="8dp"
+                style="@style/texto_simple_explicacion"
                 android:text="@string/azalpena_kolitza"
-                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgmonte_explicacion_logo" />
         </LinearLayout>
