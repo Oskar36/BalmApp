@@ -34,12 +34,12 @@
 
     <ImageButton
         android:id="@+id/imglogo"
-        android:layout_width="106dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="160dp"
+        style="@style/medidas_dantzaris"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txttxapela_juego_explicacion_titulo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imgtxapela_juego_img1"
