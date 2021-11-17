@@ -24,30 +24,49 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/jugar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtfelipe_explicacion" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView5" />
 
     <ImageButton
         android:id="@+id/imgfelipe_explicacion_logo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="120dp"
+        style="@style/medidas_dantzaris"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="144dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtfelipe_explicacion_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtfelipe_explicacion_titulo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txtfelipe_explicacion"
-        android:layout_width="334dp"
-        android:layout_height="363dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/azalpena_sanfelipe"
-        android:textSize="14sp"
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="414dp"
+        android:layout_height="444dp"
+        android:layout_marginTop="27dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgfelipe_explicacion_logo" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgfelipe_explicacion_logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtfelipe_explicacion"
+                android:layout_width="363dp"
+                android:layout_height="532dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/azalpena_sanfelipe"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgfelipe_explicacion_logo" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
