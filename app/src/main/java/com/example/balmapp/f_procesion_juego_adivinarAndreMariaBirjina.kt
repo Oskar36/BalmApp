@@ -15,16 +15,10 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LProcesionJuegoAdivinarAndremariabirjinaBinding.inflate(inflater, container, false)
         return  binding.root
@@ -33,7 +27,7 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnfinalizar.setOnClickListener(){
+        binding.btnfinalizar.setOnClickListener{
             Sharedapp.gune.gune="4.Gunea 1"
             val fragment:Fragment=f_fin_intermedio()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
@@ -46,7 +40,7 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.andremariabirjina)
         binding.imgaudioplay1.setOnClickListener{
 
-            if(mediaplayer!!.isPlaying()){
+            if(mediaplayer!!.isPlaying){
                 mediaplayer!!.seekTo(0)
             } else {
                 mediaplayer!!.start()

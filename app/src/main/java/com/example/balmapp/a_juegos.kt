@@ -10,7 +10,7 @@ class a_juegos : AppCompatActivity() {
         setContentView(R.layout.a_juegos)
         seleccionjuego()
     }
-    fun seleccionjuego(){
+    private fun seleccionjuego(){
         val juego:String=Sharedapp.prefs.juego
         var fragment: Fragment? =null
         when (juego){

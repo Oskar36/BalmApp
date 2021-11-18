@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.balmapp.databinding.LApodoBinding
 import com.example.balmapp.databinding.LFelipeExplicacionBinding
 
 
@@ -17,17 +15,10 @@ private var _binding: LFelipeExplicacionBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 class f_felipe_explicacion : Fragment() {
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LFelipeExplicacionBinding.inflate(inflater, container, false)
         return  binding.root
@@ -48,16 +39,9 @@ class f_felipe_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.sanfelipe_azalpena)
 
 
-        val repro= mediaplayer!!.isPlaying
         //Toast.makeText(requireContext(), repro.toString(), Toast.LENGTH_SHORT).show()
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)        }
-
-    }
-
-
-    override fun onResume() {
-        super.onResume()
 
     }
     override fun onDestroyView() {
@@ -65,16 +49,12 @@ class f_felipe_explicacion : Fragment() {
         _binding = null
 
     }
-
-
     override fun onStart() {
         super.onStart()
         //Iniciamos el audio
         mediaplayer!!.start()
 
     }
-
-
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios

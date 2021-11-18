@@ -32,6 +32,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp">
 
             <TextView
@@ -45,8 +46,9 @@
                 app:layout_constraintTop_toTopOf="parent"></TextView>
 
             <Spinner
+                android:text=""
                 android:id="@+id/spinner_1"
-                android:layout_width="83dp"
+                android:layout_width="192dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -59,6 +61,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp">
 
             <TextView
@@ -73,7 +76,7 @@
 
             <Spinner
                 android:id="@+id/spinner_2"
-                android:layout_width="83dp"
+                android:layout_width="192dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -88,6 +91,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp">
 
             <TextView
@@ -102,7 +106,7 @@
 
             <Spinner
                 android:id="@+id/spinner_3"
-                android:layout_width="83dp"
+                android:layout_width="192dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -115,6 +119,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp">
 
             <TextView
@@ -129,7 +134,7 @@
 
             <Spinner
                 android:id="@+id/spinner_4"
-                android:layout_width="83dp"
+                android:layout_width="192dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -148,11 +153,13 @@
             android:layout_marginTop="50dp">
 
             <TextView
+                android:id="@+id/texto_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Gurutze_bidea"></TextView>
 
             <TextView
+                android:id="@+id/texto_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -167,11 +174,13 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/texto_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Azken_afaria"></TextView>
 
             <TextView
+                android:id="@+id/texto_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -203,8 +212,8 @@
 
         <TextView
             android:id="@+id/txtprocesion_ordenar_explicacion"
-            android:layout_width="394dp"
-            android:layout_height="90dp"
+            android:layout_width="375dp"
+            android:layout_height="85dp"
             android:layout_marginTop="144dp"
             android:text="@string/procesion_ordenar_explicacion"
             app:layout_constraintEnd_toEndOf="parent"

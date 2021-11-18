@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.balmapp.databinding.LFinIntermedioBinding
 
 private var _binding:LFinIntermedioBinding?=null
@@ -14,18 +13,18 @@ class f_fin_intermedio : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding=LFinIntermedioBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnfinSiguiente.setOnClickListener(){
+        binding.btnfinSiguiente.setOnClickListener{
             val fragment:Fragment=AbrirSiguiente(Sharedapp.gune.gune)
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
-        binding.btnfinRepetir.setOnClickListener(){
+        binding.btnfinRepetir.setOnClickListener{
             val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
@@ -43,7 +42,7 @@ class f_fin_intermedio : Fragment() {
         }
         return fragment!!
     }
-    fun MarcadorJuego(gune: String):Fragment{
+    private fun MarcadorJuego(gune: String):Fragment{
         var fragment:Fragment?=null
         when (gune){
             "2.Gunea 1" ->   fragment=f_kolitza_juego_sopaletras()

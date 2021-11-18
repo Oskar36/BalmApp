@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import com.example.balmapp.databinding.LProcesionExplicacionBinding
 import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
-import android.os.SystemClock
-import android.widget.ImageView
 
 lateinit var animacion : AnimationDrawable
 private var _binding: LProcesionExplicacionBinding? = null
@@ -20,14 +18,14 @@ class f_procesion_explicacion : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LProcesionExplicacionBinding.inflate(inflater, container, false)
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnprocesionExplicacionJugar.setOnClickListener(){
+        binding.btnprocesionExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_procesion_juego_adivinar_Jesus()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             //paramos el audio

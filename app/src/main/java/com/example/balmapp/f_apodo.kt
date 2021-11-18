@@ -10,11 +10,6 @@ import com.example.balmapp.databinding.LApodoBinding
 private var _binding: LApodoBinding? = null
 private val binding get() = _binding!!
 class f_apodo : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnapodoJugar.setOnClickListener(){
@@ -25,7 +20,7 @@ class f_apodo : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LApodoBinding.inflate(inflater, container, false)
         return  binding.root

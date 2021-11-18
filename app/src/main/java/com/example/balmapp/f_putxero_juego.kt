@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LPutxeroJuegoBinding
 import android.view.animation.TranslateAnimation
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.*
 
@@ -19,23 +18,19 @@ private var _binding: LPutxeroJuegoBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 class f_putxero_juego : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LPutxeroJuegoBinding.inflate(inflater, container, false)
         return  binding.root
     }
+    @SuppressLint("ClickableViewAccessibility")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnPutxerojuego.setOnClickListener(){ //paramos el audio
+        binding.btnPutxerojuego.setOnClickListener{ //paramos el audio
             mediaplayer!!.stop()
             Sharedapp.gune.gune="7.Gunea"
             val fragment:Fragment=f_fin()
@@ -86,10 +81,10 @@ class f_putxero_juego : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    var xDelta: Int=0
-    var yDelta: Int=0
-    var x0=0.0f
-    var y0=0.0f
+    private var xDelta: Int=0
+    private var yDelta: Int=0
+    private var x0=0.0f
+    private var y0=0.0f
     @SuppressLint("ClickableViewAccessibility")
     val touchListener = View.OnTouchListener { view, event ->
         val x = event.rawX.toInt()
@@ -163,10 +158,10 @@ class f_putxero_juego : Fragment() {
 
 
     //Esto configura las tres imegenes que no deben entrar al puchero
-    fun Valid(nombre:String):Boolean{
+    private fun Valid(nombre:String):Boolean{
         val array_no_validos:List<String> = listOf("lechuga","pepinillo", "arroz")
         array_no_validos.forEach{
-            var comprnombre:String="img_"
+            var comprnombre="img_"
             comprnombre += it
             if(comprnombre == nombre){
                 return false

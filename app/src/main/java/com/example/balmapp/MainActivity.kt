@@ -1,15 +1,8 @@
 package com.example.balmapp
 
-import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
-import android.view.MenuItem
-import android.widget.Toast
-import android.widget.Toolbar
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.example.balmapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

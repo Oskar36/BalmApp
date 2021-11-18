@@ -25,11 +25,9 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
         android:text="@string/jugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <ImageButton
@@ -46,7 +44,7 @@
         android:id="@+id/scrollView4"
         android:layout_width="409dp"
         android:layout_height="412dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="224dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -64,9 +62,6 @@
 
         </LinearLayout>
     </ScrollView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

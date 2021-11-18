@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".f_apodo">
+
     <TextView
         android:id="@+id/txtapodo_apodotext"
         android:layout_width="wrap_content"
@@ -23,7 +24,6 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_conversion_absoluteWidth="411dp" />
-
     <EditText
         android:id="@+id/txtapodo_apodo"
         android:layout_width="224dp"
@@ -36,9 +36,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtapodo_apodotext"
         app:layout_constraintVertical_bias="0.049"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        android:autofillHints="" />
-
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+    </EditText>
     <Button
         android:id="@+id/btnapodo_jugar"
         android:layout_width="wrap_content"
@@ -50,5 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtapodo_apodo"
         app:layout_constraintVertical_bias="0.275" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

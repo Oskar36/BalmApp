@@ -12,19 +12,10 @@ private var _binding: LPuentePuzzleBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 class f_puente_puzzle : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LPuentePuzzleBinding.inflate(inflater, container, false)
         return  binding.root
@@ -32,7 +23,7 @@ class f_puente_puzzle : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnfinalizarPuente.setOnClickListener(){
+        binding.btnfinalizarPuente.setOnClickListener{
             //paramos el audio
             mediaplayer!!.stop()
             Sharedapp.gune.gune="1.Gunea"

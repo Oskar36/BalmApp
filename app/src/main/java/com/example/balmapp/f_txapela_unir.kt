@@ -12,15 +12,10 @@ private var _binding: LTxapelaUnirBinding? = null
 private val binding get() = _binding!!
 class f_juego_txapela_unir : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = LTxapelaUnirBinding.inflate(inflater, container, false)
         return  binding.root
@@ -28,7 +23,7 @@ class f_juego_txapela_unir : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnfinalizarPuente.setOnClickListener(){
+        binding.btnfinalizarPuente.setOnClickListener{
             Sharedapp.gune.gune="5.Gunea"
             val fragment:Fragment=f_fin()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
