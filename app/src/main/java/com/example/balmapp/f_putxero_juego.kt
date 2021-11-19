@@ -60,7 +60,7 @@ class f_putxero_juego : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
             binding.imgPutxeroTren.startAnimation(moveLefttoRight)
-
+binding.imgPutxeroTren.animation
             //Esto configura el movimiento de todos los alimentos
             binding.imgAlubias.setOnTouchListener(touchListener)
             binding.imgPimiento.setOnTouchListener(touchListener)
