@@ -1,8 +1,10 @@
 package com.example.balmapp
 
 
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
 import com.example.balmapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,8 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         val fragment= f_modo()
         NavFrag.Abrirfragment(fragment,this,R.id.fl_main)
-
-
-
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),1)
+            return
+        }
     }
 }

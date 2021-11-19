@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/puente_explicacion"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +34,7 @@
         style="@style/medidas_dantzaris"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="144dp"
+        android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtpuente_explicacion_titulo"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />

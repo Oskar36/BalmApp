@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.example.balmapp.databinding.LMapaBinding
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -18,6 +21,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
     private var gmap: GoogleMap? = null
     private lateinit var binding: LMapaBinding
     private val MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey"
+    private lateinit var fusedLocation: FusedLocationProviderClient
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)
         val inflater = menuInflater
@@ -29,6 +33,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         binding = LMapaBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        fusedLocation= LocationServices.getFusedLocationProviderClient(this)
         var mapViewBundle: Bundle? = null
         if (savedInstanceState != null) {
             mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY)
@@ -103,9 +108,29 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
             MarcadorJuego(marker.title.toString())
             true
          }
+        gmap!!.isMyLocationEnabled=true
+        gmap!!.uiSettings.isZoomControlsEnabled=true
+        gmap!!.uiSettings.isCompassEnabled=true
+        //Cuando se aceptan los permisos
+        fusedLocation.lastLocation.addOnSuccessListener {
+            if (it != null) {
+                val ubicacion = LatLng(it.latitude, it.longitude)
+                val marcador = MarkerOptions().position(ubicacion).title("Mi ubicación")
+                marcador.icon(BitmapDescriptorFactory.fromResource(R.drawable.logomapa))
+                gmap!!.addMarker(marcador)
+              gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
+            }
+
         }
+        //Localización a tiempo real
+        gmap!!.setOnMyLocationChangeListener{
+            val ubicacion = LatLng(it.latitude, it.longitude)
+            gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
+        }
+    }
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
+        marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         mapa.addMarker(marcador)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

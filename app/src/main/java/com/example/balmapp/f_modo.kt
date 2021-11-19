@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LModoBinding
-
-
-
+import java.util.*
 
 
 private var _binding: LModoBinding? = null
@@ -29,14 +27,23 @@ class f_modo : Fragment() {
         binding.btnmodoLibre.setOnClickListener{
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
+
         binding.btnmodoGuiado.setOnClickListener{
             val fragment:Fragment=f_apodo()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+        }
+
+        if(Locale.getDefault().language.equals("es")){
+            binding.cartelImg.setBackgroundResource(R.drawable.inicio)
+        }else{
+            binding.cartelImg.setBackgroundResource(R.drawable.hasiera)
         }
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 
 }
