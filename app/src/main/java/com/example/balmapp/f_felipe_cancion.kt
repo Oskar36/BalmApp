@@ -75,7 +75,7 @@ class f_sanfelipe_cancion : Fragment() {
                 val fragment:Fragment=f_fin()
                 NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             }else{
-                Toast.makeText(requireContext(), "@string/correccion_toast", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), R.string.correccion_toast, Toast.LENGTH_SHORT).show()
             }
         }
     }

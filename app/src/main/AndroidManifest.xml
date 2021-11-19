@@ -30,7 +30,8 @@
         <activity
             android:name=".a_mapa"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BalmApp"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

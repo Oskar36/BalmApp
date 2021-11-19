@@ -3,6 +3,7 @@ package com.example.balmapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.view.Menu
 import android.view.MenuItem
 import com.example.balmapp.databinding.LMapaBinding
@@ -44,6 +45,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         mapView!!.onCreate(mapViewBundle)
         mapView!!.getMapAsync(this)
        // binding.toolbar.inflateMenu(R.menu.menu_admin)
+
+
     }
     //En caso de que haya problemas con el Bundle
     override fun onSaveInstanceState(outState: Bundle) {
