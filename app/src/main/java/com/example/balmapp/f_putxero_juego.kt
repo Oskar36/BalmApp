@@ -17,6 +17,8 @@ import androidx.core.view.*
 private var _binding: LPutxeroJuegoBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
+private var mediaplayerFallo:MediaPlayer? = null
+private var mediaplayerTren:MediaPlayer?=null
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +34,8 @@ class f_putxero_juego : Fragment() {
 
         binding.btnPutxerojuego.setOnClickListener{ //paramos el audio
             mediaplayer!!.stop()
+            mediaplayerFallo!!.stop()
+            mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
             val fragment:Fragment=f_fin()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
@@ -40,12 +44,11 @@ class f_putxero_juego : Fragment() {
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_putxeroa)
-
-
+        mediaplayerFallo = MediaPlayer.create(context,R.raw.megamanxerror)
+        mediaplayerTren = MediaPlayer.create(context,R.raw.sonidotren)
         val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
-
         binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
@@ -60,7 +63,7 @@ class f_putxero_juego : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
             binding.imgPutxeroTren.startAnimation(moveLefttoRight)
-binding.imgPutxeroTren.animation
+
             //Esto configura el movimiento de todos los alimentos
             binding.imgAlubias.setOnTouchListener(touchListener)
             binding.imgPimiento.setOnTouchListener(touchListener)
@@ -75,6 +78,7 @@ binding.imgPutxeroTren.animation
             binding.imgSal.setOnTouchListener(touchListener)
             binding.imgZanahoria.setOnTouchListener(touchListener)
             binding.imgTomate.setOnTouchListener(touchListener)
+            mediaplayerTren!!.start()
         }
     }
     override fun onDestroyView() {
@@ -120,6 +124,7 @@ binding.imgPutxeroTren.animation
                         view.y=y0
                         y0=0.0f
                         x0=0.0f
+                        mediaplayerFallo!!.start()
                     }
                 }else{
                     view.x=x0
@@ -148,14 +153,15 @@ binding.imgPutxeroTren.animation
 
     }
 
-
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
         mediaplayer?.release()
+        mediaplayerFallo?.release()
+        mediaplayerTren?.release()
+        mediaplayerFallo=null
         mediaplayer = null
-
-
+        mediaplayerTren=null
     }
 
 
