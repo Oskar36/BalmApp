@@ -99,6 +99,8 @@ class f_putxero_juego : Fragment() {
                 xDelta = x - lParams.leftMargin
                 yDelta = y - lParams.topMargin
             }
+
+
             MotionEvent.ACTION_UP -> {
                 val location = IntArray(2)
                 view.getLocationOnScreen(location)

@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +11,14 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
+import androidx.lifecycle.LifecycleOwner
+
+
+
+
 
 import com.example.balmapp.databinding.LJauregiPuzzleBinding
 
@@ -27,6 +34,7 @@ class f_jauregi_puzzle : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = LJauregiPuzzleBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -40,6 +48,7 @@ class f_jauregi_puzzle : Fragment() {
             //paramos el audio
             mediaplayer!!.stop()
         }
+
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -100,18 +109,24 @@ class f_jauregi_puzzle : Fragment() {
                 val x_pieza = location_pieza[0]
                 val y_pieza = location_pieza[1]
 
+
                 //guardamos las posiciones x, y de donde tiene que ir cada pieza en funcion de la pieza que este este seleccionada
                 val x_imagen =   posicion_pieza(resources.getResourceEntryName(view.id))[0]
                 val y_imagen =   posicion_pieza(resources.getResourceEntryName(view.id))[1]
                 //Ajustar el campo donde se puede quedar la pieza
-                if ((x_pieza <= (x_imagen + 50) && x_pieza >= (x_imagen - 50)) && (y_pieza <= (y_imagen + 50) && (y_pieza >= y_imagen - 50))) {
+                if ((x_pieza <= (x_imagen + 100) && x_pieza >= (x_imagen - 100)) && (y_pieza <= (y_imagen + 100) && (y_pieza >= y_imagen - 100))) {
                     //visibilidad de que la pieza esta en el sitio correcto
                     //poner filtro verde en la posicion de la pieza
                     poner_filtro_verde(resources.getResourceEntryName(view.id))
 
                     //desaparece la pieza
                     view.isVisible = false
-
+                }
+                else{
+                    view.x=x0
+                    view.y=y0
+                    y0=0.0f
+                    x0=0.0f
                 }
             }
             MotionEvent.ACTION_MOVE -> {
@@ -161,27 +176,33 @@ class f_jauregi_puzzle : Fragment() {
     }
 
 
+
     private fun poner_filtro_verde(nombre:String) {
 
         when (nombre) {
 
             "img_pieza_puertaprincipal" ->{
-                binding.posicionPuertaprincipal.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
+                binding.posicionPuertaprincipal.setImageDrawable(getResources().getDrawable(R.drawable.pieza_puertaprincipal))
                 }
             "img_pieza_balcon" ->{
-                binding.posicionBalcon.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
+                binding.posicionBalcon.setImageDrawable(getResources().getDrawable(R.drawable.pieza_balcon))
+
                 }
             "img_pieza_ventana" ->{
-                binding.posicionVentana.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
+                binding.posicionVentana.setImageDrawable(getResources().getDrawable(R.drawable.pieza_ventana))
+
                 }
             "img_pieza_puertaventana" ->{
-                binding.posicionPuertaventana.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
+                binding.posicionPuertaventana.setImageDrawable(getResources().getDrawable(R.drawable.pieza_puertaventana))
+
                }
             "img_pieza_escudo" ->{
-                binding.posicionEscudo.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
+                binding.posicionEscudo.setImageDrawable(getResources().getDrawable(R.drawable.pieza_escudo))
+
                }
             "img_pieza_columna" ->{
-            binding.posicionColumna.setColorFilter(Color.GREEN, PorterDuff.Mode.LIGHTEN)
+                binding.posicionColumna.setImageDrawable(getResources().getDrawable(R.drawable.pieza_columna))
+
            }
 
         }
