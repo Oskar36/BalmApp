@@ -9,16 +9,18 @@
 
     tools:viewBindingIgnore="true"
 
+
     <TextView
         android:id="@+id/txtfelipe_explicacion_titulo"
+        style="@style/titulo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/felipe_explicacion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <Button
         android:id="@+id/btnfelipe_explicacion_jugar"

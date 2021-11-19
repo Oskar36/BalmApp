@@ -14,7 +14,7 @@
         android:layout_height="43dp"
         android:text="@string/balmapp"
         android:textAlignment="center"
-        android:textSize="24sp"
+        style="@style/titulo1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

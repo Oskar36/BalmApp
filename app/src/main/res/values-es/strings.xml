@@ -5,15 +5,15 @@
         <string name="nueva_partida">Nueva partida</string>
         <string name="modo_libre">Modo libre</string>
         <string name="modo_guiado">Modo guiado</string>
-        <string name="fin_del_juego">Fin del juego</string>
+        <string name="fin_del_juego">FIN DEL JUEGO</string>
         <string name="continuar">Continuar</string>
         <string name="repetir">Repetir</string>
         <string name="apodo">Apodo:</string>
         <string name="jugar">Jugar</string>
-        <string name="putxero_explicacion">Historia del Puchero</string>
-        <string name="puente_explicacion">Puente explicacion</string>
-        <string name="monte_explicacion">Monte explicacion</string>
-        <string name="jauregi_explicacion">Jauregi explicacion</string>
+        <string name="putxero_explicacion">HISTORIA DE LA PUCHERA</string>
+        <string name="puente_explicacion">HISTORIA DEL PUENTE</string>
+        <string name="monte_explicacion">HISTORIA DEL MONTE KOLITXA</string>
+        <string name="jauregi_explicacion">HISTORIA DEL CASTILLO HORCASITAS</string>
         <string name="cambiar_modo">Cambiar modo</string>
         <string name="acerca_de">Acerca de</string>
         <string name="desconectar">Desconectar</string>
@@ -24,15 +24,15 @@
         <string name="txapela">Boina</string>
         <string name="san_felipe" translatable="false">San Felipe</string>
         <string name="putxero">Puchero</string>
-        <string name="procesion_explicacion">Procesion explicacion</string>
+        <string name="procesion_explicacion">HISTORIA DE LA PROCESIÓN</string>
         <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
         <string name="txt_texto_bazkaria">Almuerzo</string>
         <string name="txt_texto_erromeria">Peregrinaje</string>
         <string name="txt_finalizar">Terminar</string>
         <string name="txt_siguientejuego">Siguiente juego</string>
-        <string name="txtkolitza_juego_explicacion_titulo">Une las imagenes con los audios</string>
-        <string name="txtkolitza_sopadeletras_titulo">Sopa de letras</string>
-        <string name="txtjauregi_puzzle_titulo">Puzzle del Puente</string>
+        <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
+        <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
+        <string name="txtjauregi_puzzle_titulo">PUZZLE DEL PUENTE</string>
         <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>
         <string name="txt_texto_Erdiko_Solairua">Pisos intermedios</string>
         <string name="txt_texto_Azken_Solairua">Ultimos pisos</string>
@@ -47,9 +47,9 @@
         <string name="txt_Erromeria">Peregrinaje</string>
         <string name="txt_Bazkaria">Almuerzo</string>
         <string name="txt_ermita">Ermita</string>
-        <string name="txapela_explicacion_titulo">Boina explicacion</string>
-        <string name="felipe_explicacion_titulo">Felipe explicacion</string>
-        <string name="asmatu_pertsonaia">Adivina el personaje</string>
+        <string name="txapela_explicacion_titulo">HISTORIA DE LA BOINA</string>
+        <string name="felipe_explicacion_titulo">HISTORIA DE SAN FELIPE Y SANTIAGO</string>
+        <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
         <string name="siguiente_adivinanda">Adivina el siguiente</string>
         <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte. ¡Me cruzan! ¿Quién soy?</string>
         <string name="opcion_1jesus">A) Judas</string>
@@ -67,8 +67,8 @@
         <string name="Judasen_hilketa">Muerte de Judas</string>
         <string name="Azken_afaria">Ultima cena</string>
         <string name="Jesusen_epaiketa">El juicio de Jesús</string>
-        <string name="felipe_cancion_titulo">Canción de San Felipe y Santiago</string>
-        <string name="putxero_juego">Juego del Puchero</string>
+        <string name="felipe_cancion_titulo">CANCIÓN DE SAN FELIPE Y SANTIAGO</string>
+        <string name="putxero_juego">JUEGO DE LA PUCHERA</string>
 
 
         <string name="azalpena_sanfelipe">
@@ -121,6 +121,7 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="txt_corregir">CORREGIR</string>
     <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
     <string name="correccion_toast">No todas son correctas</string>
+    <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
 
 
 

@@ -5,18 +5,18 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="nueva_partida">Partida berria</string>
     <string name="modo_libre">Modu librea</string>
-    <string name="felipe_cancion_titulo">San Felipe eta Santiagoren abeztia</string>
-    <string name="putxero_juego">Putxera jokua</string>
+    <string name="felipe_cancion_titulo">SAN FELIPE ETA SANTIAGOREN ABEZTIA</string>
+    <string name="putxero_juego">PUTXERAREN JOKUA</string>
     <string name="modo_guiado">Modu gidatua</string>
-    <string name="fin_del_juego">Jokuaren amaiera</string>
+    <string name="fin_del_juego">JOKUAREN AMAIERA</string>
     <string name="continuar">Jarraitu</string>
     <string name="repetir">Errepikatu</string>
     <string name="apodo">Ezizen:</string>
     <string name="jugar">Jokatu</string>
-    <string name="putxero_explicacion">Putxeraren historia</string>
-    <string name="puente_explicacion">Zubiaren historia</string>
-    <string name="monte_explicacion">Kolitza Mendiaren historia</string>
-    <string name="jauregi_explicacion">Horcasitas Jauregiaren historia</string>
+    <string name="putxero_explicacion">PUTXERAREN HISTORIA</string>
+    <string name="puente_explicacion">ZUBIAREN HISTORIA</string>
+    <string name="monte_explicacion">KOLITZA MENDIAREN HISTORIA</string>
+    <string name="jauregi_explicacion">HORCASITAS JAUREGIAREN HISTORIA</string>
     <string name="cambiar_modo">Modua aldatu</string>
     <string name="acerca_de">Honi buruz</string>
     <string name="desconectar">Deskonektatu</string>
@@ -27,15 +27,15 @@
     <string name="txapela">Txapela</string>
     <string name="san_felipe" translatable="false">San Felipe</string>
     <string name="putxero">Putxeroa</string>
-    <string name="procesion_explicacion">Prozesioaren historia</string>
+    <string name="procesion_explicacion">PROZESIOAREN HISTORIA</string>
     <string name="txt_texto_pazkoa">Pazkoa</string>
     <string name="txt_texto_bazkaria">Bazkaria</string>
     <string name="txt_texto_erromeria">Erromeria</string>
     <string name="txt_finalizar">Amaitu</string>
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
-    <string name="txtkolitza_juego_explicacion_titulo">Lotu irudiak hitzekin</string>
-    <string name="txtkolitza_sopadeletras_titulo">Letra-zopa</string>
-    <string name="txtjauregi_puzzle_titulo">Jauregiaren puzzlea</string>
+    <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
+    <string name="txtkolitza_sopadeletras_titulo">LETRA-SOPA</string>
+    <string name="txtjauregi_puzzle_titulo">JAUREGIAREN PUZZLEA</string>
     <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
     <string name="txt_texto_Erdiko_Solairua">Erdiko Solairuak</string>
     <string name="txt_texto_Azken_Solairua">Azken Solairuak</string>
@@ -50,9 +50,9 @@
     <string name="txt_Erromeria">Erromeria</string>
     <string name="txt_Bazkaria">Bazkaria</string>
     <string name="txt_ermita">Ermita</string>
-    <string name="txapela_explicacion_titulo">Txapelaren historia</string>
-    <string name="felipe_explicacion_titulo">San Felipe eta Santiagoren historia</string>
-    <string name="asmatu_pertsonaia">Asmatu pertsonaia</string>
+    <string name="txapela_explicacion_titulo">TXAPELAREN HISTORIA</string>
+    <string name="felipe_explicacion_titulo">SAN FELIPE ETA SANTIAGOREN HISTORIA</string>
+    <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
     <string name="siguiente_adivinanda">Asmatu hurrengoa</string>
     <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat. Gurutzatu egiten naute! Nor ote naiz?</string>
     <string name="opcion_1jesus">A)Judas</string>
@@ -154,5 +154,6 @@ solairu bakoitzean zer dagoen jakingo duzue.</string>
     <string name="txt_corregir">ZUZENDU</string>
     <string name="titulo_modo">NOLA JOLASTU NAHI DUZU?</string>
     <string name="correccion_toast">Guztiak ez dira zuzenak</string>
+    <string name="ordenar">ORDENATU KRONOLOGIKOKI</string>
 
 </resources>

@@ -14,7 +14,7 @@
         android:id="@+id/txttxapela_juego_explicacion_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        style="@style/titulo2"
         android:text="@string/txtkolitza_juego_explicacion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

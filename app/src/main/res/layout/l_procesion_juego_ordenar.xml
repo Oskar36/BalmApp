@@ -12,15 +12,26 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <ImageButton
-        android:id="@+id/dantzaris_procesion_ordenar"
-        style="@style/medidas_dantzaris"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageButton>
+        <TextView
+            android:id="@+id/txtprocesion_adivinar_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/titulo2"
+            android:text="@string/ordenar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+        <ImageButton
+            android:id="@+id/dantzaris_procesion_ordenar"
+            style="@style/medidas_dantzaris"
+            android:layout_marginTop="92dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageButton>
+
+        <LinearLayout
         android:layout_width="415dp"
         android:layout_height="470dp"
         android:layout_marginTop="136dp"
@@ -214,10 +225,10 @@
             android:id="@+id/txtprocesion_ordenar_explicacion"
             android:layout_width="375dp"
             android:layout_height="85dp"
-            android:layout_marginTop="144dp"
+            android:layout_marginTop="224dp"
             android:text="@string/procesion_ordenar_explicacion"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
