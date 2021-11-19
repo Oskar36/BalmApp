@@ -39,7 +39,7 @@ class f_felipe_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.sanfelipe_azalpena)
 
 
-        //Toast.makeText(requireContext(), repro.toString(), Toast.LENGTH_SHORT).show()
+
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)        }
 

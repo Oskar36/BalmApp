@@ -72,11 +72,10 @@ class f_sanfelipe_cancion : Fragment() {
             val Listatxt= listOf(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
             if(ComprobarTodos(Listatxt)){
                 //Abrir fragment repetir juego
-
                 val fragment:Fragment=f_fin()
                 NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
             }else{
-                Toast.makeText(requireContext(), "No todas son correctas", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "@string/correccion_toast", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -120,6 +120,7 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="procesion_ordenar_explicacion">¿Que si la actividad anterior era sencilla? Para ir adelante tendréis que hacer una última misión. ¡Si habéis estado atentos lo haréis en la PRIMERA! Sólo tenéis que ordenar los eventos que aparecen de mayor a mayor.</string>
     <string name="txt_corregir">CORREGIR</string>
     <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
+    <string name="correccion_toast">No todas son correctas</string>
 
 
 
