@@ -28,7 +28,7 @@ class f_fin : Fragment() {
         }
         binding.btnfinRepetir.setOnClickListener(){
             val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Repetir2","Unir")
         }
     }
     override fun onDestroyView() {

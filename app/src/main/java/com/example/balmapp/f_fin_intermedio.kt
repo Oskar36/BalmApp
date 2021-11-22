@@ -22,11 +22,11 @@ class f_fin_intermedio : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinSiguiente.setOnClickListener{
             val fragment:Fragment=AbrirSiguiente(Sharedapp.gune.gune)
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Unir")
         }
         binding.btnfinRepetir.setOnClickListener{
             val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Repetir","SopaLetras")
         }
     }
 
