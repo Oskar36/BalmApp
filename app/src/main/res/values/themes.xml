@@ -14,7 +14,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
-        <item name="titleTextColor">@color/green</item>
     </style>
     <style name="DotsDarkTheme" parent="@style/Widget.AppCompat.ActionButton.Overflow" >
         <item name="android:tint">@color/secondaryTextColor</item>

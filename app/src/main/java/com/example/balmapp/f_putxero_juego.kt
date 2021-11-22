@@ -1,5 +1,6 @@
 package com.example.balmapp
 
+import android.animation.Animator
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -10,8 +11,15 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LPutxeroJuegoBinding
 import android.view.animation.TranslateAnimation
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.*
+import android.view.animation.Animation
+
+import android.view.animation.Animation.AnimationListener
+
+
+
 
 
 private var _binding: LPutxeroJuegoBinding? = null
@@ -19,6 +27,7 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 private var mediaplayerFallo:MediaPlayer? = null
 private var mediaplayerTren:MediaPlayer?=null
+private var aciertos:Int=0
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +40,7 @@ class f_putxero_juego : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
+        aciertos=0
         binding.btnPutxerojuego.setOnClickListener{ //paramos el audio
             mediaplayer!!.stop()
             mediaplayerFallo!!.stop()
@@ -79,6 +88,22 @@ class f_putxero_juego : Fragment() {
             binding.imgZanahoria.setOnTouchListener(touchListener)
             binding.imgTomate.setOnTouchListener(touchListener)
             mediaplayerTren!!.start()
+            moveLefttoRight.setAnimationListener(object : AnimationListener {
+                override fun onAnimationStart(animation: Animation) {
+                }
+
+                override fun onAnimationRepeat(animation: Animation) {
+                }
+
+                override fun onAnimationEnd(animation: Animation) {
+                    // Pass the Intent to switch to other Activity
+                    mediaplayer!!.stop()
+                    mediaplayerFallo!!.stop()
+                    mediaplayerTren!!.stop()
+                    Sharedapp.gune.gune="7.Gunea"
+                    val fragment:Fragment=f_fin()
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)                }
+            })
         }
     }
     override fun onDestroyView() {
@@ -174,6 +199,16 @@ class f_putxero_juego : Fragment() {
             if(comprnombre == nombre){
                 return false
             }
+        }
+         if (aciertos==9){
+            mediaplayer!!.stop()
+            mediaplayerFallo!!.stop()
+            mediaplayerTren!!.stop()
+            Sharedapp.gune.gune="7.Gunea"
+            val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+        }else{
+            aciertos++
         }
         return true
     }

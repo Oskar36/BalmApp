@@ -37,7 +37,7 @@
         <item name="android:layout_marginEnd">25dp</item>
         <item name="android:layout_marginBottom">15dp</item>
         <item name="android:strokeColor">@color/secondaryColor</item>
-
+    </style>
     <style name="titulo1">
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
@@ -47,8 +47,5 @@
         <item name="android:textSize">20dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginTop">32dp</item>
-    </style>
-
-
     </style>
 </resources>
