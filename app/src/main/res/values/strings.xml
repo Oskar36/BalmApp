@@ -155,5 +155,6 @@ solairu bakoitzean zer dagoen jakingo duzue.</string>
     <string name="titulo_modo">NOLA JOLASTU NAHI DUZU?</string>
     <string name="correccion_toast">Guztiak ez dira zuzenak</string>
     <string name="ordenar">ORDENATU KRONOLOGIKOKI</string>
+    <string name="error_toast">Errorea, saiatu berriro</string>
 
 </resources>

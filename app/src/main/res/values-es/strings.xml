@@ -62,7 +62,7 @@
         <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante. Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
         <string name="opcion_1maria">A) Maria Magdalena</string>
         <string name="opcion_2maria">B) Virgen Maria</string>
-        <string name="opcion_3maria">C) Uso zuria</string>
+        <string name="opcion_3maria">C) Paloma Blanca</string>
         <string name="Gurutze_bidea">El camino de la cruz</string>
         <string name="Judasen_hilketa">Muerte de Judas</string>
         <string name="Azken_afaria">Ultima cena</string>
@@ -122,6 +122,7 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
     <string name="correccion_toast">No todas son correctas</string>
     <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
+    <string name="error_toast">Error, vuelve a intentarlo</string>
 
 
 

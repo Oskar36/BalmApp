@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarAndremariabirjinaBinding
 
 
@@ -26,13 +27,16 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         binding.btnfinalizar.setOnClickListener{
-            Sharedapp.gune.gune="4.Gunea 1"
-            val fragment:Fragment=f_fin_intermedio()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
-        }
+            if (binding.mariaRadio.isChecked) {
+                Sharedapp.gune.gune="4.Gunea 1"
+                val fragment:Fragment=f_fin_intermedio()
+                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
 
+            }else{
+                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
     override fun onResume() {
 

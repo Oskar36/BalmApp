@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarPenitenteakBinding
 
 private var _binding: LProcesionJuegoAdivinarPenitenteakBinding? = null
@@ -23,11 +24,18 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnfinalizar.setOnClickListener{
-            val fragment:Fragment=f_procesion_juego_adivinarAndreMariaBirjina()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+        binding.btnfinalizar.setOnClickListener {
+            if (binding.penitenteRadio.isChecked) {
+                val fragment: Fragment = f_procesion_juego_adivinarAndreMariaBirjina()
+                NavFrag.replaceFragment(
+                    fragment,
+                    requireActivity(),
+                    ((view as ViewGroup).parent as View).id
+                )
+            }else{
+                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+            }
         }
-
     }
     override fun onResume() {
 

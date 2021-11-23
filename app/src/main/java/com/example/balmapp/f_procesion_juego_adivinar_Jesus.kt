@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarJesusBinding
 
 
@@ -13,11 +14,16 @@ private var _binding: LProcesionJuegoAdivinarJesusBinding? = null
 private val binding get() = _binding!!
 class f_procesion_juego_adivinar_Jesus : Fragment() {
     private var mediaplayer: MediaPlayer? = null
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizar.setOnClickListener{
-            val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            if(binding.jesusRadio.isChecked){
+                val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
+                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            }else{
+                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

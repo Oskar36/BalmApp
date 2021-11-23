@@ -30,47 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtopcion3"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/opcion_3maria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtopcion2" />
-
-    <TextView
-        android:id="@+id/txtopcion2"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/opcion_2maria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtopcion1" />
-
-    <TextView
-        android:id="@+id/txtopcion1"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/opcion_1maria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgaudioplay1" />
 
     <ImageView
         android:id="@+id/imglogo"
         android:layout_width="166dp"
         android:layout_height="113dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="160dp"
         android:src="@drawable/imgmaria"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtprocesion_adivinar_titulo" />
 
@@ -93,7 +61,7 @@
         android:layout_marginTop="32dp"
         android:src="@android:drawable/ic_media_pause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -106,10 +74,44 @@
         android:layout_marginTop="32dp"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+
+    <RadioGroup
+        android:layout_width="225dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgaudiostop1">
+
+        <RadioButton
+            android:id="@+id/magdalena_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/opcion_1maria" />
+
+        <RadioButton
+            android:id="@+id/maria_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/opcion_2maria" />
+
+        <RadioButton
+            android:id="@+id/paloma_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/opcion_3maria" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btnfinalizar"
