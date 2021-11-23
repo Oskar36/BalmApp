@@ -123,7 +123,19 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="correccion_toast">No todas son correctas</string>
     <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
     <string name="error_toast">Error, vuelve a intentarlo</string>
+    <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradciciones que tiene Balmaseda hoy en dia.\n
+        \n<b>Productores y directores del proyecto:\n</b>
+        - Olatz Arisqueta Núñez\n
+        - Jone Etxeberria Obieta\n
+        - Oihane Fraile Prieto\n
+        - Miriam Martín Belhaj\n
+        - Leire Otero Sarralde\n
+        - Maider Santamaría Jiménez\n
 
-
+    \n<b>Desarroladores:\n</b>
+        - Oskar Llaguno Illera\n
+        - Iker Caballero Cano\n
+        - Alba Olano Barquin\n
+        - Noemí Márquez Gamalo</string>
 
 </resources>
