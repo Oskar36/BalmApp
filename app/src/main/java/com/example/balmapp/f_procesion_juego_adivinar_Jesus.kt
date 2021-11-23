@@ -20,7 +20,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         binding.btnfinalizar.setOnClickListener{
             if(binding.jesusRadio.isChecked){
                 val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
-                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
             }else{
                 Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
             }

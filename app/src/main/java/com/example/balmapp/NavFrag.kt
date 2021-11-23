@@ -19,12 +19,7 @@ class NavFrag {
     companion object{
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
-            println(f_activity.supportFragmentManager.backStackEntryCount)
-            println("${nombre}")
-            println("${nomdestino}")
             if (nombre.equals("Repetir")){
-                f_activity.supportFragmentManager.popBackStack(nomdestino,1)
-            }else if (nombre.equals("Repetir2")){
                 f_activity.supportFragmentManager.popBackStack(nomdestino,1)
             }
             else{

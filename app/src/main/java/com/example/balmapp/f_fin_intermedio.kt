@@ -26,7 +26,7 @@ class f_fin_intermedio : Fragment() {
         }
         binding.btnfinRepetir.setOnClickListener{
             val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Repetir","SopaLetras")
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Repetir","Juego1")
         }
     }
 

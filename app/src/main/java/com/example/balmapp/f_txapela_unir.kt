@@ -26,7 +26,7 @@ class f_juego_txapela_unir : Fragment() {
         binding.btnfinalizarPuente.setOnClickListener{
             Sharedapp.gune.gune="5.Gunea"
             val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego","Explicacion")
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

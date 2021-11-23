@@ -30,7 +30,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             mediaplayer!!.stop()
             Sharedapp.gune.gune="2.Gunea 1"
             val fragment:Fragment=f_fin_intermedio()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"SopaLetras","Explicacion")
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

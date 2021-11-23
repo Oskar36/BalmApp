@@ -44,7 +44,7 @@ class f_jauregi_puzzle : Fragment() {
         binding.btnHurrengoa.setOnClickListener {
             Sharedapp.gune.gune="3.Gunea 1"
             val fragment:Fragment=f_fin_intermedio()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
         }

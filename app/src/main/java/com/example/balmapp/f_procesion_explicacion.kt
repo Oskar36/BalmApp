@@ -27,7 +27,7 @@ class f_procesion_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnprocesionExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_procesion_juego_adivinar_Jesus()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
 

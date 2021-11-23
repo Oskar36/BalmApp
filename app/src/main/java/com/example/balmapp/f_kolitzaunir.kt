@@ -26,7 +26,7 @@ class f_kolitzajuego : Fragment() {
         binding.btnfinalizarKolitza.setOnClickListener{
             Sharedapp.gune.gune="2.Gunea 2"
             val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Unir","SopaLetras")
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego","Repetir")
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

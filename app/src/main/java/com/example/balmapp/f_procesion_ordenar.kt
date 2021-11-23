@@ -131,7 +131,7 @@ class f_procesion_ordenar : Fragment() {
             //paramos el audio
             mediaplayer!!.stop()
             val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego","Repeticion")
         }
 
 
