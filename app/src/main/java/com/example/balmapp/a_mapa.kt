@@ -1,11 +1,15 @@
 package com.example.balmapp
 
 
+import android.annotation.SuppressLint
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.balmapp.databinding.LMapaBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -13,9 +17,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 
 class a_mapa : AppCompatActivity() , OnMapReadyCallback {
     private var mapView: MapView? = null
@@ -23,6 +25,9 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
     private lateinit var binding: LMapaBinding
     private val MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey"
     private lateinit var fusedLocation: FusedLocationProviderClient
+
+    private var marcadores: MutableList<MarkerOptions> = mutableListOf()
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)
         val inflater = menuInflater
@@ -89,8 +94,10 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         mapView!!.onLowMemory()
     }
 
+    @SuppressLint("MissingPermission")
     override fun onMapReady(googleMap: GoogleMap) {
         gmap = googleMap
+        marcadores= mutableListOf()
         insertarGune(LatLng(   43.192611, -3.195056),"1.Gunea","Balmasedako Zubi Zaharra",gmap!!)
         insertarGune(LatLng(   43.201861, -3.249361),"2.Gunea","Kolitzako igoera",gmap!!)
         insertarGune(LatLng(   43.199778, -3.214444),"2.Gunea helmuga","Kolitza mendia",gmap!!)
@@ -125,17 +132,33 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
             }
 
         }
+
         //Localización a tiempo real
         gmap!!.setOnMyLocationChangeListener{
             val ubicacion = LatLng(it.latitude, it.longitude)
             gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
+
+            val gune = LatLng(marcadores.get(0).position.latitude, marcadores.get(0).position.longitude)
+            val gune2 = Location("gune")
+            gune2.latitude = marcadores.get(0).position.latitude
+            gune2.longitude = marcadores.get(0).position.longitude
+            /*if(it.distanceTo(gune2) < METERS_100){
+
+            }*/
+            Toast.makeText(this, "${it.distanceTo(gune2)}", Toast.LENGTH_SHORT).show()
         }
     }
+
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
         marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         mapa.addMarker(marcador)
+        marcadores.add(marcador)
+
+
     }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId){
@@ -151,10 +174,14 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
         }
         return true
     }
+
+
     private fun abrirActivityMenu(activity: String, juego:String){
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
     }
+
+
     private fun MarcadorJuego(gune: String){
         when (gune){
             "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
@@ -166,5 +193,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback {
             "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
         }
     }
+
+
+
 }
 
