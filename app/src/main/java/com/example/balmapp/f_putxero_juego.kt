@@ -45,8 +45,7 @@ class f_putxero_juego : Fragment() {
             mediaplayerFallo!!.stop()
             mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
-            val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            mostrarDialogoPersonalizado()
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)

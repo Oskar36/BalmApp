@@ -36,7 +36,7 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
             if (binding.mariaRadio.isChecked) {
                 Sharedapp.gune.gune="4.Gunea 1"
-
+                mostrarDialogoPersonalizado()
 
             }else{
                 Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()

@@ -122,13 +122,13 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
     <string name="correccion_toast">No todas son correctas</string>
     <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
-<<<<<<< HEAD
+
 
         <string name="dialog_findejuegopregunta">¿Que quieres hacer?</string>
         <string name="dialog_zorionak">¡FELICIDADES! ¡MUY BIEN!</string>
 
 
-=======
+
     <string name="error_toast">Error, vuelve a intentarlo</string>
     <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradciciones que tiene Balmaseda hoy en dia.\n
         \n<b>Productores y directores del proyecto:\n</b>
