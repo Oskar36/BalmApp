@@ -28,6 +28,7 @@ class f_juego_txapela_unir : Fragment() {
         binding.btnfinalizarPuente.setOnClickListener{
             Sharedapp.gune.gune="5.Gunea"
             mostrarDialogoPersonalizado()
+
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

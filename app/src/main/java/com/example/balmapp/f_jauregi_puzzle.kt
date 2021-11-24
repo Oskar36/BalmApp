@@ -45,10 +45,12 @@ class f_jauregi_puzzle : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnHurrengoa.setOnClickListener {
             Sharedapp.gune.gune="3.Gunea 1"
+
             //comprobar que el juego es correcto
             if (comprobartodaslaspiezascorrectas()){
                 mostrarDialogoPersonalizado()
             }
+
             //paramos el audio
             mediaplayer!!.stop()
         }

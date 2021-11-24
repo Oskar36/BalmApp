@@ -1,10 +1,12 @@
 package com.example.balmapp
 
 
+import android.app.FragmentManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -13,9 +15,16 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class NavFrag {
     companion object{
-        fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int) {
+        fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
-            f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).addToBackStack(null).commit()
+            if (nombre.equals("Repetir")){
+                f_activity.supportFragmentManager.popBackStack(nomdestino,1)
+            }
+            else{
+                f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).addToBackStack(nombre).commit()
+            }
+
+
         }
         fun IniciarActivity(context: Context,actividad:String){
             val nombreclase= "com.example.balmapp.$actividad"

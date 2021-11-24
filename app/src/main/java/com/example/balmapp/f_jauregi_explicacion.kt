@@ -25,7 +25,7 @@ class f_jauregi_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizarPuente.setOnClickListener{
             val fragment:Fragment=f_jauregi_puzzle()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
         }

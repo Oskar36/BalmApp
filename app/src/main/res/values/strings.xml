@@ -155,6 +155,25 @@ solairu bakoitzean zer dagoen jakingo duzue.</string>
     <string name="titulo_modo">NOLA JOLASTU NAHI DUZU?</string>
     <string name="correccion_toast">Guztiak ez dira zuzenak</string>
     <string name="ordenar">ORDENATU KRONOLOGIKOKI</string>
+<<<<<<< HEAD
     <string name="dialog_findejuegopregunta">Zer egin nahi duzu?</string>
     <string name="dialog_zorionak">ZORIONAK! OSO ONDO!</string>
+=======
+    <string name="error_toast">Errorea, saiatu berriro</string>
+    <string name="nosotros">EHUko Irakasle Eskolako ikasle-talde bat gara, eta elkarrekin eraman ditugu CIFP Txurdinaga LHII institutuko beste ikasle batzuk, lehen hezkuntzako haurrek Balmasedak gaur egun dituen historia eta itzulpenak beste era batera ikas ditzaten.\n
+        \n<b>Proiektuaren ekoizleak eta zuzendariak:\n</b>
+        - Olatz Arisqueta Núñez\n
+        - Jone Etxeberria Obieta\n
+        - Oihane Fraile Prieto\n
+        - Miriam Martín Belhaj\n
+        - Leire Otero Sarralde\n
+        - Maider Santamaría Jiménez\n
+
+    \n<b>Garatzaileak:\n</b>
+        - Oskar Llaguno Illera\n
+        - Iker Caballero Cano\n
+        - Alba Olano Barquin\n
+        - Noemí Márquez Gamalo</string>
+
+>>>>>>> 1982e014cd9b7aff3ca32e375194f48f5e993dc3
 </resources>

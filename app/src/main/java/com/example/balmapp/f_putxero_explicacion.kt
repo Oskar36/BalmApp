@@ -26,7 +26,7 @@ class f_putxero_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnputxeroExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_putxero_juego()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
         }

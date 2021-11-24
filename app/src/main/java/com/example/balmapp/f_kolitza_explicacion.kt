@@ -25,7 +25,7 @@ class f_monte_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnmonteExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_kolitza_juego_sopaletras()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
         }

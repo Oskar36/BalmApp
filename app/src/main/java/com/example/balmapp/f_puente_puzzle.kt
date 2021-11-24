@@ -29,9 +29,11 @@ class f_puente_puzzle : Fragment() {
             //paramos el audio
             mediaplayer!!.stop()
             Sharedapp.gune.gune="1.Gunea"
+
             /*val fragment:Fragment=f_fin()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
             mostrarDialogoPersonalizado()
+
         }
 
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio

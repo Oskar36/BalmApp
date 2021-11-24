@@ -31,11 +31,13 @@ class f_kolitzajuego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizarKolitza.setOnClickListener{
-            mostrarDialogoPersonalizado()
+
             Sharedapp.gune.gune="2.Gunea 2"
+            mostrarDialogoPersonalizado()
            /* val fragment:Fragment=f_fin()
             NavFrag.replaceFragmen
             t(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
+
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

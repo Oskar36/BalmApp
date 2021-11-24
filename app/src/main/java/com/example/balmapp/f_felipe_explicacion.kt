@@ -28,7 +28,7 @@ class f_felipe_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnfelipeExplicacionJugar.setOnClickListener(){
             val fragment:Fragment=f_sanfelipe_cancion()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
         }
@@ -41,7 +41,8 @@ class f_felipe_explicacion : Fragment() {
 
 
         mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)        }
+            NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
+        }
 
     }
     override fun onDestroyView() {

@@ -62,7 +62,7 @@
         <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante. Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
         <string name="opcion_1maria">A) Maria Magdalena</string>
         <string name="opcion_2maria">B) Virgen Maria</string>
-        <string name="opcion_3maria">C) Uso zuria</string>
+        <string name="opcion_3maria">C) Paloma Blanca</string>
         <string name="Gurutze_bidea">El camino de la cruz</string>
         <string name="Judasen_hilketa">Muerte de Judas</string>
         <string name="Azken_afaria">Ultima cena</string>
@@ -122,10 +122,28 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
     <string name="correccion_toast">No todas son correctas</string>
     <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
+<<<<<<< HEAD
 
         <string name="dialog_findejuegopregunta">¿Que quieres hacer?</string>
         <string name="dialog_zorionak">¡FELICIDADES! ¡MUY BIEN!</string>
 
 
+=======
+    <string name="error_toast">Error, vuelve a intentarlo</string>
+    <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradciciones que tiene Balmaseda hoy en dia.\n
+        \n<b>Productores y directores del proyecto:\n</b>
+        - Olatz Arisqueta Núñez\n
+        - Jone Etxeberria Obieta\n
+        - Oihane Fraile Prieto\n
+        - Miriam Martín Belhaj\n
+        - Leire Otero Sarralde\n
+        - Maider Santamaría Jiménez\n
+
+    \n<b>Desarroladores:\n</b>
+        - Oskar Llaguno Illera\n
+        - Iker Caballero Cano\n
+        - Alba Olano Barquin\n
+        - Noemí Márquez Gamalo</string>
+>>>>>>> 1982e014cd9b7aff3ca32e375194f48f5e993dc3
 
 </resources>

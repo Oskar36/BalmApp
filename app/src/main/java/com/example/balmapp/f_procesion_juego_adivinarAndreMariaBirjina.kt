@@ -7,7 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import androidx.appcompat.app.AlertDialog
+
+import android.widget.Toast
+
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarAndremariabirjinaBinding
 
 
@@ -28,12 +32,16 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         binding.btnfinalizar.setOnClickListener{
-            Sharedapp.gune.gune="4.Gunea 1"
-            mostrarDialogoPersonalizado()
-        }
 
+            if (binding.mariaRadio.isChecked) {
+                Sharedapp.gune.gune="4.Gunea 1"
+
+
+            }else{
+                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
     override fun onResume() {
 

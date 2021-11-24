@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LApodoBinding
+
 import com.example.balmapp.databinding.LJauregiUnirBinding
 
 
@@ -35,7 +37,7 @@ class f_jauregi_unirjuego : Fragment() {
         NavFrag.animacion_dantzaris(binding.imglogo)
         binding.btnfinalizarjauregi.setOnClickListener{
             Sharedapp.gune.gune="3.Gunea 2"
-            mostrarDialogoPersonalizado()
+
             //paramos el audio
             mediaplayer!!.stop()
         }
@@ -56,6 +58,13 @@ class f_jauregi_unirjuego : Fragment() {
             }
         }
 
+
+        binding.btnfinalizarjauregi.setOnClickListener {
+            //Abrir fragment repetir juego
+            Sharedapp.gune.gune="3.Gunea 2"
+            mostrarDialogoPersonalizado()
+            mediaplayer!!.stop()
+        }
 
     }
     override fun onDestroyView() {

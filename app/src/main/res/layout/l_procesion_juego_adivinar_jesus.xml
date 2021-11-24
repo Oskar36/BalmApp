@@ -30,86 +30,87 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="166dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="152dp"
+        android:src="@drawable/adivinar_jesus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtprocesion_adivinar_titulo" />
+
     <TextView
-        android:id="@+id/txtopcion3"
+        android:id="@+id/txtexplicacion1_penitenteak"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/opcion_3jesus"
+        android:layout_marginTop="20dp"
+        android:text="@string/explicacion_jesus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtopcion2" />
+        app:layout_constraintTop_toBottomOf="@+id/imglogo" />
 
     <ImageButton
         android:id="@+id/imgaudiostop1"
         style="@style/botones"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:src="@android:drawable/ic_media_pause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/txtexplicacion1_penitenteak"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/explicacion_jesus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imglogo" />
-
-    <TextView
-        android:id="@+id/txtopcion1"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/opcion_1jesus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgaudioplay1" />
-
-    <ImageView
-        android:id="@+id/imglogo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="176dp"
-        android:src="@drawable/adivinar_jesus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtprocesion_adivinar_titulo" />
 
     <ImageButton
         android:id="@+id/imgaudioplay1"
         style="@style/botones"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txtopcion2"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/opcion_2jesus"
+
+    <RadioGroup
+        android:layout_width="164dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.663"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtopcion1" />
+        app:layout_constraintTop_toBottomOf="@+id/imgaudiostop1">
+
+        <RadioButton
+            android:id="@+id/judas_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/opcion_1jesus" />
+
+        <RadioButton
+            android:id="@+id/jose_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/opcion_2jesus" />
+
+        <RadioButton
+            android:id="@+id/jesus_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/opcion_3jesus" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btnfinalizar"

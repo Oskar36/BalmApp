@@ -23,7 +23,7 @@ class f_txapela_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btntxapelaExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_juego_txapela_unir()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgtxapelaExplicacionLogo)

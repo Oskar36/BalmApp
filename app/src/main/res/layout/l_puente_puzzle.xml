@@ -12,23 +12,15 @@
 
     <TextView
         android:id="@+id/txtpuente_puzzle_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         style="@style/titulo2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
         android:text="@string/txtjauregi_puzzle_titulo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imgpuente_explicacion_logo"
-        style="@style/medidas_dantzaris"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpuente_puzzle_titulo"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnfinalizar_puente"
@@ -40,88 +32,14 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/img_jauregi_foto"
-        android:layout_width="234dp"
-        android:layout_height="178dp"
-        android:src="@drawable/puente_puzzle_img"
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="579dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.401" />
-
-    <ImageView
-        android:id="@+id/img_pieza_escudo"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
-
-    <ImageView
-        android:id="@+id/img_pieza_ventana"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
-
-    <ImageView
-        android:id="@+id/img_pieza6"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
-
-    <ImageView
-        android:id="@+id/img_pieza_columna"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
-
-    <ImageView
-        android:id="@+id/img_pieza_puertaventana"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
-
-    <ImageView
-        android:id="@+id/img_pieza_balcon"
-        android:layout_width="122dp"
-        android:layout_height="85dp"
-        android:src="@drawable/puzzle1_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        tools:src="@drawable/adeb632754faedfe34fb85b83e52a4dc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

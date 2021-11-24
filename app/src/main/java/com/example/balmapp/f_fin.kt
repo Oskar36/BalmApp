@@ -24,11 +24,12 @@ class f_fin : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinSiguiente.setOnClickListener(){
+                requireActivity().finish()
                 NavFrag.IniciarActivity(requireContext(),"a_mapa")
         }
         binding.btnfinRepetir.setOnClickListener(){
             val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Repetir","Juego")
         }
     }
     override fun onDestroyView() {
