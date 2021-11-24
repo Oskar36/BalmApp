@@ -13,8 +13,8 @@
     <TextView
         android:id="@+id/txtpuente_puzzle_titulo"
         style="@style/titulo2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="271dp"
+        android:layout_height="39dp"
         android:layout_marginTop="16dp"
         android:text="@string/txtjauregi_puzzle_titulo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,14 +32,185 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="400dp"
-        android:layout_height="579dp"
+        android:id="@+id/puzzle"
+        android:layout_width="364dp"
+        android:layout_height="364dp"
+        android:src="@drawable/puzzle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/adeb632754faedfe34fb85b83e52a4dc" />
+        app:layout_constraintVertical_bias="0.253" />
+
+    <ImageView
+        android:id="@+id/puzzle_11"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="332dp"
+
+        android:layout_marginTop="492dp"
+        android:src="@drawable/puzzle_11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_12"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/puzzle_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_13"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="492dp"
+        android:src="@drawable/puzzle_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_21"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="492dp"
+        android:src="@drawable/puzzle_21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_22"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="492dp"
+        android:src="@drawable/puzzle_22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_23"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="209dp"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/puzzle_23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_31"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/puzzle_31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_32"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="492dp"
+        android:src="@drawable/puzzle_32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/puzzle_33"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/puzzle_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="364dp"
+        android:layout_height="364dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253"
+        app:columnCount="3"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/bien_11"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_11"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_12"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_12"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_13"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_13"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_21"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_21"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_22"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_22"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_23"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_23"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_31"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_31"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_32"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:src="@drawable/puzzle_32"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bien_33"
+            android:layout_width="121.33dp"
+            android:layout_height="121.33dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="276dp"
+            android:src="@drawable/puzzle_33"
+            android:visibility="invisible"/>
+    </androidx.gridlayout.widget.GridLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
