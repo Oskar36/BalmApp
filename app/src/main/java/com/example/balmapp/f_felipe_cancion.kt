@@ -1,6 +1,7 @@
 package com.example.balmapp
 
 
+import android.content.DialogInterface
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LFelipeCancionBinding
 import java.util.*
 
@@ -71,9 +73,8 @@ class f_sanfelipe_cancion : Fragment() {
             val txt16=ComprobarTextos(binding.txtpalabra16,"viva")
             val Listatxt= listOf(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
             if(ComprobarTodos(Listatxt)){
-                //Abrir fragment repetir juego
-                val fragment:Fragment=f_fin()
-                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+
+                mostrarDialogoPersonalizado()
             }else{
                 Toast.makeText(requireContext(), R.string.correccion_toast, Toast.LENGTH_SHORT).show()
             }
@@ -119,5 +120,26 @@ class f_sanfelipe_cancion : Fragment() {
             }
         }
         return true
+    }
+
+    private fun mostrarDialogoPersonalizado(){
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
+            .setPositiveButton(R.string.txt_finalizar,
+                DialogInterface.OnClickListener { dialog, id ->
+                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.repetir,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+
     }
 }

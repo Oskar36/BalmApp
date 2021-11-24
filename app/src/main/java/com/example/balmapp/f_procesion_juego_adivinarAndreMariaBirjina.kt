@@ -1,11 +1,13 @@
 package com.example.balmapp
 
+import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarAndremariabirjinaBinding
 
 
@@ -29,8 +31,7 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
         binding.btnfinalizar.setOnClickListener{
             Sharedapp.gune.gune="4.Gunea 1"
-            val fragment:Fragment=f_fin_intermedio()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            mostrarDialogoPersonalizado()
         }
 
     }
@@ -54,5 +55,26 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
         super.onDestroyView()
         _binding = null
         mediaplayer!!.stop()
+    }
+    private fun mostrarDialogoPersonalizado(){
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
+            .setPositiveButton(R.string.txt_siguientejuego,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.AbrirSiguiente(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.repetir,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.MarcadorJuegofinintermedio(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+
     }
 }

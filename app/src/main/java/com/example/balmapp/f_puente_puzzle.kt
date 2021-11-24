@@ -1,11 +1,13 @@
 package com.example.balmapp
 
+import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LPuentePuzzleBinding
 
 private var _binding: LPuentePuzzleBinding? = null
@@ -27,8 +29,9 @@ class f_puente_puzzle : Fragment() {
             //paramos el audio
             mediaplayer!!.stop()
             Sharedapp.gune.gune="1.Gunea"
-            val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            /*val fragment:Fragment=f_fin()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
+            mostrarDialogoPersonalizado()
         }
 
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -54,6 +57,27 @@ class f_puente_puzzle : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
 
+
+    }
+
+    private fun mostrarDialogoPersonalizado(){
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
+            .setPositiveButton(R.string.txt_finalizar,
+                DialogInterface.OnClickListener { dialog, id ->
+                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.repetir,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
 
     }
 }

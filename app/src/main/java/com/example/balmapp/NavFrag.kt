@@ -8,9 +8,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-
-
-
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class NavFrag {
@@ -47,7 +45,49 @@ class NavFrag {
             animacion.stop()
 
         }
+       fun MarcadorJuegofin(gune: String):Fragment{
+            var fragment:Fragment?=null
+            when (gune){
+                "1.Gunea" ->     fragment=f_puente_puzzle()
+                "2.Gunea 2" ->   fragment=f_kolitzajuego()
+                "3.Gunea 2" ->   fragment=f_jauregi_unirjuego()
+                "4.Gunea 2" ->   fragment=f_procesion_ordenar()
+                "5.Gunea" ->     fragment=f_juego_txapela_unir()
+                "6.Gunea" ->     fragment=f_sanfelipe_cancion()
+                "7.Gunea" ->     fragment=f_putxero_juego()
+            }
+            return fragment!!
+        }
+
+    fun AbrirSiguiente(gune: String):Fragment {
+            var fragment:Fragment?=null
+            when (gune){
+                "2.Gunea 1" ->   fragment=f_kolitzajuego()
+                "3.Gunea 1" ->   fragment=f_jauregi_unirjuego()
+                "4.Gunea 1" ->   fragment=f_procesion_ordenar()
+                "2.Gunea 2" ->   fragment=f_kolitzajuego()
+                "3.Gunea 2" ->   fragment=f_procesion_ordenar()
+                "4.Gunea 2" ->   fragment=f_procesion_ordenar()
+            }
+            return fragment!!
+        }
+      fun  MarcadorJuegofinintermedio(gune: String):Fragment{
+            var fragment:Fragment?=null
+            when (gune){
+                "2.Gunea 1" ->   fragment=f_kolitza_juego_sopaletras()
+                "3.Gunea 1" ->   fragment=f_jauregi_puzzle()
+                "4.Gunea 1" ->   fragment=f_procesion_juego_adivinar_Jesus()
+                "2.Gunea 2" ->   fragment=f_kolitza_juego_sopaletras()
+                "3.Gunea 2" ->   fragment=f_jauregi_puzzle()
+                "4.Gunea 2" ->   fragment=f_procesion_juego_adivinar_Jesus()
+            }
+            return fragment!!
+        }
+
+
+
     }
+
 }
 
 

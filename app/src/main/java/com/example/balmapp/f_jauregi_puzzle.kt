@@ -1,6 +1,7 @@
 package com.example.balmapp
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
@@ -12,6 +13,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
@@ -43,11 +45,15 @@ class f_jauregi_puzzle : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnHurrengoa.setOnClickListener {
             Sharedapp.gune.gune="3.Gunea 1"
-            val fragment:Fragment=f_fin_intermedio()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+            //comprobar que el juego es correcto
+            if (comprobartodaslaspiezascorrectas()){
+                mostrarDialogoPersonalizado()
+            }
             //paramos el audio
             mediaplayer!!.stop()
         }
+
+
 
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
@@ -117,7 +123,7 @@ class f_jauregi_puzzle : Fragment() {
                 if ((x_pieza <= (x_imagen + 100) && x_pieza >= (x_imagen - 100)) && (y_pieza <= (y_imagen + 100) && (y_pieza >= y_imagen - 100))) {
                     //visibilidad de que la pieza esta en el sitio correcto
                     //poner filtro verde en la posicion de la pieza
-                    poner_filtro_verde(resources.getResourceEntryName(view.id))
+                    poner_filtro_normal(resources.getResourceEntryName(view.id))
 
                     //desaparece la pieza
                     view.isVisible = false
@@ -177,7 +183,7 @@ class f_jauregi_puzzle : Fragment() {
 
 
 
-    private fun poner_filtro_verde(nombre:String) {
+    private fun poner_filtro_normal(nombre:String) {
 
         when (nombre) {
 
@@ -210,7 +216,20 @@ class f_jauregi_puzzle : Fragment() {
     }
 
 
+private fun comprobartodaslaspiezascorrectas():Boolean{
+  if(binding.imgPiezaBalcon.isVisible==false &&
+      binding.imgPiezaColumna.isVisible==false &&
+      binding.imgPiezaEscudo.isVisible==false &&
+      binding.imgPiezaPuertaprincipal.isVisible==false &&
+      binding.imgPiezaVentana.isVisible==false &&
+      binding.imgPiezaPuertaventana.isVisible==false) {
+      return true
 
+  }else{
+      return false
+  }
+
+}
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -231,6 +250,27 @@ class f_jauregi_puzzle : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
 
+
+    }
+    private fun mostrarDialogoPersonalizado(){
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
+            .setPositiveButton(R.string.txt_siguientejuego,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.AbrirSiguiente(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.repetir,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.MarcadorJuegofinintermedio(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
 
     }
 }
