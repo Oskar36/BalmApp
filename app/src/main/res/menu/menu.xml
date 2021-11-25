@@ -5,6 +5,9 @@
         android:id="@+id/Cambiar_modo_menu">
     </item>
 
+    <item android:title="@string/modo_profesor"
+        android:id="@+id/modo_profesor">
+    </item>
     <item android:title="@string/acerca_de"
         android:id="@+id/acerca_de_menu">
     </item>

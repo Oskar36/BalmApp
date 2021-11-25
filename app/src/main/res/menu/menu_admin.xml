@@ -33,6 +33,10 @@
         android:id="@+id/acerca_de_menu">
     </item>
 
+    <item android:title="@string/modo_profesor"
+        android:id="@+id/modo_profesor">
+    </item>
+
     <item android:title="@string/desconectar"
         android:id="@+id/desconectar_menu">
     </item>
