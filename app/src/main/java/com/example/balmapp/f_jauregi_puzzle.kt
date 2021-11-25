@@ -28,6 +28,7 @@ import com.example.balmapp.databinding.LJauregiPuzzleBinding
 private var _binding: LJauregiPuzzleBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
+private var aciertos:Int=0
 
 class f_jauregi_puzzle : Fragment() {
     override fun onCreateView(
@@ -43,17 +44,7 @@ class f_jauregi_puzzle : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnHurrengoa.setOnClickListener {
-            Sharedapp.gune.gune="3.Gunea 1"
 
-            //comprobar que el juego es correcto
-            if (comprobartodaslaspiezascorrectas()){
-                mostrarDialogoPersonalizado()
-            }
-
-            //paramos el audio
-            mediaplayer!!.stop()
-        }
 
 
 
@@ -126,6 +117,7 @@ class f_jauregi_puzzle : Fragment() {
                     //visibilidad de que la pieza esta en el sitio correcto
                     //poner filtro verde en la posicion de la pieza
                     poner_filtro_normal(resources.getResourceEntryName(view.id))
+                    Valid()
 
                     //desaparece la pieza
                     view.isVisible = false
@@ -218,25 +210,6 @@ class f_jauregi_puzzle : Fragment() {
     }
 
 
-private fun comprobartodaslaspiezascorrectas():Boolean{
-  if(binding.imgPiezaBalcon.isVisible==false &&
-      binding.imgPiezaColumna.isVisible==false &&
-      binding.imgPiezaEscudo.isVisible==false &&
-      binding.imgPiezaPuertaprincipal.isVisible==false &&
-      binding.imgPiezaVentana.isVisible==false &&
-      binding.imgPiezaPuertaventana.isVisible==false) {
-      return true
-
-  }else{
-      return false
-  }
-
-}
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
     override fun onStart() {
         super.onStart()
@@ -274,5 +247,16 @@ private fun comprobartodaslaspiezascorrectas():Boolean{
             .create()
             .show()
 
+    }
+//controlamos que todas las piezas esten colocadas
+    private fun Valid():Boolean{
+
+    aciertos += 1
+        if (aciertos==6){
+            mediaplayer!!.stop()
+            Sharedapp.gune.gune="3.Gunea 1"
+            mostrarDialogoPersonalizado()
+        }
+        return true
     }
 }

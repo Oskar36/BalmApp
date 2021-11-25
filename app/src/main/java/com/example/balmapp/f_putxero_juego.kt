@@ -40,13 +40,7 @@ class f_putxero_juego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         aciertos=0
-        binding.btnPutxerojuego.setOnClickListener{ //paramos el audio
-            mediaplayer!!.stop()
-            mediaplayerFallo!!.stop()
-            mediaplayerTren!!.stop()
-            Sharedapp.gune.gune="7.Gunea"
-            mostrarDialogoPersonalizado()
-        }
+
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -100,7 +94,7 @@ class f_putxero_juego : Fragment() {
                     mediaplayerTren!!.stop()
                     Sharedapp.gune.gune="7.Gunea"
 
-                    mostrarDialogoPersonalizado()               }
+                    mostrarDialogoDerrota()             }
 
             })
         }
@@ -204,8 +198,8 @@ class f_putxero_juego : Fragment() {
             mediaplayerFallo!!.stop()
             mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
-            val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego","Explicacion")
+
+             mostrarDialogoPersonalizado()
         }else{
             aciertos++
         }
@@ -221,6 +215,23 @@ class f_putxero_juego : Fragment() {
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     // sign in the user ...
                 })
+            .setNeutralButton(R.string.repetir,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+
+    }
+
+    private fun mostrarDialogoDerrota(){
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuegoderrota,null))
+
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
