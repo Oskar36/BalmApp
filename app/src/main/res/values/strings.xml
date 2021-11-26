@@ -18,8 +18,8 @@
     <string name="monte_explicacion">KOLITZA MENDIAREN HISTORIA</string>
     <string name="jauregi_explicacion">HORCASITAS JAUREGIAREN HISTORIA</string>
     <string name="cambiar_modo">Modua aldatu</string>
-    <string name="acerca_de">Honi buruz</string>
-    <string name="desconectar">Deskonektatu</string>
+    <string name="acerca_de">HONI BURUZ</string>
+    <string name="desconectar">DESKONEKTATU</string>
     <string name="puente">ZUBI ZAHARRA</string>
     <string name="kolitxa" translatable="false">KOLITXA MENDIA</string>
     <string name="jauregi">HORCASITAS JAUREGIA</string>
@@ -172,7 +172,7 @@ solairu bakoitzean zer dagoen jakingo duzue.</string>
         - Iker Caballero Cano\n
         - Alba Olano Barquin\n
         - Noemí Márquez Gamalo</string>
-    <string name="modo_profesor">Irakasle modea</string>
+    <string name="modo_profesor">IRAKASLE MODUA</string>
     <string name="saiatuberriz">OHHHH! Saiatu berriz</string>
 
 </resources>

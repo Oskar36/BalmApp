@@ -15,8 +15,8 @@
         <string name="monte_explicacion">HISTORIA DEL MONTE KOLITXA</string>
         <string name="jauregi_explicacion">HISTORIA DEL CASTILLO HORCASITAS</string>
         <string name="cambiar_modo">Cambiar modo</string>
-        <string name="acerca_de">Acerca de</string>
-        <string name="desconectar">Desconectar</string>
+        <string name="acerca_de">ACERCA DE</string>
+        <string name="desconectar">DESCONECTAR</string>
         <string name="puente">PUENTE VIEJO</string>
         <string name="kolitxa" translatable="false">MONTE KOLITXA</string>
         <string name="jauregi">CASTILLO HORCASITAS</string>
@@ -139,7 +139,7 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
         - Iker Caballero Cano\n
         - Alba Olano Barquin\n
         - Noemí Márquez Gamalo</string>
-    <string name="modo_profesor">Modo profesor</string>
+    <string name="modo_profesor">MODO PROFESOR</string>
 
     <string name="saiatuberriz">OHHHH! Saiatu vuelve a intentarlo</string>
 
