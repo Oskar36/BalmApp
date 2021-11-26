@@ -32,12 +32,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     private lateinit var fusedLocation: FusedLocationProviderClient
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        super.onCreateOptionsMenu(menu)
-        val inflater = menuInflater
-        inflater.inflate(R.menu.menu_admin, menu)
-        return true
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LMapaBinding.inflate(layoutInflater)
