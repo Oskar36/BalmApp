@@ -9,5 +9,6 @@
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#000000</color>
     <color name="green">#00ff00</color>
+    <color name="blanco">#FFFFFF</color>
 </resources>
 

@@ -18,4 +18,10 @@
     <style name="DotsDarkTheme" parent="@style/Widget.AppCompat.ActionButton.Overflow" >
         <item name="android:tint">@color/secondaryTextColor</item>
     </style>
+
+    <style name="NavigationViewStyle" parent="">
+        <item name="android:textSize">20sp</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">40dp</item><!-- menu item height-->
+        <item name="android:textColor">@color/blanco</item>
+    </style>
 </resources>
