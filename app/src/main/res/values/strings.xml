@@ -20,13 +20,13 @@
     <string name="cambiar_modo">Modua aldatu</string>
     <string name="acerca_de">Honi buruz</string>
     <string name="desconectar">Deskonektatu</string>
-    <string name="puente">Zubia</string>
-    <string name="kolitxa" translatable="false">Kolitxa</string>
-    <string name="jauregi">Jauregia</string>
-    <string name="procesion">Prozesion</string>
-    <string name="txapela">Txapela</string>
-    <string name="san_felipe" translatable="false">San Felipe</string>
-    <string name="putxero">Putxeroa</string>
+    <string name="puente">ZUBI ZAHARRA</string>
+    <string name="kolitxa" translatable="false">KOLITXA MENDIA</string>
+    <string name="jauregi">HORCASITAS JAUREGIA</string>
+    <string name="procesion">PROZESIOA</string>
+    <string name="txapela">TXAPELA MUSEOA</string>
+    <string name="san_felipe" translatable="false">SAN FELIPE ABEZTIA</string>
+    <string name="putxero">PUTXERIA</string>
     <string name="procesion_explicacion">PROZESIOAREN HISTORIA</string>
     <string name="txt_texto_pazkoa">Pazkoa</string>
     <string name="txt_texto_bazkaria">Bazkaria</string>

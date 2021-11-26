@@ -17,13 +17,13 @@
         <string name="cambiar_modo">Cambiar modo</string>
         <string name="acerca_de">Acerca de</string>
         <string name="desconectar">Desconectar</string>
-        <string name="puente">Puente</string>
-        <string name="kolitxa" translatable="false">Kolitxa</string>
-        <string name="jauregi">Castillo</string>
-        <string name="procesion">Procesión</string>
-        <string name="txapela">Boina</string>
-        <string name="san_felipe" translatable="false">San Felipe</string>
-        <string name="putxero">Puchero</string>
+        <string name="puente">PUENTE VIEJO</string>
+        <string name="kolitxa" translatable="false">MONTE KOLITXA</string>
+        <string name="jauregi">CASTILLO HORCASITAS</string>
+        <string name="procesion">PROCESIÓN</string>
+        <string name="txapela">MUSEO DE LA BOINA</string>
+        <string name="san_felipe" translatable="false">CANCIÓN DE SAN FELIPE</string>
+        <string name="putxero">PUCHERAS</string>
         <string name="procesion_explicacion">HISTORIA DE LA PROCESIÓN</string>
         <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
         <string name="txt_texto_bazkaria">Almuerzo</string>
