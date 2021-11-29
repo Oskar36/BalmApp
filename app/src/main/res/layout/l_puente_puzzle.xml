@@ -151,14 +151,14 @@
             android:layout_width="121.33dp"
             android:layout_height="121.33dp"
             android:src="@drawable/puzzle_11"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/bien_12"
             android:layout_width="121.33dp"
             android:layout_height="121.33dp"
             android:src="@drawable/puzzle_12"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/bien_13"

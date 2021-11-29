@@ -247,11 +247,14 @@ class f_puente_puzzle : Fragment() {
                 }
 
         }
-          
+
         }
         binding.frameLayout7.invalidate()
         true
     }
+
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
