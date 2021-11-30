@@ -1,6 +1,7 @@
 package com.example.balmapp
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.example.balmapp.databinding.LPuentePuzzleBinding
@@ -44,8 +46,7 @@ class f_puente_puzzle : Fragment() {
             //paramos el audio
             mediaplayer!!.stop()
             Sharedapp.gune.gune="1.Gunea"
-            val fragment:Fragment=f_fin()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego","Explicacion")
+            mostrarDialogoPersonalizado()
         }
             else{
                 Toast.makeText(requireContext(), "Falta alguna pieza", Toast.LENGTH_SHORT).show()
@@ -286,6 +287,27 @@ class f_puente_puzzle : Fragment() {
         binding.puzzle.getLocationOnScreen(location2)
         val x2 = location2[0]
         val y2 = location2[1]
+
+    }
+
+    private fun mostrarDialogoPersonalizado(){
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
+            .setPositiveButton(R.string.txt_finalizar,
+                DialogInterface.OnClickListener { dialog, id ->
+                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.repetir,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
 
     }
 }

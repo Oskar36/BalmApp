@@ -11,7 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LTxapelaUnirBinding
 
 
-private var _binding: LTxapelaUnirBinding? = null
+private var _binding:LTxapelaUnirBinding? = null
 private val binding get() = _binding!!
 private var mediaplayeraudio1: MediaPlayer? = null
 private var mediaplayeraudio2: MediaPlayer? = null
@@ -31,8 +31,11 @@ class f_juego_txapela_unir : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnfinalizarPuente.setOnClickListener{
-            Sharedapp.gune.gune="5.Gunea"
+        binding.btnsiguiente.setOnClickListener{
+
+            val fragment:Fragment=f_txapelaunir2()
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
+
 
 
         }
@@ -107,7 +110,7 @@ class f_juego_txapela_unir : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+
         mediaplayeraudio1!!.pause()
         mediaplayeraudio2!!.pause()
         mediaplayeraudio3!!.pause()

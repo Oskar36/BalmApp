@@ -26,7 +26,7 @@
         style="@style/botones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hurrengoa"
+        android:text="@string/txt_finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -45,14 +45,14 @@
         android:layout_width="104dp"
         android:layout_height="70dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="208dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageButton
-            android:id="@+id/playaudio1"
+            android:id="@+id/playaudio5"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -65,7 +65,7 @@
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/pauseaudio1"
+            android:id="@+id/pauseaudio5"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -83,14 +83,14 @@
         android:layout_width="104dp"
         android:layout_height="70dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="328dp"
+        android:layout_marginTop="296dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageButton
-            android:id="@+id/playaudio2"
+            android:id="@+id/playaudio6"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -103,7 +103,7 @@
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/pauseaudio2"
+            android:id="@+id/pauseaudio6"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -121,14 +121,14 @@
         android:layout_width="104dp"
         android:layout_height="70dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="380dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageButton
-            android:id="@+id/playaudio3"
+            android:id="@+id/playaudio7"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -141,7 +141,7 @@
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/pauseaudio3"
+            android:id="@+id/pauseaudio7"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -159,14 +159,14 @@
         android:layout_width="104dp"
         android:layout_height="70dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="468dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageButton
-            android:id="@+id/playaudio4"
+            android:id="@+id/playaudio8"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -179,7 +179,7 @@
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/pauseaudio4"
+            android:id="@+id/pauseaudio8"
             style="@style/botones"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -194,42 +194,42 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/txapelaimagen1"
+        android:id="@+id/txapelaimagen5"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="196dp"
-        android:src="@drawable/txapelaimagen2"
+        android:src="@drawable/txapelaimagen8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/txapelaimagen2"
+        android:id="@+id/txapelaimagen6"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="312dp"
-        android:src="@drawable/txapelaimagen3"
+        android:src="@drawable/txapelaimagen7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/txapelaimagen3"
+        android:id="@+id/txapelaimagen7"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="420dp"
-        android:src="@drawable/txapelaimagen4"
+        android:src="@drawable/txapelaimagen6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/txapelaimagen4"
+        android:id="@+id/txapelaimagen8"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="536dp"
-        android:src="@drawable/txapelaimagen1"
+        android:src="@drawable/txapelaimagen5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
