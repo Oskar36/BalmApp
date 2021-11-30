@@ -24,7 +24,10 @@ class f_txapela_explicacion : Fragment() {
         binding.btntxapelaExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_juego_txapela_unir()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
+
         }
+
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

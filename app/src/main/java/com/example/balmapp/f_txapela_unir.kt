@@ -50,6 +50,7 @@ class f_juego_txapela_unir : Fragment() {
                 mediaplayer!!.stop()
             }else{
 
+
                 mediaplayer!!.prepare()
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imglogo)
