@@ -1,20 +1,19 @@
-<androidx.drawerlayout.widget.DrawerLayout android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".a_mapa"
-    tools:openDrawer="start"
-    android:id="@+id/drawer_layout">
+    tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav"
+        style="@style/Navigationestiloa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:visibility="visible"
-        style="@style/botones"
-        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/transparent"
         app:menu="@menu/menu_admin">
 
     </com.google.android.material.navigation.NavigationView>
