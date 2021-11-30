@@ -10,5 +10,6 @@
     <color name="secondaryTextColor">#000000</color>
     <color name="green">#00ff00</color>
     <color name="blanco">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>
 

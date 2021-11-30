@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <item android:title="@string/juegos">
         <menu>
         <group android:checkableBehavior="single">
             <item android:title="@string/puente"
-                android:id="@+id/puente_admin">
+                android:id="@+id/puente_admin"
+                android:icon="@drawable/icono_puente">
             </item>
 
             <item android:title="@string/kolitxa"
-                android:id="@+id/kolitxa_menu">
+                android:id="@+id/kolitxa_menu"
+                android:icon="@drawable/icono_monte">
             </item>
 
             <item android:title="@string/jauregi"
-                android:id="@+id/jauregi_menu">
+                android:id="@+id/jauregi_menu"
+                android:icon="@drawable/icono_castillo">
             </item>
 
             <item android:title="@string/procesion"
-                android:id="@+id/procesion_menu">
+                android:id="@+id/procesion_menu"
+                android:icon="@drawable/icono_cruz">
             </item>
 
             <item android:title="@string/txapela"
-                android:id="@+id/txapela_menu">
+                android:id="@+id/txapela_menu"
+                android:icon="@drawable/icono_boina">
             </item>
 
             <item android:title="@string/san_felipe"
-                android:id="@+id/san_felipe_menu">
+                android:id="@+id/san_felipe_menu"
+                android:icon="@drawable/icono_musica">
             </item>
 
             <item android:title="@string/putxero"
-                android:id="@+id/putxero_menu">
+                android:id="@+id/putxero_menu"
+                android:icon="@drawable/icono_puchero">
             </item>
         </group>
         </menu>
@@ -41,16 +47,19 @@
         <menu>
         <group android:checkableBehavior="single">
                 <item android:title="@string/acerca_de"
-                    android:id="@+id/acerca_de_menu">
+                    android:id="@+id/acerca_de_menu"
+                    android:icon="@drawable/icono_interrogacion">
                 </item>
 
-                <item android:title="@string/modo_profesor">
+                <item android:title="@string/modo_profesor"
+                    android:icon="@drawable/icono_mando">
                 </item>
         </group>
         </menu>
     </item>
 
     <item android:title="@string/desconectar"
-        android:id="@+id/desconectar_menu">
+        android:id="@+id/desconectar_menu"
+        android:icon="@drawable/icono_desconectar">
     </item>
 </menu>
