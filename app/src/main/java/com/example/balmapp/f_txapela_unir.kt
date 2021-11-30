@@ -139,14 +139,18 @@ class f_juego_txapela_unir : Fragment() {
 
         if (mediaplayeraudio1!!.isPlaying){
             mediaplayeraudio1!!.seekTo(0)
+            mediaplayeraudio1!!.pause()
             }
        if (mediaplayeraudio2!!.isPlaying){
            mediaplayeraudio2!!.seekTo(0)
+           mediaplayeraudio2!!.pause()
         }
         if (mediaplayeraudio3!!.isPlaying){
             mediaplayeraudio3!!.seekTo(0)
+            mediaplayeraudio3!!.pause()
         } else if (mediaplayeraudio4!!.isPlaying){
             mediaplayeraudio4!!.seekTo(0)
+            mediaplayeraudio4!!.pause()
         }
 
 
