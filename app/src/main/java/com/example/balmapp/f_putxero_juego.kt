@@ -27,6 +27,7 @@ private var mediaplayer: MediaPlayer? = null
 private var mediaplayerFallo:MediaPlayer? = null
 private var mediaplayerTren:MediaPlayer?=null
 private var aciertos:Int=0
+private var victoria:Boolean = false
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,7 @@ class f_putxero_juego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         aciertos=0
-
+        victoria==false
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -94,7 +95,11 @@ class f_putxero_juego : Fragment() {
                     mediaplayerTren!!.stop()
                     Sharedapp.gune.gune="7.Gunea"
 
-                    mostrarDialogoDerrota()             }
+                   if(victoria==false){
+                       mostrarDialogoDerrota()
+                   }
+
+                }
 
             })
         }
@@ -198,8 +203,10 @@ class f_putxero_juego : Fragment() {
             mediaplayerFallo!!.stop()
             mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
-
              mostrarDialogoPersonalizado()
+             victoria=true
+
+
         }else{
             aciertos++
         }

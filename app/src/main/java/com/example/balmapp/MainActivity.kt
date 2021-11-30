@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         return super.onKeyDown(keyCode, event)
     if(keyCode==KEYCODE_BACK){
+        //creacion de pop up cerrar aplicacion.
         MaterialAlertDialogBuilder(applicationContext,
             R.style.Body_ThemeOverlay_MaterialComponents_MaterialAlertDialog)
             .setTitle("CERRAR")

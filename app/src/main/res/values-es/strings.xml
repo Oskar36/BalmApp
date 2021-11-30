@@ -145,4 +145,23 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="juegos">Juegos</string>
     <string name="otros">Otros</string>
 
+    <string name="boinas1">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
+    <string name="boinas2">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko..</string>
+    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen.
+        Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko.
+        Boinas La Encartada industria ondare garrantzitsu bat da,
+        Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela.
+        Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.
+</string>
+    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren
+        museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko,
+        helburu bikoitzarekin:
+        ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
+    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak,
+        oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
+    <string name="nuevapartida">¿QUIERES EMPEZAR NUEVA PARTIDA?</string>
+    <string name="nuevapartidaEXPLICACION">Empezara desde el comienzo</string>
+    <string name="si">SI</string>
+    <string name="no">NO</string>
+
 </resources>

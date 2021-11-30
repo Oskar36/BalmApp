@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    tools:viewBindingIgnore="true"
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/primaryColor"
+        android:gravity="center"
+        android:padding="8dp"
+        android:src="@drawable/logodantzaris1" />
+    <TextView
+        android:id="@+id/text_dialogpregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="42dp"
+        android:gravity="center"
+        android:text="@string/nuevapartida"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/text_dialogfelicidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="42dp"
+        android:gravity="center"
+        android:text="@string/nuevapartidaEXPLICACION"
+        android:textSize="15sp"
+        android:textColor="@android:color/background_dark"
+        />
+
+<!--   private fun mostrarDialogoPersonalizado(){-->
+
+<!--    AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)-->
+<!--    .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))-->
+<!--    .setPositiveButton(R.string.si,-->
+
+<!--    // sign in the user ...-->
+<!--    })-->
+<!--    .setNegativeButton(R.string.no,-->
+<!--    DialogInterface.OnClickListener { dialog, id ->-->
+
+
+<!--    // sign in the user ...-->
+<!--    })-->
+<!--    .setCancelable(false)-->
+<!--    .create()-->
+<!--    .show()-->
+
+<!--    }-->
+
+
+
+
+
+</LinearLayout>

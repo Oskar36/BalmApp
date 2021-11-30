@@ -47,7 +47,7 @@ class f_jauregi_puzzle : Fragment() {
 
 
 
-
+        aciertos=0
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio

@@ -15,6 +15,7 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_dialog_findejuego.xml" value="0.264" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_dialogofindejuego.xml" value="0.11927083333333334" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_dialogofindejuegoderrota.xml" value="0.11145833333333334" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_dialogonuevapartida.xml" value="0.4" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_cancion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_explicacion.xml" value="0.2" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_fin.xml" value="0.2" />
@@ -45,7 +46,9 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_putxero_juego.xml" value="0.2" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_sanfelipe_cancion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_txapela_explicacion.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_txapela_unir.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_txapela_unir.xml" value="0.264" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/menu/menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/menu/menu_admin.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/a_juegos.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
