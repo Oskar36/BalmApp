@@ -17,6 +17,7 @@ private var mediaplayeraudio1: MediaPlayer? = null
 private var mediaplayeraudio2: MediaPlayer? = null
 private var mediaplayeraudio3: MediaPlayer? = null
 private var mediaplayeraudio4: MediaPlayer? = null
+private var mediaplayer_azal: MediaPlayer? = null
 
 class f_juego_txapela_unir : Fragment() {
 
@@ -43,6 +44,29 @@ class f_juego_txapela_unir : Fragment() {
         //parar animacion cuando pare el audio
         //    mediaplayer!!.setOnCompletionListener {
          //   NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
+
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imglogo)
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer_azal = MediaPlayer.create(context, R.raw.azalpena_unir_txapela)
+        //Iniciamos el audio
+        mediaplayer_azal!!.start()
+
+        //parar animacion cuando pare el audio
+        mediaplayer_azal!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imglogo)
+        }
+        //parar y continuar el audio
+        binding.imglogo.setOnClickListener {
+            if(mediaplayer_azal!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imglogo)
+                mediaplayer_azal!!.seekTo(0)
+            }else {
+                mediaplayer_azal!!.start()
+                NavFrag.animacion_dantzaris(binding.imglogo)
+            }}
+
+
     }
 
     override fun onResume() {
@@ -51,7 +75,6 @@ class f_juego_txapela_unir : Fragment() {
         mediaplayeraudio2 = MediaPlayer.create(context, R.raw.txapelaaudio2)
         mediaplayeraudio3 = MediaPlayer.create(context, R.raw.txapelaaudio3)
         mediaplayeraudio4 = MediaPlayer.create(context, R.raw.txapelaaudio4)
-
 
 
         //funcion para controlar audio1
