@@ -19,6 +19,7 @@ import java.time.Clock
 private var _binding: LPuentePuzzleBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
+private var contador=0
 class f_puente_puzzle : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,29 +30,10 @@ class f_puente_puzzle : Fragment() {
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        contador=0
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnfinalizarPuente.setOnClickListener{
-            if( binding.puzzle11.isVisible==false&&
-                binding.puzzle12.isVisible==false&&
-                binding.puzzle13.isVisible==false&&
-                binding.puzzle21.isVisible==false&&
-                binding.puzzle22.isVisible==false&&
-                binding.puzzle23.isVisible==false&&
-                binding.puzzle31.isVisible==false&&
-                binding.puzzle32.isVisible==false&&
-                binding.puzzle33.isVisible==false){
 
-
-            //paramos el audio
-            mediaplayer!!.stop()
-            Sharedapp.gune.gune="1.Gunea"
-            mostrarDialogoPersonalizado()
-        }
-            else{
-                Toast.makeText(requireContext(), "Falta alguna pieza", Toast.LENGTH_SHORT).show()
-            }
-        }
 
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_zubia)
@@ -70,9 +52,9 @@ class f_puente_puzzle : Fragment() {
 
 
     }
+    private var yDelta: Int = 0
 
     private var xDelta: Int = 0
-    private var yDelta: Int = 0
     private var x0 = 0.0f
     private var y0 = 0.0f
 
@@ -114,6 +96,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_11")){
                             binding.bien11.isVisible =true
                             binding.puzzle11.isVisible =false
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
 
                         }
                         else{
@@ -129,7 +115,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_12")){
                             binding.bien12.isVisible =true
                             binding.puzzle12.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -144,7 +133,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_13")){
                             binding.bien13.isVisible =true
                             binding.puzzle13.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -159,7 +151,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_21")){
                             binding.bien21.isVisible =true
                             binding.puzzle21.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -174,7 +169,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_22")){
                             binding.bien22.isVisible =true
                             binding.puzzle22.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -189,7 +187,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_23")){
                             binding.bien23.isVisible =true
                             binding.puzzle23.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -204,7 +205,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_31")){
                             binding.bien31.isVisible =true
                             binding.puzzle31.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -219,7 +223,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_32")){
                             binding.bien32.isVisible =true
                             binding.puzzle32.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -234,7 +241,10 @@ class f_puente_puzzle : Fragment() {
                         if(resources.getResourceEntryName(view.id).equals("puzzle_33")){
                             binding.bien33.isVisible =true
                             binding.puzzle33.isVisible =false
-
+                            contador++
+                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+                            if (contador==9){
+                                mostrarDialogoPersonalizado()}
                         }
                         else{
                             view?.x=x0
@@ -310,4 +320,6 @@ class f_puente_puzzle : Fragment() {
             .show()
 
     }
+
+
 }
