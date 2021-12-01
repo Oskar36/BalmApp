@@ -144,7 +144,8 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
     <string name="saiatuberriz">OHHHH! Saiatu vuelve a intentarlo</string>
     <string name="juegos">Juegos</string>
     <string name="otros">Otros</string>
-
+    <string name="apodocompr">El apodo ya existe </string>
+    <string name="camposvacios">El apodo no puede estar</string>
     <string name="boinas1">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
     <string name="boinas2">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko..</string>
     <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen.

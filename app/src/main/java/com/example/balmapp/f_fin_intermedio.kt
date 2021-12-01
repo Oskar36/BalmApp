@@ -37,7 +37,7 @@ class f_fin_intermedio : Fragment() {
             "3.Gunea 1" ->   fragment=f_jauregi_unirjuego()
             "4.Gunea 1" ->   fragment=f_procesion_ordenar()
             "2.Gunea 2" ->   fragment=f_kolitzajuego()
-            "3.Gunea 2" ->   fragment=f_procesion_ordenar()
+            "3.Gunea 2" ->   fragment=f_jauregi_unirjuego()
             "4.Gunea 2" ->   fragment=f_procesion_ordenar()
         }
         return fragment!!

@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 
 class Gune(context: Context) {
     private val PREFS_NAME = "com.example.balmapp.sharedpreferences"
-    private val SHARED_NAME = "shared_name"
+    private val SHARED_NAME = "gune"
     private val Gune: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
     var gune: String
         //comprobamos el archivo de sahred preferences

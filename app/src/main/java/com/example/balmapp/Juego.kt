@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 
 class Juego(context: Context) {
     private val PREFS_NAME = "com.example.balmapp.sharedpreferences"
-    private val SHARED_NAME = "shared_name"
+    private val SHARED_NAME = "juego"
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
     var juego: String
         //comprobamos el archivo de sahred preferences

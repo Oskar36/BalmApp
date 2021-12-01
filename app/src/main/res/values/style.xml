@@ -9,18 +9,6 @@
         <item name="android:layout_marginEnd">25dp</item>
         <item name="android:layout_marginBottom">15dp</item>
     </style>
-    <style name="Body_ThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="materialAlertDialogBodyTextStyle">@style/BodyMaterialAlertDialog.MaterialComponents.Body.Text</item>
-    </style>
-
-
-    <style name="BodyMaterialAlertDialog.MaterialComponents.Body.Text" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
-        <item name="android:textColor">@color/primaryColor</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="DialogBasicCustomStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:colorAccent">@color/secondaryColor</item>
 
@@ -70,5 +58,14 @@
         <item name="android:paddingLeft">15dp</item>
         <item name="itemTextColor">@color/blanco</item>
         <item name="itemBackground">@color/transparent</item>
+    </style>
+    <style name="Body_ThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyMaterialAlertDialog.MaterialComponents.Body.Text</item>
+    </style>
+    <style name="BodyMaterialAlertDialog.MaterialComponents.Body.Text" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

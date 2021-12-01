@@ -12,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.balmapp.databinding.LPutxeroJuegoBinding
 import android.view.animation.TranslateAnimation
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.*
 import android.view.animation.Animation
@@ -54,9 +53,11 @@ class f_putxero_juego : Fragment() {
         binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-               mediaplayer!!.stop()
+                mediaplayer!!.pause()
             }else{
-                mediaplayer!!.prepare()
+                if(mediaplayer!!.currentPosition!=0 && mediaplayer!!.currentPosition!= mediaplayer!!.duration){
+                    mediaplayer!!.seekTo(mediaplayer!!.currentPosition)
+                }
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
             }

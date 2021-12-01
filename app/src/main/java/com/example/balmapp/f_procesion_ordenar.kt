@@ -40,10 +40,11 @@ class f_procesion_ordenar : Fragment() {
         binding.dantzarisProcesionOrdenar.setOnClickListener {
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.dantzarisProcesionOrdenar)
-                mediaplayer!!.stop()
+                mediaplayer!!.pause()
             }else{
-
-                mediaplayer!!.prepare()
+                if(mediaplayer!!.currentPosition!=0 && mediaplayer!!.currentPosition!= mediaplayer!!.duration){
+                    mediaplayer!!.seekTo(mediaplayer!!.currentPosition)
+                }
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.dantzarisProcesionOrdenar)
             }
@@ -51,7 +52,6 @@ class f_procesion_ordenar : Fragment() {
         cargar_spinner()
         binding.btnprocesionordenar.setOnClickListener {
         comprobar()
-
         }
     }
 

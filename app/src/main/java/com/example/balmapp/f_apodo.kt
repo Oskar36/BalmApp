@@ -5,18 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LApodoBinding
+import com.google.firebase.FirebaseApp
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.Delay
 
 private var _binding: LApodoBinding? = null
 private val binding get() = _binding!!
+private  lateinit var database: FirebaseFirestore
 class f_apodo : Fragment() {
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        binding.btnapodoJugar.setOnClickListener(){
-            val fragment:Fragment=f_partida()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
-        }
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,5 +26,35 @@ class f_apodo : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        database = FirebaseFirestore.getInstance()
+        binding.btnapodoJugar.setOnClickListener(){
+            if(binding.txtapodoApodo.text.toString().isNotEmpty()){
+                Sharedapp.nombre.nombre=binding.txtapodoApodo.text.toString().toLowerCase()
+            var doc=database.collection("apodos")
+                .document(binding.txtapodoApodo.text.toString().trim())
+            doc.get()
+                .addOnSuccessListener { document ->
+                    if(document.exists()){
+                        Sharedapp.usuario.usuario=""
+                        val fragment:Fragment=f_partida()
+                        NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    }else{
+                        Sharedapp.usuario.usuario="Nuevo"
+                        BD.insertarApodo(binding.txtapodoApodo.text.toString().toLowerCase())
+                        val fragment:Fragment=f_partida()
+                        NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    }
+                }
+                .addOnFailureListener(){
+                    Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+                }
+            }else{
+                Toast.makeText(requireContext(), R.string.camposvacios.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }

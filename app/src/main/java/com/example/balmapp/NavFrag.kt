@@ -1,16 +1,14 @@
 package com.example.balmapp
 
 
-import android.app.FragmentManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import com.google.firebase.firestore.FirebaseFirestore
+
 
 
 class NavFrag {
@@ -23,8 +21,6 @@ class NavFrag {
             else{
                 f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).addToBackStack(nombre).commit()
             }
-
-
         }
         fun IniciarActivity(context: Context,actividad:String){
             val nombreclase= "com.example.balmapp.$actividad"
@@ -46,7 +42,7 @@ class NavFrag {
 
         }
         fun animacion_dantzaris_parar(imagen: ImageView){
-            val dantzaris = imagen.apply {
+           imagen.apply {
                 setBackgroundResource(R.drawable.animaciondantzaris)
                 animacion = background as AnimationDrawable
             }

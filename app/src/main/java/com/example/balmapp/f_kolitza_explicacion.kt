@@ -46,10 +46,11 @@ class f_monte_explicacion : Fragment() {
         binding.imgmonteExplicacionLogo.setOnClickListener {
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgmonteExplicacionLogo)
-                mediaplayer!!.stop()
+                mediaplayer!!.pause()
             }else{
-
-                mediaplayer!!.prepare()
+                if(mediaplayer!!.currentPosition!=0 && mediaplayer!!.currentPosition!= mediaplayer!!.duration){
+                    mediaplayer!!.seekTo(mediaplayer!!.currentPosition)
+                }
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imgmonteExplicacionLogo)
             }

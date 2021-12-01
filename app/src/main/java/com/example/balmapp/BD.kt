@@ -1,78 +1,50 @@
 package com.example.balmapp
 
 
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 
 
 class BD {
 
     companion object {
-        //si llama al la funcion para insertar un apodo y no se puede porque el nombre
-        // ya ha habido un apodo con ese nombre se devuelve false y si la insercion es correcta se devuelve true
-        fun guardarDatoApodo(nombre: String, puntuacion: String): Boolean {
+        fun insertarApodo(nombre: String) {
             val db: FirebaseFirestore= FirebaseFirestore.getInstance()
-            var insertado: Boolean = false
-            //comprobar el nombre
-            if (combrobarnombre(nombre) == false) {
-                val dato = hashMapOf(
-                    "id" to nombre,
-                    "puntuacion" to puntuacion
-                )
-                db.collection("apodos").document().set(dato)
-                    .addOnSuccessListener {
-                        System.out.println("operacion correcta")
-                        insertado = true
-                    }
-                    .addOnFailureListener {
-                        System.out.println("ha fallado")
-
-                    }
-            }
-            return insertado
-        }
-
-
-        private fun combrobarnombre( nombre: String): Boolean {
-            val db: FirebaseFirestore= FirebaseFirestore.getInstance()
-            var control: Boolean = false
-            db.collection("apodos").get()
-                .addOnSuccessListener { documentos ->
-
-                    //leemos cada fila de apodo
-                    for (documento in documentos) {
-                        if ("${documento.id}" == nombre && control == false) {
-                            control == true
-                        }
-                    }
-
-                }
-                .addOnFailureListener {
-                }
-
-            //en caso de que el apodo que se intente insertar ya este guardado
-            return control
-        }
-
-        fun insertarPuntuacionApodo( nombre: String, puntuacion: String) {
-            val db: FirebaseFirestore= FirebaseFirestore.getInstance()
-            val cambios = hashMapOf<String, Any>(
-                "puntuacion" to puntuacion
+            val apodo = hashMapOf(
+                "puntuacion" to "0",
             )
-            db.collection("apodos")
-                .whereEqualTo("id", nombre)
+            db.collection("apodos").document(nombre)
+                .set(apodo)
+        }
+        fun insertarNuevaPartida(nombre: String) {
+            val db: FirebaseFirestore= FirebaseFirestore.getInstance()
+            val partida = hashMapOf(
+                "gune" to "0",
+                "nombre" to nombre,
+                "puntuacion_partida" to "0"
+            )
+            db.collection("partidas").document()
+                .set(partida)
+                .addOnSuccessListener {
+                }
+                .addOnFailureListener { }
+        }
+        fun actualizarPartida(nombre: String,puntuacion: String,gune: String,eliminar:Boolean){
+            val db: FirebaseFirestore= FirebaseFirestore.getInstance()
+            val partida = hashMapOf(
+                "gune" to gune,
+                "nombre" to nombre,
+                "puntuacion_partida" to puntuacion
+            )
+            db.collection("partidas").whereEqualTo("nombre","$nombre")
                 .get()
                 .addOnSuccessListener {
-                    it.forEach {
-                        it.reference.update(cambios)
-                        System.out.println("operacion correcta")
+                    if(eliminar){
+                        insertarNuevaPartida(nombre)
                     }
                 }
-                .addOnFailureListener {
-                    System.out.println("ha fallado")
-                }
-
+                .addOnFailureListener { }
         }
-
         fun guardarDatoPartida(
             gune: String,
             nombre: String,

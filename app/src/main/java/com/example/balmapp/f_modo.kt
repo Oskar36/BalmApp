@@ -25,7 +25,9 @@ class f_modo : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnmodoLibre.setOnClickListener{
+            Sharedapp.partida.partida=""
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            requireActivity().finish()
         }
 
         binding.btnmodoGuiado.setOnClickListener{

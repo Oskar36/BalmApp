@@ -63,11 +63,15 @@ class f_juego_txapela_unir : Fragment() {
         binding.imglogo.setOnClickListener {
             if(mediaplayer_azal!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imglogo)
-                mediaplayer_azal!!.seekTo(0)
-            }else {
+                mediaplayer_azal!!.pause()
+            }else{
+                if(mediaplayer_azal!!.currentPosition!=0 && mediaplayer_azal!!.currentPosition!= mediaplayer_azal!!.duration){
+                    mediaplayer_azal!!.seekTo(mediaplayer_azal!!.currentPosition)
+                }
                 mediaplayer_azal!!.start()
                 NavFrag.animacion_dantzaris(binding.imglogo)
-            }}
+            }
+        }
 
 
     }

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.balmapp.databinding.LPuenteExplicacionBinding
 
 
@@ -43,9 +44,11 @@ class f_puente_explicacion : Fragment() {
         binding.imgpuenteExplicacionLogo.setOnClickListener {
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgpuenteExplicacionLogo)
-                mediaplayer!!.stop()
+                mediaplayer!!.pause()
             }else{
-                mediaplayer!!.prepare()
+                if(mediaplayer!!.currentPosition!=0 && mediaplayer!!.currentPosition!= mediaplayer!!.duration){
+                    mediaplayer!!.seekTo(mediaplayer!!.currentPosition)
+                }
                 mediaplayer!!.start()
                 NavFrag.animacion_dantzaris(binding.imgpuenteExplicacionLogo)
             }
@@ -66,10 +69,8 @@ class f_puente_explicacion : Fragment() {
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
-        mediaplayer?.release()
+             mediaplayer?.release()
              mediaplayer = null
-
-
     }
 
 

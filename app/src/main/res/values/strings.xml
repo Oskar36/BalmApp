@@ -203,4 +203,6 @@ Amaitzeko, aipatu behar da Zubi Zaharretik ezin dela igaro ibilgailurik eta galt
     <string name="si">BAI</string>
     <string name="no">EZ</string>
     <string name="hurrengoa">HURRENGOA</string>
+    <string name="apodocompr">Ezizena existitzen da</string>
+    <string name="camposvacios">Ezizena ezin da hutsik egon</string>
 </resources>

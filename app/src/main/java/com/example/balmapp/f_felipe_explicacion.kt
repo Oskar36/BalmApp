@@ -43,7 +43,18 @@ class f_felipe_explicacion : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
         }
-
+        binding.imgfelipeExplicacionLogo.setOnClickListener{
+            if(mediaplayer!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
+                mediaplayer!!.pause()
+            }else{
+                if(mediaplayer!!.currentPosition!=0 && mediaplayer!!.currentPosition!= mediaplayer!!.duration){
+                    mediaplayer!!.seekTo(mediaplayer!!.currentPosition)
+                }
+                mediaplayer!!.start()
+                NavFrag.animacion_dantzaris(binding.imgfelipeExplicacionLogo)
+            }
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

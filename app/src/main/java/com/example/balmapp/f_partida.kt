@@ -5,19 +5,45 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
 import com.example.balmapp.databinding.LPartidaBinding
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 private var _binding: LPartidaBinding? = null
 private val binding get() = _binding!!
+private  lateinit var database: FirebaseFirestore
 class f_partida : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        if (Sharedapp.usuario.usuario == "Nuevo"){
+            binding.btnpartidaContinuar.isVisible=false
+        }
       binding.btnpartidaNueva.setOnClickListener{
-          NavFrag.IniciarActivity(requireContext(),"a_mapa")
+          database = FirebaseFirestore.getInstance()
+          if(Sharedapp.usuario.usuario == "Nuevo"){
+              BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
+              NavFrag.IniciarActivity(requireContext(),"a_mapa")
+              requireActivity().finish()
+          }else{
+              var doc=database.collection("partidas")
+                  .document()
+              doc.get()
+                  .addOnSuccessListener { document ->
+                      if(document.exists()){
+                          BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
+                          NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                          requireActivity().finish()
+                      }
+                  }
+          }
       }
         binding.btnpartidaContinuar.setOnClickListener{
-
+            Sharedapp.partida.partida=""
+            BD.actualizarPartida(Sharedapp.nombre.nombre,"0","0",true)
+            NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            requireActivity().finish()
         }
     }
     override fun onCreateView(

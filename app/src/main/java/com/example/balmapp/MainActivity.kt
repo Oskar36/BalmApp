@@ -10,6 +10,7 @@ import android.view.KeyEvent
 import android.view.KeyEvent.KEYCODE_BACK
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
+import androidx.core.view.isInvisible
 import com.example.balmapp.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -62,4 +63,5 @@ class MainActivity : AppCompatActivity() {
 
     }
     }
+
 }

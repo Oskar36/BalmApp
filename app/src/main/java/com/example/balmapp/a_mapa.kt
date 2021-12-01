@@ -132,7 +132,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         fusedLocation.lastLocation.addOnSuccessListener {
             if (it != null) {
                 val ubicacion = LatLng(it.latitude, it.longitude)
-              gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
+                gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
             }
 
         }
