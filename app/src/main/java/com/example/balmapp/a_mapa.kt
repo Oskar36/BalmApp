@@ -55,6 +55,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
 
         binding.floatingActionButton.setOnClickListener {
          binding.drawerLayout.openDrawer(GravityCompat.START)
+
         }
 
         navigationView.setNavigationItemSelectedListener(this)
@@ -131,9 +132,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         fusedLocation.lastLocation.addOnSuccessListener {
             if (it != null) {
                 val ubicacion = LatLng(it.latitude, it.longitude)
-                val marcador = MarkerOptions().position(ubicacion).title("Mi ubicación")
-                marcador.icon(BitmapDescriptorFactory.fromResource(R.drawable.logomapa))
-                gmap!!.addMarker(marcador)
               gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
             }
 
@@ -182,16 +180,26 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.puente_admin -> {abrirActivityMenu("a_juegos","puente")}
-            R.id.kolitxa_menu -> abrirActivityMenu("a_juegos","kolitza")
-            R.id.jauregi_menu ->  abrirActivityMenu("a_juegos","jauregi")
-            R.id.procesion_menu -> abrirActivityMenu("a_juegos","procesion")
-            R.id.txapela_menu -> abrirActivityMenu("a_juegos","boina")
-            R.id.san_felipe_menu -> abrirActivityMenu("a_juegos","san felipe")
-            R.id.putxero_menu -> abrirActivityMenu("a_juegos","puchero")
-            R.id.acerca_de_menu -> abrirActivityMenu("a_acercade","puchero")
-            R.id.modo_profesor -> Toast.makeText(this, "Falta hacer", Toast.LENGTH_SHORT).show()
-            R.id.desconectar_menu -> abrirActivityMenu("MainActivity","")
+            R.id.puente_admin -> {abrirActivityMenu("a_juegos","puente")
+                                  binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.kolitxa_menu -> {abrirActivityMenu("a_juegos","kolitza")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.jauregi_menu ->  {abrirActivityMenu("a_juegos","jauregi")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.procesion_menu -> {abrirActivityMenu("a_juegos","procesion")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.txapela_menu -> {   abrirActivityMenu("a_juegos","boina")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.san_felipe_menu -> {abrirActivityMenu("a_juegos","san felipe")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.putxero_menu -> {abrirActivityMenu("a_juegos","puchero")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.acerca_de_menu -> {abrirActivityMenu("a_acercade","puchero")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.modo_profesor -> {Toast.makeText(this, "Falta hacer", Toast.LENGTH_SHORT).show()
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+            R.id.desconectar_menu -> {abrirActivityMenu("MainActivity","")
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
         }
         return true
     }

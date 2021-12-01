@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".a_acercade">
+
+    tools:viewBindingIgnore="true"
+
+    <TextView
+        android:id="@+id/txtapodo_titulo"
+        style="@style/titulo1"
+        android:layout_width="163dp"
+        android:layout_height="43dp"
+        android:text="@string/balmapp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <ImageView
+        android:id="@+id/imagenacercade_upv"
+        android:layout_width="91dp"
+        android:layout_height="87dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277"
+        app:srcCompat="@drawable/upvehulogo" />
+
+    <ImageView
+        android:id="@+id/imgacercade_fp"
+        android:layout_width="91dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71"
+        app:srcCompat="@drawable/fptxurdinaga_logo" />
+
+    <ScrollView
+        android:layout_width="401dp"
+        android:layout_height="215dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.719">
+
+        <TextView
+            android:id="@+id/txtacercade_descr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nosotros" />
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
