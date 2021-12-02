@@ -89,7 +89,7 @@ class f_puente_puzzle : Fragment() {
             MotionEvent.ACTION_UP -> {
 
 
-               // comp_puzzle_pieza()
+                // comp_puzzle_pieza()
 
                 when{
                     //11
@@ -251,7 +251,7 @@ class f_puente_puzzle : Fragment() {
 
                 }
 
-        }
+            }
 
         }
         binding.frameLayout7.invalidate()
@@ -299,11 +299,12 @@ class f_puente_puzzle : Fragment() {
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
                 DialogInterface.OnClickListener { dialog, id ->
-                 //   NavFrag.IniciarActivity("","")
+                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
+                    Sharedapp.gune.gune="1.Gunea"
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
                     // sign in the user ...
