@@ -27,6 +27,7 @@ private var mediaplayerFallo:MediaPlayer? = null
 private var mediaplayerTren:MediaPlayer?=null
 private var aciertos:Int=0
 private var victoria:Boolean = false
+private var saltar=false
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,8 @@ class f_putxero_juego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         aciertos=0
-        victoria==false
+        victoria=false
+        saltar=false
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -64,24 +66,28 @@ class f_putxero_juego : Fragment() {
         }
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-            binding.imgPutxeroTren.startAnimation(moveLefttoRight)
+            if(!saltar){
+                NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
+                binding.imgPutxeroTren.startAnimation(moveLefttoRight)
 
-            //Esto configura el movimiento de todos los alimentos
-            binding.imgAlubias.setOnTouchListener(touchListener)
-            binding.imgPimiento.setOnTouchListener(touchListener)
-            binding.imgMorcilla.setOnTouchListener(touchListener)
-            binding.imgAceite.setOnTouchListener(touchListener)
-            binding.imgArroz.setOnTouchListener(touchListener)
-            binding.imgCebolla.setOnTouchListener(touchListener)
-            binding.imgChorizo.setOnTouchListener(touchListener)
-            binding.imgCostilla.setOnTouchListener(touchListener)
-            binding.imgLechuga.setOnTouchListener(touchListener)
-            binding.imgPepinillo.setOnTouchListener(touchListener)
-            binding.imgSal.setOnTouchListener(touchListener)
-            binding.imgZanahoria.setOnTouchListener(touchListener)
-            binding.imgTomate.setOnTouchListener(touchListener)
-            mediaplayerTren!!.start()
+                //Esto configura el movimiento de todos los alimentos
+                binding.imgAlubias.setOnTouchListener(touchListener)
+                binding.imgPimiento.setOnTouchListener(touchListener)
+                binding.imgMorcilla.setOnTouchListener(touchListener)
+                binding.imgAceite.setOnTouchListener(touchListener)
+                binding.imgArroz.setOnTouchListener(touchListener)
+                binding.imgCebolla.setOnTouchListener(touchListener)
+                binding.imgChorizo.setOnTouchListener(touchListener)
+                binding.imgCostilla.setOnTouchListener(touchListener)
+                binding.imgLechuga.setOnTouchListener(touchListener)
+                binding.imgPepinillo.setOnTouchListener(touchListener)
+                binding.imgSal.setOnTouchListener(touchListener)
+                binding.imgZanahoria.setOnTouchListener(touchListener)
+                binding.imgTomate.setOnTouchListener(touchListener)
+                mediaplayerTren!!.start()
+                saltar=true
+            }
+
             moveLefttoRight.setAnimationListener(object : AnimationListener {
                 override fun onAnimationStart(animation: Animation) {
                 }
@@ -96,7 +102,7 @@ class f_putxero_juego : Fragment() {
                     mediaplayerTren!!.stop()
                     Sharedapp.gune.gune="7.Gunea"
 
-                   if(victoria==false){
+                   if(!victoria){
                        mostrarDialogoDerrota()
                    }
 
@@ -104,11 +110,16 @@ class f_putxero_juego : Fragment() {
 
             })
         }
+
+        binding.saltar.setOnClickListener {
+            saltar=false
+            mediaplayer!!.seekTo(mediaplayer!!.duration)
+            mediaplayer!!.stop()
+            NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
+
+        }
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+
     private var xDelta: Int=0
     private var yDelta: Int=0
     private var x0=0.0f
