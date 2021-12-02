@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="botones" >
         <item name="android:background">@drawable/boton</item>
@@ -22,6 +22,7 @@
 
     <style name="texto_simple_explicacion" >
         <item name="android:gravity">start</item>
+        <item name="android:justificationMode" tools:targetApi="o">inter_word</item>
         <item name="android:textSize">18dp</item>
         <item name="android:layout_width">340dp</item>
         <item name="android:layout_height">wrap_content</item>

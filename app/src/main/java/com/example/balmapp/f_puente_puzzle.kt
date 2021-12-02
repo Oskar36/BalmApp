@@ -4,12 +4,13 @@ import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
@@ -97,7 +98,7 @@ class f_puente_puzzle : Fragment() {
                             binding.bien11.isVisible =true
                             binding.puzzle11.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
+
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
 
@@ -116,7 +117,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien12.isVisible =true
                             binding.puzzle12.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -134,8 +134,8 @@ class f_puente_puzzle : Fragment() {
                             binding.bien13.isVisible =true
                             binding.puzzle13.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
+
                                 mostrarDialogoPersonalizado()}
                         }
                         else{
@@ -152,7 +152,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien21.isVisible =true
                             binding.puzzle21.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -170,7 +169,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien22.isVisible =true
                             binding.puzzle22.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -188,7 +186,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien23.isVisible =true
                             binding.puzzle23.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -206,7 +203,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien31.isVisible =true
                             binding.puzzle31.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -224,7 +220,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien32.isVisible =true
                             binding.puzzle32.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -242,7 +237,6 @@ class f_puente_puzzle : Fragment() {
                             binding.bien33.isVisible =true
                             binding.puzzle33.isVisible =false
                             contador++
-                            Toast.makeText(requireContext(), "$contador", Toast.LENGTH_SHORT).show()
                             if (contador==9){
                                 mostrarDialogoPersonalizado()}
                         }
@@ -301,12 +295,11 @@ class f_puente_puzzle : Fragment() {
     }
 
     private fun mostrarDialogoPersonalizado(){
-
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
                 DialogInterface.OnClickListener { dialog, id ->
-                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                 //   NavFrag.IniciarActivity("","")
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,

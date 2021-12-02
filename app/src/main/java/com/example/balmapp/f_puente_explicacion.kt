@@ -27,7 +27,7 @@ class f_puente_explicacion : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.btnpuenteExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_puente_puzzle()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego")
             //paramos el audio
             mediaplayer!!.stop()
 
