@@ -18,14 +18,9 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizar.setOnClickListener{
-            if(binding.jesusRadio.isChecked){
-                val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
-                NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
-            }else{
-                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
-            }
+            val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
+            NavFrag.EleccionJuego(binding.jesusRadio,fragment,requireActivity(),requireView(),requireContext())
         }
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +32,6 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     }
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
         mediaplayer!!.stop()
     }
 

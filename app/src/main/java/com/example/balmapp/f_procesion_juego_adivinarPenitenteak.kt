@@ -25,16 +25,8 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizar.setOnClickListener {
-            if (binding.penitenteRadio.isChecked) {
-                val fragment: Fragment = f_procesion_juego_adivinarAndreMariaBirjina()
-                NavFrag.replaceFragment(
-                    fragment,
-                    requireActivity(),
-                    ((view as ViewGroup).parent as View).id
-                )
-            }else{
-                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
-            }
+            val fragment: Fragment = f_procesion_juego_adivinarAndreMariaBirjina()
+            NavFrag.EleccionJuego(binding.penitenteRadio,fragment,requireActivity(),requireView(),requireContext())
         }
     }
     override fun onResume() {

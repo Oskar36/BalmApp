@@ -28,6 +28,7 @@ private var mediaplayerTren:MediaPlayer?=null
 private var aciertos:Int=0
 private var victoria:Boolean = false
 private var saltar=false
+private var terminar=false
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +44,7 @@ class f_putxero_juego : Fragment() {
         aciertos=0
         victoria=false
         saltar=false
+        terminar=false
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -86,6 +88,7 @@ class f_putxero_juego : Fragment() {
                 binding.imgTomate.setOnTouchListener(touchListener)
                 mediaplayerTren!!.start()
                 saltar=true
+                terminar=true
             }
 
             moveLefttoRight.setAnimationListener(object : AnimationListener {
@@ -97,11 +100,11 @@ class f_putxero_juego : Fragment() {
 
                 override fun onAnimationEnd(animation: Animation) {
                     // Pass the Intent to switch to other Activity
+                    NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
                     mediaplayer!!.stop()
                     mediaplayerFallo!!.stop()
                     mediaplayerTren!!.stop()
                     Sharedapp.gune.gune="7.Gunea"
-
                    if(!victoria){
                        mostrarDialogoDerrota()
                    }
@@ -112,11 +115,11 @@ class f_putxero_juego : Fragment() {
         }
 
         binding.saltar.setOnClickListener {
-            saltar=false
-            mediaplayer!!.seekTo(mediaplayer!!.duration)
-            mediaplayer!!.stop()
-            NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-
+            if (!terminar){
+                saltar=false
+                mediaplayer!!.seekTo(mediaplayer!!.duration)
+                NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
+            }
         }
     }
 

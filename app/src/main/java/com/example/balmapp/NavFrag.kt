@@ -3,8 +3,13 @@ package com.example.balmapp
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.drawable.AnimationDrawable
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -13,6 +18,7 @@ import androidx.fragment.app.FragmentActivity
 
 class NavFrag {
     companion object{
+        var theme=""
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){
@@ -29,9 +35,29 @@ class NavFrag {
                 context.startActivity(intent)
         }
         fun Abrirfragment(fragment: Fragment,activity: AppCompatActivity,layout: Int) {
-            val transaction= activity.supportFragmentManager.beginTransaction()
-            transaction.add(layout, fragment)
-            transaction.commit()
+            val currentNightMode: Int = activity.resources
+                .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            if(theme==""){
+                val transaction= activity.supportFragmentManager.beginTransaction()
+                transaction.add(layout, fragment)
+                transaction.commit()
+                when (currentNightMode) {
+                    Configuration.UI_MODE_NIGHT_NO -> {
+                        theme=currentNightMode.toString()
+                    }
+                    Configuration.UI_MODE_NIGHT_YES -> {
+                        theme=currentNightMode.toString()
+                    }
+                }
+            }else{
+                if(theme!=currentNightMode.toString()){
+                    theme=currentNightMode.toString()
+                }else{
+                    val transaction= activity.supportFragmentManager.beginTransaction()
+                    transaction.add(layout, fragment)
+                    transaction.commit()
+                }
+            }
         }
         fun animacion_dantzaris(imagen: ImageView){
             val dantzaris = imagen.apply {
@@ -88,11 +114,14 @@ class NavFrag {
             }
             return fragment!!
         }
-
-
-
+        fun EleccionJuego(radioubutton: RadioButton, fragment: Fragment, activity: FragmentActivity, view: View, context: Context){
+            if(radioubutton.isChecked){
+                replaceFragment(fragment,activity,((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
+            }else{
+                Toast.makeText(context, R.string.error_toast, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
-
 }
 
 

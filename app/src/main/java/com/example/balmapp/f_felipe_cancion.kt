@@ -19,6 +19,8 @@ import java.util.*
 private var _binding: LFelipeCancionBinding? = null
 private val binding get() = _binding!!
 private var mediaPlayer: MediaPlayer?=null
+private data class TestErantz(val texto:TextView,val respuesta: String)
+private  lateinit var lista:List<TestErantz>
 class f_sanfelipe_cancion : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,55 +32,12 @@ class f_sanfelipe_cancion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        binding.btncorregir.setOnClickListener{
-            Sharedapp.gune.gune="6.Gunea"
-            NavFrag.IniciarActivity(requireContext(),"a_mapa")
-        }
-
-        //Comprobacion de que las palabras de la cancion esten bien escrita.
-        //Cuando las palabras esten mal escritas apareceran en rojo y cuando esten bien saldran en verde.
+        lista= listOf(TestErantz(binding.txtpalabra1,"mayo"),TestErantz(binding.txtpalabra2,"abril"),TestErantz(binding.txtpalabra3,"santiago"),TestErantz(binding.txtpalabra4,"gil"),TestErantz(binding.txtpalabra5,"buena"),TestErantz(binding.txtpalabra6,"comer"),TestErantz(binding.txtpalabra7,"felipe"),TestErantz(binding.txtpalabra8,"san"),TestErantz(binding.txtpalabra9,"señorita"),TestErantz(binding.txtpalabra10,"peseta"),TestErantz(binding.txtpalabra11,"flores"),TestErantz(binding.txtpalabra12,"flores"),TestErantz(binding.txtpalabra13,"mocos"),TestErantz(binding.txtpalabra14,"pocos"),TestErantz(binding.txtpalabra15,"viva"),TestErantz(binding.txtpalabra16,"viva"))
         binding.btncorregir.setOnClickListener {
-            //Palabra 1
-            val txt1=ComprobarTextos(binding.txtpalabra1,"mayo")
-            //Palabra 2
-            val txt2=ComprobarTextos(binding.txtpalabra2,"abril")
-            //Palabra 3
-            val txt3=ComprobarTextos(binding.txtpalabra3,"santiago")
-            //Palabra 4
-            val txt4=ComprobarTextos(binding.txtpalabra4,"gil")
-            //Palabra 5
-            val txt5=ComprobarTextos(binding.txtpalabra5,"buena")
-            //Palabra 6
-            val txt6=ComprobarTextos(binding.txtpalabra6,"comer")
-            //Palabra 7
-            val txt7=ComprobarTextos(binding.txtpalabra7,"felipe")
-            //Palabra 8
-            val txt8=ComprobarTextos(binding.txtpalabra8,"san")
-            //Palabra 9
-            val txt9=ComprobarTextos(binding.txtpalabra9,"señorita")
-            //Palabra 10
-            val txt10=ComprobarTextos(binding.txtpalabra10,"peseta")
-            //Palabra 11
-            val txt11=ComprobarTextos(binding.txtpalabra11,"flores")
-            //Palabra 12
-            val txt12=ComprobarTextos(binding.txtpalabra12,"flores")
-            //Palabra 13
-            val txt13=ComprobarTextos(binding.txtpalabra13,"mocos")
-            //Palabra 14
-            val txt14=ComprobarTextos(binding.txtpalabra14,"pocos")
-            //Palabra 15
-            val txt15=ComprobarTextos(binding.txtpalabra15,"viva")
-            //Palabra 16
-            val txt16=ComprobarTextos(binding.txtpalabra16,"viva")
-            val Listatxt= listOf(txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16)
-            if(ComprobarTodos(Listatxt)){
-
-
+            if(Compr()){
                 mostrarDialogoPersonalizado()
                 //Abrir fragment repetir juego
                 Sharedapp.gune.gune="6.Gunea"
-
             }else{
                 Toast.makeText(requireContext(), R.string.correccion_toast, Toast.LENGTH_SHORT).show()
             }
@@ -98,10 +57,20 @@ class f_sanfelipe_cancion : Fragment() {
             mediaPlayer!!.pause()
         }
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private fun Compr():Boolean{
+        var aciertos=0
+        lista.forEach{
+            if(it.texto.text.isNotEmpty()){
+                if (it.texto.text.toString().lowercase().trim()==it.respuesta){
+                    it.texto.setTextColor(Color.parseColor("#00ff00"))
+                    aciertos++
+                }else{
+                    it.texto.setTextColor(Color.parseColor("#ad0a15"))
+                }
+            }
 
+        }
+        return aciertos== lista.size
     }
 
     override fun onDestroy() {

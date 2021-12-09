@@ -3,6 +3,7 @@ package com.example.balmapp
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
@@ -13,6 +14,9 @@ import androidx.core.app.ActivityCompat
 import androidx.core.view.isInvisible
 import com.example.balmapp.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -28,7 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         SystemClock.sleep(1000)
 
-
+        val currentNightMode: Int = this.resources
+            .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        NavFrag.theme=currentNightMode.toString()
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
             != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),1)
