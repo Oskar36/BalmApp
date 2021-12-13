@@ -10,21 +10,13 @@
 
     <string name="modo_libre">Modu librea</string>
 
-    <string name="felipe_cancion_titulo">SAN FELIPE ETA SANTIAGOREN ABEZTIA</string>
-
-    <string name="putxero_juego">PUTXERAREN JOKUA</string>
-
     <string name="modo_guiado">Modu gidatua</string>
 
     <string name="fin_del_juego">JOKUAREN AMAIERA</string>
 
-    <string name="continuar">Jarraitu</string>
+    <string name="felipe_cancion_titulo">SAN FELIPE ETA SANTIAGOREN ABEZTIA</string>
 
-    <string name="repetir">Errepikatu</string>
-
-    <string name="apodo">Ezizen:</string>
-
-    <string name="jugar">Jokatu</string>
+    <string name="putxero_juego">PUTXERAREN JOKUA</string>
 
     <string name="putxero_explicacion">PUTXERAREN HISTORIA</string>
 
@@ -34,15 +26,13 @@
 
     <string name="jauregi_explicacion">HORCASITAS JAUREGIAREN HISTORIA</string>
 
-    <string name="cambiar_modo">Modua aldatu</string>
-
     <string name="acerca_de">HONI BURUZ</string>
 
     <string name="desconectar">DESKONEKTATU</string>
 
     <string name="puente">ZUBI ZAHARRA</string>
 
-    <string name="kolitxa" translatable="false">KOLITXA MENDIA</string>
+    <string name="kolitxa">KOLITXA MENDIA</string>
 
     <string name="jauregi">HORCASITAS JAUREGIA</string>
 
@@ -50,11 +40,59 @@
 
     <string name="txapela">TXAPELA MUSEOA</string>
 
-    <string name="san_felipe" translatable="false">SAN FELIPE ABEZTIA</string>
+    <string name="san_felipe">SAN FELIPE ABEZTIA</string>
 
     <string name="putxero">PUTXERIA</string>
 
     <string name="procesion_explicacion">PROZESIOAREN HISTORIA</string>
+
+    <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
+
+    <string name="txttxapela_juego_explicacion_titulo">LOTU IRUDIAK AUDIOEKIN</string>
+
+    <string name="txtkolitza_sopadeletras_titulo">LETRA-SOPA</string>
+
+    <string name="txtjauregi_puzzle_titulo">JAUREGIAREN PUZZLEA</string>
+
+    <string name="txapela_explicacion_titulo">TXAPELAREN HISTORIA</string>
+
+    <string name="felipe_explicacion_titulo">SAN FELIPE ETA SANTIAGOREN HISTORIA</string>
+
+    <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
+
+    <string name="siguiente_adivinanda">ASMATU HURRENGOA</string>
+
+    <string name="txt_corregir">ZUZENDU</string>
+
+    <string name="titulo_modo">NOLA JOLASTU NAHI DUZU?</string>
+
+    <string name="modo_profesor">IRAKASLE MODUA</string>
+
+    <string name="saiatuberriz">OHHHH! SAIATU BERRIZ</string>
+
+    <string name="dialog_zorionak">ZORIONAK! OSO ONDO!</string>
+
+    <string name="ordenar">ORDENATU KRONOLOGIKOKI</string>
+
+    <string name="nuevapartida">PARTIDA BERRI BAT HASI NAHI DUZU?</string>
+
+    <string name="nuevapartidaEXPLICACION">Hasieratik hasiko da.</string>
+
+    <string name="si">BAI</string>
+
+    <string name="no">EZ</string>
+
+    <string name="hurrengoa">HURRENGOA</string>
+
+    <string name="continuar">Jarraitu</string>
+
+    <string name="repetir">Errepikatu</string>
+
+    <string name="apodo">Ezizen:</string>
+
+    <string name="jugar">Jokatu</string>
+
+    <string name="cambiar_modo">Modua aldatu</string>
 
     <string name="txt_texto_pazkoa">Pazkoa</string>
 
@@ -65,14 +103,6 @@
     <string name="txt_finalizar">Amaitu</string>
 
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
-
-    <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
-
-    <string name="txttxapela_juego_explicacion_titulo">LOTU IRUDIAK AUDIOEKIN</string>
-
-    <string name="txtkolitza_sopadeletras_titulo">LETRA-SOPA</string>
-
-    <string name="txtjauregi_puzzle_titulo">JAUREGIAREN PUZZLEA</string>
 
     <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
 
@@ -102,15 +132,8 @@
 
     <string name="txt_ermita">Ermita</string>
 
-    <string name="txapela_explicacion_titulo">TXAPELAREN HISTORIA</string>
-
-    <string name="felipe_explicacion_titulo">SAN FELIPE ETA SANTIAGOREN HISTORIA</string>
-
-    <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
-
-    <string name="siguiente_adivinanda">Asmatu hurrengoa</string>
-
     <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat. Gurutzatu egiten naute! Nor ote naiz?</string>
+
     <string name="opcion_1jesus">A)Judas</string>
 
     <string name="opcion_2jesus">B)Jose</string>
@@ -184,17 +207,9 @@
     <string name="explicacion" translatable="false">Lehenengo ondarea, Balmasedako Zubi Zaharra da, Muza zubia ere deitzen da.  Zubia XV. mendean eraiki zuten, XII. mendean eraikita zegoen egurrezko zubi erromatar baten gainean. Zubi Zaharraren azpitik Kadagua ibaia pasatzen da. XV. mendearen lehen erdian, guardiako dorrea eraiki zen, eta, pixka bat geroago, erdiko arku handia. Hala ere, hori guztia ezin da agiri bidez datatu.
     Garai batean, La Muza zubia, kostaldetik eta Gaztelako zenbait lekura joateko zubi  bakarra zen. Zubia, Balmasedak merkataritza aldetik izan zuen garrantzia adierazten du. Zubi hori, bere dorretxoarekin, hiribildura sartzeko ateak ziren, eta aduana funtzioa zuen. Hiribildura sartu nahi zuten pertsonek zergak ordaindu behar zituzten. Amaitzeko, aipatu behar da Zubi Zaharretik ezin dela igaro ibilgailurik eta galtzada harrizkoa dela. Horrez gain, zubi honek forma berezia zuenez gurdiak eta zalditegiak igarotzea zaila zen. Horren ondorioz, beste zubi batzuk eraikitzeko erabakia hartu zuten.</string>
 
-    <string name="txt_corregir">ZUZENDU</string>
-
-    <string name="titulo_modo">NOLA JOLASTU NAHI DUZU?</string>
-
     <string name="correccion_toast">Guztiak ez dira zuzenak</string>
 
-    <string name="ordenar">ORDENATU KRONOLOGIKOKI</string>
-
-    <string name="dialog_findejuegopregunta">Zer egin nahi duzu?</string>
-
-    <string name="dialog_zorionak">ZORIONAK! OSO ONDO!</string>
+    <string name="dialog_findejuegopregunta">ZER EGIN NAHI DUZU?</string>
 
     <string name="error_toast">Errorea, saiatu berriro</string>
 
@@ -213,9 +228,7 @@
         - Alba Olano Barquin\n
         - Noemí Márquez Gamalo</string>
 
-    <string name="modo_profesor">IRAKASLE MODUA</string>
 
-    <string name="saiatuberriz">OHHHH! Saiatu berriz</string>
 
     <string name="juegos">Jokuak</string>
 
@@ -232,16 +245,6 @@
         helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
 
     <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
-
-    <string name="nuevapartida">PARTIDA BERRI BAT HASI NAHI DUZU?</string>
-
-    <string name="nuevapartidaEXPLICACION">Hasieratik hasiko da. </string>
-
-    <string name="si">BAI</string>
-
-    <string name="no">EZ</string>
-
-    <string name="hurrengoa">HURRENGOA</string>
 
     <string name="apodocompr">Ezizena existitzen da</string>
 
