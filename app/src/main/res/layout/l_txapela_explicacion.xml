@@ -46,7 +46,7 @@
             <TextView
                 android:id="@+id/txttxapela_explicacion"
                 style="@style/texto_simple_explicacion"
-                android:text="@string/explicacion"
+                android:text="@string/azalpena_txapela"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgtxapela_explicacion_logo" />
 
