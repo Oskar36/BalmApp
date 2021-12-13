@@ -96,7 +96,11 @@
 
     <string name="txt_texto_pazkoa">Pazkoa</string>
 
+    <string name="txt_pazkoa">Pazkoa</string>
+
     <string name="txt_texto_bazkaria">Bazkaria</string>
+
+    <string name="txt_Bazkaria">Bazkaria</string>
 
     <string name="txt_texto_erromeria">Erromeria</string>
 
