@@ -1,130 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-        <string name="nueva_partida">Nueva partida</string>
-        <string name="modo_libre">Modo libre</string>
-        <string name="modo_guiado">Modo guiado</string>
-        <string name="fin_del_juego">FIN DEL JUEGO</string>
-        <string name="continuar">Continuar</string>
-        <string name="repetir">Repetir</string>
-        <string name="apodo">Apodo:</string>
-        <string name="jugar">Jugar</string>
-        <string name="putxero_explicacion">HISTORIA DE LA PUCHERA</string>
-        <string name="puente_explicacion">HISTORIA DEL PUENTE</string>
-        <string name="monte_explicacion">HISTORIA DEL MONTE KOLITXA</string>
-        <string name="jauregi_explicacion">HISTORIA DEL CASTILLO HORCASITAS</string>
-        <string name="cambiar_modo">Cambiar modo</string>
-        <string name="acerca_de">ACERCA DE</string>
-        <string name="desconectar">DESCONECTAR</string>
-        <string name="puente">PUENTE VIEJO</string>
-        <string name="kolitxa" translatable="false">MONTE KOLITXA</string>
-        <string name="jauregi">CASTILLO HORCASITAS</string>
-        <string name="procesion">PROCESIÓN</string>
-        <string name="txapela">MUSEO DE LA BOINA</string>
-        <string name="san_felipe" translatable="false">CANCIÓN DE SAN FELIPE</string>
-        <string name="putxero">PUCHERAS</string>
-        <string name="procesion_explicacion">HISTORIA DE LA PROCESIÓN</string>
-        <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
-        <string name="txt_texto_bazkaria">Almuerzo</string>
-        <string name="txt_texto_erromeria">Peregrinaje</string>
-        <string name="txt_finalizar">Terminar</string>
-        <string name="txt_siguientejuego">Siguiente juego</string>
-        <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
-        <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
-        <string name="txtjauregi_puzzle_titulo">PUZZLE DEl PALACIO</string>
-        <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>
-        <string name="txt_texto_Erdiko_Solairua">Pisos intermedios</string>
-        <string name="txt_texto_Azken_Solairua">Ultimos pisos</string>
-        <string name="txt_texto_Fatxada">Fachada</string>
-        <string name="txt_texto_Gelak_Egongelak">Habitaciones y salones</string>
-        <string name="txt_texto_Balkoi">El balcón principal, la familia abrigo y 2 vigas</string>
-        <string name="txt_texto_Sotoa">Sótano y animales lugar para almacenar</string>
-        <string name="txt_texto_Gambara">Gambara</string>
-        <string name="txt_tontorra">La cumbre</string>
-        <string name="txt_pazkoa">Pascua de Resurrección</string>
-        <string name="txt_Pentekoste">Pentecostés</string>
-        <string name="txt_Erromeria">Peregrinaje</string>
-        <string name="txt_Bazkaria">Almuerzo</string>
-        <string name="txt_ermita">Ermita</string>
-        <string name="txapela_explicacion_titulo">HISTORIA DE LA BOINA</string>
-        <string name="felipe_explicacion_titulo">HISTORIA DE SAN FELIPE Y SANTIAGO</string>
-        <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
-        <string name="siguiente_adivinanda">Adivina el siguiente</string>
-        <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte. ¡Me cruzan! ¿Quién soy?</string>
-        <string name="opcion_1jesus">A) Judas</string>
-        <string name="opcion_2jesus">B) Jose</string>
-        <string name="opcion_3jesus">C) Jesus</string>
-        <string name="explicacion_penitenteak">Llevo cruces. Voy en grupo y todos usamos sombreros. Además, vamos descalzos. ¿Quienes somos?</string>
-        <string name="opcion_1penitenteak">A) Penitentes</string>
-        <string name="opcion_2penitenteak">B) Los romanos</string>
-        <string name="opcion_3penitenteak">C) Los ladrones</string>
-        <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante. Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
-        <string name="opcion_1maria">A) Maria Magdalena</string>
-        <string name="opcion_2maria">B) Virgen Maria</string>
-        <string name="opcion_3maria">C) Paloma Blanca</string>
-        <string name="Gurutze_bidea">El camino de la cruz</string>
-        <string name="Judasen_hilketa">Muerte de Judas</string>
-        <string name="Azken_afaria">Ultima cena</string>
-        <string name="Jesusen_epaiketa">El juicio de Jesús</string>
-        <string name="felipe_cancion_titulo">CANCIÓN DE SAN FELIPE Y SANTIAGO</string>
-        <string name="putxero_juego">JUEGO DE LA PUCHERA</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
+    <string name="nueva_partida">Nueva partida</string>
 
-        <string name="azalpena_sanfelipe">
-Hay tres elementos distintivos de la Balmaseda "San Felipe y Santiago" que se celebra el 1 de mayo: el santo, el canto y los sombreros. Además, el XIX. es una tradición del siglo XIX, pero se cree que comenzó hace muchos años.
+    <string name="modo_libre">Modo libre</string>
 
-"San Felipe y Santiago" forma parte de una tradición religiosa de carácter infantil que se remonta a nuestros antepasados. Esta tradición consiste en que un santo, en este caso el Niño Jesús de Praga, tome la excusa de una petición como santo.
+    <string name="modo_guiado">Modo guiado</string>
 
-Cada año, en la mañana del 1 de mayo, grupos de 4 o 6 niñas y niños de entre 12 y 13 años, el "grupo San Felipe", recorren las calles de Balmaseda y, para ello, cargan con una plataforma de madera. Ahí va una pequeña imagen del Niño Jesús en Praga, rodeado de flores o ramas verdes.
+    <string name="fin_del_juego">FIN DEL JUEGO</string>
 
-Mientras cruzan las calles de Balmaseda, cantan partes de la canción “San Felipe y Santiago”. A los adultos les piden dinero diciendo “una peseta para San Felipe y Santiago” y se reparte el pedido entre los niños para que lo gasten cuando quieran. </string>
+    <string name="continuar">Continuar</string>
 
-        <string name="azalpena_jauregi">Lucas Horcasitas, propuso la construcción del Palacio Horcasitas y construido en 1687 (siglo XVII) estaba en Balmaseda.
-        Gracias al Palacio de las Horcasitas, el Palacio de Bizkaia uno de los mas importantes y mas antiguos fue construido. El palacio está ubicado en el casco antiguo de Balmaseda. Balmaseda se creó para ser un lugar de comercio y producción.
-        El palacio tiene cuatro pisos y está rodeado por un jardín. Las plantas bajas se utilizaron para sótanos y para almacenar animales (especialmente caballos). Arriba estaban los dormitorios y las salas de estar.
-        En el piso superior estaba el ático. Finalmente, en la fachada, allí estaba el balcón principal y alrededor de él la familia Horcasitas oculto. El balcón estaba asegurado con dos grandes vigas, para no caer.</string>
+    <string name="repetir">Repetir</string>
 
-        <string name="azalpena_kolitza"> El segundo patrimonio es la subida de Kolitza (romería popular). El Libro de Historia de Balmaseda afirma que esta tradición se remonta al siglo XVI. siglo, porque hubo terribles epidemias. En lo alto del monte Kolitza se encontraba la ermita de San Sebastián. En esa montaña se realizó una procesión para pedir protección. Pero al ver que las muertes no terminaban, las autoridades reforzaron la santidad de la ermita, ofreciéndola también a San Roque. Por eso ahora se llama Ermita de San Sebastián y San Roque.
-El monte Kolitza es el monte más significativo de las Encartaciones y uno de los más bellos de Bizkaia. Tiene 879 metros de altura y sobre los valles se divisa el límite entre Balmaseda, Artzentales y el Valle de Mena.
-En su cima se encuentra la ermita románica de San Sebastián y San Roque, construida en el siglo XIII. o XIV. construida en el siglo XVI.
+    <string name="apodo">Apodo:</string>
 
-El monte Kolitza se eleva en vísperas de Pentecostés y significa la venida del Espíritu Santo. Esto sucede después del Domingo de Resurrección y el Domingo de la Resurrección de Jesús.
+    <string name="jugar">Jugar</string>
 
-Esta peregrinación se realizaba siempre en sábado, siempre en Pentecostés. porque se hace el domingo. Sin embargo, el Ayuntamiento de Balmaseda está celebrando decidió cambiar al sábado. Romería por la mañana
-        comienza y se celebra una misa en la ermita. Al final de la misa, se prepara una comida rural. Al anochecer desciende la música de la fanfarria, y los jóvenes,
-        al pasar por el pueblo, piden agua a sus vecinos. Fiestas continúa hasta el anochecer. </string>
+    <string name="putxero_explicacion">HISTORIA DE LA PUCHERA</string>
 
-        <string name="azalpena_procesion"> El Vía Crucis Vivientea de Balmaseda recibe el nombre de procesión de Semana Santa. En estas procesiones, las niñas y los niños de este pueblo son los protagonistas. Hoy en día, participan en estas procesiones más de 700 personas, algunas influenciadas por la tradición o la religión, y todas como Balmaseda. Además, esta tradición se remonta a la infancia, participando en encrucijadas infantiles en los barrios de Santo Domingo y La Magdalena. Se constata que con el tiempo los personajes y la decoración han ido mejorando y esta tradición se remonta al siglo XVII. se inició en el siglo XVI, manteniéndolo hasta nuestros días.
-Todo comienza la noche del Jueves Santo, cuando se realizan la “Última Cena”, la “Oración en el jardín” y “El Principio de Jesús”. El día siguiente, que es Viernes Santo, serán los tambores de la guardia romana.
-En este sentido, las siguientes procesiones son las siguientes. Procesión de Primeros Pasos, Jueves Santo. La procesión partirá de la plaza San Severino. Junto a los pasos van los romanos y los penitentes. Estos últimos llevan sombrero y andan descalzos, con cruces al cuello. La segunda, el mismo día, es la última cena, y en esta se realiza una representación del juicio ante los sacerdotes.
-Por otro lado, el juicio de Pilato tiene lugar el Viernes Santo. Primero, matan a Judas. Entonces juzgarán a Jesús y castigarán a Jesús. El mismo día se celebra el Vía Crucis. Habrá Magdalena, la Virgen María y otros personajes. Allí, Jesús dirá las últimas palabras antes de morir. Una vez descendidos de la cruz, serán llevados al sepulcro.
-Además, también hay una Procesión del Entierro, donde la apariencia oscura de los pasos y personajes entristece mucho la procesión. Finalmente, la ruta comienza en la plaza San Severino y vuelve a la plaza.
-Para finalizar el día se celebra la Procesión del Silencio, que es la más especial. Los romanos ayudan en el silencio sepulcral. Allí, después de una breve oración, se coloca el paso de Cristo en una de las paredes de la iglesia. La ruta comienza en la Plaza San Severino, terminando camino al cementerio.</string>
-        <string name="azalpena_putxero"> El festival fue creado por la gente de Balmaseda en los años 70. San Severino (Putxera) es la fiesta más popular de Balmaseda y el Concurso de Putxera tiene lugar el 23 de octubre. Inicialmente, la Fiesta de San Severino era religiosa y ahora es una fiesta popular.
+    <string name="puente_explicacion">HISTORIA DEL PUENTE</string>
+
+    <string name="monte_explicacion">HISTORIA DEL MONTE KOLITXA</string>
+
+    <string name="jauregi_explicacion">HISTORIA DEL CASTILLO HORCASITAS</string>
+
+    <string name="cambiar_modo">Cambiar modo</string>
+
+    <string name="acerca_de">ACERCA DE</string>
+
+    <string name="desconectar">DESCONECTAR</string>
+
+    <string name="puente">PUENTE VIEJO</string>
+
+    <string name="kolitxa">MONTE KOLITXA</string>
+
+    <string name="jauregi">CASTILLO HORCASITAS</string>
+
+    <string name="procesion">PROCESIÓN</string>
+
+    <string name="txapela">MUSEO DE LA BOINA</string>
+
+    <string name="san_felipe">CANCIÓN DE SAN FELIPE</string>
+
+    <string name="putxero">PUCHERAS</string>
+
+    <string name="procesion_explicacion">HISTORIA DE LA PROCESIÓN</string>
+
+    <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
+
+    <string name="txt_texto_bazkaria">Almuerzo</string>
+
+    <string name="txt_texto_erromeria">Peregrinaje</string>
+
+    <string name="txt_finalizar">Terminar</string>
+
+    <string name="txt_siguientejuego">Siguiente juego</string>
+
+    <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LAS PALABRAS</string>
+
+    <string name="txttxapela_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
+
+    <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
+
+    <string name="txtjauregi_puzzle_titulo">PUZZLE DEL PALACIO</string>
+
+    <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>
+
+    <string name="txt_texto_Erdiko_Solairua">Pisos intermedios</string>
+
+    <string name="txt_texto_Azken_Solairua">Ultimos pisos</string>
+
+    <string name="txt_texto_Fatxada">Fachada</string>
+
+    <string name="txt_texto_Gelak_Egongelak">Habitaciones y salones</string>
+
+    <string name="txt_texto_Balkoi">El balcón principal, la familia abrigo y 2 vigas</string>
+
+    <string name="txt_texto_Sotoa">Sótano y animales lugar para almacenar</string>
+
+    <string name="txt_texto_Gambara">Gambara</string>
+
+    <string name="txt_tontorra">La cumbre</string>
+
+    <string name="txt_pazkoa">Pascua de Resurrección</string>
+
+    <string name="txt_Pentekoste">Pentecostés</string>
+
+    <string name="txt_Erromeria">Peregrinaje</string>
+
+    <string name="txt_Bazkaria">Almuerzo</string>
+
+    <string name="txt_ermita">Ermita</string>
+
+    <string name="txapela_explicacion_titulo">HISTORIA DE LA BOINA</string>
+
+    <string name="felipe_explicacion_titulo">HISTORIA DE SAN FELIPE Y SANTIAGO</string>
+
+    <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
+
+    <string name="siguiente_adivinanda">Adivina el siguiente</string>
+
+    <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte. ¡Me cruzan! ¿Quién soy?</string>
+
+    <string name="opcion_1jesus">A) Judas</string>
+
+    <string name="opcion_2jesus">B) Jose</string>
+
+    <string name="opcion_3jesus">C) Jesus</string>
+
+    <string name="explicacion_penitenteak">Llevo cruces. Voy en grupo y todos usamos sombreros. Además, vamos descalzos. ¿Quienes somos?</string>
+
+    <string name="opcion_1penitenteak">A) Penitentes</string>
+
+    <string name="opcion_2penitenteak">B) Los romanos</string>
+
+    <string name="opcion_3penitenteak">C) Los ladrones</string>
+
+    <string name="explicacion_maria">Soy la madre de un personaje muy, muy importante. Juzgan y crucifican a mi hijo. ¿Quién soy?</string>
+
+    <string name="opcion_1maria">A) Maria Magdalena</string>
+
+    <string name="opcion_2maria">B) Virgen Maria</string>
+
+    <string name="opcion_3maria">C) Paloma Blanca</string>
+
+    <string name="Gurutze_bidea">El camino de la cruz</string>
+
+    <string name="Judasen_hilketa">Muerte de Judas</string>
+
+    <string name="Azken_afaria">Ultima cena</string>
+
+    <string name="Jesusen_epaiketa">El juicio de Jesús</string>
+
+    <string name="felipe_cancion_titulo">CANCIÓN DE SAN FELIPE Y SANTIAGO</string>
+
+    <string name="putxero_juego">JUEGO DE LA PUCHERA</string>
+
+    <string name="azalpena_sanfelipe">Hay tres elementos distintivos de la Balmaseda "San Felipe y Santiago" que se celebra el 1 de mayo: el santo, el canto y los sombreros. Además, el XIX. es una tradición del siglo XIX, pero se cree que comenzó hace muchos años.
+    "San Felipe y Santiago" forma parte de una tradición religiosa de carácter infantil que se remonta a nuestros antepasados. Esta tradición consiste en que un santo, en este caso el Niño Jesús de Praga, tome la excusa de una petición como santo.
+    Cada año, en la mañana del 1 de mayo, grupos de 4 o 6 niñas y niños de entre 12 y 13 años, el "grupo San Felipe", recorren las calles de Balmaseda y, para ello, cargan con una plataforma de madera. Ahí va una pequeña imagen del Niño Jesús en Praga, rodeado de flores o ramas verdes.
+    Mientras cruzan las calles de Balmaseda, cantan partes de la canción “San Felipe y Santiago”. A los adultos les piden dinero diciendo “una peseta para San Felipe y Santiago” y se reparte el pedido entre los niños para que lo gasten cuando quieran. </string>
+
+    <string name="azalpena_jauregi">Lucas Horcasitas, propuso la construcción del Palacio Horcasitas y construido en 1687 (siglo XVII) estaba en Balmaseda.
+    Gracias al Palacio de las Horcasitas, el Palacio de Bizkaia uno de los mas importantes y mas antiguos fue construido. El palacio está ubicado en el casco antiguo de Balmaseda. Balmaseda se creó para ser un lugar de comercio y producción.
+    El palacio tiene cuatro pisos y está rodeado por un jardín. Las plantas bajas se utilizaron para sótanos y para almacenar animales (especialmente caballos). Arriba estaban los dormitorios y las salas de estar.
+    En el piso superior estaba el ático. Finalmente, en la fachada, allí estaba el balcón principal y alrededor de él la familia Horcasitas oculto. El balcón estaba asegurado con dos grandes vigas, para no caer.</string>
+
+    <string name="azalpena_kolitza"> El segundo patrimonio es la subida de Kolitza (romería popular). El Libro de Historia de Balmaseda afirma que esta tradición se remonta al siglo XVI. siglo, porque hubo terribles epidemias. En lo alto del monte Kolitza se encontraba la ermita de San Sebastián. En esa montaña se realizó una procesión para pedir protección. Pero al ver que las muertes no terminaban, las autoridades reforzaron la santidad de la ermita, ofreciéndola también a San Roque. Por eso ahora se llama Ermita de San Sebastián y San Roque.
+    El monte Kolitza es el monte más significativo de las Encartaciones y uno de los más bellos de Bizkaia. Tiene 879 metros de altura y sobre los valles se divisa el límite entre Balmaseda, Artzentales y el Valle de Mena.
+    En su cima se encuentra la ermita románica de San Sebastián y San Roque, construida en el siglo XIII. o XIV. construida en el siglo XVI. El monte Kolitza se eleva en vísperas de Pentecostés y significa la venida del Espíritu Santo. Esto sucede después del Domingo de Resurrección y el Domingo de la Resurrección de Jesús.
+    Esta peregrinación se realizaba siempre en sábado, siempre en Pentecostés. porque se hace el domingo. Sin embargo, el Ayuntamiento de Balmaseda está celebrando decidió cambiar al sábado. Romería por la mañana comienza y se celebra una misa en la ermita. Al final de la misa, se prepara una comida rural. Al anochecer desciende la música de la fanfarria, y los jóvenes,
+    al pasar por el pueblo, piden agua a sus vecinos. Fiestas continúa hasta el anochecer. </string>
+
+    <string name="azalpena_procesion"> El Vía Crucis Vivientea de Balmaseda recibe el nombre de procesión de Semana Santa. En estas procesiones, las niñas y los niños de este pueblo son los protagonistas. Hoy en día, participan en estas procesiones más de 700 personas, algunas influenciadas por la tradición o la religión, y todas como Balmaseda. Además, esta tradición se remonta a la infancia, participando en encrucijadas infantiles en los barrios de Santo Domingo y La Magdalena. Se constata que con el tiempo los personajes y la decoración han ido mejorando y esta tradición se remonta al siglo XVII. se inició en el siglo XVI, manteniéndolo hasta nuestros días. Todo comienza la noche del Jueves Santo, cuando se realizan la “Última Cena”, la “Oración en el jardín” y “El Principio de Jesús”. El día siguiente, que es Viernes Santo, serán los tambores de la guardia romana.
+    En este sentido, las siguientes procesiones son las siguientes. Procesión de Primeros Pasos, Jueves Santo. La procesión partirá de la plaza San Severino. Junto a los pasos van los romanos y los penitentes. Estos últimos llevan sombrero y andan descalzos, con cruces al cuello. La segunda, el mismo día, es la última cena, y en esta se realiza una representación del juicio ante los sacerdotes. Por otro lado, el juicio de Pilato tiene lugar el Viernes Santo. Primero, matan a Judas. Entonces juzgarán a Jesús y castigarán a Jesús. El mismo día se celebra el Vía Crucis. Habrá Magdalena, la Virgen María y otros personajes. Allí, Jesús dirá las últimas palabras antes de morir. Una vez descendidos de la cruz, serán llevados al sepulcro.
+    Además, también hay una Procesión del Entierro, donde la apariencia oscura de los pasos y personajes entristece mucho la procesión. Finalmente, la ruta comienza en la plaza San Severino y vuelve a la plaza. Para finalizar el día se celebra la Procesión del Silencio, que es la más especial. Los romanos ayudan en el silencio sepulcral. Allí, después de una breve oración, se coloca el paso de Cristo en una de las paredes de la iglesia. La ruta comienza en la Plaza San Severino, terminando camino al cementerio.</string>
+
+    <string name="azalpena_putxero">El festival fue creado por la gente de Balmaseda en los años 70. San Severino (Putxera) es la fiesta más popular de Balmaseda y el Concurso de Putxera tiene lugar el 23 de octubre. Inicialmente, la Fiesta de San Severino era religiosa y ahora es una fiesta popular.
     Ese día, por la mañana, las pandillas y las familias se reúnen en la iglesia de San Severino. Allí, las putxeras se preparan siguiendo una receta tradicional a base de frijoles rojos, chorizo y morcilla.
     Hay concursos gastronómicos y otras fiestas en este día, como desfiles, fanfarrias, bailes, conciertos, verbenas ...
     Los orígenes de Putxera se remontan al siglo XIX. Se inició en el siglo XVI, cuando se construyó el ferrocarril Bilbao-La Robla. El ferrocarril fue creado para transportar carbón desde las minas de León a Bilbao. Muchos vecinos de Balmaseda empezaron a trabajar en el ferrocarril. Pasaron muchas horas en el tren en malas condiciones y comieron alimentos fríos. El personal quería comer comida caliente, así que se les ocurrió una forma. Los primeros charcos se cocinaron con el vapor de la máquina.
-
     En Balmaseda no se olvidó la tradición del "putch ferroviario". La competencia fue exitosa y en los años siguientes continuó celebrándose. Inicialmente se hicieron en el frontón y ahora en la Plaza San Severino.</string>
-        <string name="azalpena_txapela"> Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
+
+    <string name="azalpena_txapela"> Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
     Egun horretan, goizean, kuadrillak eta familiak San Severino elizan biltzen dira. Bertan, Putxerak errezeta tradizionala erabiliz prestatzen dituzte indaba gorria, txorizoa eta odolkia erabiliz.
     Lehiaketa gastronomiko eta beste jai batzuk egiten dira egun horretan, adibidez, kalejira, fanfarreak, dantzak, kontzertuak, berbenak...
-    Putxeraren jatorria XIX. mendean hasi zen, Bilbao-La Robla trenbidea eraiki zenean. Trenbidea ikatza Leongo-meategietatik Bilbora garraiatzeko sortu zen. Balmasedako biztanle asko trenbidean lanean hasi ziren. Trenean ordu asko ematen zituzten baldintza txarretan eta janari hotza jaten zuten. Langileek janari beroa jan nahi zuten, beraz, era bat asmatu zuten. Lehen putxerak makinaren lurruna erabiliz sukaldatzen zuten.
-
-    Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa. Lehiaketa arrakastatsua izan zen eta hurrengo urteetan ospatzen jarraitu zen. Hasieran frontoian egiten ziren eta gaur egun San Severino plazan.</string>
+    Putxeraren jatorria XIX. mendean hasi zen, Bilbao-La Robla trenbidea eraiki zenean. Trenbidea ikatza Leongo-meategietatik Bilbora garraiatzeko sortu zen. Balmasedako biztanle asko trenbidean lanean hasi ziren. Trenean ordu asko ematen zituzten baldintza txarretan eta janari hotza jaten zuten. Langileek janari beroa jan nahi zuten, beraz, era bat asmatu zuten. Lehen putxerak makinaren lurruna erabiliz sukaldatzen zuten. Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa. Lehiaketa arrakastatsua izan zen eta hurrengo urteetan ospatzen jarraitu zen. Hasieran frontoian egiten ziren eta gaur egun San Severino plazan.</string>
 
     <string name="txtjauregi_puzzle_explicacion">En la fotografía aparece el palacio, pero le faltan ventanas, puerta, bigas, escudo de armas, etc. Abajo aparecen estos elementos. Lleva cada elemento a su sitio.</string>
+
     <string name="txtjauregi_unir_explicacion">Relaciona lo que aparece en la columna de la izquierda con lo que aparece en la columna de la derecha. Así sabréis lo que hay en cada piso.</string>
+
     <string name="procesion_adivinar_explicacion">¡Hola, amigos! ¿Os atrevéis a jugar con El personaje inventado? Si es así, os aparecerá la descripción de un personaje y tendréis algunas opciones para adivinar quién es el personaje. ¿Listo? ¡Pues adelante!</string>
+
     <string name="procesion_ordenar_explicacion">¿Que si la actividad anterior era sencilla? Para ir adelante tendréis que hacer una última misión. ¡Si habéis estado atentos lo haréis en la PRIMERA! Sólo tenéis que ordenar los eventos que aparecen de mayor a mayor.</string>
+
     <string name="txt_corregir">CORREGIR</string>
+
     <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
+
     <string name="correccion_toast">No todas son correctas</string>
+
     <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
-    <string name="dialog_findejuegopregunta">¿Que quieres hacer?</string>
+
+    <string name="dialog_findejuegopregunta">¿QUE QUIERES HACER?</string>
+
     <string name="dialog_zorionak">¡FELICIDADES! ¡MUY BIEN!</string>
+
     <string name="error_toast">Error, vuelve a intentarlo</string>
+
     <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradciciones que tiene Balmaseda hoy en dia.\n
         \n<b>Productores y directores del proyecto:\n</b>
         - Olatz Arisqueta Núñez\n
@@ -139,31 +206,37 @@ Para finalizar el día se celebra la Procesión del Silencio, que es la más esp
         - Iker Caballero Cano\n
         - Alba Olano Barquin\n
         - Noemí Márquez Gamalo</string>
+
     <string name="modo_profesor">MODO PROFESOR</string>
 
     <string name="saiatuberriz">OHHHH! Vuelve a intentarlo</string>
+
     <string name="juegos">Juegos</string>
+
     <string name="otros">Otros</string>
+
     <string name="apodocompr">El apodo ya existe </string>
+
     <string name="camposvacios">El apodo no puede estar</string>
+
     <string name="boinas1">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
+
     <string name="boinas2">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko..</string>
-    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen.
-        Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko.
-        Boinas La Encartada industria ondare garrantzitsu bat da,
-        Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela.
-        Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.
-</string>
-    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren
-        museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko,
-        helburu bikoitzarekin:
-        ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
-    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak,
-        oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
+
+    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen. Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko. Boinas La Encartada industria ondare garrantzitsu bat da, Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela. Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.</string>
+
+    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko, helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
+
+    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
+
     <string name="nuevapartida">¿QUIERES EMPEZAR NUEVA PARTIDA?</string>
+
     <string name="nuevapartidaEXPLICACION">Empezara desde el comienzo</string>
+
     <string name="si">SI</string>
+
     <string name="no">NO</string>
+
     <string name="hurrengoa">SIGUIENTE</string>
 
 </resources>

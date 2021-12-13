@@ -55,7 +55,7 @@
             <TextView
                 android:id="@+id/txtpuente_explicacion"
                 style="@style/texto_simple_explicacion"
-                android:text="@string/explicacion"
+                android:text="@string/azalpena_puente"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgpuente_explicacion_logo" />
 
