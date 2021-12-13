@@ -1,170 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="balmapp" translatable="false">BalmApp</string>
+
     <string name="app_name" translatable="false">BalmApp</string>
+
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
     <string name="nueva_partida">Partida berria</string>
+
     <string name="modo_libre">Modu librea</string>
+
     <string name="felipe_cancion_titulo">SAN FELIPE ETA SANTIAGOREN ABEZTIA</string>
+
     <string name="putxero_juego">PUTXERAREN JOKUA</string>
+
     <string name="modo_guiado">Modu gidatua</string>
+
     <string name="fin_del_juego">JOKUAREN AMAIERA</string>
+
     <string name="continuar">Jarraitu</string>
+
     <string name="repetir">Errepikatu</string>
+
     <string name="apodo">Ezizen:</string>
+
     <string name="jugar">Jokatu</string>
+
     <string name="putxero_explicacion">PUTXERAREN HISTORIA</string>
+
     <string name="puente_explicacion">ZUBIAREN HISTORIA</string>
+
     <string name="monte_explicacion">KOLITZA MENDIAREN HISTORIA</string>
+
     <string name="jauregi_explicacion">HORCASITAS JAUREGIAREN HISTORIA</string>
+
     <string name="cambiar_modo">Modua aldatu</string>
+
     <string name="acerca_de">HONI BURUZ</string>
+
     <string name="desconectar">DESKONEKTATU</string>
+
     <string name="puente">ZUBI ZAHARRA</string>
+
     <string name="kolitxa" translatable="false">KOLITXA MENDIA</string>
+
     <string name="jauregi">HORCASITAS JAUREGIA</string>
+
     <string name="procesion">PROZESIOA</string>
+
     <string name="txapela">TXAPELA MUSEOA</string>
+
     <string name="san_felipe" translatable="false">SAN FELIPE ABEZTIA</string>
+
     <string name="putxero">PUTXERIA</string>
+
     <string name="procesion_explicacion">PROZESIOAREN HISTORIA</string>
+
     <string name="txt_texto_pazkoa">Pazkoa</string>
+
     <string name="txt_texto_bazkaria">Bazkaria</string>
+
     <string name="txt_texto_erromeria">Erromeria</string>
+
     <string name="txt_finalizar">Amaitu</string>
+
     <string name="txt_siguientejuego">Hurrengo jokoa</string>
+
     <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
+
     <string name="txtkolitza_sopadeletras_titulo">LETRA-SOPA</string>
+
     <string name="txtjauregi_puzzle_titulo">JAUREGIAREN PUZZLEA</string>
+
     <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
+
     <string name="txt_texto_Erdiko_Solairua">Erdiko Solairuak</string>
+
     <string name="txt_texto_Azken_Solairua">Azken Solairuak</string>
+
     <string name="txt_texto_Fatxada">Fatxada</string>
+
     <string name="txt_texto_Gelak_Egongelak">Gelak eta Egongelak</string>
+
     <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren armarria eta 2 biga</string>
+
     <string name="txt_texto_Sotoa">Sotoa eta animaliak gordetzeko lekua</string>
+
     <string name="txt_texto_Gambara">Gambara</string>
+
     <string name="txt_tontorra">Tontorra</string>
+
     <string name="txt_pazkoa">Pazkoa</string>
+
     <string name="txt_Pentekoste">Pentekoste</string>
+
     <string name="txt_Erromeria">Erromeria</string>
+
     <string name="txt_Bazkaria">Bazkaria</string>
+
     <string name="txt_ermita">Ermita</string>
+
     <string name="txapela_explicacion_titulo">TXAPELAREN HISTORIA</string>
+
     <string name="felipe_explicacion_titulo">SAN FELIPE ETA SANTIAGOREN HISTORIA</string>
+
     <string name="asmatu_pertsonaia">ASMATU PERTSONAIA</string>
+
     <string name="siguiente_adivinanda">Asmatu hurrengoa</string>
+
     <string name="explicacion_jesus">Protagonista naiz. Baina oso zorte txarra daukat. Gurutzatu egiten naute! Nor ote naiz?</string>
     <string name="opcion_1jesus">A)Judas</string>
+
     <string name="opcion_2jesus">B)Jose</string>
+
     <string name="opcion_3jesus">C)Jesus</string>
+
     <string name="explicacion_penitenteak">Gurutzeak garraiatzen ditut. Talde batean noa eta guztiok txanoak daramatzagu. Gainera, oinutsik goaz. Nortzuk gara?</string>
+
     <string name="opcion_1penitenteak">A)Penitenteak</string>
+
     <string name="opcion_2penitenteak">B)Erromatarrak</string>
+
     <string name="opcion_3penitenteak">C)Lapurrak</string>
+
     <string name="explicacion_maria">Pertsonaia oso oso garrantzitsu baten ama naiz. Nire semea epaitu eta gurutzatu egiten dute. Nor naiz?</string>
+
     <string name="opcion_1maria">A)Maria Magdalena</string>
+
     <string name="opcion_2maria">B)Andre Maria Birjina</string>
+
     <string name="opcion_3maria">C)Uso zuria</string>
+
     <string name="Gurutze_bidea">Gurutze bidea</string>
+
     <string name="Judasen_hilketa">Judas-en hilketa</string>
+
     <string name="Azken_afaria">Azken afaria</string>
+
     <string name="Jesusen_epaiketa">Jesus-en epaiketa</string>
 
-    <string name="azalpena_sanfelipe">
-Maiatzaren 1ean ospatzen den "San Felipe eta Santiago" balmasedarraren elementu bereizgarriak hiru dira: santua, abestia eta txanoak. Horrez gain,  XIX. mendeko tradizio bat da, baina uste da duela urte asko baino lehen hasi zena.
+    <string name="azalpena_sanfelipe">Maiatzaren 1ean ospatzen den "San Felipe eta Santiago" balmasedarraren elementu bereizgarriak hiru dira: santua, abestia eta txanoak. Horrez gain,  XIX. mendeko tradizio bat da, baina uste da duela urte asko baino lehen hasi zena. “San Felipe eta Santiago eguna” izaera erlijiosoa duen haur-tradizio baten barruan dago, gure arbasoetara heltzen dena. Tradizio hau, santu bat, kasu honetan, Pragako Jesus Haurra, eskaera baten aitzakia santu bezala hartzean datza.
+        Urtero, maiatzaren 1eko goizean, 12 edo 13 urte arteko 4 edo 6 neska-mutilek osatutako taldeek, "San felipe taldeak", Balmasedako kaleak zeharkatzen dituzte eta horretarako, egurrezko plataforma bat eramaten dute. Bertan joaten da Pragako Jesus Haurraren irudi txikia, lorez edo adar berdez inguratuta. Balmasedako kaleak zeharkatzen dituzten bitartean, "San Felipe eta Santiago" abestiaren zati batzuk abesten dituzte. Helduei dirua eskatzen diete "San Felipe eta Santiagorako pezetatxo bat" esanez eta eskaera haurren artean banatzen da, nahi dutenean gastatzeko. </string>
 
-“San Felipe eta Santiago eguna” izaera erlijiosoa duen haur-tradizio baten barruan dago, gure arbasoetara heltzen dena. Tradizio hau, santu bat, kasu honetan, Pragako Jesus Haurra, eskaera baten aitzakia santu bezala hartzean datza.
+    <string name="azalpena_jauregi">Lucas Horcasitas, Horcasitas jauregia eraikitzea proposatu zuen eta 1687. urtean (XVII. mendea) eraiki egin zen Balmasedan. Horcasitas jauregiari esker, Bizkaiko jauregi garrantzitsuenetarikoa eta zaharrenetarikoa eraiki zen. Jauregia Balmasedako alde zaharrean dago. Balmaseda merkataritzarako eta ekoizpenerako lekua izateko sortu zen.
+    Jauregiak lau solairu ditu eta lorategi batez inguratuta dago. Beheko solairuak sotorako eta animaliak (batez ere zaldiak) gordetzeko erabiltzen ziren. Goiko solairuetan gelak eta egongelak zeuden. Azken solairuan ganbara zegoen. Azkenik, fatxadan, balkoi nagusia zegoen eta bere inguruan Horcasitas familiaren ezkutua. Balkoia bi biga handitan bermatuta zegoen, ez erortzeko.</string>
 
-Urtero, maiatzaren 1eko goizean, 12 edo 13 urte arteko 4 edo 6 neska-mutilek osatutako taldeek, "San felipe taldeak", Balmasedako kaleak zeharkatzen dituzte eta horretarako, egurrezko plataforma bat eramaten dute. Bertan joaten da Pragako Jesus Haurraren irudi txikia, lorez edo adar berdez inguratuta.
+    <string name="azalpena_kolitza">Bigarren ondarea Kolitzako igoera da (erromeria herrikoia). Balmasedako Historia liburuan esaten da tradizio hau XVI. mendean hasi zela, epidemi ikaragarriak zeudelako. Kolitza mendiaren tontorrean San Sebastian ermita zegoen. Mendi horretan prozesio bat egin zen babesa eskatzeko. Baina heriotzak amaitzen ez zirela ikusita, agintariek ermitaren santutasuna indartu zuten, San Roqueri ere eskainiz. Horregatik, gaur egun, San Sebastian eta San Roque ermita izena du.
+        Kolitza mendia Enkarterriko mendirik esanguratsuena da eta Bizkaiko ederrenetakoa. 879 metroko altuera du eta haranen gainean, Balmaseda, Artzentales eta Mena Haranaren arteko muga ikusten da. Bere tontorrean, San Sebastian eta San Roque ermita erromanikoa dago, XIII. edo XIV. mendean eraiki zena. Kolitza mendira Pentecostés bezperan igotzen da eta Espiritu Santuaren etorrera esan nahi du. Hau Pazko Igandea eta Jesusen Berpizkunde Igandea igaro ondoren gertatzen da.
+        Erromeria hau beti larunbat batean egiten zen, Pentecostés beti igandean egiten delako. Hala ere, Balmasedako Udalak jaia larunbatera aldatzea erabaki zuen. Erromeria goizean hasten da eta ermitan meza egiten da. Meza amaitzean, landa-bazkaria prestatzen da. Ilunabarrean,
+        fanfarrearen doinua entzunez jaisten da, eta gazteek, herritik igarotzean, ura eskatzen diete auzokideei. Jaiak iluntzera arte jarraitzen du.</string>
 
-Balmasedako kaleak zeharkatzen dituzten bitartean, "San Felipe eta Santiago" abestiaren zati batzuk abesten dituzte. Helduei dirua eskatzen diete "San Felipe eta Santiagorako pezetatxo bat" esanez eta eskaera haurren artean banatzen da, nahi dutenean gastatzeko. </string>
+    <string name="azalpena_procesion"> Balmasedako Vía Crucis Vivientea, aste santuro egiten diren prozesioei esaten zaio. Prozesio hauetan, herri honetako neska-mutilak protagonistak dira. Gaur egun, 700 pertsona baino gehiagok parte hartzen dute prozesio hauetan, batzuk tradizioak edo erlijioak eraginda, eta guztiak balmasedarrak bezala. Gainera, tradizio hau txikitatik hasten da, Santo Domingo eta La Magdalena auzoetako haurren gurutze-bideetan parte hartuz. Denboran zehar pertsonaiak eta dekorazioa hobetu dela egiaztatzen da eta tradizio hau XVII. mendetik aurrera hasi zen, gaur egunera arte mantenduz.
+    Guztia Ostegun Santuko gauean hasten da, "Azken Afaria", "Baratzeko Otoitza" eta "Jesusen Printzipioa" antzezten direnean. Hurrengo egunean, hau da, Ostiral Santuan, erromatar guardiaren danborrak izango dira.
+    Honen harira, hurrengo prozesioak honako hauek dira. Lehenengoa Pausoen Prozesioa, ostegun Santua. Prozesioa San Severino plazatik hasiko da. Pausoekin batera, erromatarrak eta penitenteak doaz. Azken hauek txanoak jantzita eta oinutsik doaz, lepoan gurutzeak daramatzatela. Bigarrena, egun berean, azken afaria egiten da eta honetan apaizen aurreko epaiketaren antzezpen bat egiten da.
+    Bestalde, Pilatoren epaiketa egiten da, ostiral Santuan. Lehenik eta behin, Judas hilko dute. Gero, Jesusen epaiketa egingo dute eta Jesusen zigorkatzea. Egun berean, Gurutze Bidea ospatu egiten da. Magdalena, Andre Maria Birjina eta beste pertsonaia batzuk egongo dira. Bertan, Jesusek azken hitzak esango ditu, hil aurretik. Behin gurutzetik jaitsita, hilobira eramango dute.
+    Horrez gain, Lurperatzen Prozesioa ere egiten da,  non pausoen eta pertsonaien itxura ilunari esker, prozesioa benetan tristea izatea lortzen den. Amaitzeko, ibilbidea San Severino plazan hasiko da eta berriro plazara itzuliko da.
+    Egunari amaiera emateko, Isiltasunaren Prozesioa ospatzen da, bereziena dena. Erromatarrek laguntzen dute heriozko isiltasunean. Han, otoitz labur baten ostean, Kristoren pausoa elizaren hormetako batean jartzen da. Ibilbidea San Severino plazan hasiko da hilerrirako bidean amaituz.</string>
 
-    <string name="azalpena_jauregi">
-        Lucas Horcasitas, Horcasitas jauregia eraikitzea proposatu zuen eta 1687. urtean (XVII. mendea) eraiki egin zen Balmasedan.
-Horcasitas jauregiari esker, Bizkaiko jauregi garrantzitsuenetarikoa eta zaharrenetarikoa eraiki zen. Jauregia Balmasedako alde zaharrean dago. Balmaseda merkataritzarako eta ekoizpenerako lekua izateko sortu zen.
-Jauregiak lau solairu ditu eta lorategi batez inguratuta dago. Beheko solairuak sotorako eta animaliak (batez ere zaldiak) gordetzeko erabiltzen ziren. Goiko solairuetan gelak eta egongelak zeuden. Azken solairuan ganbara zegoen. Azkenik, fatxadan, balkoi nagusia zegoen eta bere inguruan Horcasitas familiaren ezkutua. Balkoia bi biga handitan bermatuta zegoen, ez erortzeko.
-
-    </string>
-
-    <string name="azalpena_kolitza">
-        Bigarren ondarea Kolitzako igoera da (erromeria herrikoia). Balmasedako Historia liburuan esaten da tradizio hau XVI. mendean hasi zela, epidemi ikaragarriak zeudelako. Kolitza mendiaren tontorrean San Sebastian ermita zegoen. Mendi horretan prozesio bat egin zen babesa eskatzeko. Baina heriotzak amaitzen ez zirela ikusita, agintariek ermitaren santutasuna indartu zuten, San Roqueri ere eskainiz. Horregatik, gaur egun, San Sebastian eta San Roque ermita izena du.
-Kolitza mendia Enkarterriko mendirik esanguratsuena da eta Bizkaiko ederrenetakoa. 879 metroko altuera du eta haranen gainean, Balmaseda, Artzentales eta Mena Haranaren arteko muga ikusten da.
-Bere tontorrean, San Sebastian eta San Roque ermita erromanikoa dago, XIII. edo XIV. mendean eraiki zena.
-
-Kolitza mendira Pentecostés bezperan igotzen da eta Espiritu Santuaren etorrera esan nahi du. Hau Pazko Igandea eta Jesusen Berpizkunde Igandea igaro ondoren gertatzen da.
-
-Erromeria hau beti larunbat batean egiten zen, Pentecostés beti
-        igandean egiten delako. Hala ere, Balmasedako Udalak jaia
-        larunbatera aldatzea erabaki zuen. Erromeria goizean
-        hasten da eta ermitan meza egiten da. Meza amaitzean,
-        landa-bazkaria prestatzen da. Ilunabarrean,
-        fanfarrearen doinua entzunez jaisten da, eta gazteek,
-        herritik igarotzean, ura eskatzen diete auzokideei. Jaiak
-        iluntzera arte jarraitzen du.
-
-    </string>
-    <string name="azalpena_procesion">
-        Balmasedako Vía Crucis Vivientea, aste santuro egiten diren prozesioei esaten zaio. Prozesio hauetan, herri honetako neska-mutilak protagonistak dira. Gaur egun, 700 pertsona baino gehiagok parte hartzen dute prozesio hauetan, batzuk tradizioak edo erlijioak eraginda, eta guztiak balmasedarrak bezala. Gainera, tradizio hau txikitatik hasten da, Santo Domingo eta La Magdalena auzoetako haurren gurutze-bideetan parte hartuz. Denboran zehar pertsonaiak eta dekorazioa hobetu dela egiaztatzen da eta tradizio hau XVII. mendetik aurrera hasi zen, gaur egunera arte mantenduz.
-
-Guztia Ostegun Santuko gauean hasten da, "Azken Afaria", "Baratzeko Otoitza" eta "Jesusen Printzipioa" antzezten direnean. Hurrengo egunean, hau da, Ostiral Santuan, erromatar guardiaren danborrak izango dira.
-
-Honen harira, hurrengo prozesioak honako hauek dira. Lehenengoa Pausoen Prozesioa, ostegun Santua. Prozesioa San Severino plazatik hasiko da. Pausoekin batera, erromatarrak eta penitenteak doaz. Azken hauek txanoak jantzita eta oinutsik doaz, lepoan gurutzeak daramatzatela. Bigarrena, egun berean, azken afaria egiten da eta honetan apaizen aurreko epaiketaren antzezpen bat egiten da.
-
-Bestalde, Pilatoren epaiketa egiten da, ostiral Santuan. Lehenik eta behin, Judas hilko dute. Gero, Jesusen epaiketa egingo dute eta Jesusen zigorkatzea. Egun berean, Gurutze Bidea ospatu egiten da. Magdalena, Andre Maria Birjina eta beste pertsonaia batzuk egongo dira. Bertan, Jesusek azken hitzak esango ditu, hil aurretik. Behin gurutzetik jaitsita, hilobira eramango dute.
-
-Horrez gain, Lurperatzen Prozesioa ere egiten da,  non pausoen eta pertsonaien itxura ilunari esker, prozesioa benetan tristea izatea lortzen den. Amaitzeko, ibilbidea San Severino plazan hasiko da eta berriro plazara itzuliko da.
-Egunari amaiera emateko, Isiltasunaren Prozesioa ospatzen da, bereziena dena. Erromatarrek laguntzen dute heriozko isiltasunean. Han, otoitz labur baten ostean, Kristoren pausoa elizaren hormetako batean jartzen da. Ibilbidea San Severino plazan hasiko da,
-        hilerrirako bidean amaituz.
-
-            </string>
-    <string name="azalpena_putxero">
-    Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
+    <string name="azalpena_putxero">Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
     Egun horretan, goizean, kuadrillak eta familiak San Severino elizan biltzen dira. Bertan, Putxerak errezeta tradizionala erabiliz prestatzen dituzte indaba gorria, txorizoa eta odolkia erabiliz.
     Lehiaketa gastronomiko eta beste jai batzuk egiten dira egun horretan, adibidez, kalejira, fanfarreak, dantzak, kontzertuak, berbenak...
     Putxeraren jatorria XIX. mendean hasi zen, Bilbao-La Robla trenbidea eraiki zenean. Trenbidea ikatza Leongo-meategietatik Bilbora garraiatzeko sortu zen. Balmasedako biztanle asko trenbidean lanean hasi ziren. Trenean ordu asko ematen zituzten baldintza txarretan eta janari hotza jaten zuten. Langileek janari beroa jan nahi zuten, beraz, era bat asmatu zuten. Lehen putxerak makinaren lurruna erabiliz sukaldatzen zuten.
+    Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa. Lehiaketa arrakastatsua izan zen eta hurrengo urteetan ospatzen jarraitu zen. Hasieran frontoian egiten ziren eta gaur egun San Severino plazan.</string>
 
-    Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa.
-        Lehiaketa arrakastatsua izan zen eta hurrengo urteetan
-        ospatzen jarraitu zen. Hasieran frontoian egiten ziren
-        eta gaur egun San Severino plazan.
- </string>
-
-    <string name="azalpena_txapela">
-    Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
+    <string name="azalpena_txapela">Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
     Egun horretan, goizean, kuadrillak eta familiak San Severino elizan biltzen dira. Bertan, Putxerak errezeta tradizionala erabiliz prestatzen dituzte indaba gorria, txorizoa eta odolkia erabiliz.
     Lehiaketa gastronomiko eta beste jai batzuk egiten dira egun horretan, adibidez, kalejira, fanfarreak, dantzak, kontzertuak, berbenak...
     Putxeraren jatorria XIX. mendean hasi zen, Bilbao-La Robla trenbidea eraiki zenean. Trenbidea ikatza Leongo-meategietatik Bilbora garraiatzeko sortu zen. Balmasedako biztanle asko trenbidean lanean hasi ziren. Trenean ordu asko ematen zituzten baldintza txarretan eta janari hotza jaten zuten. Langileek janari beroa jan nahi zuten, beraz, era bat asmatu zuten. Lehen putxerak makinaren lurruna erabiliz sukaldatzen zuten.
+    Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa. Lehiaketa arrakastatsua izan zen eta hurrengo urteetan ospatzen jarraitu zen. Hasieran frontoian egiten ziren eta gaur egun San Severino plazan.</string>
 
-    Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa.
-        Lehiaketa arrakastatsua izan zen eta hurrengo urteetan
-        ospatzen jarraitu zen. Hasieran frontoian egiten ziren
-        eta gaur egun San Severino plazan.
- </string>
-    <string name="txtjauregi_puzzle_explicacion">Argazkian jauregia agertzen da, baina, leihoak, atea, bigak, armarria etab. falta zaizkio.
-Behean elementu horiek agertzen dira. Eraman elementu bakoitza bere lekura.</string>
+    <string name="txtjauregi_puzzle_explicacion">Argazkian jauregia agertzen da, baina, leihoak, atea, bigak, armarria etab. falta zaizkio. Behean elementu horiek agertzen dira. Eraman elementu bakoitza bere lekura.</string>
 
-    <string name="txtjauregi_unir_explicacion">Lotu ezkerreko zutabean agertzen dena eskumako zutabean agertzen denarekin. Horrela
-solairu bakoitzean zer dagoen jakingo duzue.</string>
-F
+    <string name="txtjauregi_unir_explicacion">Lotu ezkerreko zutabean agertzen dena eskumako zutabean agertzen denarekin. Horrela solairu bakoitzean zer dagoen jakingo duzue.</string>
+
     <string name="procesion_adivinar_explicacion">"Kaixo lagunok! Ausartzen al zarete “Pertsonaia asmatu” jolastera? Horrela bada, pertsonaia baten deskribapena agertuko zaizue eta aukera batzuk izango dituzue pertsonaia nor den asmatzeko. Prest? Ba aurrera! "</string>
+
     <string name="procesion_ordenar_explicacion">"Baietz aurreko jarduera erraza zela? Aurrera joateko azken misio bat egin beharko duzue. Adi egon bazarete PRIMERAN egingo duzue! Soilik agertzen diren gertaerak ordenatu behar dituzue zaharrenetik berrienera.  "</string>
+
     <string name="felipe_cancion_letra" translatable="false">"San Felipe y Santiago el primer día de ……………1…….. San Felipe y San Gil el primer día de …………2………... Viva Felipe viva ………………3……. vivan las flores del mes de mayo Viva Felipe viva San ………4……… vivan las flores  del mes de abril  La señora de esa casa es una ………5…….. mujer ,pero más buena sería si nos diera de …………6….. Viva ………7……... viva Santiago vivan las flores del mes de mayo Viva Felipe viva ………8…….. Gil vivan las flores  del mes de abril  Señorita ………………9……., señorita de cartera  si no nos da una ………10……..., le meamos la escalera Viva Felipe viva Santiago vivan las ……11………... del mes de mayo Viva Felipe viva San Gil vivan las ………12……..  del mes de abril  Allí arriba en aquel  alto hay un puchero de ………13…….. no se lo digas a nadie, y te daré unos ………14…….. Viva Felipe viva Santiago ………15….. las flores del mes de mayo Viva Felipe viva San Gil ………16…….. las flores  del mes de abril "</string>
-    <string name="explicacion" translatable="false">Lehenengo ondarea, Balmasedako Zubi Zaharra da, Muza zubia ere deitzen da.  Zubia XV. mendean eraiki zuten, XII. mendean eraikita zegoen egurrezko zubi erromatar baten gainean.
 
-Zubi Zaharraren azpitik Kadagua ibaia pasatzen da. XV. mendearen lehen erdian, guardiako dorrea eraiki zen, eta, pixka bat geroago, erdiko arku handia. Hala ere, hori guztia ezin da agiri bidez datatu.
+    <string name="explicacion" translatable="false">Lehenengo ondarea, Balmasedako Zubi Zaharra da, Muza zubia ere deitzen da.  Zubia XV. mendean eraiki zuten, XII. mendean eraikita zegoen egurrezko zubi erromatar baten gainean. Zubi Zaharraren azpitik Kadagua ibaia pasatzen da. XV. mendearen lehen erdian, guardiako dorrea eraiki zen, eta, pixka bat geroago, erdiko arku handia. Hala ere, hori guztia ezin da agiri bidez datatu.
+    Garai batean, La Muza zubia, kostaldetik eta Gaztelako zenbait lekura joateko zubi  bakarra zen. Zubia, Balmasedak merkataritza aldetik izan zuen garrantzia adierazten du. Zubi hori, bere dorretxoarekin, hiribildura sartzeko ateak ziren, eta aduana funtzioa zuen. Hiribildura sartu nahi zuten pertsonek zergak ordaindu behar zituzten. Amaitzeko, aipatu behar da Zubi Zaharretik ezin dela igaro ibilgailurik eta galtzada harrizkoa dela. Horrez gain, zubi honek forma berezia zuenez gurdiak eta zalditegiak igarotzea zaila zen. Horren ondorioz, beste zubi batzuk eraikitzeko erabakia hartu zuten.</string>
 
-Garai batean, La Muza zubia, kostaldetik eta Gaztelako zenbait lekura joateko zubi  bakarra zen. Zubia, Balmasedak merkataritza aldetik izan zuen garrantzia adierazten du. Zubi hori, bere dorretxoarekin, hiribildura sartzeko ateak ziren, eta aduana funtzioa zuen. Hiribildura sartu nahi zuten pertsonek zergak ordaindu behar zituzten.
-
-Amaitzeko, aipatu behar da Zubi Zaharretik ezin dela igaro ibilgailurik eta galtzada harrizkoa dela. Horrez gain, zubi honek forma berezia zuenez gurdiak eta zalditegiak igarotzea zaila zen. Horren ondorioz, beste zubi batzuk eraikitzeko erabakia hartu zuten.
-</string>
     <string name="txt_corregir">ZUZENDU</string>
+
     <string name="titulo_modo">NOLA JOLASTU NAHI DUZU?</string>
+
     <string name="correccion_toast">Guztiak ez dira zuzenak</string>
+
     <string name="ordenar">ORDENATU KRONOLOGIKOKI</string>
+
     <string name="dialog_findejuegopregunta">Zer egin nahi duzu?</string>
+
     <string name="dialog_zorionak">ZORIONAK! OSO ONDO!</string>
+
     <string name="error_toast">Errorea, saiatu berriro</string>
+
     <string name="nosotros">EHUko Irakasle Eskolako ikasle-talde bat gara, eta elkarrekin eraman ditugu CIFP Txurdinaga LHII institutuko beste ikasle batzuk, lehen hezkuntzako haurrek Balmasedak gaur egun dituen historia eta itzulpenak beste era batera ikas ditzaten.\n
         \n<b>Proiektuaren ekoizleak eta zuzendariak:\n</b>
         - Olatz Arisqueta Núñez\n
@@ -179,30 +210,38 @@ Amaitzeko, aipatu behar da Zubi Zaharretik ezin dela igaro ibilgailurik eta galt
         - Iker Caballero Cano\n
         - Alba Olano Barquin\n
         - Noemí Márquez Gamalo</string>
+
     <string name="modo_profesor">IRAKASLE MODUA</string>
+
     <string name="saiatuberriz">OHHHH! Saiatu berriz</string>
+
     <string name="juegos">Jokuak</string>
+
     <string name="otros">Besteak</string>
+
     <string name="boinas1">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
+
     <string name="boinas2">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko..</string>
-    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen.
-        Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko.
-        Boinas La Encartada industria ondare garrantzitsu bat da,
-        Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela.
-        Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.
-</string>
-    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren
-        museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko,
-        helburu bikoitzarekin:
-        ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
-    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak,
-        oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
+
+    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen. Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko.
+        Boinas La Encartada industria ondare garrantzitsu bat da, Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela. Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.</string>
+
+    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko,
+        helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
+
+    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
 
     <string name="nuevapartida">PARTIDA BERRI BAT HASI NAHI DUZU?</string>
+
     <string name="nuevapartidaEXPLICACION">Hasieratik hasiko da. </string>
+
     <string name="si">BAI</string>
+
     <string name="no">EZ</string>
+
     <string name="hurrengoa">HURRENGOA</string>
+
     <string name="apodocompr">Ezizena existitzen da</string>
+
     <string name="camposvacios">Ezizena ezin da hutsik egon</string>
 </resources>
