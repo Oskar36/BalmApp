@@ -8,79 +8,81 @@
     tools:context=".f_sanfelipe_cancion">
     tools:viewBindingIgnore="true"
 
-    <ImageButton
-        android:id="@+id/pause"
-        style="@style/botones"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@android:drawable/ic_media_pause"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136"
-        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/play"
-        style="@style/botones"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136"
-        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/txtsanfelipe_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/felipe_cancion_titulo"
-        style="@style/titulo2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/btncorregir"
-        style="@style/botones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_corregir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <ScrollView
-        android:layout_width="407dp"
-        android:layout_height="484dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/btncorregir"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/pause"
+                    style="@style/botones"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@android:drawable/ic_media_pause"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsanfelipe_titulo"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/play"
+                    style="@style/botones"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsanfelipe_titulo"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/txtsanfelipe_titulo"
+                    style="@style/titulo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/felipe_cancion_titulo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/txtsanfelipe_cancion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:lineSpacingExtra="6sp"
                 android:text="@string/felipe_cancion_letra"
                 android:textSize="20sp"
@@ -88,7 +90,6 @@
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -117,7 +118,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
                 <TextView
                     android:id="@+id/txt2"
                     android:layout_width="wrap_content"
@@ -125,8 +125,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="2"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra1"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -138,8 +138,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -168,7 +166,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
                 <TextView
                     android:id="@+id/txt4"
                     android:layout_width="wrap_content"
@@ -176,8 +173,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="4"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra3"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -189,8 +186,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -219,9 +214,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
-
-
                 <TextView
                     android:id="@+id/txt6"
                     android:layout_width="wrap_content"
@@ -229,8 +221,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="6"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra5"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -243,9 +235,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -274,7 +263,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
                 <TextView
                     android:id="@+id/txt8"
                     android:layout_width="wrap_content"
@@ -282,8 +270,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="8"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra7"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -295,9 +283,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -326,10 +311,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
-
-
-
                 <TextView
                     android:id="@+id/txt10"
                     android:layout_width="wrap_content"
@@ -337,8 +318,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="10"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra9"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -350,11 +331,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -383,9 +359,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
-
-
                 <TextView
                     android:id="@+id/txt12"
                     android:layout_width="wrap_content"
@@ -393,8 +366,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="12"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra11"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -406,10 +379,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -438,10 +407,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
-
-
-
                 <TextView
                     android:id="@+id/txt14"
                     android:layout_width="wrap_content"
@@ -449,8 +414,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="14"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra13"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -464,18 +429,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-
-
-
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/txt15"
@@ -497,11 +456,6 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
 
 
-
-
-
-
-
                 <TextView
                     android:id="@+id/txt16"
                     android:layout_width="wrap_content"
@@ -509,8 +463,8 @@
                     android:layout_marginLeft="80dp"
                     android:text="16"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txtpalabra15"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"></TextView>
 
                 <EditText
@@ -521,7 +475,18 @@
                     app:layout_constraintStart_toEndOf="@+id/txt16"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btncorregir"
+                style="@style/botones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:foregroundGravity="right"
+                android:text="@string/txt_corregir" />
 
 
         </LinearLayout>
