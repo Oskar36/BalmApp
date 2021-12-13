@@ -1,6 +1,5 @@
 package com.example.balmapp
 
-import android.animation.Animator
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.media.MediaPlayer
@@ -105,9 +104,9 @@ class f_putxero_juego : Fragment() {
                     mediaplayerFallo!!.stop()
                     mediaplayerTren!!.stop()
                     Sharedapp.gune.gune="7.Gunea"
-                   if(!victoria){
-                       mostrarDialogoDerrota()
-                   }
+                    if(!victoria){
+                        mostrarDialogoDerrota()
+                    }
 
                 }
 
@@ -144,15 +143,13 @@ class f_putxero_juego : Fragment() {
 
 
             MotionEvent.ACTION_UP -> {
-                val location = IntArray(2)
-                view.getLocationOnScreen(location)
-                val x = location[0]
-                val y = location[1]
-                val location2 = IntArray(2)
-                binding.imgPutxeroPutxero.getLocationOnScreen(location2)
-                val x2 = location2[0]
-                val y2 = location2[1]
-                if((x<=(x2+100) && x>=(x2-100)) && (y<=(y2+300) && (y>=y2-40))){
+                val x_ingrediente=view.x
+                val y_ingrediente=view.y
+                val x_puchero=binding.imgPutxeroPutxero.x
+                val y_puchero=binding.imgPutxeroPutxero.y
+                val pucheroanchura=binding.imgPutxeroPutxero.width
+                val pucheroaltura=binding.imgPutxeroPutxero.height
+                if(y_ingrediente<(y_puchero+pucheroaltura) && y_ingrediente>y_puchero && x_ingrediente<(x_puchero+pucheroanchura) && x_ingrediente>x_puchero){
                     if(Valid(resources.getResourceEntryName(view.id))){
                         view.isVisible=false
                         y0=0.0f
@@ -181,7 +178,7 @@ class f_putxero_juego : Fragment() {
                 view.layoutParams = layoutParams
             }
         }
-       binding.frameLayout11.invalidate()
+        binding.frameLayout11.invalidate()
         true
     }
     override fun onStart() {
@@ -213,13 +210,13 @@ class f_putxero_juego : Fragment() {
                 return false
             }
         }
-         if (aciertos==9){
+        if (aciertos==9){
             mediaplayer!!.stop()
             mediaplayerFallo!!.stop()
             mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
-             mostrarDialogoPersonalizado()
-             victoria=true
+            mostrarDialogoPersonalizado()
+            victoria=true
 
 
         }else{

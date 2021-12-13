@@ -94,7 +94,9 @@ class f_juego_txapela_unir : Fragment() {
             }
         }
         binding.pauseaudio1.setOnClickListener{
-            mediaplayeraudio1!!.pause()
+            if(mediaplayeraudio1!!.isPlaying){
+                mediaplayeraudio1!!.pause()
+            }
         }
 
         //funcion para controlar audio2
@@ -107,7 +109,9 @@ class f_juego_txapela_unir : Fragment() {
             }
         }
         binding.pauseaudio2.setOnClickListener{
-            mediaplayeraudio2!!.pause()
+            if(mediaplayeraudio2!!.isPlaying){
+                mediaplayeraudio2!!.pause()
+            }
         }
         //funcion para controlar audio3
         binding.playaudio3.setOnClickListener{
@@ -119,7 +123,9 @@ class f_juego_txapela_unir : Fragment() {
             }
         }
         binding.pauseaudio3.setOnClickListener{
-            mediaplayeraudio3!!.pause()
+            if(mediaplayeraudio3!!.isPlaying){
+                mediaplayeraudio3!!.pause()
+            }
         }
         //funcion para controlar audio4
         binding.playaudio4.setOnClickListener{
@@ -131,20 +137,21 @@ class f_juego_txapela_unir : Fragment() {
             }
         }
         binding.pauseaudio4.setOnClickListener{
-            mediaplayeraudio4!!.pause()
+            if(mediaplayeraudio4!!.isPlaying){
+                mediaplayeraudio4!!.pause()
+            }
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-
+        mediaplayer_azal!!.pause()
         mediaplayeraudio1!!.pause()
         mediaplayeraudio2!!.pause()
         mediaplayeraudio3!!.pause()
         mediaplayeraudio4!!.pause()
 
     }
-
     private fun mostrarDialogoPersonalizado(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)

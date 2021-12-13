@@ -61,19 +61,12 @@ class f_procesion_ordenar : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
     }
-    override fun onStart() {
-        super.onStart()
-        //Iniciamos el audio
-        mediaplayer!!.start()
-    }
-
     fun cargar_spinner(){
         val s0= "Eligir una opcion"
         val s1= binding.texto1.text
         val s2= binding.texto2.text
         val s3= binding.texto3.text
         val s4= binding.texto4.text
-
         val lista = listOf(s0,s1,s2,s3,s4)
         val adaptador = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,lista)
         binding.spinner1.adapter=adaptador
@@ -82,42 +75,29 @@ class f_procesion_ordenar : Fragment() {
         binding.spinner4.adapter=adaptador
     }
     fun comprobar(){
-
-
         val guru= binding.texto1.text
         val judas= binding.texto2.text
         val azk= binding.texto3.text
         val jesus= binding.texto4.text
         var comprob= 1
-
-
         if(binding.spinner1.selectedItem.toString()==azk) {
             binding.spinner1.setBackgroundColor(Color.parseColor("#00ff00"))
         }else{
             binding.spinner1.setBackgroundColor(Color.parseColor("#ad0a15"))
             comprob=0
         }
-
-
-
         if(binding.spinner2.selectedItem.toString()==judas) {
             binding.spinner2.setBackgroundColor(Color.parseColor("#00ff00"))
         }else{
             binding.spinner2.setBackgroundColor(Color.parseColor("#ad0a15"))
             comprob=0
         }
-
-
-
         if(binding.spinner3.selectedItem.toString()==jesus) {
             binding.spinner3.setBackgroundColor(Color.parseColor("#00ff00"))
         }else{
             binding.spinner3.setBackgroundColor(Color.parseColor("#ad0a15"))
             comprob=0
         }
-
-
-
         if(binding.spinner4.selectedItem.toString()==guru) {
             binding.spinner4.setBackgroundColor(Color.parseColor("#00ff00"))
         }else{

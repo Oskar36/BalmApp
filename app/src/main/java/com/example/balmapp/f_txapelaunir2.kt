@@ -66,7 +66,9 @@ class f_txapelaunir2 : Fragment() {
             }
         }
         binding.pauseaudio5.setOnClickListener{
-            mediaplayeraudio5!!.pause()
+            if(mediaplayeraudio5!!.isPlaying){
+                mediaplayeraudio5!!.pause()
+            }
         }
 
         //funcion para controlar audio6
@@ -79,7 +81,9 @@ class f_txapelaunir2 : Fragment() {
             }
         }
         binding.pauseaudio6.setOnClickListener{
-            mediaplayeraudio6!!.pause()
+            if(mediaplayeraudio6!!.isPlaying){
+                mediaplayeraudio6!!.pause()
+            }
         }
         //funcion para controlar audio7
         binding.playaudio7.setOnClickListener{
@@ -91,7 +95,9 @@ class f_txapelaunir2 : Fragment() {
             }
         }
         binding.pauseaudio7.setOnClickListener{
-            mediaplayeraudio7!!.pause()
+            if(mediaplayeraudio7!!.isPlaying){
+                mediaplayeraudio7!!.pause()
+            }
         }
         //funcion para controlar audio8
         binding.playaudio8.setOnClickListener{
@@ -103,13 +109,14 @@ class f_txapelaunir2 : Fragment() {
             }
         }
         binding.pauseaudio8.setOnClickListener{
-            mediaplayeraudio8!!.pause()
+            if(mediaplayeraudio8!!.isPlaying){
+                mediaplayeraudio8!!.pause()
+            }
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
         mediaplayeraudio5!!.pause()
         mediaplayeraudio6!!.pause()
         mediaplayeraudio7!!.pause()

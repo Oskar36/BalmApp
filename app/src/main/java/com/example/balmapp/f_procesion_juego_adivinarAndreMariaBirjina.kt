@@ -56,7 +56,9 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
             }
         }
         binding.imgaudiostop1.setOnClickListener{
-            mediaplayer!!.pause()
+            if(mediaplayer!!.isPlaying){
+                mediaplayer!!.pause()
+            }
         }
     }
     override fun onDestroyView() {

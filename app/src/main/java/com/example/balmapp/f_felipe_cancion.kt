@@ -54,7 +54,9 @@ class f_sanfelipe_cancion : Fragment() {
            }
        }
         binding.pause.setOnClickListener{
-            mediaPlayer!!.pause()
+            if(mediaPlayer!!.isPlaying){
+                mediaPlayer!!.pause()
+            }
         }
     }
     private fun Compr():Boolean{
@@ -77,24 +79,6 @@ class f_sanfelipe_cancion : Fragment() {
         super.onDestroy()
         mediaPlayer!!.stop()
     }
-    private fun ComprobarTextos(txt:TextView, respuesta:String):Boolean{
-        return if(txt.text.toString().lowercase(Locale.getDefault()) == respuesta){
-            txt.setTextColor(Color.parseColor("#00ff00"))
-            true
-        }else{
-            txt.setTextColor(Color.parseColor("#ad0a15"))
-            false
-        }
-    }
-    private fun ComprobarTodos(txtL:List<Boolean>):Boolean{
-        txtL.forEach{
-            if (!it){
-                return false
-            }
-        }
-        return true
-    }
-
     private fun mostrarDialogoPersonalizado(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)

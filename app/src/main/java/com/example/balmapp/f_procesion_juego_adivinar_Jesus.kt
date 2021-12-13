@@ -47,7 +47,9 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             }
         }
         binding.imgaudiostop1.setOnClickListener{
-            mediaplayer!!.pause()
+            if(mediaplayer!!.isPlaying){
+                mediaplayer!!.pause()
+            }
         }
     }
 

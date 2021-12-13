@@ -31,16 +31,10 @@ class f_jauregi_unirjuego : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
-        mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_jauregi_unir)
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
-        binding.btnfinalizarjauregi.setOnClickListener{
-            Sharedapp.gune.gune="3.Gunea 2"
-
-            //paramos el audio
-            mediaplayer!!.stop()
-        }
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_jauregi_unir)
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imglogo)
@@ -58,34 +52,24 @@ class f_jauregi_unirjuego : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imglogo)
             }
         }
-
-
         binding.btnfinalizarjauregi.setOnClickListener {
             //Abrir fragment repetir juego
+                mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 2"
             mostrarDialogoPersonalizado()
-            mediaplayer!!.stop()
         }
 
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
     override fun onStart() {
         super.onStart()
         //Iniciamos el audio
         mediaplayer!!.start()
     }
-
-
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
         mediaplayer?.release()
         mediaplayer = null
-
-
     }
 
     private fun mostrarDialogoPersonalizado(){

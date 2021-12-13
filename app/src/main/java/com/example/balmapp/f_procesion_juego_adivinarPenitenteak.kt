@@ -45,7 +45,9 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
         }
         binding.imgaudiostop1.setOnClickListener{
             //Pausamos el audio
-            mediaplayer!!.pause()
+            if(mediaplayer!!.isPlaying){
+                mediaplayer!!.pause()
+            }
         }
 
 

@@ -44,9 +44,6 @@ class f_jauregi_puzzle : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-
-
         aciertos=0
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imgjauregiJuegoLogo)

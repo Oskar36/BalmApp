@@ -11,6 +11,8 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
@@ -33,13 +35,10 @@ class f_puente_puzzle : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         contador=0
         super.onActivityCreated(savedInstanceState)
-
-
-
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_zubia)
-
-
+        //Iniciamos el audio
+        mediaplayer!!.start()
         binding.puzzle11.setOnTouchListener(touchListener)
         binding.puzzle12.setOnTouchListener(touchListener)
         binding.puzzle13.setOnTouchListener(touchListener)
@@ -49,12 +48,8 @@ class f_puente_puzzle : Fragment() {
         binding.puzzle31.setOnTouchListener(touchListener)
         binding.puzzle32.setOnTouchListener(touchListener)
         binding.puzzle33.setOnTouchListener(touchListener)
-
-
-
     }
     private var yDelta: Int = 0
-
     private var xDelta: Int = 0
     private var x0 = 0.0f
     private var y0 = 0.0f
@@ -88,190 +83,24 @@ class f_puente_puzzle : Fragment() {
             //cuando sueltes
             MotionEvent.ACTION_UP -> {
 
-
-                // comp_puzzle_pieza()
-
-                when{
-                    //11
-                    ((x<=217&& x>=-93) && (y<=675 && (y>=365)))-> {
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_11")){
-                            binding.bien11.isVisible =true
-                            binding.puzzle11.isVisible =false
-                            contador++
-
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //12
-                    ((x<=526&& x>=217) && (y<=675 && (y>=365)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_12")){
-                            binding.bien12.isVisible =true
-                            binding.puzzle12.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //13
-                    ((x<=835&& x>=526) && (y<=675 && (y>=365)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_13")){
-                            binding.bien13.isVisible =true
-                            binding.puzzle13.isVisible =false
-                            contador++
-                            if (contador==9){
-
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //21
-                    ((x<=217&& x>=-93) && (y<=1021 && (y>=675)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_21")){
-                            binding.bien21.isVisible =true
-                            binding.puzzle21.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //22
-                    ((x<=526&& x>=217) && (y<=1021 && (y>=675)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_22")){
-                            binding.bien22.isVisible =true
-                            binding.puzzle22.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //23
-                    ((x<=835&& x>=526) && (y<=1021 && (y>=675)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_23")){
-                            binding.bien23.isVisible =true
-                            binding.puzzle23.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //31
-                    ((x<=217&& x>=-93) && (y<=1369 && (y>=1021)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_31")){
-                            binding.bien31.isVisible =true
-                            binding.puzzle31.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //32
-                    ((x<=526&& x>=217) && (y<=1369 && (y>=1021)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_32")){
-                            binding.bien32.isVisible =true
-                            binding.puzzle32.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-                    //33
-                    ((x<=835&& x>=526) && (y<=1369 && (y>=1021)))->{
-
-                        if(resources.getResourceEntryName(view.id).equals("puzzle_33")){
-                            binding.bien33.isVisible =true
-                            binding.puzzle33.isVisible =false
-                            contador++
-                            if (contador==9){
-                                mostrarDialogoPersonalizado()}
-                        }
-                        else{
-                            view?.x=x0
-                            view?.y=y0
-                            y0=0.0f
-                            x0=0.0f
-                        }
-                    }
-
-
+                var bien: ImageView? =null
+                when(resources.getResourceEntryName(view.id)){
+                    "puzzle_11"-> bien=binding.bien11
+                    "puzzle_12"-> bien=binding.bien12
+                    "puzzle_13"-> bien=binding.bien13
+                    "puzzle_21"-> bien=binding.bien21
+                    "puzzle_22"-> bien=binding.bien22
+                    "puzzle_23"-> bien=binding.bien23
+                    "puzzle_31"-> bien=binding.bien31
+                    "puzzle_32"-> bien=binding.bien32
+                    "puzzle_33"-> bien=binding.bien33
                 }
-
+                comp_puzzle_pieza(bien!!,view,x0,y0)
             }
-
         }
         binding.frameLayout7.invalidate()
         true
     }
-
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-    override fun onStart() {
-        super.onStart()
-        //Iniciamos el audio
-        mediaplayer!!.start()
-
-    }
-
-
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
@@ -282,16 +111,30 @@ class f_puente_puzzle : Fragment() {
     }
 
 
-    fun comp_puzzle_pieza() {
-        val location = IntArray(2)
-        view?.getLocationOnScreen(location)
-        val x = location[0]
-        val y = location[1]
+    fun comp_puzzle_pieza(bien:ImageView,pieza:View, x1:Float,y1:Float) {
+        val bienanchura=bien.width
+        val bienaltura=bien.height
         val location2 = IntArray(2)
-        binding.puzzle.getLocationOnScreen(location2)
-        val x2 = location2[0]
-        val y2 = location2[1]
-
+        bien!!.getLocationOnScreen(location2)
+        val bienx = location2[0]
+        val bieny = location2[1]
+        val location = IntArray(2)
+        pieza!!.getLocationOnScreen(location)
+        val piezax = location[0]
+        val piezay = location[1]
+        if(piezay<(bieny+bienaltura) && piezay>bieny && piezax<(bienx+bienanchura) && piezax>bienx){
+            bien.isVisible =true
+            pieza.isVisible =false
+            contador++
+            if (contador==9){
+                mostrarDialogoPersonalizado()
+            }
+        }else{
+            pieza.x=x1
+            pieza.y=y1
+            x0=0.0f
+            y0=0.0f
+        }
     }
 
     private fun mostrarDialogoPersonalizado(){
