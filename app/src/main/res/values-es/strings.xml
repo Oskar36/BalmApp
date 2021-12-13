@@ -30,7 +30,8 @@
         <string name="txt_texto_erromeria">Peregrinaje</string>
         <string name="txt_finalizar">Terminar</string>
         <string name="txt_siguientejuego">Siguiente juego</string>
-        <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
+        <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LAS PALABRAS</string>
+        <string name="txttxapela_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
         <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
         <string name="txtjauregi_puzzle_titulo">PUZZLE DEL PALACIO</string>
         <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>

@@ -68,6 +68,8 @@
 
     <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
 
+    <string name="txttxapela_juego_explicacion_titulo">LOTU IRUDIAK AUDIOEKIN</string>
+
     <string name="txtkolitza_sopadeletras_titulo">LETRA-SOPA</string>
 
     <string name="txtjauregi_puzzle_titulo">JAUREGIAREN PUZZLEA</string>
