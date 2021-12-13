@@ -2,10 +2,12 @@ package com.example.balmapp
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
+import android.graphics.BitmapFactory
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.os.SystemClock
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -127,7 +129,8 @@ class f_puente_puzzle : Fragment() {
             pieza.isVisible =false
             contador++
             if (contador==9){
-                mostrarDialogoPersonalizado()
+
+                descargar()
             }
         }else{
             pieza.x=x1
@@ -157,6 +160,32 @@ class f_puente_puzzle : Fragment() {
             .show()
 
     }
+    private fun descargar(){
+        val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
 
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogo_descargar,null))
+            .setPositiveButton(R.string.descargar,
+                DialogInterface.OnClickListener { dialog, id ->
+
+
+                    MediaStore.Images.Media.insertImage(requireActivity().contentResolver,bm, "Puzzle" , "Puzzle puente")
+                    dialog.dismiss()
+                    SystemClock.sleep(1000)
+                    mostrarDialogoPersonalizado()
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.cancel,
+                DialogInterface.OnClickListener { dialog, id ->
+                    Sharedapp.gune.gune="1.Gunea"
+                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+
+    }
 
 }

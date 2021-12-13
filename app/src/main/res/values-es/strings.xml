@@ -228,5 +228,19 @@
     <string name="no">NO</string>
 
     <string name="hurrengoa">SIGUIENTE</string>
+    <string name="cancel">cancelar</string>
+    <string name="descargar">Descargar</string>
+
+    <string name="elegir">Eligir una opcion</string>
+
+    <string name="camino">Gurutzearen bidea</string>
+
+    <string name="muerte">Judasen heriotza</string>
+
+    <string name="ultima">Azken afaria</string>
+
+    <string name="juicio">Jesusen epaiketa</string>
+
+    <string name="descargar_texto">Puzzlea gorde nahi duzu?</string>
 
 </resources>

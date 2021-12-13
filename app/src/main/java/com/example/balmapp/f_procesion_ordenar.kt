@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LProcesionJuegoOrdenarBinding
 
@@ -53,6 +54,7 @@ class f_procesion_ordenar : Fragment() {
         binding.btnprocesionordenar.setOnClickListener {
         comprobar()
         }
+
     }
 
     override fun onStop() {
@@ -62,11 +64,14 @@ class f_procesion_ordenar : Fragment() {
         mediaplayer = null
     }
     fun cargar_spinner(){
-        val s0= "Eligir una opcion"
-        val s1= binding.texto1.text
-        val s2= binding.texto2.text
-        val s3= binding.texto3.text
-        val s4= binding.texto4.text
+
+
+        val s0= resources.getString(R.string.elegir)
+        val s1= resources.getString(R.string.camino)
+        val s2= resources.getString(R.string.muerte)
+        val s3= resources.getString(R.string.ultima)
+        val s4= resources.getString(R.string.juicio)
+        Toast.makeText(requireContext(), s0, Toast.LENGTH_SHORT).show()
         val lista = listOf(s0,s1,s2,s3,s4)
         val adaptador = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,lista)
         binding.spinner1.adapter=adaptador
@@ -75,10 +80,10 @@ class f_procesion_ordenar : Fragment() {
         binding.spinner4.adapter=adaptador
     }
     fun comprobar(){
-        val guru= binding.texto1.text
-        val judas= binding.texto2.text
-        val azk= binding.texto3.text
-        val jesus= binding.texto4.text
+        val guru= resources.getString(R.string.camino)
+        val judas= resources.getString(R.string.muerte)
+        val azk= resources.getString(R.string.ultima)
+        val jesus= resources.getString(R.string.juicio)
         var comprob= 1
         if(binding.spinner1.selectedItem.toString()==azk) {
             binding.spinner1.setBackgroundColor(Color.parseColor("#00ff00"))

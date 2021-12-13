@@ -96,11 +96,9 @@
 
     <string name="txt_texto_pazkoa">Pazkoa</string>
 
-    <string name="txt_pazkoa">Pazkoa</string>
 
     <string name="txt_texto_bazkaria">Bazkaria</string>
 
-    <string name="txt_Bazkaria">Bazkaria</string>
 
     <string name="txt_texto_erromeria">Erromeria</string>
 
@@ -126,9 +124,13 @@
 
     <string name="txt_tontorra">Tontorra</string>
 
+    <string name="txt_pazkoa">Pazkoa</string>
+
     <string name="txt_Pentekoste">Pentekoste</string>
 
     <string name="txt_Erromeria">Erromeria</string>
+
+    <string name="txt_Bazkaria">Bazkaria</string>
 
     <string name="txt_ermita">Ermita</string>
 
@@ -233,4 +235,19 @@
     <string name="apodocompr">Ezizena existitzen da.</string>
 
     <string name="camposvacios">Ezizena ezin da hutsik egon.</string>
+
+    <string name="cancel">Ez</string>
+    <string name="descargar">Gorde</string>
+
+    <string name="elegir">Aukeratu ezazu aukera bat</string>
+
+    <string name="camino">El camino de la cruz</string>
+
+    <string name="muerte">Muerte de Judas</string>
+
+    <string name="ultima">Ultima cena</string>
+
+    <string name="juicio">El juicio de Jesus</string>
+
+    <string name="descargar_texto">¿Quieres descargar el puzzle?</string>
 </resources>
