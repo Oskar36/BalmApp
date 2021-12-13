@@ -11,15 +11,29 @@
 
     <string name="fin_del_juego">FIN DEL JUEGO</string>
 
-    <string name="continuar">Continuar</string>
+    <string name="continuar">CONTINUAR</string>
 
-    <string name="repetir">Repetir</string>
+    <string name="repetir">REPETIR</string>
 
     <string name="apodo">Apodo:</string>
 
-    <string name="jugar">Jugar</string>
+    <string name="jugar">JUGAR</string>
 
     <string name="putxero_explicacion">HISTORIA DE LA PUCHERA</string>
+
+    <string name="txt_corregir">CORREGIR</string>
+
+    <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
+
+    <string name="correccion_toast">No todas son correctas</string>
+
+    <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
+
+    <string name="dialog_findejuegopregunta">¿QUE QUIERES HACER?</string>
+
+    <string name="dialog_zorionak">¡FELICIDADES! ¡MUY BIEN!</string>
+
+    <string name="error_toast">Error, vuelve a intentarlo.</string>
 
     <string name="puente_explicacion">HISTORIA DEL PUENTE</string>
 
@@ -47,18 +61,6 @@
 
     <string name="putxero">PUCHERAS</string>
 
-    <string name="procesion_explicacion">HISTORIA DE LA PROCESIÓN</string>
-
-    <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
-
-    <string name="txt_texto_bazkaria">Almuerzo</string>
-
-    <string name="txt_texto_erromeria">Peregrinaje</string>
-
-    <string name="txt_finalizar">Terminar</string>
-
-    <string name="txt_siguientejuego">Siguiente juego</string>
-
     <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LAS PALABRAS</string>
 
     <string name="txttxapela_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
@@ -66,6 +68,26 @@
     <string name="txtkolitza_sopadeletras_titulo">SOPA DE LETRAS</string>
 
     <string name="txtjauregi_puzzle_titulo">PUZZLE DEL PALACIO</string>
+
+    <string name="procesion_explicacion">HISTORIA DE LA PROCESIÓN</string>
+
+    <string name="txapela_explicacion_titulo">HISTORIA DE LA BOINA</string>
+
+    <string name="felipe_explicacion_titulo">HISTORIA DE SAN FELIPE Y SANTIAGO</string>
+
+    <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
+
+    <string name="siguiente_adivinanda">ADIVINA EL SIGUIENTE</string>
+
+    <string name="txt_texto_pazkoa">Pascua de Resurrección</string>
+
+    <string name="txt_texto_bazkaria">Almuerzo</string>
+
+    <string name="txt_texto_erromeria">Peregrinaje</string>
+
+    <string name="txt_finalizar">TEMRINAR</string>
+
+    <string name="txt_siguientejuego">SIGUIENTE JUEGO</string>
 
     <string name="txt_texto_Beheko_Solairuak">Pisos bajos</string>
 
@@ -85,23 +107,11 @@
 
     <string name="txt_tontorra">La cumbre</string>
 
-    <string name="txt_pazkoa">Pascua de Resurrección</string>
-
     <string name="txt_Pentekoste">Pentecostés</string>
 
     <string name="txt_Erromeria">Peregrinaje</string>
 
-    <string name="txt_Bazkaria">Almuerzo</string>
-
     <string name="txt_ermita">Ermita</string>
-
-    <string name="txapela_explicacion_titulo">HISTORIA DE LA BOINA</string>
-
-    <string name="felipe_explicacion_titulo">HISTORIA DE SAN FELIPE Y SANTIAGO</string>
-
-    <string name="asmatu_pertsonaia">ADIVINA EL PERSONAJE</string>
-
-    <string name="siguiente_adivinanda">Adivina el siguiente</string>
 
     <string name="explicacion_jesus">Yo soy el protagonista. Pero tengo muy mala suerte. ¡Me cruzan! ¿Quién soy?</string>
 
@@ -165,10 +175,10 @@
     Los orígenes de Putxera se remontan al siglo XIX. Se inició en el siglo XVI, cuando se construyó el ferrocarril Bilbao-La Robla. El ferrocarril fue creado para transportar carbón desde las minas de León a Bilbao. Muchos vecinos de Balmaseda empezaron a trabajar en el ferrocarril. Pasaron muchas horas en el tren en malas condiciones y comieron alimentos fríos. El personal quería comer comida caliente, así que se les ocurrió una forma. Los primeros charcos se cocinaron con el vapor de la máquina.
     En Balmaseda no se olvidó la tradición del "putch ferroviario". La competencia fue exitosa y en los años siguientes continuó celebrándose. Inicialmente se hicieron en el frontón y ahora en la Plaza San Severino.</string>
 
-    <string name="azalpena_txapela"> Jaia, Balmasedako biztanleek sortu zuten 70. hamarkadan. San Severino (Putxerak) Balmasedako festarik ezagunenak dira eta Putxera Lehiaketa urriaren 23an egiten da. Hasieran, San Severino Jaia erlijiosoa zen eta gaur egun jai herrikoia da.
-    Egun horretan, goizean, kuadrillak eta familiak San Severino elizan biltzen dira. Bertan, Putxerak errezeta tradizionala erabiliz prestatzen dituzte indaba gorria, txorizoa eta odolkia erabiliz.
-    Lehiaketa gastronomiko eta beste jai batzuk egiten dira egun horretan, adibidez, kalejira, fanfarreak, dantzak, kontzertuak, berbenak...
-    Putxeraren jatorria XIX. mendean hasi zen, Bilbao-La Robla trenbidea eraiki zenean. Trenbidea ikatza Leongo-meategietatik Bilbora garraiatzeko sortu zen. Balmasedako biztanle asko trenbidean lanean hasi ziren. Trenean ordu asko ematen zituzten baldintza txarretan eta janari hotza jaten zuten. Langileek janari beroa jan nahi zuten, beraz, era bat asmatu zuten. Lehen putxerak makinaren lurruna erabiliz sukaldatzen zuten. Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa. Lehiaketa arrakastatsua izan zen eta hurrengo urteetan ospatzen jarraitu zen. Hasieran frontoian egiten ziren eta gaur egun San Severino plazan.</string>
+    <string name="azalpena_txapela"></string>
+
+    <string name="azalpena_puente">El primer patrimonio es el Puente Viejo de Balmaseda, también llamado Puente de la Muza. El puente fue construido en el siglo XV sobre un puente romano de madera construido en el siglo XII. Bajo el Puente Viejo pasa el río Cadagua. En la primera mitad del siglo XV se construyó la torre de Laguardia y un poco más tarde el gran arco central. Sin embargo, todo ello no puede fecharse documentalmente.
+    Hubo un tiempo en que el puente de La Muza era el único para ir por la costa y algunos puntos de Castilla. Puente, indica la importancia comercial de Balmaseda. Ese puente, con su torrecilla, eran las puertas de acceso a la villa y tenía una función de aduana. Las personas que querían entrar en la villa tenían que pagar impuestos. Por último, señalar que no se permite el paso de vehículos por el Puente Viejo y que la calzada es de piedra. Además, este puente tenía una forma especial que dificultaba el paso de carros y caballerizas. Como consecuencia de ello, tomaron la decisión de construir otros puentes.</string>
 
     <string name="txtjauregi_puzzle_explicacion">En la fotografía aparece el palacio, pero le faltan ventanas, puerta, bigas, escudo de armas, etc. Abajo aparecen estos elementos. Lleva cada elemento a su sitio.</string>
 
@@ -177,20 +187,6 @@
     <string name="procesion_adivinar_explicacion">¡Hola, amigos! ¿Os atrevéis a jugar con El personaje inventado? Si es así, os aparecerá la descripción de un personaje y tendréis algunas opciones para adivinar quién es el personaje. ¿Listo? ¡Pues adelante!</string>
 
     <string name="procesion_ordenar_explicacion">¿Que si la actividad anterior era sencilla? Para ir adelante tendréis que hacer una última misión. ¡Si habéis estado atentos lo haréis en la PRIMERA! Sólo tenéis que ordenar los eventos que aparecen de mayor a mayor.</string>
-
-    <string name="txt_corregir">CORREGIR</string>
-
-    <string name="titulo_modo">¿COMO QUIERES JUGAR?</string>
-
-    <string name="correccion_toast">No todas son correctas</string>
-
-    <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
-
-    <string name="dialog_findejuegopregunta">¿QUE QUIERES HACER?</string>
-
-    <string name="dialog_zorionak">¡FELICIDADES! ¡MUY BIEN!</string>
-
-    <string name="error_toast">Error, vuelve a intentarlo</string>
 
     <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradciciones que tiene Balmaseda hoy en dia.\n
         \n<b>Productores y directores del proyecto:\n</b>
@@ -209,29 +205,19 @@
 
     <string name="modo_profesor">MODO PROFESOR</string>
 
-    <string name="saiatuberriz">OHHHH! Vuelve a intentarlo</string>
+    <string name="saiatuberriz">OHHHH! VUELVE A INTENTARLO</string>
 
     <string name="juegos">Juegos</string>
 
     <string name="otros">Otros</string>
 
-    <string name="apodocompr">El apodo ya existe </string>
+    <string name="apodocompr">El apodo ya existe.</string>
 
-    <string name="camposvacios">El apodo no puede estar</string>
-
-    <string name="boinas1">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
-
-    <string name="boinas2">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko..</string>
-
-    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen. Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko. Boinas La Encartada industria ondare garrantzitsu bat da, Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela. Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.</string>
-
-    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko, helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
-
-    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
+    <string name="camposvacios">El apodo no puede estar.</string>
 
     <string name="nuevapartida">¿QUIERES EMPEZAR NUEVA PARTIDA?</string>
 
-    <string name="nuevapartidaEXPLICACION">Empezara desde el comienzo</string>
+    <string name="nuevapartidaEXPLICACION">Empezara desde el comienzo.</string>
 
     <string name="si">SI</string>
 

@@ -38,7 +38,7 @@
 
     <string name="procesion">PROZESIOA</string>
 
-    <string name="txapela">TXAPELA MUSEOA</string>
+    <string name="txapela">TXAPELAREN MUSEOA</string>
 
     <string name="san_felipe">SAN FELIPE ABEZTIA</string>
 
@@ -84,13 +84,13 @@
 
     <string name="hurrengoa">HURRENGOA</string>
 
-    <string name="continuar">Jarraitu</string>
+    <string name="continuar">JARRAITU</string>
 
-    <string name="repetir">Errepikatu</string>
+    <string name="repetir">ERREPIKATU</string>
 
     <string name="apodo">Ezizen:</string>
 
-    <string name="jugar">Jokatu</string>
+    <string name="jugar">JOKATU</string>
 
     <string name="cambiar_modo">Modua aldatu</string>
 
@@ -100,9 +100,9 @@
 
     <string name="txt_texto_erromeria">Erromeria</string>
 
-    <string name="txt_finalizar">Amaitu</string>
+    <string name="txt_finalizar">AMAITU</string>
 
-    <string name="txt_siguientejuego">Hurrengo jokoa</string>
+    <string name="txt_siguientejuego">HURRENGO JOKOA</string>
 
     <string name="txt_texto_Beheko_Solairuak">Beheko Solairuak</string>
 
@@ -112,23 +112,19 @@
 
     <string name="txt_texto_Fatxada">Fatxada</string>
 
-    <string name="txt_texto_Gelak_Egongelak">Gelak eta Egongelak</string>
+    <string name="txt_texto_Gelak_Egongelak">Gelak eta Egongelak.</string>
 
-    <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren armarria eta 2 biga</string>
+    <string name="txt_texto_Balkoi">Balkoi nagusia, familiaren armarria eta 2 biga.</string>
 
-    <string name="txt_texto_Sotoa">Sotoa eta animaliak gordetzeko lekua</string>
+    <string name="txt_texto_Sotoa">Sotoa eta animaliak gordetzeko lekua.</string>
 
     <string name="txt_texto_Gambara">Gambara</string>
 
     <string name="txt_tontorra">Tontorra</string>
 
-    <string name="txt_pazkoa">Pazkoa</string>
-
     <string name="txt_Pentekoste">Pentekoste</string>
 
     <string name="txt_Erromeria">Erromeria</string>
-
-    <string name="txt_Bazkaria">Bazkaria</string>
 
     <string name="txt_ermita">Ermita</string>
 
@@ -194,20 +190,20 @@
 
     <string name="txtjauregi_unir_explicacion">Lotu ezkerreko zutabean agertzen dena eskumako zutabean agertzen denarekin. Horrela solairu bakoitzean zer dagoen jakingo duzue.</string>
 
-    <string name="procesion_adivinar_explicacion">"Kaixo lagunok! Ausartzen al zarete “Pertsonaia asmatu” jolastera? Horrela bada, pertsonaia baten deskribapena agertuko zaizue eta aukera batzuk izango dituzue pertsonaia nor den asmatzeko. Prest? Ba aurrera! "</string>
+    <string name="procesion_adivinar_explicacion">"Kaixo lagunok! Ausartzen al zarete “Pertsonaia asmatu” jolastera? Horrela bada, pertsonaia baten deskribapena agertuko zaizue eta aukera batzuk izango dituzue pertsonaia nor den asmatzeko. Prest? Ba aurrera!</string>
 
-    <string name="procesion_ordenar_explicacion">"Baietz aurreko jarduera erraza zela? Aurrera joateko azken misio bat egin beharko duzue. Adi egon bazarete PRIMERAN egingo duzue! Soilik agertzen diren gertaerak ordenatu behar dituzue zaharrenetik berrienera.  "</string>
+    <string name="procesion_ordenar_explicacion">Baietz aurreko jarduera erraza zela? Aurrera joateko azken misio bat egin beharko duzue. Adi egon bazarete PRIMERAN egingo duzue! Soilik agertzen diren gertaerak ordenatu behar dituzue zaharrenetik berrienera.</string>
 
-    <string name="felipe_cancion_letra" translatable="false">"San Felipe y Santiago el primer día de ……………1…….. San Felipe y San Gil el primer día de …………2………... Viva Felipe viva ………………3……. vivan las flores del mes de mayo Viva Felipe viva San ………4……… vivan las flores  del mes de abril  La señora de esa casa es una ………5…….. mujer ,pero más buena sería si nos diera de …………6….. Viva ………7……... viva Santiago vivan las flores del mes de mayo Viva Felipe viva ………8…….. Gil vivan las flores  del mes de abril  Señorita ………………9……., señorita de cartera  si no nos da una ………10……..., le meamos la escalera Viva Felipe viva Santiago vivan las ……11………... del mes de mayo Viva Felipe viva San Gil vivan las ………12……..  del mes de abril  Allí arriba en aquel  alto hay un puchero de ………13…….. no se lo digas a nadie, y te daré unos ………14…….. Viva Felipe viva Santiago ………15….. las flores del mes de mayo Viva Felipe viva San Gil ………16…….. las flores  del mes de abril "</string>
+    <string name="felipe_cancion_letra" translatable="false">"San Felipe y Santiago el primer día de ……………1…….. San Felipe y San Gil el primer día de …………2………... Viva Felipe viva ………………3……. vivan las flores del mes de mayo Viva Felipe viva San ………4……… vivan las flores  del mes de abril  La señora de esa casa es una ………5…….. mujer ,pero más buena sería si nos diera de …………6….. Viva ………7……... viva Santiago vivan las flores del mes de mayo Viva Felipe viva ………8…….. Gil vivan las flores  del mes de abril  Señorita ………………9……., señorita de cartera  si no nos da una ………10……..., le meamos la escalera Viva Felipe viva Santiago vivan las ……11………... del mes de mayo Viva Felipe viva San Gil vivan las ………12……..  del mes de abril  Allí arriba en aquel  alto hay un puchero de ………13…….. no se lo digas a nadie, y te daré unos ………14…….. Viva Felipe viva Santiago ………15….. las flores del mes de mayo Viva Felipe viva San Gil ………16…….. las flores  del mes de abril </string>
 
     <string name="azalpena_puente">Lehenengo ondarea, Balmasedako Zubi Zaharra da, Muza zubia ere deitzen da.  Zubia XV. mendean eraiki zuten, XII. mendean eraikita zegoen egurrezko zubi erromatar baten gainean. Zubi Zaharraren azpitik Kadagua ibaia pasatzen da. XV. mendearen lehen erdian, guardiako dorrea eraiki zen, eta, pixka bat geroago, erdiko arku handia. Hala ere, hori guztia ezin da agiri bidez datatu.
     Garai batean, La Muza zubia, kostaldetik eta Gaztelako zenbait lekura joateko zubi  bakarra zen. Zubia, Balmasedak merkataritza aldetik izan zuen garrantzia adierazten du. Zubi hori, bere dorretxoarekin, hiribildura sartzeko ateak ziren, eta aduana funtzioa zuen. Hiribildura sartu nahi zuten pertsonek zergak ordaindu behar zituzten. Amaitzeko, aipatu behar da Zubi Zaharretik ezin dela igaro ibilgailurik eta galtzada harrizkoa dela. Horrez gain, zubi honek forma berezia zuenez gurdiak eta zalditegiak igarotzea zaila zen. Horren ondorioz, beste zubi batzuk eraikitzeko erabakia hartu zuten.</string>
 
-    <string name="correccion_toast">Guztiak ez dira zuzenak</string>
+    <string name="correccion_toast">Guztiak ez dira zuzenak.</string>
 
     <string name="dialog_findejuegopregunta">ZER EGIN NAHI DUZU?</string>
 
-    <string name="error_toast">Errorea, saiatu berriro</string>
+    <string name="error_toast">Errorea, saiatu berriro.</string>
 
     <string name="nosotros">EHUko Irakasle Eskolako ikasle-talde bat gara, eta elkarrekin eraman ditugu CIFP Txurdinaga LHII institutuko beste ikasle batzuk, lehen hezkuntzako haurrek Balmasedak gaur egun dituen historia eta itzulpenak beste era batera ikas ditzaten.\n
         \n<b>Proiektuaren ekoizleak eta zuzendariak:\n</b>
@@ -230,19 +226,7 @@
 
     <string name="otros">Besteak</string>
 
-    <string name="boinas1">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
+    <string name="apodocompr">Ezizena existitzen da.</string>
 
-    <string name="boinas2">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko..</string>
-
-    <string name="boinas3">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen. Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko.
-        Boinas La Encartada industria ondare garrantzitsu bat da, Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela. Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.</string>
-
-    <string name="boinas4">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko,
-        helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
-
-    <string name="boinas5">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
-
-    <string name="apodocompr">Ezizena existitzen da</string>
-
-    <string name="camposvacios">Ezizena ezin da hutsik egon</string>
+    <string name="camposvacios">Ezizena ezin da hutsik egon.</string>
 </resources>
