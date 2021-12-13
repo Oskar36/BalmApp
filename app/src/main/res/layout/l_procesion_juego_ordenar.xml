@@ -29,12 +29,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageButton>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
         <LinearLayout
             android:layout_width="415dp"
             android:layout_height="470dp"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="120dp"
             android:orientation="vertical"
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +59,7 @@
 
                 <Spinner
                     android:id="@+id/spinner_1"
-                    android:layout_width="192dp"
+                    android:layout_width="250dp"
                     android:layout_height="27dp"
                     android:layout_marginStart="15dp"
                     android:text=""
@@ -87,7 +88,7 @@
 
                 <Spinner
                     android:id="@+id/spinner_2"
-                    android:layout_width="192dp"
+                    android:layout_width="250dp"
                     android:layout_height="27dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +118,7 @@
 
                 <Spinner
                     android:id="@+id/spinner_3"
-                    android:layout_width="192dp"
+                    android:layout_width="250dp"
                     android:layout_height="27dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -145,7 +146,7 @@
 
                 <Spinner
                     android:id="@+id/spinner_4"
-                    android:layout_width="192dp"
+                    android:layout_width="250dp"
                     android:layout_height="27dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -157,50 +158,10 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp">
-
-                <TextView
-                    android:id="@+id/texto_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Gurutze_bidea"></TextView>
-
-                <TextView
-                    android:id="@+id/texto_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="@string/Judasen_hilketa"></TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/texto_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Azken_afaria"></TextView>
-
-                <TextView
-                    android:id="@+id/texto_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="@string/Jesusen_epaiketa"></TextView>
-            </LinearLayout>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="102dp">
+                android:layout_height="102dp"
+                android:layout_marginTop="50dp">
 
 
                 <Button
@@ -211,10 +172,10 @@
                     android:text="@string/txt_finalizar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintHorizontal_bias="0.984"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.703">
+                    app:layout_constraintVertical_bias="0.962">
 
                 </Button>
             </androidx.constraintlayout.widget.ConstraintLayout>
