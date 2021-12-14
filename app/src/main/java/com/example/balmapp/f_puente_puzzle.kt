@@ -171,15 +171,16 @@ class f_puente_puzzle : Fragment() {
 
                     MediaStore.Images.Media.insertImage(requireActivity().contentResolver,bm, "Puzzle" , "Puzzle puente")
                     dialog.dismiss()
+                    Toast.makeText(requireContext(), resources.getString(R.string.desgargado), Toast.LENGTH_SHORT).show()
                     SystemClock.sleep(1000)
                     mostrarDialogoPersonalizado()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.cancel,
                 DialogInterface.OnClickListener { dialog, id ->
-                    Sharedapp.gune.gune="1.Gunea"
-                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
-                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    dialog.dismiss()
+                    SystemClock.sleep(1000)
+                    mostrarDialogoPersonalizado()
                     // sign in the user ...
                 })
             .setCancelable(false)

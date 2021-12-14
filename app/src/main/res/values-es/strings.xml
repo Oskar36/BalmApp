@@ -233,14 +233,18 @@
 
     <string name="elegir">Eligir una opcion</string>
 
-    <string name="camino">Gurutzearen bidea</string>
 
-    <string name="muerte">Judasen heriotza</string>
 
-    <string name="ultima">Azken afaria</string>
+    <string name="camino">El camino de la cruz</string>
 
-    <string name="juicio">Jesusen epaiketa</string>
+    <string name="muerte">Muerte de Judas</string>
 
-    <string name="descargar_texto">Puzzlea gorde nahi duzu?</string>
+    <string name="ultima">Ultima cena</string>
+
+    <string name="juicio">El juicio de Jesus</string>
+
+    <string name="descargar_texto">¿Quieres descargar el puzzle?</string>
+
+    <string name="desgargado">Imagen del puzzle descargada</string>
 
 </resources>
