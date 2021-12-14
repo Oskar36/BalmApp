@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -56,6 +57,7 @@ class f_jauregi_unirjuego : Fragment() {
             //Abrir fragment repetir juego
                 mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 2"
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
         }
 

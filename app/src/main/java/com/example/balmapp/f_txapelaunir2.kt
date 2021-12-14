@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,7 @@ class f_txapelaunir2 : Fragment() {
         NavFrag.atras_lugar="Juego2"
         binding.btnsiguiente.setOnClickListener{
             Sharedapp.gune.gune="5.Gunea"
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
 
 

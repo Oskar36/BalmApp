@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -108,6 +109,7 @@ class f_putxero_juego : Fragment() {
                     mediaplayerTren!!.stop()
                     Sharedapp.gune.gune="7.Gunea"
                     if(!victoria){
+                        SystemClock.sleep(1000)
                         mostrarDialogoDerrota()
                     }
                 }
@@ -209,6 +211,7 @@ class f_putxero_juego : Fragment() {
             mediaplayerFallo!!.stop()
             mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
             victoria=true
 

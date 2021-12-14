@@ -7,6 +7,7 @@ import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -254,6 +255,7 @@ class f_jauregi_puzzle : Fragment() {
         if (aciertos==6){
             mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 1"
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
         }
         return true

@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
 
            /* val fragment:Fragment=f_fin_intermedio()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
 
         }

@@ -5,6 +5,7 @@ import android.content.DialogInterface
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +37,7 @@ class f_sanfelipe_cancion : Fragment() {
         lista= listOf(TestErantz(binding.txtpalabra1,"mayo"),TestErantz(binding.txtpalabra2,"abril"),TestErantz(binding.txtpalabra3,"santiago"),TestErantz(binding.txtpalabra4,"gil"),TestErantz(binding.txtpalabra5,"buena"),TestErantz(binding.txtpalabra6,"comer"),TestErantz(binding.txtpalabra7,"felipe"),TestErantz(binding.txtpalabra8,"san"),TestErantz(binding.txtpalabra9,"señorita"),TestErantz(binding.txtpalabra10,"peseta"),TestErantz(binding.txtpalabra11,"flores"),TestErantz(binding.txtpalabra12,"flores"),TestErantz(binding.txtpalabra13,"mocos"),TestErantz(binding.txtpalabra14,"pocos"),TestErantz(binding.txtpalabra15,"viva"),TestErantz(binding.txtpalabra16,"viva"))
         binding.btncorregir.setOnClickListener {
             if(Compr()){
+                SystemClock.sleep(1000)
                 mostrarDialogoPersonalizado()
                 //Abrir fragment repetir juego
                 Sharedapp.gune.gune="6.Gunea"
