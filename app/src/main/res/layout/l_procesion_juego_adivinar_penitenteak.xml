@@ -19,16 +19,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-    android:id="@+id/txtprocesion_adivinar_explicacion"
-    android:layout_width="369dp"
-    android:layout_height="90dp"
-    android:layout_marginTop="96dp"
-    android:text="@string/procesion_adivinar_explicacion"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="166dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/imgpenitenteak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtprocesion_adivinar_titulo" />
 
     <TextView
         android:id="@+id/txtexplicacion1_penitenteak"
@@ -49,7 +50,7 @@
         android:layout_marginTop="16dp"
         android:src="@android:drawable/ic_media_pause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -62,30 +63,10 @@
         android:layout_marginTop="16dp"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/imglogo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/imgpenitenteak"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtprocesion_adivinar_titulo" />
-
-    <Button
-        android:id="@+id/btnfinalizar"
-        style="@style/botones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/siguiente_adivinanda"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioGroup
         android:layout_width="175dp"
@@ -120,6 +101,17 @@
             android:minHeight="48dp"
             android:text="@string/opcion_3penitenteak" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btnfinalizar"
+        style="@style/botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/siguiente_adivinanda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

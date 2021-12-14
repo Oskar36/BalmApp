@@ -41,10 +41,10 @@
                     android:src="@android:drawable/ic_media_pause"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintHorizontal_bias="0.631"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtsanfelipe_titulo"
-                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_bias="0.666"
                     tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
 
                 <ImageButton
@@ -56,10 +56,10 @@
                     android:src="@android:drawable/ic_media_play"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintHorizontal_bias="0.452"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtsanfelipe_titulo"
-                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_bias="0.8"
                     tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
 
                 <TextView
