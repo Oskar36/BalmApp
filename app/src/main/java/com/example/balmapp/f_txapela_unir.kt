@@ -31,12 +31,9 @@ class f_juego_txapela_unir : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         binding.btnsiguiente.setOnClickListener{
-
             val fragment:Fragment=f_txapelaunir2()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
-
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
