@@ -230,6 +230,7 @@ class f_putxero_juego : Fragment() {
                 DialogInterface.OnClickListener { dialog, id ->
                     moveLefttoRight.cancel()
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                    requireActivity().finish()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,

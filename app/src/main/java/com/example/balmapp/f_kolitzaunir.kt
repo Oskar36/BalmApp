@@ -55,6 +55,7 @@ AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
     .setPositiveButton(R.string.txt_finalizar,
         DialogInterface.OnClickListener { dialog, id ->
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
+            requireActivity().finish()
             // sign in the user ...
         })
     .setNeutralButton(R.string.repetir,

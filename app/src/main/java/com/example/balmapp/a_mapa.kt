@@ -165,6 +165,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     private fun abrirActivityMenu(activity: String, juego:String){
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
+        finish()
     }
     private fun MarcadorJuego(gune: String){
         when (gune){
