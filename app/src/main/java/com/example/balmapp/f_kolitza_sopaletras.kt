@@ -35,7 +35,6 @@ class f_kolitza_juego_sopaletras : Fragment() {
 
            /* val fragment:Fragment=f_fin_intermedio()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
-            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
 
         }

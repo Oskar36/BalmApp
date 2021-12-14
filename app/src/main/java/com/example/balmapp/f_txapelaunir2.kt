@@ -35,7 +35,6 @@ class f_txapelaunir2 : Fragment() {
         NavFrag.atras_lugar="Juego2"
         binding.btnsiguiente.setOnClickListener{
             Sharedapp.gune.gune="5.Gunea"
-            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
 
 

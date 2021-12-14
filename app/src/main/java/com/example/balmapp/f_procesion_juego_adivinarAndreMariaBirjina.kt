@@ -36,7 +36,6 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
         binding.btnfinalizar.setOnClickListener{
             if (binding.mariaRadio.isChecked) {
                 Sharedapp.gune.gune="4.Gunea 1"
-                SystemClock.sleep(1000)
                 mostrarDialogoPersonalizado()
 
             }else{

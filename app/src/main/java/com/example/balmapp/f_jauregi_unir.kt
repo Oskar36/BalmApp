@@ -57,7 +57,6 @@ class f_jauregi_unirjuego : Fragment() {
             //Abrir fragment repetir juego
                 mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 2"
-            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
         }
 
