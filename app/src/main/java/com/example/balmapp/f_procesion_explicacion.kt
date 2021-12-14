@@ -26,6 +26,7 @@ class f_procesion_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnprocesionExplicacionJugar.setOnClickListener{
+            NavFrag.atras_lugar="Juego1"
             val fragment:Fragment=f_procesion_juego_adivinar_Jesus()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio

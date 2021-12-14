@@ -23,6 +23,7 @@ class f_jauregi_explicacion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        NavFrag.atras_lugar="Juego1"
         binding.btnfinalizarPuente.setOnClickListener{
             val fragment:Fragment=f_jauregi_puzzle()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")

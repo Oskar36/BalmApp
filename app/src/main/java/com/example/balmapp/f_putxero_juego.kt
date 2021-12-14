@@ -28,6 +28,7 @@ private var aciertos:Int=0
 private var victoria:Boolean = false
 private var saltar=false
 private var terminar=false
+private lateinit var   moveLefttoRight:TranslateAnimation
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,7 +51,9 @@ class f_putxero_juego : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_putxeroa)
         mediaplayerFallo = MediaPlayer.create(context,R.raw.megamanxerror)
         mediaplayerTren = MediaPlayer.create(context,R.raw.sonidotren)
-        val moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
+        //Iniciamos el audio
+        mediaplayer!!.start()
+        moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
         binding.imgputxeroJuegoLogo.setOnClickListener{
@@ -107,9 +110,7 @@ class f_putxero_juego : Fragment() {
                     if(!victoria){
                         mostrarDialogoDerrota()
                     }
-
                 }
-
             })
         }
 
@@ -181,13 +182,6 @@ class f_putxero_juego : Fragment() {
         binding.frameLayout11.invalidate()
         true
     }
-    override fun onStart() {
-        super.onStart()
-        //Iniciamos el audio
-        mediaplayer!!.start()
-
-    }
-
     override fun onStop() {
         super.onStop()
         //liberacion del productor de medios
@@ -231,13 +225,14 @@ class f_putxero_juego : Fragment() {
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
                 DialogInterface.OnClickListener { dialog, id ->
+                    moveLefttoRight.cancel()
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
-                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
                     // sign in the user ...
                 })
             .setCancelable(false)

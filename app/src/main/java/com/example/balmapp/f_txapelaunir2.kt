@@ -31,7 +31,7 @@ class f_txapelaunir2 : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
+        NavFrag.atras_lugar="Juego2"
         binding.btnsiguiente.setOnClickListener{
             Sharedapp.gune.gune="5.Gunea"
             mostrarDialogoPersonalizado()
@@ -135,6 +135,7 @@ class f_txapelaunir2 : Fragment() {
                 })
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
+
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
                     // sign in the user ...

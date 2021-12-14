@@ -33,7 +33,6 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizar.setOnClickListener{
-
             if (binding.mariaRadio.isChecked) {
                 Sharedapp.gune.gune="4.Gunea 1"
                 mostrarDialogoPersonalizado()
@@ -63,7 +62,6 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
     }
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
         mediaplayer!!.stop()
     }
     private fun mostrarDialogoPersonalizado(){
@@ -78,6 +76,7 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
                 })
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
+                    NavFrag.atras_lugar="Juego1"
                     val fragment:Fragment=NavFrag.MarcadorJuegofinintermedio(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
                     // sign in the user ...

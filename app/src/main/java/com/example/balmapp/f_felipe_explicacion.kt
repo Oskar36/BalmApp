@@ -27,6 +27,7 @@ class f_felipe_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfelipeExplicacionJugar.setOnClickListener(){
+            NavFrag.atras_lugar="Juego1"
             val fragment:Fragment=f_sanfelipe_cancion()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
@@ -56,11 +57,6 @@ class f_felipe_explicacion : Fragment() {
             }
         }
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-
-    }
     override fun onStart() {
         super.onStart()
         //Iniciamos el audio
@@ -75,6 +71,4 @@ class f_felipe_explicacion : Fragment() {
 
 
     }
-
-
 }

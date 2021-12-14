@@ -24,6 +24,7 @@ class f_monte_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnmonteExplicacionJugar.setOnClickListener{
+            NavFrag.atras_lugar="Juego1"
             val fragment:Fragment=f_kolitza_juego_sopaletras()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio

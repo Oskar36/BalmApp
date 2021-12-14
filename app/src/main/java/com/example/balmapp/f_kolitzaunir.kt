@@ -30,16 +30,16 @@ class f_kolitzajuego : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnfinalizarKolitza.setOnClickListener {
+        NavFrag.atras_lugar="Juego2"
+        binding.btnfinalizarKolitza.setOnClickListener{
 
-            Sharedapp.gune.gune = "2.Gunea 2"
+            Sharedapp.gune.gune="2.Gunea 2"
             mostrarDialogoPersonalizado()
-            /* val fragment:Fragment=f_fin()
+           /* val fragment:Fragment=f_fin()
             NavFrag.replaceFragmen
             t(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
 
         }
-
     }
     override fun onDestroyView() {
         super.onDestroyView()

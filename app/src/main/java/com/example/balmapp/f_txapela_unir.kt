@@ -35,9 +35,7 @@ class f_juego_txapela_unir : Fragment() {
         binding.btnsiguiente.setOnClickListener{
 
             val fragment:Fragment=f_txapelaunir2()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
-
-
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
 
         }
         //inicio de la animacion

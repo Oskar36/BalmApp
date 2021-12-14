@@ -2,6 +2,9 @@ package com.example.balmapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class a_juegos : AppCompatActivity() {
@@ -23,5 +26,14 @@ class a_juegos : AppCompatActivity() {
             "boina" ->     fragment=f_txapela_explicacion()
         }
         NavFrag.Abrirfragment(fragment!!,this,R.id.framejuegos)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if(NavFrag.atras_lugar=="Juego1"){
+           supportFragmentManager.popBackStack("Explicacion",1)
+        }else if(NavFrag.atras_lugar=="Juego2"){
+            supportFragmentManager.popBackStack("Juego1",1)
+       }
     }
 }

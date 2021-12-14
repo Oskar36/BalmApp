@@ -26,8 +26,9 @@ class f_puente_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnpuenteExplicacionJugar.setOnClickListener{
+            NavFrag.atras_lugar="Juego1"
             val fragment:Fragment=f_puente_puzzle()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego")
+            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio
             mediaplayer!!.stop()
 
@@ -38,7 +39,8 @@ class f_puente_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.zubia_azalpena)
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
-            NavFrag.animacion_dantzaris_parar(binding.imgpuenteExplicacionLogo)        }
+            NavFrag.animacion_dantzaris_parar(binding.imgpuenteExplicacionLogo)
+        }
 
         //parar y continuar el audio
         binding.imgpuenteExplicacionLogo.setOnClickListener {

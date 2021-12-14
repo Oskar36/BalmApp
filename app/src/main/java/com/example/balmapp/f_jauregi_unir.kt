@@ -30,8 +30,8 @@ class f_jauregi_unirjuego : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         //inicio de la animacion
+        NavFrag.atras_lugar="Juego2"
         NavFrag.animacion_dantzaris(binding.imglogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_jauregi_unir)

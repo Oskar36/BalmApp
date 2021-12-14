@@ -25,7 +25,7 @@ class f_partida : Fragment() {
           if(Sharedapp.usuario.usuario == "Nuevo"){
               BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
               NavFrag.IniciarActivity(requireContext(),"a_mapa")
-              requireActivity().finish()
+              //requireActivity().finish()
           }else{
               var doc=database.collection("partidas")
                   .document()
@@ -34,7 +34,7 @@ class f_partida : Fragment() {
                       if(document.exists()){
                           BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
                           NavFrag.IniciarActivity(requireContext(),"a_mapa")
-                          requireActivity().finish()
+                          //requireActivity().finish()
                       }
                   }
           }

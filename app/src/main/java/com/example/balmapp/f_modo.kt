@@ -27,7 +27,7 @@ class f_modo : Fragment() {
         binding.btnmodoLibre.setOnClickListener{
             Sharedapp.partida.partida=""
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
-            requireActivity().finish()
+            //requireActivity().finish()
         }
 
         binding.btnmodoGuiado.setOnClickListener{

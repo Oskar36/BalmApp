@@ -152,7 +152,7 @@ class f_puente_puzzle : Fragment() {
                 DialogInterface.OnClickListener { dialog, id ->
                     Sharedapp.gune.gune="1.Gunea"
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
-                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
                     // sign in the user ...
                 })
             .setCancelable(false)

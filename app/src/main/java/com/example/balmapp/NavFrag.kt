@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentActivity
 class NavFrag {
     companion object{
         var theme=""
+        var atras_lugar=""
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){

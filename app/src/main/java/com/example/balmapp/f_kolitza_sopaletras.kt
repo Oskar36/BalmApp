@@ -89,7 +89,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             .setPositiveButton(R.string.txt_siguientejuego,
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.AbrirSiguiente(Sharedapp.gune.gune)
-                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,

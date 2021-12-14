@@ -24,14 +24,15 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        NavFrag.atras_lugar=""
         binding.btnfinalizar.setOnClickListener {
             val fragment: Fragment = f_procesion_juego_adivinarAndreMariaBirjina()
             NavFrag.EleccionJuego(binding.penitenteRadio,fragment,requireActivity(),requireView(),requireContext())
         }
     }
     override fun onResume() {
-
         super.onResume()
+
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
         mediaplayer = MediaPlayer.create(context, R.raw.penitenteak)
         binding.imgaudioplay1.setOnClickListener{
