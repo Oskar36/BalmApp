@@ -6,18 +6,43 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.balmapp.databinding.LProcesionJuegoAdivinarJesusBinding
 
 
 private var _binding: LProcesionJuegoAdivinarJesusBinding? = null
 private val binding get() = _binding!!
+private var mediaplayerexp: MediaPlayer? = null
 class f_procesion_juego_adivinar_Jesus : Fragment() {
     private var mediaplayer: MediaPlayer? = null
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        //inicio de la animacion
+        NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayerexp = MediaPlayer.create(context, R.raw.procesion_exp_juego1)
+        //Iniciamos el audio
+        mediaplayerexp!!.start()
+
+        //parar y continuar el audio
+        binding.imgprocesionExplicacionLogo.setOnClickListener {
+            if(mediaplayerexp!!.isPlaying){
+                NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)
+                mediaplayerexp!!.pause()
+            }else{
+                if(mediaplayerexp!!.currentPosition!=0 && mediaplayerexp!!.currentPosition!= mediaplayerexp!!.duration){
+                    mediaplayerexp!!.seekTo(mediaplayerexp!!.currentPosition)
+                }
+                mediaplayerexp!!.start()
+                NavFrag.animacion_dantzaris(binding.imgprocesionExplicacionLogo)
+            }
+        }
+        //parar animacion cuando pare el audio
+        mediaplayerexp!!.setOnCompletionListener {
+            NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)
+        }
         binding.btnfinalizar.setOnClickListener{
+            mediaplayerexp!!.stop()
             val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
             NavFrag.EleccionJuego(binding.jesusRadio,fragment,requireActivity(),requireView(),requireContext())
         }
@@ -32,7 +57,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     }
     override fun onDestroyView() {
         super.onDestroyView()
-        mediaplayer!!.stop()
+        mediaplayerexp!!.stop()
     }
 
     override fun onResume() {
@@ -53,6 +78,12 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        //liberacion del productor de medios
+        mediaplayerexp?.release()
+        mediaplayerexp = null
+    }
 
 
     }
