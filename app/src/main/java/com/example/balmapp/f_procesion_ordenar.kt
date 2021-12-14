@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -117,7 +118,7 @@ class f_procesion_ordenar : Fragment() {
             Sharedapp.gune.gune="4.Gunea 2"
             //paramos el audio
             mediaplayer!!.stop()
-
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
 
         }

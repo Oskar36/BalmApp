@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,7 @@ class f_kolitzajuego : Fragment() {
         binding.btnfinalizarKolitza.setOnClickListener {
 
             Sharedapp.gune.gune = "2.Gunea 2"
+            SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
             /* val fragment:Fragment=f_fin()
             NavFrag.replaceFragmen

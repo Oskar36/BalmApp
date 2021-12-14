@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +37,7 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
             if (binding.mariaRadio.isChecked) {
                 Sharedapp.gune.gune="4.Gunea 1"
+                SystemClock.sleep(1000)
                 mostrarDialogoPersonalizado()
 
             }else{
