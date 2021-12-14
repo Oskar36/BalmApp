@@ -33,14 +33,11 @@ class f_txapelaunir2 : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.atras_lugar="Juego2"
-        binding.btnsiguiente.setOnClickListener{
-            Sharedapp.gune.gune="5.Gunea"
+        binding.btnsiguiente.setOnClickListener {
+            Sharedapp.gune.gune = "5.Gunea"
             mostrarDialogoPersonalizado()
-
-
         }
-        //inicio de la animacion
-        NavFrag.animacion_dantzaris(binding.imglogo)
+
 
 
         //parar animacion cuando pare el audio

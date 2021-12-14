@@ -96,9 +96,7 @@
 
     <string name="txt_texto_pazkoa">Pazkoa</string>
 
-
     <string name="txt_texto_bazkaria">Bazkaria</string>
-
 
     <string name="txt_texto_erromeria">Erromeria</string>
 
@@ -236,8 +234,9 @@
 
     <string name="camposvacios">Ezizena ezin da hutsik egon.</string>
 
-    <string name="cancel">Ez</string>
-    <string name="descargar">Gorde</string>
+    <string name="cancel">EZ</string>
+
+    <string name="descargar">GORDE</string>
 
     <string name="elegir">Aukeratu ezazu aukera bat</string>
 

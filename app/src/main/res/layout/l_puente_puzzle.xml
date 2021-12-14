@@ -13,12 +13,13 @@
     <TextView
         android:id="@+id/txtpuente_puzzle_titulo"
         style="@style/titulo2"
-        android:layout_width="271dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
+        android:layout_width="229dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
         android:text="@string/txtjauregi_puzzle_titulo"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -33,7 +33,7 @@
         android:id="@+id/imgtxapela_juego_img1"
         android:layout_width="97dp"
         android:layout_height="76dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="252dp"
         android:src="@drawable/kolitza_juego_img1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,70 +53,21 @@
         android:id="@+id/imgtxapela_juego_img4"
         android:layout_width="95dp"
         android:layout_height="84dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginEnd="252dp"
+        android:layout_marginTop="484dp"
+        android:layout_marginEnd="256dp"
         android:src="@drawable/kolitza_juego_img4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
-
-    <TextView
-        android:id="@+id/txt_texto_pazkoa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:text="@string/txt_texto_pazkoa"
-        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img1"
-        tools:layout_editor_absoluteY="155dp" />
 
     <ImageView
         android:id="@+id/imgtxapela_juego_img3"
         android:layout_width="95dp"
         android:layout_height="84dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="252dp"
         android:src="@drawable/kolitza_juego_img3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
-
-    <TextView
-        android:id="@+id/txt_texto_ermita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/txt_ermita"
-        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img6"
-        app:layout_constraintTop_toBottomOf="@+id/txt_texto_erromeria" />
-
-    <TextView
-        android:id="@+id/txt_texto_erromeria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/txt_texto_erromeria"
-        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_texto_bazkaria" />
-
-    <TextView
-        android:id="@+id/txt_texto_tontorra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/txt_tontorra"
-        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img4"
-        app:layout_constraintTop_toBottomOf="@+id/txt_texto_pentekoste" />
-
-    <TextView
-        android:id="@+id/txt_texto_bazkaria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/txt_texto_bazkaria"
-        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_texto_pazkoa" />
 
     <TextView
         android:id="@+id/txt_texto_pentekoste"
@@ -125,15 +76,79 @@
         android:layout_marginStart="88dp"
         android:layout_marginTop="68dp"
         android:text="@string/txt_Pentekoste"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img5"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_ermita" />
+
+    <TextView
+        android:id="@+id/txt_texto_erromeria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/txt_texto_erromeria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_bazkaria" />
+
+    <TextView
+        android:id="@+id/txt_texto_bazkaria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/txt_texto_bazkaria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_pazkoa" />
+
+    <TextView
+        android:id="@+id/txt_texto_ermita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/txt_ermita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img6"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_erromeria" />
+
+    <TextView
+        android:id="@+id/txt_texto_tontorra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/txt_tontorra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img4"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_pentekoste"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/txt_texto_pazkoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="124dp"
+        android:text="@string/txt_texto_pazkoa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgtxapela_juego_img5"
         android:layout_width="95dp"
         android:layout_height="84dp"
-        android:layout_marginTop="376dp"
-        android:layout_marginEnd="252dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="256dp"
         android:src="@drawable/kolitza_juego_img5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
@@ -142,7 +157,7 @@
         android:id="@+id/imgtxapela_juego_img2"
         android:layout_width="95dp"
         android:layout_height="63dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="216dp"
         android:layout_marginEnd="252dp"
         android:src="@drawable/kolitza_juego_img2"
         app:layout_constraintEnd_toEndOf="parent"

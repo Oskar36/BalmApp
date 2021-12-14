@@ -72,7 +72,7 @@ class f_procesion_ordenar : Fragment() {
         val s2= resources.getString(R.string.muerte)
         val s3= resources.getString(R.string.ultima)
         val s4= resources.getString(R.string.juicio)
-        Toast.makeText(requireContext(), s0, Toast.LENGTH_SHORT).show()
+
         val lista = listOf(s0,s1,s2,s3,s4)
         val adaptador = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,lista)
         binding.spinner1.adapter=adaptador
