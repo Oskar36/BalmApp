@@ -41,164 +41,93 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
 
-    <LinearLayout
-        android:layout_width="104dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="212dp"
-        android:orientation="horizontal"
+    <ImageButton
+        android:id="@+id/playaudio3"
+        style="@style/botones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="4dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-
-        <ImageButton
-            android:id="@+id/playaudio1"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_play"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.459"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/pauseaudio1"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_pause"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.62"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="104dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="328dp"
-        android:orientation="horizontal"
+    <ImageButton
+        android:id="@+id/playaudio2"
+        style="@style/botones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="4dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-
-        <ImageButton
-            android:id="@+id/playaudio2"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_play"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.459"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/pauseaudio2"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_pause"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.62"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="104dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="436dp"
-        android:orientation="horizontal"
+    <ImageButton
+        android:id="@+id/playaudio1"
+        style="@style/botones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="4dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <ImageButton
+        android:id="@+id/playaudio4"
+        style="@style/botones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="4dp"
 
-        <ImageButton
-            android:id="@+id/playaudio3"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_play"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.459"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/pauseaudio3"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_pause"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.62"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="104dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="544dp"
-        android:orientation="horizontal"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <ImageView
+        android:id="@+id/txapelaimagen3"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="528dp"
+        android:src="@drawable/txapelaimagen4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/playaudio4"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_play"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.459"
-            app:layout_constraintStart_toStartOf="parent"
-
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/pauseaudio4"
-            style="@style/botones"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:src="@android:drawable/ic_media_pause"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.62"
-            app:layout_constraintStart_toStartOf="parent"
-
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/txapelaimagen2"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="428dp"
+        android:src="@drawable/txapelaimagen3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/txapelaimagen4"
         android:layout_width="120dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="544dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="228dp"
         android:src="@drawable/txapelaimagen1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -207,31 +136,120 @@
         android:id="@+id/txapelaimagen1"
         android:layout_width="120dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="328dp"
         android:src="@drawable/txapelaimagen2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/txapelaimagen2"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="320dp"
-        android:src="@drawable/txapelaimagen3"
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imglogo">
 
-    <ImageView
-        android:id="@+id/txapelaimagen3"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="428dp"
-        android:src="@drawable/txapelaimagen4"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt1_unir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txt_unir"
+                android:text="@string/txt1_unir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt2_unir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt2_unir"
+                style="@style/txt_unir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView7"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt3_unir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt3_unir"
+                style="@style/txt_unir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt4_unir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt4_unir"
+                style="@style/txt_unir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

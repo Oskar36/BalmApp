@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LTxapelaUnirBinding
 import com.example.balmapp.databinding.LTxapelaunir2Binding
@@ -51,66 +52,45 @@ class f_txapelaunir2 : Fragment() {
         mediaplayeraudio6 = MediaPlayer.create(context, R.raw.txapelaaudio2)
         mediaplayeraudio7 = MediaPlayer.create(context, R.raw.txapelaaudio3)
         mediaplayeraudio8 = MediaPlayer.create(context, R.raw.txapelaaudio4)
-
-
-
         //funcion para controlar audio5
         binding.playaudio5.setOnClickListener{
-            pararaudios()
             if(mediaplayeraudio5!!.isPlaying){
-                mediaplayeraudio5!!.seekTo(0)
+                mediaplayeraudio5!!.pause()
+                mediaplayeraudio5!!.seekTo(mediaplayeraudio5!!.currentPosition)
             } else {
                 mediaplayeraudio5!!.start()
             }
         }
-        binding.pauseaudio5.setOnClickListener{
-            if(mediaplayeraudio5!!.isPlaying){
-                mediaplayeraudio5!!.pause()
-            }
-        }
-
         //funcion para controlar audio6
         binding.playaudio6.setOnClickListener{
-            pararaudios()
             if(mediaplayeraudio6!!.isPlaying){
-                mediaplayeraudio6!!.seekTo(0)
+                mediaplayeraudio6!!.pause()
+                mediaplayeraudio6!!.seekTo(mediaplayeraudio6!!.currentPosition)
             } else {
                 mediaplayeraudio6!!.start()
             }
         }
-        binding.pauseaudio6.setOnClickListener{
-            if(mediaplayeraudio6!!.isPlaying){
-                mediaplayeraudio6!!.pause()
-            }
-        }
+
         //funcion para controlar audio7
         binding.playaudio7.setOnClickListener{
-            pararaudios()
             if(mediaplayeraudio7!!.isPlaying){
-                mediaplayeraudio7!!.seekTo(0)
+                mediaplayeraudio7!!.pause()
+                mediaplayeraudio7!!.seekTo(mediaplayeraudio7!!.currentPosition)
             } else {
                 mediaplayeraudio7!!.start()
             }
         }
-        binding.pauseaudio7.setOnClickListener{
-            if(mediaplayeraudio7!!.isPlaying){
-                mediaplayeraudio7!!.pause()
-            }
-        }
+
         //funcion para controlar audio8
         binding.playaudio8.setOnClickListener{
-            pararaudios()
             if(mediaplayeraudio8!!.isPlaying){
-                mediaplayeraudio8!!.seekTo(0)
+                mediaplayeraudio8!!.pause()
+                mediaplayeraudio8!!.seekTo(mediaplayeraudio8!!.currentPosition)
             } else {
                 mediaplayeraudio8!!.start()
             }
         }
-        binding.pauseaudio8.setOnClickListener{
-            if(mediaplayeraudio8!!.isPlaying){
-                mediaplayeraudio8!!.pause()
-            }
-        }
+
     }
 
     override fun onDestroyView() {
@@ -142,27 +122,6 @@ class f_txapelaunir2 : Fragment() {
             .setCancelable(false)
             .create()
             .show()
-
     }
-    private fun pararaudios(){
 
-        if (mediaplayeraudio5!!.isPlaying){
-            mediaplayeraudio5!!.seekTo(0)
-            mediaplayeraudio5!!.pause()
-        }
-        if (mediaplayeraudio6!!.isPlaying){
-            mediaplayeraudio6!!.seekTo(0)
-            mediaplayeraudio6!!.pause()
-        }
-        if (mediaplayeraudio7!!.isPlaying){
-            mediaplayeraudio7!!.seekTo(0)
-            mediaplayeraudio7!!.pause()
-        } else if (mediaplayeraudio8!!.isPlaying){
-            mediaplayeraudio8!!.seekTo(0)
-            mediaplayeraudio8!!.pause()
-        }
-
-
-
-    }
 }

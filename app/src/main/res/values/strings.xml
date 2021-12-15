@@ -256,9 +256,25 @@
 
     <string name="cerrar_texto">APLIKAZIOA ITXI NAHI DUZU?</string>
 
-    <string name="saltar_texto">Esplikazioa saltatu nahi duzu?</string>
+    <string name="txt1_unir">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago.</string>
 
-    <string name="volver_mapa">MAPARA BUELTATU</string>
+    <string name="txt2_unir">Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko.</string>
+
+    <string name="txt3_unir">Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen. Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko. Boinas La Encartada industria ondare garrantzitsu bat da, Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela. Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.</string>
+
+    <string name="txt4_unir">Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko, helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea.</string>
+
+    <string name="txt5_unir">Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren. </string>
+
+    <string name="txt6_unir">Fabrikak hainbat eraikin ditu: etxearen museoa bera, langileak bizi diren etxea, eskola gisa ere erabiltzen den eliza txiki bat, eta abar.</string>
+
+    <string name="txt7_unir">Museoan hainbat makina daude: XX. mendeko turbina hidraulikoek eta uhal eta poleen mekanismoak.</string>
+
+    <string name="txt8_unir">Ebaki berria den artilea biratzen da eta gero objektu bihurtzen da.</string>
+
+    <string name="saltar_texto">Azalpena saltatu nahi duzu?</string>
+
+    <string name="volver_mapa">Mapara bueltatu</string>
 
     <string name="saltar">Saltatu</string>
 </resources>

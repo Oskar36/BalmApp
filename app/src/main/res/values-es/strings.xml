@@ -252,8 +252,25 @@
     <string name="cerrar_texto">¿QUIERES CERRAR LA APLICACIÓN?</string>
 
     <string name="saltar_texto">¿Quieres saltar la explicacion?</string>
+
     <string name="volver_mapa">VOLVER AL MAPA</string>
 
     <string name="saltar">Saltar</string>
+
+    <string name="txt1_unir">Boinas La Encartada se encuentra junto al río Cadagua desde el casco histórico de Balmaseda.</string>
+
+    <string name="txt2_unir">Las aguas de aquí fueron necesarias para ponerlas en marcha mediante una maquinaria de fábrica.</string>
+
+    <string name="txt3_unir">La fábrica de Boinas se fundó en 1892 y se abrió como museo en 2007. Las aguas de aquí fueron necesarias para ponerlas en marcha mediante una maquinaria de fábrica. Boinas La Encartada es un importante patrimonio industrial que analiza la historia de Euskal Herria y de uno de nuestros trajes más famosos: la boina. La planta está bien conservada y sus instalaciones se utilizan como hace cien años.</string>
+
+    <string name="txt4_unir">La Diputación Foral de Bizkaia y el Ayuntamiento de Balmaseda eran los responsables de la mejora de este museo y de la difusión del valioso patrimonio industrial de esta curiosa fábrica textil, con un doble objetivo: la conservación del patrimonio histórico textil y la creación de un centro de turismo.</string>
+
+    <string name="txt5_unir">En esta fábrica creaban muchos productos: guantes, mantas, telas, bufandas, pero su principal producto eran las boinas.</string>
+
+    <string name="txt6_unir">La fábrica consta de varios edificios: el propio museo de la casa, la casa donde viven los obreros, una pequeña iglesia que también sirve de escuela, etcétera.</string>
+
+    <string name="txt7_unir">El museo cuenta con varias máquinas: turbinas hidráulicas del siglo XX y mecanismos de correas y poleas.</string>
+
+    <string name="txt8_unir">Se gira la lana recién cortada y luego se convierte en objeto.</string>
 
 </resources>

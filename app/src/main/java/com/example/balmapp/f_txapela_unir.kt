@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LTxapelaUnirBinding
 
@@ -81,59 +82,41 @@ class f_juego_txapela_unir : Fragment() {
 
         //funcion para controlar audio1
         binding.playaudio1.setOnClickListener{
-            pararaudios()
-            if(mediaplayeraudio1!!.isPlaying){
-                mediaplayeraudio1!!.seekTo(0)
-            } else {
-                mediaplayeraudio1!!.start()
-            }
-        }
-        binding.pauseaudio1.setOnClickListener{
             if(mediaplayeraudio1!!.isPlaying){
                 mediaplayeraudio1!!.pause()
+                mediaplayeraudio1!!.seekTo(mediaplayeraudio1!!.currentPosition)
+            } else {
+                mediaplayeraudio1!!.start()
             }
         }
 
         //funcion para controlar audio2
         binding.playaudio2.setOnClickListener{
-            pararaudios()
             if(mediaplayeraudio2!!.isPlaying){
-                mediaplayeraudio2!!.seekTo(0)
+                mediaplayeraudio2!!.pause()
+                mediaplayeraudio2!!.seekTo(mediaplayeraudio2!!.currentPosition)
             } else {
                 mediaplayeraudio2!!.start()
             }
         }
-        binding.pauseaudio2.setOnClickListener{
-            if(mediaplayeraudio2!!.isPlaying){
-                mediaplayeraudio2!!.pause()
-            }
-        }
+
         //funcion para controlar audio3
         binding.playaudio3.setOnClickListener{
-           pararaudios()
             if(mediaplayeraudio3!!.isPlaying){
-                mediaplayeraudio3!!.seekTo(0)
+                mediaplayeraudio3!!.pause()
+                mediaplayeraudio3!!.seekTo(mediaplayeraudio3!!.currentPosition)
             } else {
                 mediaplayeraudio3!!.start()
             }
         }
-        binding.pauseaudio3.setOnClickListener{
-            if(mediaplayeraudio3!!.isPlaying){
-                mediaplayeraudio3!!.pause()
-            }
-        }
+
         //funcion para controlar audio4
         binding.playaudio4.setOnClickListener{
-            pararaudios()
-            if(mediaplayeraudio4!!.isPlaying){
-                mediaplayeraudio4!!.seekTo(0)
-            } else {
-                mediaplayeraudio4!!.start()
-            }
-        }
-        binding.pauseaudio4.setOnClickListener{
             if(mediaplayeraudio4!!.isPlaying){
                 mediaplayeraudio4!!.pause()
+                mediaplayeraudio4!!.seekTo(mediaplayeraudio4!!.currentPosition)
+            } else {
+                mediaplayeraudio4!!.start()
             }
         }
     }
@@ -147,45 +130,6 @@ class f_juego_txapela_unir : Fragment() {
         mediaplayeraudio4!!.pause()
 
     }
-    private fun mostrarDialogoPersonalizado(){
-
-        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
-            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
-            .setPositiveButton(R.string.txt_finalizar,
-                DialogInterface.OnClickListener { dialog, id ->
-                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
-                    // sign in the user ...
-                })
-            .setNeutralButton(R.string.repetir,
-                DialogInterface.OnClickListener { dialog, id ->
-                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
-                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
-                    // sign in the user ...
-                })
-            .setCancelable(false)
-            .create()
-            .show()
-
-    }
-    private fun pararaudios(){
-
-        if (mediaplayeraudio1!!.isPlaying){
-            mediaplayeraudio1!!.seekTo(0)
-            mediaplayeraudio1!!.pause()
-            }
-       if (mediaplayeraudio2!!.isPlaying){
-           mediaplayeraudio2!!.seekTo(0)
-           mediaplayeraudio2!!.pause()
-        }
-        if (mediaplayeraudio3!!.isPlaying){
-            mediaplayeraudio3!!.seekTo(0)
-            mediaplayeraudio3!!.pause()
-        } else if (mediaplayeraudio4!!.isPlaying){
-            mediaplayeraudio4!!.seekTo(0)
-            mediaplayeraudio4!!.pause()
-        }
 
 
-
-    }
 }
