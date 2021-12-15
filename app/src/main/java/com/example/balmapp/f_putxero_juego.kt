@@ -281,7 +281,7 @@ class f_putxero_juego : Fragment() {
             binding.frameLayout11,
             resources.getString(R.string.saltar_texto),
             BaseTransientBottomBar.LENGTH_LONG
-        ).setAction("Deshacer") {
+        ).setAction(resources.getString(R.string.saltar)) {
             mediaplayer!!.seekTo(mediaplayer!!.duration)
         }
         snackbar.show()
