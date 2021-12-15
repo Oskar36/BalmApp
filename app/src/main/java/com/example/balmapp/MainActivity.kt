@@ -1,6 +1,7 @@
 package com.example.balmapp
 
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -11,6 +12,7 @@ import android.view.KeyEvent
 import android.view.KeyEvent.KEYCODE_BACK
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.isInvisible
 import com.example.balmapp.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -43,31 +45,26 @@ class MainActivity : AppCompatActivity() {
     }
 //se controla la pulsación del boton atras
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        return super.onKeyDown(keyCode, event)
-    if(keyCode==KEYCODE_BACK){
-        //creacion de pop up cerrar aplicacion.
-        MaterialAlertDialogBuilder(applicationContext,
-            R.style.Body_ThemeOverlay_MaterialComponents_MaterialAlertDialog)
-            .setTitle("CERRAR")
-            .setMessage("¿SALIR DE LA APLICACIÓN?")
-            .setIcon(resources.getDrawable(R.drawable.logodantzaris1))
-            .setPositiveButton("SI") { dialog, which ->
 
-                val intent =  Intent(Intent.ACTION_MAIN)
-                intent.addCategory(Intent.CATEGORY_HOME)
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-
-            }
-            .setNegativeButton("NO") { dialog, which ->
-
+    var cerrar1 = false
+    android.app.AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
+        .setView(layoutInflater.inflate(R.layout.l_dialogo_cerrar, null))
+        .setPositiveButton(R.string.si,
+            DialogInterface.OnClickListener { dialog, id ->
+                finish()
+                cerrar1 = super.onKeyDown(keyCode, event)
+            })
+        .setNeutralButton(R.string.cancel,
+            DialogInterface.OnClickListener { dialog, id ->
                 dialog.dismiss()
-            }
+            })
+        .setCancelable(false)
+        .create()
+        .show()
 
-            .show()
-
-
+        return cerrar1
     }
-    }
+
+
 
 }

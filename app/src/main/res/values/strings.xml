@@ -188,7 +188,9 @@
     Putxeraren jatorria XIX. mendean hasi zen, Bilbao-La Robla trenbidea eraiki zenean. Trenbidea ikatza Leongo-meategietatik Bilbora garraiatzeko sortu zen. Balmasedako biztanle asko trenbidean lanean hasi ziren. Trenean ordu asko ematen zituzten baldintza txarretan eta janari hotza jaten zuten. Langileek janari beroa jan nahi zuten, beraz, era bat asmatu zuten. Lehen putxerak makinaren lurruna erabiliz sukaldatzen zuten.
     Balmasedan ez zen ahaztu "trenbide-putxeren" tradizioa. Lehiaketa arrakastatsua izan zen eta hurrengo urteetan ospatzen jarraitu zen. Hasieran frontoian egiten ziren eta gaur egun San Severino plazan.</string>
 
-    <string name="azalpena_txapela"></string>
+    <string name="azalpena_txapela">Boinas La Encartada Balmasedako hirigune historikotik Kadagua ibaiaren ondoan dago. Txapeletako fabrika 1892. urtean sortu zen eta 2007an museo bezala ireki zen. Hemengo urak beharrezkoak izan ziren fabrikako makineria baten bidez martxan jartzeko. Boinas La Encartada industria ondare garrantzitsu bat da, Euskal Herriko historia eta gure jantzi ospetsuenetako baten historia aztertzen ditu: txapela. Lantegia ondo kontserbatuta dago eta bere instalazioak duela ehun urte bezala erabiltzen dira.
+    Bizkaiko Foru Aldundiak eta Balmasedako Udalak arduradunak ziren museo hau hobetzen eta ehungintza-fabrika bitxi horren industria-ondare baliotsua zabaltzeko, helburu bikoitzarekin: ehungintzako ondare historikoa kontserbatzea eta turismorako zentro bat sortzea. Fabrika honetan produktu asko sortzen zituzten: eskularruak, mantak, oihalak, bufandak, baina haien produktu nagusia txapelak ziren.
+    Fabrikak hainbat eraikin ditu: etxearen museoa bera, langileak bizi diren etxea, eskola gisa ere erabiltzen den eliza txiki bat, eta abar. Museoan hainbat makina daude: XX. mendeko turbina hidraulikoek eta uhal eta poleen mekanismoak. Amaitzeko, ebaki berria den artilea biratzen da eta gero objektu bihurtzen da.</string>
 
     <string name="txtjauregi_puzzle_explicacion">Argazkian jauregia agertzen da, baina, leihoak, atea, bigak, armarria etab. falta zaizkio. Behean elementu horiek agertzen dira. Eraman elementu bakoitza bere lekura.</string>
 
@@ -248,8 +250,10 @@
 
     <string name="juicio">Jesusen epaiketa</string>
 
-    <string name="descargar_texto">Puzzlea gorde nahi duzu?</string>
+    <string name="descargar_texto">PUZZLEA GORDE NAHI DUZU?</string>
 
     <string name="desgargado">Puzzlearen irudia gordeta</string>
+
+    <string name="cerrar_texto">APLIKAZIOA ITXI NAHI DUZU?</string>
 
 </resources>
