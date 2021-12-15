@@ -17,7 +17,10 @@ import androidx.core.view.*
 import android.view.animation.Animation
 
 import android.view.animation.Animation.AnimationListener
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
 
 
 private var _binding: LPutxeroJuegoBinding? = null
@@ -255,10 +258,22 @@ class f_putxero_juego : Fragment() {
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
                     // sign in the user ...
+                    buildSnackbar()
                 })
             .setCancelable(false)
             .create()
             .show()
 
+    }
+
+    private fun buildSnackbar() {
+        val snackbar = Snackbar.make(
+            binding.frameLayout11,
+            resources.getString(R.string.saltar_texto),
+            BaseTransientBottomBar.LENGTH_LONG
+        ).setAction("Deshacer") {
+            mediaplayer!!.seekTo(mediaplayer!!.duration)
+        }
+        snackbar.show()
     }
 }
