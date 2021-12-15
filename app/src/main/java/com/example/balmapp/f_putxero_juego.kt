@@ -242,6 +242,11 @@ class f_putxero_juego : Fragment() {
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
                     // sign in the user ...
                 })
+            .setPositiveButton(R.string.volver_mapa,
+                DialogInterface.OnClickListener { dialog, id ->
+                    requireActivity().finish()
+                    // sign in the user ...
+                })
             .setCancelable(false)
             .create()
             .show()
@@ -260,6 +265,11 @@ class f_putxero_juego : Fragment() {
                     // sign in the user ...
                     buildSnackbar()
                 })
+            .setPositiveButton(R.string.volver_mapa,
+                DialogInterface.OnClickListener { dialog, id ->
+                requireActivity().finish()
+                // sign in the user ...
+            })
             .setCancelable(false)
             .create()
             .show()

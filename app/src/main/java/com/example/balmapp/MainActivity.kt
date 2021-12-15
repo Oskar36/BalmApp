@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         .setCancelable(false)
         .create()
         .show()
-
         return cerrar1
     }
 

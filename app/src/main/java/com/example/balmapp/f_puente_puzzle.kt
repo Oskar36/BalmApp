@@ -116,6 +116,8 @@ class f_puente_puzzle : Fragment() {
     fun comp_puzzle_pieza(bien:ImageView,pieza:View, x1:Float,y1:Float) {
         val bienanchura=bien.width
         val bienaltura=bien.height
+        val piezaanchura=pieza.width
+        val piezaaltura=pieza.height
         val location2 = IntArray(2)
         bien!!.getLocationOnScreen(location2)
         val bienx = location2[0]
@@ -124,7 +126,7 @@ class f_puente_puzzle : Fragment() {
         pieza!!.getLocationOnScreen(location)
         val piezax = location[0]
         val piezay = location[1]
-        if(piezay<(bieny+bienaltura) && piezay>bieny && piezax<(bienx+bienanchura) && piezax>bienx){
+        if((piezay<(bieny+bienaltura) && piezay>bieny && piezax<(bienx+bienanchura) && piezax>bienx)|| ((piezay+piezaaltura)<(bieny+bienaltura) && (piezay+piezaaltura)>bieny && (piezax+piezaanchura)<(bienx+bienanchura) && (piezax+piezaanchura)>bienx)){
             bien.isVisible =true
             pieza.isVisible =false
             contador++

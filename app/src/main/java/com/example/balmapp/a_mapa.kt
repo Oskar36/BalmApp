@@ -2,6 +2,7 @@ package com.example.balmapp
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
@@ -165,7 +166,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     private fun abrirActivityMenu(activity: String, juego:String){
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
-        finish()
     }
     private fun MarcadorJuego(gune: String){
         when (gune){
@@ -203,6 +203,13 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
         }
         return true
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent=Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
 

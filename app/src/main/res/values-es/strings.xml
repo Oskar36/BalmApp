@@ -252,4 +252,6 @@
     <string name="cerrar_texto">¿QUIERES CERRAR LA APLICACIÓN?</string>
 
     <string name="saltar_texto">¿Quieres saltar la explicacion?</string>
+    <string name="volver_mapa">VOLVER AL MAPA</string>
+
 </resources>
