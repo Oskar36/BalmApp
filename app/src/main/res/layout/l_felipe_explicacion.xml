@@ -13,8 +13,8 @@
     <TextView
         android:id="@+id/txtfelipe_explicacion_titulo"
         style="@style/titulo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="315dp"
+        android:layout_height="54dp"
         android:layout_marginTop="16dp"
         android:text="@string/felipe_explicacion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="412dp"
         android:layout_marginTop="224dp"
         app:layout_constraintStart_toStartOf="parent"

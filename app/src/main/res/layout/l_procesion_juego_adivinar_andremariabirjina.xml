@@ -22,9 +22,9 @@
 
     <ImageView
         android:id="@+id/imglogo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="187dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="44dp"
         android:src="@drawable/imgmaria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -35,7 +35,7 @@
         android:id="@+id/txtexplicacion1_penitenteak"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="@string/explicacion_maria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.737"
@@ -46,12 +46,13 @@
         android:layout_width="225dp"
         android:layout_height="151dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.723"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgaudiostop1">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8">
 
         <RadioButton
             android:id="@+id/magdalena_radio"
@@ -81,10 +82,10 @@
         style="@style/botones"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:src="@android:drawable/ic_media_pause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintHorizontal_bias="0.637"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -94,10 +95,10 @@
         style="@style/botones"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtexplicacion1_penitenteak"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />

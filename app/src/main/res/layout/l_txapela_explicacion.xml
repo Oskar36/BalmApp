@@ -10,6 +10,18 @@
 
     tools:viewBindingIgnore="true"
 
+
+    <ImageButton
+        android:id="@+id/imgtxapela_explicacion_logo"
+        style="@style/medidas_dantzaris"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.871"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/txttxapela_explicacion_titulo"
         android:layout_width="wrap_content"
@@ -35,7 +47,7 @@
     <ScrollView
         android:id="@+id/scrollView4"
         android:layout_width="match_parent"
-        android:layout_height="297dp"
+        android:layout_height="260dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +63,7 @@
                 style="@style/texto_simple_explicacion"
                 android:text="@string/azalpena_txapela"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgtxapela_explicacion_logo" />
+                app:layout_constraintTop_toBottomOf="@+id/imgpuente_explicacion_logo" />
 
 
         </LinearLayout>
@@ -59,14 +71,15 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="283dp"
-        android:layout_height="204dp"
+        android:layout_width="264dp"
+        android:layout_height="172dp"
         android:src="@drawable/boina_foto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.318" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

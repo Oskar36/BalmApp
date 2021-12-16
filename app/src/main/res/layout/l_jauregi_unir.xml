@@ -12,8 +12,8 @@
     <TextView
         android:id="@+id/txtjauregi_unir_titulo"
         style="@style/titulo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="233dp"
+        android:layout_height="58dp"
         android:layout_marginTop="16dp"
         android:text="@string/txtkolitza_juego_explicacion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,11 +23,13 @@
 
     <TextView
         android:id="@+id/txtjauregi_unir_explicacion"
-        android:layout_width="347dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="60dp"
+        style="@style/juegos_explicacion"
+        android:layout_width="343dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="40dp"
         android:text="@string/txtjauregi_unir_explicacion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglogo" />
 
@@ -54,29 +56,18 @@
         android:id="@+id/txt_texto_Erdiko_Solairua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
         android:text="@string/txt_texto_Erdiko_Solairua"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Beheko_Solairuak" />
-
-    <TextView
-        android:id="@+id/txt_texto_Beheko_Solairuak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="388dp"
-
-        android:text="@string/txt_texto_Beheko_Solairuak"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_texto_Azken_Solairua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:text="@string/txt_texto_Azken_Solairua"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Erdiko_Solairua" />
@@ -86,10 +77,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:text="@string/txt_texto_Fatxada"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Azken_Solairua" />
+
+    <TextView
+        android:id="@+id/txt_texto_Beheko_Solairuak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="356dp"
+
+        android:text="@string/txt_texto_Beheko_Solairuak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_texto_Sotoa"
@@ -98,20 +100,9 @@
         android:layout_marginTop="24dp"
         android:text="@string/txt_texto_Sotoa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Balkoi..." />
-
-    <TextView
-        android:id="@+id/txt_texto_Gambara"
-        android:layout_width="146dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/txt_texto_Gambara"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Sotoa" />
 
     <TextView
         android:id="@+id/txt_texto_Balkoi..."
@@ -120,7 +111,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/txt_texto_Balkoi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Gelak_Egongelak" />
 
@@ -131,9 +122,20 @@
         android:layout_marginTop="340dp"
         android:text="@string/txt_texto_Gelak_Egongelak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_texto_Gambara"
+        android:layout_width="146dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/txt_texto_Gambara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_texto_Sotoa" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,6 +44,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp">
 
@@ -73,6 +74,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp">
 
@@ -103,6 +105,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp">
 
@@ -133,6 +136,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp">
 
@@ -186,8 +190,9 @@
 
         <TextView
             android:id="@+id/txtprocesion_ordenar_explicacion"
-            android:layout_width="375dp"
-            android:layout_height="85dp"
+            style="@style/juegos_explicacion"
+            android:layout_width="347dp"
+            android:layout_height="107dp"
             android:layout_marginTop="200dp"
             android:text="@string/procesion_ordenar_explicacion"
             app:layout_constraintEnd_toEndOf="parent"

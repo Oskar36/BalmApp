@@ -48,10 +48,10 @@ class f_txapelaunir2 : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        mediaplayeraudio5 = MediaPlayer.create(context, R.raw.txapelaaudio1)
-        mediaplayeraudio6 = MediaPlayer.create(context, R.raw.txapelaaudio2)
-        mediaplayeraudio7 = MediaPlayer.create(context, R.raw.txapelaaudio3)
-        mediaplayeraudio8 = MediaPlayer.create(context, R.raw.txapelaaudio4)
+        mediaplayeraudio5 = MediaPlayer.create(context, R.raw.txapelaaudio5)
+        mediaplayeraudio6 = MediaPlayer.create(context, R.raw.txapelaaudio6)
+        mediaplayeraudio7 = MediaPlayer.create(context, R.raw.txapelaaudio7)
+        mediaplayeraudio8 = MediaPlayer.create(context, R.raw.txapelaaudio8)
         //funcion para controlar audio5
         binding.playaudio5.setOnClickListener{
             if(mediaplayeraudio5!!.isPlaying){

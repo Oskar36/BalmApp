@@ -21,7 +21,6 @@
     </style>
 
     <style name="texto_simple_explicacion" >
-        <item name="android:gravity">start</item>
         <item name="android:justificationMode" tools:targetApi="o">inter_word</item>
         <item name="android:textSize">18dp</item>
         <item name="android:layout_width">340dp</item>
@@ -50,12 +49,14 @@
     <style name="titulo1">
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="titulo2">
         <item name="android:textSize">20dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginTop">32dp</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="Navigationestiloa">
@@ -83,5 +84,15 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
+    <style name="juegos_explicacion" >
+        <item name="android:gravity">start</item>
+        <item name="android:justificationMode" tools:targetApi="o">inter_word</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_width">340dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:lineSpacingExtra">4dp</item>
     </style>
 </resources>

@@ -2,18 +2,21 @@ package com.example.balmapp
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.SystemClock
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
@@ -256,8 +259,38 @@ class f_jauregi_puzzle : Fragment() {
             mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 1"
             SystemClock.sleep(1000)
-            mostrarDialogoPersonalizado()
+            descargar()
         }
         return true
+    }
+
+
+    private fun descargar(){
+        val bm = BitmapFactory.decodeResource(resources, R.drawable.palaciohorcasitasbalmaseda)
+
+        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogo_descargar,null))
+            .setPositiveButton(R.string.descargar,
+                DialogInterface.OnClickListener { dialog, id ->
+
+
+                    MediaStore.Images.Media.insertImage(requireActivity().contentResolver,bm, "Puzzle" , "Puzzle jauregi")
+                    dialog.dismiss()
+                    Toast.makeText(requireContext(), resources.getString(R.string.desgargado), Toast.LENGTH_SHORT).show()
+                    SystemClock.sleep(1000)
+                    mostrarDialogoPersonalizado()
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.cancel,
+                DialogInterface.OnClickListener { dialog, id ->
+                    dialog.dismiss()
+                    SystemClock.sleep(1000)
+                    mostrarDialogoPersonalizado()
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+
     }
 }

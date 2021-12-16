@@ -65,8 +65,8 @@
                 <TextView
                     android:id="@+id/txtsanfelipe_titulo"
                     style="@style/titulo2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="296dp"
+                    android:layout_height="51dp"
                     android:text="@string/felipe_cancion_titulo"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

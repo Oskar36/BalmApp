@@ -11,9 +11,9 @@
 
     <TextView
         android:id="@+id/txtkolitza_juego_explicacion_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         style="@style/titulo2"
+        android:layout_width="241dp"
+        android:layout_height="69dp"
         android:text="@string/txtkolitza_juego_explicacion_titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="156dp"
         android:text="@string/txt_texto_pazkoa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.305"

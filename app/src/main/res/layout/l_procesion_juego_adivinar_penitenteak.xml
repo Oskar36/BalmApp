@@ -22,9 +22,9 @@
 
     <ImageView
         android:id="@+id/imglogo"
-        android:layout_width="166dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="203dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="28dp"
         android:src="@drawable/imgpenitenteak"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -72,13 +72,14 @@
         android:layout_width="175dp"
         android:layout_height="152dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="31dp"
         app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.601"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgaudiostop1">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79">
 
         <RadioButton
             android:id="@+id/penitente_radio"
