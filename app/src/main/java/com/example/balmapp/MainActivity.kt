@@ -16,8 +16,7 @@ import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.isInvisible
 import com.example.balmapp.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-
-
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),1)
             return
         }
+        NavFrag.idioma=Locale.getDefault().language
     }
 //se controla la pulsación del boton atras
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

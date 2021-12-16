@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.drawable.AnimationDrawable
+import android.media.MediaPlayer
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -13,13 +14,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-
+import java.util.*
 
 
 class NavFrag {
     companion object{
         var theme=""
         var atras_lugar=""
+        var idioma=""
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){
@@ -38,7 +40,8 @@ class NavFrag {
         fun Abrirfragment(fragment: Fragment,activity: AppCompatActivity,layout: Int) {
             val currentNightMode: Int = activity.resources
                 .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-            if(theme==""){
+
+            if(theme=="" || idioma==""){
                 val transaction= activity.supportFragmentManager.beginTransaction()
                 transaction.add(layout, fragment)
                 transaction.commit()
@@ -51,8 +54,9 @@ class NavFrag {
                     }
                 }
             }else{
-                if(theme!=currentNightMode.toString()){
+                if(theme!=currentNightMode.toString() || idioma!= Locale.getDefault().language){
                     theme=currentNightMode.toString()
+                    idioma=Locale.getDefault().language
                 }else{
                     val transaction= activity.supportFragmentManager.beginTransaction()
                     transaction.add(layout, fragment)

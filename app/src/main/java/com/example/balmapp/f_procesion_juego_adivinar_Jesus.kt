@@ -42,7 +42,6 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
             NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)
         }
         binding.btnfinalizar.setOnClickListener{
-            mediaplayerexp!!.stop()
             val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
             NavFrag.EleccionJuego(binding.jesusRadio,fragment,requireActivity(),requireView(),requireContext())
         }
@@ -57,6 +56,7 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     }
     override fun onDestroyView() {
         super.onDestroyView()
+        mediaplayer!!.stop()
         mediaplayerexp!!.stop()
     }
 

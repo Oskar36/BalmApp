@@ -1,6 +1,7 @@
 package com.example.balmapp
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -21,6 +22,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
+import android.media.AudioManager
+
+
+
 
 
 private var _binding: LPutxeroJuegoBinding? = null
@@ -60,6 +65,7 @@ class f_putxero_juego : Fragment() {
         moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
+
         binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)

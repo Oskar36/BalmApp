@@ -42,7 +42,7 @@
 
     <string name="san_felipe">SAN FELIPE ABEZTIA</string>
 
-    <string name="putxero">PUTXERIA</string>
+    <string name="putxero">PUTXERA</string>
 
     <string name="procesion_explicacion">PROZESIOAREN HISTORIA</string>
 
@@ -277,4 +277,5 @@
     <string name="volver_mapa">Mapara bueltatu</string>
 
     <string name="saltar">Saltatu</string>
+    <string name="txtpuente_puzzle_titulo">ZUBIAREN PUZZLEA</string>
 </resources>
