@@ -82,6 +82,7 @@ class f_juego_txapela_unir : Fragment() {
 
         //funcion para controlar audio1
         binding.playaudio1.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio1!!.isPlaying){
                 mediaplayeraudio1!!.pause()
                 mediaplayeraudio1!!.seekTo(mediaplayeraudio1!!.currentPosition)
@@ -92,6 +93,7 @@ class f_juego_txapela_unir : Fragment() {
 
         //funcion para controlar audio2
         binding.playaudio2.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio2!!.isPlaying){
                 mediaplayeraudio2!!.pause()
                 mediaplayeraudio2!!.seekTo(mediaplayeraudio2!!.currentPosition)
@@ -102,6 +104,7 @@ class f_juego_txapela_unir : Fragment() {
 
         //funcion para controlar audio3
         binding.playaudio3.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio3!!.isPlaying){
                 mediaplayeraudio3!!.pause()
                 mediaplayeraudio3!!.seekTo(mediaplayeraudio3!!.currentPosition)
@@ -112,6 +115,7 @@ class f_juego_txapela_unir : Fragment() {
 
         //funcion para controlar audio4
         binding.playaudio4.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio4!!.isPlaying){
                 mediaplayeraudio4!!.pause()
                 mediaplayeraudio4!!.seekTo(mediaplayeraudio4!!.currentPosition)
@@ -128,6 +132,28 @@ class f_juego_txapela_unir : Fragment() {
         mediaplayeraudio2!!.pause()
         mediaplayeraudio3!!.pause()
         mediaplayeraudio4!!.pause()
+
+    }
+
+    private fun pararaudios(){
+
+        if (mediaplayeraudio1!!.isPlaying){
+            mediaplayeraudio1!!.seekTo(0)
+            mediaplayeraudio1!!.pause()
+        }
+        if (mediaplayeraudio2!!.isPlaying){
+            mediaplayeraudio2!!.seekTo(0)
+            mediaplayeraudio2!!.pause()
+        }
+        if (mediaplayeraudio3!!.isPlaying){
+            mediaplayeraudio3!!.seekTo(0)
+            mediaplayeraudio3!!.pause()
+        } else if (mediaplayeraudio4!!.isPlaying){
+            mediaplayeraudio4!!.seekTo(0)
+            mediaplayeraudio4!!.pause()
+        }
+
+
 
     }
 

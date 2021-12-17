@@ -54,6 +54,7 @@ class f_txapelaunir2 : Fragment() {
         mediaplayeraudio8 = MediaPlayer.create(context, R.raw.txapelaaudio8)
         //funcion para controlar audio5
         binding.playaudio5.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio5!!.isPlaying){
                 mediaplayeraudio5!!.pause()
                 mediaplayeraudio5!!.seekTo(mediaplayeraudio5!!.currentPosition)
@@ -63,6 +64,7 @@ class f_txapelaunir2 : Fragment() {
         }
         //funcion para controlar audio6
         binding.playaudio6.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio6!!.isPlaying){
                 mediaplayeraudio6!!.pause()
                 mediaplayeraudio6!!.seekTo(mediaplayeraudio6!!.currentPosition)
@@ -73,6 +75,7 @@ class f_txapelaunir2 : Fragment() {
 
         //funcion para controlar audio7
         binding.playaudio7.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio7!!.isPlaying){
                 mediaplayeraudio7!!.pause()
                 mediaplayeraudio7!!.seekTo(mediaplayeraudio7!!.currentPosition)
@@ -83,6 +86,7 @@ class f_txapelaunir2 : Fragment() {
 
         //funcion para controlar audio8
         binding.playaudio8.setOnClickListener{
+            pararaudios()
             if(mediaplayeraudio8!!.isPlaying){
                 mediaplayeraudio8!!.pause()
                 mediaplayeraudio8!!.seekTo(mediaplayeraudio8!!.currentPosition)
@@ -99,6 +103,29 @@ class f_txapelaunir2 : Fragment() {
         mediaplayeraudio6!!.pause()
         mediaplayeraudio7!!.pause()
         mediaplayeraudio8!!.pause()
+
+    }
+
+    private fun pararaudios(){
+
+        if (mediaplayeraudio5!!.isPlaying){
+            mediaplayeraudio5!!.seekTo(0)
+            mediaplayeraudio5!!.pause()
+        }
+        if (mediaplayeraudio6!!.isPlaying){
+            mediaplayeraudio6!!.seekTo(0)
+            mediaplayeraudio6!!.pause()
+        }
+        if (mediaplayeraudio7!!.isPlaying){
+            mediaplayeraudio7!!.seekTo(0)
+            mediaplayeraudio7!!.pause()
+
+        } else if (mediaplayeraudio8!!.isPlaying){
+            mediaplayeraudio8!!.seekTo(0)
+            mediaplayeraudio8!!.pause()
+        }
+
+
 
     }
 
