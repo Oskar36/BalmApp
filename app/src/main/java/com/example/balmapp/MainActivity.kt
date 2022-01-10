@@ -63,7 +63,5 @@ class MainActivity : AppCompatActivity() {
         .show()
         return cerrar1
     }
-    override fun onDestroy() {
-        super.onDestroy()
-    }
+
 }
