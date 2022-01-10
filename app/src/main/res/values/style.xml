@@ -95,4 +95,12 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:lineSpacingExtra">4dp</item>
     </style>
+    <style name="botones2" >
+        <item name="android:background">@drawable/boton</item>
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
 </resources>

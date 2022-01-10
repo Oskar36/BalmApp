@@ -54,8 +54,9 @@
 
     <Button
         android:id="@+id/txt_texto_Erdiko_Solairua"
+        style="@style/botones2"
         android:layout_width="108dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="40dp"
         android:text="@string/txt_texto_Erdiko_Solairua"
@@ -68,27 +69,29 @@
         android:layout_height="51dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
+        style="@style/botones2"
         android:text="@string/txt_texto_Azken_Solairua"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Erdiko_Solairua" />
 
     <Button
         android:id="@+id/txt_texto_Fatxada"
+        style="@style/botones2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/txt_texto_Fatxada"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_texto_Azken_Solairua" />
 
     <Button
         android:id="@+id/txt_texto_Beheko_Solairuak"
+        style="@style/botones2"
         android:layout_width="114dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="372dp"
-
         android:text="@string/txt_texto_Beheko_Solairuak"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
