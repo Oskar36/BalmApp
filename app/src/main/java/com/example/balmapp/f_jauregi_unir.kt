@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LApodoBinding
@@ -31,6 +32,7 @@ class f_jauregi_unirjuego : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        NavFrag.contador=0
         //inicio de la animacion
         NavFrag.atras_lugar="Juego2"
         NavFrag.animacion_dantzaris(binding.imglogo)
@@ -55,11 +57,37 @@ class f_jauregi_unirjuego : Fragment() {
         }
         binding.btnfinalizarjauregi.setOnClickListener {
             //Abrir fragment repetir juego
-                mediaplayer!!.stop()
+            mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 2"
             mostrarDialogoPersonalizado()
         }
-
+        binding.txtTextoBehekoSolairuak.setOnClickListener{
+            crearLinea(binding.txtTextoBehekoSolairuak,binding.txtTextoGelakEgongelak)
+        }
+        binding.txtTextoErdikoSolairua.setOnClickListener{
+            crearLinea(binding.txtTextoErdikoSolairua,binding.txtTextoBalkoi)
+        }
+        binding.txtTextoAzkenSolairua.setOnClickListener{
+            crearLinea(binding.txtTextoAzkenSolairua,binding.txtTextoSotoa)
+        }
+        binding.txtTextoFatxada.setOnClickListener{
+            crearLinea(binding.txtTextoFatxada,binding.txtTextoGambara)
+        }
+    }
+    private fun crearLinea(txtinicion:TextView, textfin:TextView){
+        val linea= Linea(requireContext())
+        binding.frameLayout7.addView(linea)
+        linea.startX=txtinicion.x + txtinicion.width
+        linea.startY=txtinicion.y + (txtinicion.height/2)
+        linea.endX=txtinicion.x
+        linea.endY=txtinicion.y
+        linea.rbx=textfin.x
+        linea.rby=textfin.y
+        linea.txtfin=textfin
+        linea.texto=txtinicion!!
+        linea.layoutInflater=layoutInflater
+        linea.activity=requireActivity()
+        linea.view=((view as ViewGroup).parent as View)
     }
     override fun onStart() {
         super.onStart()
@@ -72,9 +100,7 @@ class f_jauregi_unirjuego : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
     }
-
-    private fun mostrarDialogoPersonalizado(){
-
+    fun mostrarDialogoPersonalizado(){
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,

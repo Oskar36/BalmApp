@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.view.KeyEvent
 import android.view.KeyEvent.KEYCODE_BACK
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContentProviderCompat.requireContext
@@ -45,7 +46,6 @@ class MainActivity : AppCompatActivity() {
     }
 //se controla la pulsación del boton atras
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-
     var cerrar1 = false
     android.app.AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
         .setView(layoutInflater.inflate(R.layout.l_dialogo_cerrar, null))
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         .show()
         return cerrar1
     }
-
-
-
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 }

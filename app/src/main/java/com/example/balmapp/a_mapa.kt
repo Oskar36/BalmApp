@@ -53,9 +53,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
 
         binding.floatingActionButton.setOnClickListener {
          binding.drawerLayout.openDrawer(GravityCompat.START)
-
         }
-
         navigationView.setNavigationItemSelectedListener(this)
 
     }
