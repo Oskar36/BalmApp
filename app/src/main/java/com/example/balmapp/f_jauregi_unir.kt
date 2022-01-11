@@ -9,16 +9,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 import androidx.appcompat.app.AlertDialog
-import com.example.balmapp.databinding.LApodoBinding
-
+import androidx.core.view.isGone
 import com.example.balmapp.databinding.LJauregiUnirBinding
 
 
 private var _binding: LJauregiUnirBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
+private var linea: Linea? =null
 
 class f_jauregi_unirjuego : Fragment() {
 
@@ -75,19 +76,23 @@ class f_jauregi_unirjuego : Fragment() {
         }
     }
     private fun crearLinea(txtinicion:TextView, textfin:TextView){
-        val linea= Linea(requireContext())
+        if(linea!=null && !NavFrag.terminado_unir){
+            linea!!.isGone=true
+        }
+        linea=Linea(requireContext())
         binding.frameLayout7.addView(linea)
-        linea.startX=txtinicion.x + txtinicion.width
-        linea.startY=txtinicion.y + (txtinicion.height/2)
-        linea.endX=txtinicion.x
-        linea.endY=txtinicion.y
-        linea.rbx=textfin.x
-        linea.rby=textfin.y
-        linea.txtfin=textfin
-        linea.texto=txtinicion!!
-        linea.layoutInflater=layoutInflater
-        linea.activity=requireActivity()
-        linea.view=((view as ViewGroup).parent as View)
+        linea!!.startX=txtinicion.x + txtinicion.width
+        linea!!.startY=txtinicion.y + (txtinicion.height/2)
+        linea!!.endX=txtinicion.x + txtinicion.width+30
+        linea!!.endY=txtinicion.y + (txtinicion.height/2)
+        linea!!.rbx=textfin.x
+        linea!!.rby=textfin.y
+        linea!!.txtfin=textfin
+        linea!!.texto=txtinicion!!
+        linea!!.layoutInflater=layoutInflater
+        linea!!.activity=requireActivity()
+        linea!!.view=((view as ViewGroup).parent as View)
+        NavFrag.terminado_unir=false
     }
     override fun onStart() {
         super.onStart()

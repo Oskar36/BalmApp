@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.os.SystemClock
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -13,6 +14,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.isGone
 import androidx.fragment.app.FragmentActivity
+import kotlinx.coroutines.delay
 
 
 class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null) :
@@ -24,8 +26,6 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
     var endY = 0f
     var rbx=0f
     var rby=0f
-    lateinit var img:ImageView
-    lateinit var imgfin:ImageView
     lateinit var button: Button
     lateinit var texto:TextView
     lateinit var txtfin:TextView
@@ -56,10 +56,11 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                     invalidate()
                 }
                 MotionEvent.ACTION_UP -> {
+
                     if (endY<(rby+rbyfin) && endY>rby && endX<(rbx+rbxfin) && endX>rbx){
+                        mPaint.color=Color.GREEN
+                        NavFrag.terminado_unir=true
                         dentro=true
-                        //endX=imgfin!!.x + (imgfin!!.width/2)
-                        //endY=imgfin!!.y + (imgfin!!.height/2)
                         endX=txtfin!!.x + (txtfin!!.width/2)
                         endY=txtfin!!.y + (txtfin!!.height/2)
                         //img.background=resources.getDrawable(R.drawable.borde)
@@ -69,14 +70,13 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                         if(NavFrag.contador==4){
                             NavFrag.mostrarDialogoPersonalizado(layoutInflater!!,context!!,activity!!,view!!)
                         }
-
                     }else{
                         //endX = startX+20
                         //endY = startY+20
                         this.isGone=true
                     }
 
-                    //invalidate()
+                    invalidate()
                 }
             }
         }

@@ -26,6 +26,7 @@ class NavFrag {
         var atras_lugar=""
         var idioma=""
         var contador=0
+        var terminado_unir=false
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){
@@ -131,7 +132,7 @@ class NavFrag {
             }
         }
         fun mostrarDialogoPersonalizado(layoutInflater:LayoutInflater,context: Context,activity:FragmentActivity,view: View){
-
+            Sharedapp.gune.gune="3.Gunea 2"
             AlertDialog.Builder(context, R.style.DialogBasicCustomStyle)
                 .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
                 .setPositiveButton(R.string.txt_finalizar,
@@ -142,6 +143,7 @@ class NavFrag {
                     })
                 .setNeutralButton(R.string.repetir,
                     DialogInterface.OnClickListener { dialog, id ->
+                        println(Sharedapp.gune.gune)
                         val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                         replaceFragment(fragment,activity,view.id)
                         // sign in the user ...
