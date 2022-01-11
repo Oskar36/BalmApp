@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
+import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.SystemClock
@@ -23,9 +24,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import android.media.AudioManager
-
-
-
+import android.os.Handler
 
 
 private var _binding: LPutxeroJuegoBinding? = null
@@ -62,10 +61,11 @@ class f_putxero_juego : Fragment() {
         mediaplayerTren = MediaPlayer.create(context,R.raw.sonidotren)
         //Iniciamos el audio
         mediaplayer!!.start()
-        moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
+        moveLefttoRight = TranslateAnimation(600F, -120F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
 
+        Toast.makeText(requireContext(), moveLefttoRight.duration.toString() , Toast.LENGTH_SHORT).show()
         binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
@@ -78,8 +78,16 @@ class f_putxero_juego : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imgputxeroJuegoLogo)
             }
         }
+
         //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
+
+            val handler = Handler()
+            handler.postDelayed(Runnable {
+                NavFrag.animacion_numero(binding.numeros)
+
+            }, 47000)
+
             if(!saltar){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
                 binding.imgPutxeroTren.startAnimation(moveLefttoRight)
@@ -101,6 +109,7 @@ class f_putxero_juego : Fragment() {
                 mediaplayerTren!!.start()
                 saltar=true
                 terminar=true
+
             }
 
             moveLefttoRight.setAnimationListener(object : AnimationListener {
@@ -123,6 +132,7 @@ class f_putxero_juego : Fragment() {
                     }
                 }
             })
+
         }
 
         binding.saltar.setOnClickListener {
@@ -132,6 +142,8 @@ class f_putxero_juego : Fragment() {
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
             }
         }
+
+
     }
 
     private var xDelta: Int=0
