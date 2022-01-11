@@ -94,7 +94,6 @@
         android:layout_height="57dp"
         android:layout_marginStart="164dp"
         android:layout_marginTop="88dp"
-
         android:src="@drawable/pieza_balcon_posicion"
         app:layout_constraintStart_toStartOf="@+id/img_jauregi_foto"
         app:layout_constraintTop_toTopOf="@+id/img_jauregi_foto" />
@@ -105,7 +104,6 @@
         android:layout_height="28dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="36dp"
-
         android:src="@drawable/pieza_escudo_posicion"
         app:layout_constraintStart_toStartOf="@+id/img_jauregi_foto"
         app:layout_constraintTop_toTopOf="@+id/img_jauregi_foto" />
@@ -116,7 +114,6 @@
         android:layout_height="43dp"
         android:layout_marginStart="260dp"
         android:layout_marginTop="156dp"
-
         android:src="@drawable/pieza_ventana_posicion"
         app:layout_constraintStart_toStartOf="@+id/img_jauregi_foto"
         app:layout_constraintTop_toTopOf="@+id/img_jauregi_foto" />
