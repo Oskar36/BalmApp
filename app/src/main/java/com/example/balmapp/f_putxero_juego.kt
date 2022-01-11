@@ -62,7 +62,7 @@ class f_putxero_juego : Fragment() {
         mediaplayerTren = MediaPlayer.create(context,R.raw.sonidotren)
         //Iniciamos el audio
         mediaplayer!!.start()
-        moveLefttoRight = TranslateAnimation(600F, -420F, 0F, 0F)
+        moveLefttoRight = TranslateAnimation(600F, -120F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
 
