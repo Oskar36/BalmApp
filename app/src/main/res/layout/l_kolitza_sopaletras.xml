@@ -1079,12 +1079,24 @@
     </GridLayout>
 
     <TextView
+        android:id="@+id/txt_Bazkaria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="208dp"
+        android:text="@string/txt_Bazkaria"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/txt_Erromeria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="324dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="236dp"
         android:text="@string/txt_Erromeria"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1092,11 +1104,10 @@
         android:id="@+id/txt_Pentekoste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="208dp"
         android:text="@string/txt_Pentekoste"
-        app:layout_constraintEnd_toStartOf="@+id/txt_tontorra"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1104,11 +1115,10 @@
         android:id="@+id/txt_pazkoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="236dp"
         android:text="@string/txt_pazkoa"
-        app:layout_constraintEnd_toStartOf="@+id/txt_Erromeria"
-        app:layout_constraintHorizontal_bias="0.3"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1116,21 +1126,10 @@
         android:id="@+id/txt_tontorra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="208dp"
         android:text="@string/txt_tontorra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_Bazkaria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="220dp"
-        android:text="@string/txt_Bazkaria"
-        app:layout_constraintEnd_toStartOf="@+id/txt_ermita"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1138,11 +1137,10 @@
         android:id="@+id/txt_ermita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="236dp"
         android:text="@string/txt_ermita"
-        app:layout_constraintEnd_toStartOf="@+id/txt_pazkoa"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

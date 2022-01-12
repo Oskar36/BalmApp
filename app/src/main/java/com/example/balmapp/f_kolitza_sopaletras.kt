@@ -354,7 +354,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
     }
-    private fun unslectAllCells(){
+    /*private fun unslectAllCells(){
         val childCount = binding.wordsGrid.childCount
         for (i in 0 until childCount){
             val linearLayout: LinearLayout = binding.wordsGrid.getChildAt(i) as LinearLayout
@@ -362,7 +362,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
                 linearLayout.getChildAt(t).background = ContextCompat.getDrawable(requireContext(), R.drawable.borde_unselected)
             }
         }
-    }
+    }*/
     private fun generateRandomLetters(){
         gridFlags = Array(gridSize) { BooleanArray(gridSize) { false } }
         foundWordsFlags = Array(gridSize) { BooleanArray(gridSize) { false } }
@@ -456,6 +456,16 @@ class f_kolitza_juego_sopaletras : Fragment() {
         var foundWordsFlags = Array(gridSize) { BooleanArray(gridSize) { false } }
 
         val wordArray = Array<Letra>(numWords) { Letra("") }
-        val words = arrayOf("ERMITA", "TONTORRA", "PAZKOA", "PENTEKOSTE","ERROMERIA","BAZKARIA")
+        val words = wordarray()
+        private fun wordarray():Array<String>{
+            val words:Array<String>
+            if(Locale.getDefault().language=="es"){
+                words = arrayOf("PASCUA", "CUMBRE", "ALMUERZO", "PENTECOSTES","ERMITA","PEREGRINAJE")
+            }else{
+                words = arrayOf("ERMITA", "TONTORRA", "PAZKOA", "PENTEKOSTE","ERROMERIA","BAZKARIA")
+            }
+            return words
+        }
     }
 }
+

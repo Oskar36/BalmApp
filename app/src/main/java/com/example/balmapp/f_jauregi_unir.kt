@@ -75,6 +75,7 @@ class f_jauregi_unirjuego : Fragment() {
             crearLinea(binding.txtTextoFatxada,binding.txtTextoGambara)
         }
     }
+
     private fun crearLinea(txtinicion:TextView, textfin:TextView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true

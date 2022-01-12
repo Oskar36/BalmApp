@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.SystemClock
+import android.text.style.LineHeightSpan
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.MotionEvent
