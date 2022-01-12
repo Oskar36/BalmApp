@@ -5,6 +5,8 @@
     android:id="@+id/frameLayout11"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:windowEnableSplitTouch="false"
     tools:context=".f_putxero_juego">
 
     tools:viewBindingIgnore="true"
