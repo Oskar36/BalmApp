@@ -12,5 +12,6 @@
     <color name="blanco">#FFFFFF</color>
     <color name="gris">#7E7E7E</color>
     <color name="transparent">#00000000</color>
+    <color name="rojo">#ff0000</color>
 </resources>
 

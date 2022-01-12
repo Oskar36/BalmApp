@@ -6,14 +6,16 @@ import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.SystemClock
+import android.view.*
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.example.balmapp.databinding.LFelipeCancionBinding
 import java.util.*
 
@@ -34,16 +36,100 @@ class f_sanfelipe_cancion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        lista= listOf(TestErantz(binding.txtpalabra1,"mayo"),TestErantz(binding.txtpalabra2,"abril"),TestErantz(binding.txtpalabra3,"santiago"),TestErantz(binding.txtpalabra4,"gil"),TestErantz(binding.txtpalabra5,"buena"),TestErantz(binding.txtpalabra6,"comer"),TestErantz(binding.txtpalabra7,"felipe"),TestErantz(binding.txtpalabra8,"san"),TestErantz(binding.txtpalabra9,"señorita"),TestErantz(binding.txtpalabra10,"peseta"),TestErantz(binding.txtpalabra11,"flores"),TestErantz(binding.txtpalabra12,"flores"),TestErantz(binding.txtpalabra13,"mocos"),TestErantz(binding.txtpalabra14,"pocos"),TestErantz(binding.txtpalabra15,"viva"),TestErantz(binding.txtpalabra16,"viva"))
+
+
+        val textos = arrayOf( R.string.felipe_cancion_letra1,R.string.felipe_cancion_letra2,R.string.felipe_cancion_letra3,R.string.felipe_cancion_letra4)
+        var contador=1
+        binding.siguiente.setOnClickListener {
+            binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            when (contador) {
+                1 -> {
+                    binding.txtsanfelipeCancion.setText(textos.get(0))
+                    if(binding.text1.text.toString().trim().toLowerCase()==("mayo") && binding.text2.text.toString().trim().toLowerCase()==("abril")) {
+                        binding.txtsanfelipeCancion.setText(textos.get(1))
+                        binding.text1.setText("")
+                        binding.text2.setText("")
+                        contador++
+                    }
+                    else{
+                        Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+                        if(binding.text1.text.toString().trim().toLowerCase()!=("mayo") ){
+                            binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                        }
+                            if(binding.text2.text.toString().trim().toLowerCase()!=("abril")) {
+                                binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                    }
+                }
+                }
+
+                2 -> { if(binding.text1.text.toString().trim().toLowerCase()==("buena") && binding.text2.text.toString().trim().toLowerCase()==("comer")) {
+                    binding.txtsanfelipeCancion.setText(textos.get(2))
+                    binding.text1.setText("")
+                    binding.text2.setText("")
+                    contador++
+                }
+                else{
+                    Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+                    if(binding.text1.text.toString().trim().toLowerCase()!=("buena") ){
+                        binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                    }
+                    if(binding.text2.text.toString().trim().toLowerCase()!=("comer")) {
+                        binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                    }
+                }
+
+                }
+                3 -> {
+                    if(binding.text1.text.toString().trim().toLowerCase()==("señorita") && binding.text2.text.toString().trim().toLowerCase()==("peseta")) {
+                        binding.txtsanfelipeCancion.setText(textos.get(3))
+                        binding.text1.setText("")
+                        binding.text2.setText("")
+                        contador++
+                        binding.siguiente.visibility = INVISIBLE
+                        binding.btncorregir.visibility = VISIBLE
+                    }
+                    else{
+                        Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+                        if(binding.text1.text.toString().trim().toLowerCase()!=("señorita") ){
+                            binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                        }
+                        if(binding.text2.text.toString().trim().toLowerCase()!=("peseta")) {
+                            binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+
         binding.btncorregir.setOnClickListener {
-            if(Compr()){
+            binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            if(binding.text1.text.toString().trim().toLowerCase()==("mocos") && binding.text2.text.toString().trim().toLowerCase()==("pocos")) {
                 mostrarDialogoPersonalizado()
                 //Abrir fragment repetir juego
                 Sharedapp.gune.gune="6.Gunea"
-            }else{
-                Toast.makeText(requireContext(), R.string.correccion_toast, Toast.LENGTH_SHORT).show()
             }
+            else{
+                Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
+                if(binding.text1.text.toString().trim().toLowerCase()!=("mocos") ){
+                    binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                }
+                if(binding.text2.text.toString().trim().toLowerCase()!=("pocos")) {
+                    binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                }
+
+
         }
+
+        }
+
+
+
     }
     override fun onResume() {
         super.onResume()
@@ -60,21 +146,6 @@ class f_sanfelipe_cancion : Fragment() {
                 mediaPlayer!!.pause()
             }
         }
-    }
-    private fun Compr():Boolean{
-        var aciertos=0
-        lista.forEach{
-            if(it.texto.text.isNotEmpty()){
-                if (it.texto.text.toString().lowercase().trim()==it.respuesta){
-                    it.texto.setTextColor(Color.parseColor("#00ff00"))
-                    aciertos++
-                }else{
-                    it.texto.setTextColor(Color.parseColor("#ad0a15"))
-                }
-            }
-
-        }
-        return aciertos== lista.size
     }
 
     override fun onDestroy() {
