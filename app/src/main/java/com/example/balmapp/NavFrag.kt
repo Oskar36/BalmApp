@@ -77,6 +77,14 @@ class NavFrag {
             animacion.start()
 
         }
+        fun animacion_numero(imagen: ImageView){
+            val numero = imagen.apply {
+                setBackgroundResource(R.drawable.animacion_numeros)
+                animacion = background as AnimationDrawable
+            }
+            animacion.start()
+
+        }
         fun animacion_dantzaris_parar(imagen: ImageView){
             imagen.apply {
                 setBackgroundResource(R.drawable.animaciondantzaris)
