@@ -67,8 +67,8 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                         //img.background=resources.getDrawable(R.drawable.borde)
                         //button.isClickable=false
                         texto.isClickable=false
-                        NavFrag.contador++
-                        if(NavFrag.contador==4){
+                        NavFrag.contador--
+                        if(NavFrag.contador==0){
                             NavFrag.mostrarDialogoPersonalizado(layoutInflater!!,context!!,activity!!,view!!)
                         }
                     }else{

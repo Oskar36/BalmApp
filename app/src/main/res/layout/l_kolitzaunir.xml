@@ -29,43 +29,43 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 
-    <ImageView
+    <Button
         android:id="@+id/imgtxapela_juego_img1"
         android:layout_width="97dp"
         android:layout_height="76dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="252dp"
-        android:src="@drawable/kolitza_juego_img1"
+        android:background="@drawable/kolitza_juego_img1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
-    <ImageView
+    <Button
         android:id="@+id/imgtxapela_juego_img6"
         android:layout_width="95dp"
         android:layout_height="84dp"
         android:layout_marginTop="292dp"
         android:layout_marginEnd="252dp"
-        android:src="@drawable/kolitza_juego_img6"
+        android:background="@drawable/kolitza_juego_img6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
-    <ImageView
+    <Button
         android:id="@+id/imgtxapela_juego_img4"
         android:layout_width="95dp"
         android:layout_height="84dp"
         android:layout_marginTop="484dp"
         android:layout_marginEnd="256dp"
-        android:src="@drawable/kolitza_juego_img4"
+        android:background="@drawable/kolitza_juego_img4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
-    <ImageView
+    <Button
         android:id="@+id/imgtxapela_juego_img3"
         android:layout_width="95dp"
         android:layout_height="84dp"
         android:layout_marginTop="124dp"
         android:layout_marginEnd="252dp"
-        android:src="@drawable/kolitza_juego_img3"
+        android:background="@drawable/kolitza_juego_img3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
@@ -143,23 +143,23 @@
         app:layout_constraintStart_toEndOf="@+id/imgtxapela_juego_img1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <Button
         android:id="@+id/imgtxapela_juego_img5"
         android:layout_width="95dp"
         android:layout_height="84dp"
-        android:layout_marginTop="384dp"
-        android:layout_marginEnd="256dp"
-        android:src="@drawable/kolitza_juego_img5"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="252dp"
+        android:background="@drawable/kolitza_juego_img5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 
-    <ImageView
+    <Button
         android:id="@+id/imgtxapela_juego_img2"
         android:layout_width="95dp"
         android:layout_height="63dp"
         android:layout_marginTop="216dp"
         android:layout_marginEnd="252dp"
-        android:src="@drawable/kolitza_juego_img2"
+        android:background="@drawable/kolitza_juego_img2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtkolitza_juego_explicacion_titulo" />
 

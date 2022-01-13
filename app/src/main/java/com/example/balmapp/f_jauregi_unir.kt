@@ -32,8 +32,9 @@ class f_jauregi_unirjuego : Fragment() {
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        Sharedapp.gune.gune="3.Gunea 2"
         super.onActivityCreated(savedInstanceState)
-        NavFrag.contador=0
+        NavFrag.contador=4
         //inicio de la animacion
         NavFrag.atras_lugar="Juego2"
         NavFrag.animacion_dantzaris(binding.imglogo)
@@ -56,12 +57,7 @@ class f_jauregi_unirjuego : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imglogo)
             }
         }
-        binding.btnfinalizarjauregi.setOnClickListener {
-            //Abrir fragment repetir juego
-            mediaplayer!!.stop()
-            Sharedapp.gune.gune="3.Gunea 2"
-            mostrarDialogoPersonalizado()
-        }
+
         binding.txtTextoBehekoSolairuak.setOnClickListener{
             crearLinea(binding.txtTextoBehekoSolairuak,binding.txtTextoGelakEgongelak)
         }

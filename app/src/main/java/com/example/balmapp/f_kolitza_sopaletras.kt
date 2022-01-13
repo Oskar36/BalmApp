@@ -446,6 +446,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
     }
+
     companion object {
         const val vocabulary = "ABCDEFGHIJKLMOPQRSTUVWSYZ"
         const val numWords = 6
@@ -467,5 +468,6 @@ class f_kolitza_juego_sopaletras : Fragment() {
             return words
         }
     }
+
 }
 

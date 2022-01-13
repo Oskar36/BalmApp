@@ -140,7 +140,7 @@ class NavFrag {
             }
         }
         fun mostrarDialogoPersonalizado(layoutInflater:LayoutInflater,context: Context,activity:FragmentActivity,view: View){
-            Sharedapp.gune.gune="3.Gunea 2"
+
             AlertDialog.Builder(context, R.style.DialogBasicCustomStyle)
                 .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
                 .setPositiveButton(R.string.txt_finalizar,
