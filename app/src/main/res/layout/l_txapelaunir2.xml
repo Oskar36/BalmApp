@@ -223,6 +223,7 @@
     </ScrollView>
 
     <ScrollView
+        android:id="@+id/scrollView8"
         android:layout_width="100dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -239,10 +240,10 @@
 
             <TextView
                 android:id="@+id/txt4_unir"
+                style="@style/txt_unir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt8_unir"
-                style="@style/txt_unir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

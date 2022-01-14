@@ -37,10 +37,6 @@ class f_juego_txapela_unir : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.contador=4
-        binding.btnsiguiente.setOnClickListener{
-            val fragment:Fragment=f_txapelaunir2()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
-        }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
         //parar animacion cuando pare el audio
@@ -103,6 +99,7 @@ class f_juego_txapela_unir : Fragment() {
         linea!!.activity=requireActivity()
         linea!!.view=((view as ViewGroup).parent as View)
         NavFrag.terminado_unir=false
+        linea!!.txapela=true
     }
     override fun onResume() {
         super.onResume()

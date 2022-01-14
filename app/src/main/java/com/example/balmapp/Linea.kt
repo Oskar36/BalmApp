@@ -10,11 +10,13 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.core.view.isGone
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import kotlinx.coroutines.delay
 
@@ -32,6 +34,7 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
     lateinit var texto:TextView
      var txtfin:TextView?=null
      var scroll: ScrollView?=null
+    var txapela=false
     lateinit var layoutInflater: LayoutInflater
     lateinit var activity: FragmentActivity
     lateinit var view: View
@@ -77,8 +80,14 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                         texto.isClickable=false
                         NavFrag.contador--
                         if(NavFrag.contador==0){
-                            NavFrag.mostrarDialogoPersonalizado(layoutInflater!!,context!!,activity!!,view!!)
+                            if(scroll!=null && txapela){
+                                val fragment: Fragment =f_txapelaunir2()
+                                NavFrag.replaceFragment(fragment,activity!!,view!!.id,"Juego1")
+                            }else{
+                                NavFrag.mostrarDialogoPersonalizado(layoutInflater!!,context!!,activity!!,view!!)
+                            }
                         }
+
                     }else{
                         //endX = startX+20
                         //endY = startY+20
