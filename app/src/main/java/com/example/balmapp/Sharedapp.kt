@@ -9,6 +9,7 @@ class Sharedapp : Application(){
         lateinit var usuario: Usuario
         lateinit var nombre:Nombre
         lateinit var partida:Partida
+        lateinit var menu:Menu
 
     }
     override fun onCreate() {
@@ -18,5 +19,6 @@ class Sharedapp : Application(){
         usuario=Usuario(applicationContext)
         nombre=Nombre(applicationContext)
         partida=Partida(applicationContext)
+        menu=Menu(applicationContext)
     }
 }

@@ -252,7 +252,7 @@
 
     <string name="juicio">Jesusen epaiketa</string>
 
-    <string name="descargar_texto">PUZZLEA GORDE NAHI DUZU?</string>
+    <string name="descargar_texto">ARGAZKIA GORDE NAHI DUZU?</string>
 
     <string name="desgargado">Puzzlearen irudia gordeta</string>
 
@@ -281,4 +281,6 @@
     <string name="saltar">Saltatu</string>
 
     <string name="txtpuente_puzzle_titulo">ZUBIAREN PUZZLEA</string>
+
+    <string name="contraseña">Pasahitza</string>
 </resources>

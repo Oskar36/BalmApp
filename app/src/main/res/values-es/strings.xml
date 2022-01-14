@@ -245,7 +245,7 @@
 
     <string name="juicio">El juicio de Jesus</string>
 
-    <string name="descargar_texto">¿QUIERES DESCARGAR EL PUZZLE??</string>
+    <string name="descargar_texto">¿QUIERES DESCARGAR LA IMAGEN??</string>
 
     <string name="desgargado">Imagen del puzzle descargada</string>
 
@@ -275,4 +275,5 @@
 
     <string name="txtpuente_puzzle_titulo">PUZZLE DEL PUENTE</string>
 
+    <string name="contraseña">Contraseña</string>
 </resources>

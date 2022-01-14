@@ -270,7 +270,7 @@ class f_jauregi_puzzle : Fragment() {
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogo_descargar,null))
-            .setPositiveButton(R.string.descargar,
+            .setPositiveButton(R.string.si,
                 DialogInterface.OnClickListener { dialog, id ->
 
 
@@ -281,7 +281,7 @@ class f_jauregi_puzzle : Fragment() {
                     mostrarDialogoPersonalizado()
                     // sign in the user ...
                 })
-            .setNeutralButton(R.string.cancel,
+            .setNeutralButton(R.string.no,
                 DialogInterface.OnClickListener { dialog, id ->
                     dialog.dismiss()
                     SystemClock.sleep(1000)

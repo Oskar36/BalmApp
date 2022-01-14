@@ -117,10 +117,10 @@ class f_sanfelipe_cancion : Fragment() {
             else{
                 Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
                 if(binding.text1.text.toString().trim().toLowerCase()!=("mocos") ){
-                    binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                    binding.text1.setTextColor(resources.getColor(R.color.rojo))
                 }
                 if(binding.text2.text.toString().trim().toLowerCase()!=("pocos")) {
-                    binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                    binding.text2.setTextColor(resources.getColor(R.color.rojo))
                 }
 
 

@@ -3,7 +3,8 @@
 
     <item android:title="@string/juegos">
         <menu>
-        <group android:checkableBehavior="single">
+        <group android:checkableBehavior="single"
+            android:id="@+id/menu1">
             <item android:title="@string/puente"
                 android:id="@+id/puente_admin"
                 android:icon="@drawable/icono_puente">
@@ -45,13 +46,15 @@
 
     <item android:title="@string/otros">
         <menu>
-        <group android:checkableBehavior="single">
+        <group android:checkableBehavior="single"
+            android:id="@+id/menu2">
                 <item android:title="@string/acerca_de"
                     android:id="@+id/acerca_de_menu"
                     android:icon="@drawable/icono_interrogacion">
                 </item>
 
                 <item android:title="@string/modo_profesor"
+                    android:id="@+id/modo_profesor_menuAdmin"
                     android:icon="@drawable/icono_mando">
                 </item>
         </group>

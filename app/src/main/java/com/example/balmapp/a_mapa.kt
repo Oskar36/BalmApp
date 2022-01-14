@@ -2,13 +2,19 @@ package com.example.balmapp
 
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
+import android.provider.MediaStore
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.balmapp.NavFrag.Companion.mostrarDialogoPersonalizado
 import com.example.balmapp.databinding.LMapaBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -41,10 +47,33 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         if (savedInstanceState != null) {
             mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY)
         }
-
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav)
         navigationView.bringToFront()
+        var menu=navigationView.menu
+
+
+
+        //si el saredapp es profesor
+        /*if(){
+            menu.findItem(R.id.puente_admin).isVisible=true
+            menu.findItem(R.id.kolitxa_menu).isVisible=true
+            menu.findItem(R.id.jauregi_menu).isVisible=true
+            menu.findItem(R.id.procesion_menu).isVisible=true
+            menu.findItem(R.id.txapela_menu).isVisible=true
+            menu.findItem(R.id.san_felipe_menu).isVisible=true
+            menu.findItem(R.id.putxero_menu).isVisible=true
+        }else{
+            menu.findItem(R.id.puente_admin).isVisible=false
+            menu.findItem(R.id.kolitxa_menu).isVisible=false
+            menu.findItem(R.id.jauregi_menu).isVisible=false
+            menu.findItem(R.id.procesion_menu).isVisible=false
+            menu.findItem(R.id.txapela_menu).isVisible=false
+            menu.findItem(R.id.san_felipe_menu).isVisible=false
+            menu.findItem(R.id.putxero_menu).isVisible=false
+        }
+*/
+
         mapView =binding.mapa
         //Binding
         mapView!!.onCreate(mapViewBundle)
@@ -52,7 +81,9 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
        // binding.toolbar.inflateMenu(R.menu.menu_admin)
 
         binding.floatingActionButton.setOnClickListener {
+
          binding.drawerLayout.openDrawer(GravityCompat.START)
+
         }
         navigationView.setNavigationItemSelectedListener(this)
 
@@ -177,7 +208,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.puente_admin -> {abrirActivityMenu("a_juegos","puente")
-                                  binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                                  binding.drawerLayout.closeDrawer(GravityCompat.START)}
             R.id.kolitxa_menu -> {abrirActivityMenu("a_juegos","kolitza")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.jauregi_menu ->  {abrirActivityMenu("a_juegos","jauregi")
@@ -191,9 +222,9 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             R.id.putxero_menu -> {abrirActivityMenu("a_juegos","puchero")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.acerca_de_menu -> {abrirActivityMenu("a_acercade","puchero")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
-            R.id.modo_profesor -> {Toast.makeText(this, "Falta hacer", Toast.LENGTH_SHORT).show()
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                                   binding.drawerLayout.closeDrawer(GravityCompat.START)
+                Toast.makeText(this, "dsfs", Toast.LENGTH_SHORT).show()}
+            R.id.modo_profesor_menuAdmin -> { modo_porfesor()  }
             R.id.desconectar_menu -> {abrirActivityMenu("MainActivity","")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
         }
@@ -205,6 +236,35 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         val intent=Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+    private fun modo_porfesor(){
+        val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
+
+        AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogo_profesor,null))
+            .setPositiveButton(R.string.continuar,
+                DialogInterface.OnClickListener { dialog, id ->
+                    if (contraseña==aaaaa11111){
+                        //la movida del saredapp
+
+                    }else{
+
+                    }
+                    dialog.dismiss()
+                    // sign in the user ...
+                })
+            .setNeutralButton(R.string.cancel,
+                DialogInterface.OnClickListener { dialog, id ->
+
+
+
+                    dialog.dismiss()
+                    // sign in the user ...
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+
     }
 }
 

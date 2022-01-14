@@ -3,6 +3,7 @@ package com.example.balmapp
 import android.content.Context
 import android.content.SharedPreferences
 
+
 class Partida(context: Context) {
     private val PREFS_NAME = "com.example.balmapp.sharedpreferences"
     private val SHARED_NAME = "shared_name3"
