@@ -65,7 +65,7 @@ class f_putxero_juego : Fragment() {
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
 
-        Toast.makeText(requireContext(), moveLefttoRight.duration.toString() , Toast.LENGTH_SHORT).show()
+        //Toast.makeText(requireContext(), moveLefttoRight.duration.toString() , Toast.LENGTH_SHORT).show()
         binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)

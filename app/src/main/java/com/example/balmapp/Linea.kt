@@ -12,6 +12,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.core.view.isGone
 import androidx.fragment.app.FragmentActivity
@@ -29,7 +30,8 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
     var rby=0f
     lateinit var button: Button
     lateinit var texto:TextView
-    lateinit var txtfin:TextView
+     var txtfin:TextView?=null
+     var scroll: ScrollView?=null
     lateinit var layoutInflater: LayoutInflater
     lateinit var activity: FragmentActivity
     lateinit var view: View
@@ -62,8 +64,14 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                         mPaint.color=Color.GREEN
                         NavFrag.terminado_unir=true
                         dentro=true
-                        endX=txtfin!!.x 
-                        endY=txtfin!!.y + (txtfin!!.height/2)
+                        if(scroll!=null && txtfin==null){
+                            endX=scroll!!.x + (scroll!!.width/2)
+                            endY=scroll!!.y + (scroll!!.height/2)
+                        }else{
+                            endX=txtfin!!.x + (txtfin!!.width/2)
+                            endY=txtfin!!.y + (txtfin!!.height/2)
+                        }
+
                         //img.background=resources.getDrawable(R.drawable.borde)
                         //button.isClickable=false
                         texto.isClickable=false

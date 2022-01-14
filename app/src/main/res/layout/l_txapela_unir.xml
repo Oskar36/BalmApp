@@ -102,70 +102,71 @@
         app:layout_constraintVertical_bias="0.853"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen3"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="528dp"
-        android:src="@drawable/txapelaimagen4"
+        android:background="@drawable/txapelaimagen4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen2"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="428dp"
-        android:src="@drawable/txapelaimagen3"
+        android:background="@drawable/txapelaimagen3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen4"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="228dp"
-        android:src="@drawable/txapelaimagen1"
+        android:background="@drawable/txapelaimagen1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen1"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="328dp"
-        android:src="@drawable/txapelaimagen2"
+        android:background="@drawable/txapelaimagen2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ScrollView
         android:id="@+id/scrollView5"
         android:layout_width="100dp"
         android:layout_height="92dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglogo">
 
         <LinearLayout
+            android:id="@+id/li1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txt1_unir"
+                style="@style/txt_unir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/txt_unir"
-                android:text="@string/txt1_unir"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/txt1_unir" />
         </LinearLayout>
     </ScrollView>
 
@@ -180,16 +181,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/li2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txt2_unir"
+                style="@style/txt_unir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt2_unir"
-                style="@style/txt_unir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -208,16 +210,17 @@
         app:layout_constraintVertical_bias="0.68">
 
         <LinearLayout
+            android:id="@+id/li3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txt3_unir"
+                style="@style/txt_unir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt3_unir"
-                style="@style/txt_unir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -225,6 +228,7 @@
     </ScrollView>
 
     <ScrollView
+        android:id="@+id/scrollView8"
         android:layout_width="100dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -235,16 +239,17 @@
         app:layout_constraintVertical_bias="0.86">
 
         <LinearLayout
+            android:id="@+id/li4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txt4_unir"
+                style="@style/txt_unir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt4_unir"
-                style="@style/txt_unir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

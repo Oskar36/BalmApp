@@ -8,9 +8,6 @@
     tools:context=".f_juego_txapela_unir">
 
     tools:viewBindingIgnore="true"
-
-
-
     <TextView
         android:id="@+id/txttxapela_juego_explicacion_titulo"
         android:layout_width="wrap_content"
@@ -92,50 +89,54 @@
         app:layout_constraintVertical_bias="0.83"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen6"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/txapelaimagen7"
+        android:background="@drawable/txapelaimagen7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintVertical_bias="0.383"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen8"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/txapelaimagen5"
+        android:background="@drawable/txapelaimagen5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintVertical_bias="0.174"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen7"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/txapelaimagen6"
+        android:background="@drawable/txapelaimagen6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.605"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 
-    <ImageView
+    <Button
         android:id="@+id/txapelaimagen"
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/txapelaimagen8"
+        android:background="@drawable/txapelaimagen8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+        app:layout_constraintVertical_bias="0.843"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <ScrollView
         android:id="@+id/scrollView5"

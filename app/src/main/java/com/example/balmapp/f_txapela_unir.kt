@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.ScrollView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isGone
 import com.example.balmapp.databinding.LTxapelaUnirBinding
 
 
@@ -19,7 +23,7 @@ private var mediaplayeraudio2: MediaPlayer? = null
 private var mediaplayeraudio3: MediaPlayer? = null
 private var mediaplayeraudio4: MediaPlayer? = null
 private var mediaplayer_azal: MediaPlayer? = null
-
+private var linea: Linea? =null
 class f_juego_txapela_unir : Fragment() {
 
     override fun onCreateView(
@@ -32,14 +36,13 @@ class f_juego_txapela_unir : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        NavFrag.contador=4
         binding.btnsiguiente.setOnClickListener{
             val fragment:Fragment=f_txapelaunir2()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
         }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
-
-
         //parar animacion cuando pare el audio
         //    mediaplayer!!.setOnCompletionListener {
          //   NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
@@ -68,10 +71,39 @@ class f_juego_txapela_unir : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imglogo)
             }
         }
-
-
+        binding.txapelaimagen4.setOnClickListener{
+            crearLinea(binding.txapelaimagen4,binding.txt1Unir, binding.scrollView5)
+        }
+        binding.txapelaimagen1.setOnClickListener{
+            crearLinea(binding.txapelaimagen1,binding.txt2Unir,binding.scrollView6)
+        }
+        binding.txapelaimagen2.setOnClickListener{
+            crearLinea(binding.txapelaimagen2,binding.txt3Unir,binding.scrollView7)
+        }
+        binding.txapelaimagen3.setOnClickListener{
+            crearLinea(binding.txapelaimagen3,binding.txt4Unir,binding.scrollView8)
+        }
     }
-
+    private fun crearLinea(txtinicion: TextView, textfin:TextView,scrollView: ScrollView){
+        if(linea!=null && !NavFrag.terminado_unir){
+            linea!!.isGone=true
+        }
+        linea=Linea(requireContext())
+        binding.frameLayout7.addView(linea)
+        linea!!.startX=txtinicion.x + txtinicion.width
+        linea!!.startY=txtinicion.y + (txtinicion.height/2)
+        linea!!.endX=txtinicion.x + txtinicion.width+30
+        linea!!.endY=txtinicion.y + (txtinicion.height/2)
+        linea!!.rbx=scrollView.x
+        linea!!.rby=scrollView.y
+        linea!!.scroll=scrollView
+        //linea!!.txtfin=textfin
+        linea!!.texto=txtinicion!!
+        linea!!.layoutInflater=layoutInflater
+        linea!!.activity=requireActivity()
+        linea!!.view=((view as ViewGroup).parent as View)
+        NavFrag.terminado_unir=false
+    }
     override fun onResume() {
         super.onResume()
         mediaplayeraudio1 = MediaPlayer.create(context, R.raw.txapelaaudio1)
