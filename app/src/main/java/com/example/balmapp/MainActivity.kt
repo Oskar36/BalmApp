@@ -47,20 +47,24 @@ class MainActivity : AppCompatActivity() {
 //se controla la pulsación del boton atras
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
     var cerrar1 = false
-    android.app.AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
-        .setView(layoutInflater.inflate(R.layout.l_dialogo_cerrar, null))
-        .setPositiveButton(R.string.si,
-            DialogInterface.OnClickListener { dialog, id ->
-                finish()
-                cerrar1 = super.onKeyDown(keyCode, event)
-            })
-        .setNeutralButton(R.string.cancel,
-            DialogInterface.OnClickListener { dialog, id ->
-                dialog.dismiss()
-            })
-        .setCancelable(false)
-        .create()
-        .show()
+    if (NavFrag.pantalla_inicio){
+        android.app.AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_dialogo_cerrar, null))
+            .setPositiveButton(R.string.si,
+                DialogInterface.OnClickListener { dialog, id ->
+                    finish()
+                    cerrar1 = super.onKeyDown(keyCode, event)
+                })
+            .setNeutralButton(R.string.cancel,
+                DialogInterface.OnClickListener { dialog, id ->
+                    dialog.dismiss()
+                })
+            .setCancelable(false)
+            .create()
+            .show()
+    }else{
+        cerrar1 = super.onKeyDown(keyCode, event)
+    }
         return cerrar1
     }
 

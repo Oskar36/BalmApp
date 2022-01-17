@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.SystemClock
 import android.provider.MediaStore
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,26 +31,20 @@ class f_modo : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        NavFrag.pantalla_inicio=true
         binding.btnmodoLibre.setOnClickListener{
             Sharedapp.partida.partida=""
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
             requireActivity().finish()
         }
-
         binding.btnmodoGuiado.setOnClickListener{
             val fragment:Fragment=f_apodo()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
         }
-
         if(Locale.getDefault().language.equals("es")){
             binding.cartelImg.setBackgroundResource(R.drawable.inicio)
         }else{
             binding.cartelImg.setBackgroundResource(R.drawable.hasiera)
         }
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 }

@@ -26,6 +26,7 @@ class NavFrag {
         var atras_lugar=""
         var idioma=""
         var contador=0
+        var pantalla_inicio=true
         var terminado_unir=false
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment

@@ -17,31 +17,18 @@ private  lateinit var database: FirebaseFirestore
 class f_partida : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        NavFrag.pantalla_inicio=false
         if (Sharedapp.usuario.usuario == "Nuevo"){
             binding.btnpartidaContinuar.isVisible=false
         }
       binding.btnpartidaNueva.setOnClickListener{
-          database = FirebaseFirestore.getInstance()
-          if(Sharedapp.usuario.usuario == "Nuevo"){
-              BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
+          Toast.makeText(requireContext(), Sharedapp.usuario.usuario, Toast.LENGTH_SHORT).show()
+          BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
               NavFrag.IniciarActivity(requireContext(),"a_mapa")
-              //requireActivity().finish()
-          }else{
-              var doc=database.collection("partidas")
-                  .document()
-              doc.get()
-                  .addOnSuccessListener { document ->
-                      if(document.exists()){
-                          BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
-                          NavFrag.IniciarActivity(requireContext(),"a_mapa")
-                          requireActivity().finish()
-                      }
-                  }
-          }
+              requireActivity().finish()
       }
         binding.btnpartidaContinuar.setOnClickListener{
-            Sharedapp.partida.partida=""
-            BD.actualizarPartida(Sharedapp.nombre.nombre,"0","0",true)
+            BD.cargarPartida(Sharedapp.nombre.nombre)
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
             requireActivity().finish()
         }
