@@ -63,16 +63,6 @@ class f_kolitza_juego_sopaletras : Fragment() {
         params.height = resources.displayMetrics.widthPixels
         binding.wordsGrid.layoutParams = params
         generateRandomLetters()
-        binding.btnsiguienteJuego.setOnClickListener{
-            //paramos el audio
-            mediaplayer!!.stop()
-            Sharedapp.gune.gune="2.Gunea 1"
-            mostrarDialogoPersonalizado()
-           /* val fragment:Fragment=f_fin_intermedio()
-            NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
-
-
-        }
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -461,7 +451,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
         private fun wordarray():Array<String>{
             val words:Array<String>
             if(Locale.getDefault().language=="es"){
-                words = arrayOf("PASCUA", "CUMBRE", "ALMUERZO", "PENTECOSTES","ERMITA","PEREGRINAJE")
+                words = arrayOf("PASCUA", "CUMBRE", "ALMUERZO", "PENTECOSTE","ERMITA","PEREGRINO")
             }else{
                 words = arrayOf("ERMITA", "TONTORRA", "PAZKOA", "PENTEKOSTE","ERROMERIA","BAZKARIA")
             }

@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.provider.MediaStore
 import android.view.MenuItem
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
@@ -239,18 +240,15 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     }
     private fun modo_porfesor(){
         val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
-
+        val input = EditText(this)
         AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogo_profesor,null))
             .setPositiveButton(R.string.continuar,
+
                 DialogInterface.OnClickListener { dialog, id ->
-                    if (contraseña==aaaaa11111){
-                        //la movida del saredapp
-
-                    }else{
-
-                    }
-                    dialog.dismiss()
+                    var si = input.text
+                    Toast.makeText(this, "$si", Toast.LENGTH_SHORT).show()
+                   // dialog.dismiss()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.cancel,
