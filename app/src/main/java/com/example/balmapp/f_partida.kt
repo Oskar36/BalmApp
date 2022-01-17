@@ -18,6 +18,7 @@ class f_partida : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.pantalla_inicio=false
+        Sharedapp.partida.partida="guiado"
         if (Sharedapp.usuario.usuario == "Nuevo"){
             binding.btnpartidaContinuar.isVisible=false
         }
@@ -32,6 +33,8 @@ class f_partida : Fragment() {
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
             requireActivity().finish()
         }
+
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

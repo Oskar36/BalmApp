@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
 import android.provider.MediaStore
+import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.Toast
@@ -53,10 +54,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         navigationView.bringToFront()
         var menu=navigationView.menu
 
-
-
-        //si el saredapp es profesor
-        /*if(){
+        if(Sharedapp.partida.partida=="profesor"){
             menu.findItem(R.id.puente_admin).isVisible=true
             menu.findItem(R.id.kolitxa_menu).isVisible=true
             menu.findItem(R.id.jauregi_menu).isVisible=true
@@ -64,7 +62,9 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             menu.findItem(R.id.txapela_menu).isVisible=true
             menu.findItem(R.id.san_felipe_menu).isVisible=true
             menu.findItem(R.id.putxero_menu).isVisible=true
+
         }else{
+            Toast.makeText(this, "${Sharedapp.partida.partida}", Toast.LENGTH_SHORT).show()
             menu.findItem(R.id.puente_admin).isVisible=false
             menu.findItem(R.id.kolitxa_menu).isVisible=false
             menu.findItem(R.id.jauregi_menu).isVisible=false
@@ -73,7 +73,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             menu.findItem(R.id.san_felipe_menu).isVisible=false
             menu.findItem(R.id.putxero_menu).isVisible=false
         }
-*/
+
 
         mapView =binding.mapa
         //Binding
@@ -240,15 +240,31 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     }
     private fun modo_porfesor(){
         val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
-        val input = EditText(this)
-        AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
-            .setView(layoutInflater.inflate(R.layout.l_dialogo_profesor,null))
+
+
+       var dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
+
+        var view = LayoutInflater.from(this).inflate(R.layout.l_dialogo_profesor, null)
+
+        dialog
+            .setView(view)
             .setPositiveButton(R.string.continuar,
 
                 DialogInterface.OnClickListener { dialog, id ->
-                    var si = input.text
-                    Toast.makeText(this, "$si", Toast.LENGTH_SHORT).show()
-                   // dialog.dismiss()
+                    val no = view.findViewById<EditText>(R.id.contraseña)
+                    val contraseña= no?.text?.toString() ?: " "
+
+                    if (contraseña.trim()=="123456Aa"){
+                        Sharedapp.partida.partida="profesor"
+
+                        finish()
+                        NavFrag.IniciarActivity(this,"a_mapa")
+
+                    }
+
+
+
+                     dialog.dismiss()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.cancel,

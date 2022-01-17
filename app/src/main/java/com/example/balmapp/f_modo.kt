@@ -33,7 +33,7 @@ class f_modo : Fragment() {
         super.onActivityCreated(savedInstanceState)
         NavFrag.pantalla_inicio=true
         binding.btnmodoLibre.setOnClickListener{
-            Sharedapp.partida.partida=""
+            Sharedapp.partida.partida="libre"
             NavFrag.IniciarActivity(requireContext(),"a_mapa")
             requireActivity().finish()
         }
@@ -46,5 +46,6 @@ class f_modo : Fragment() {
         }else{
             binding.cartelImg.setBackgroundResource(R.drawable.hasiera)
         }
+
     }
 }
