@@ -12,7 +12,6 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -64,7 +63,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             menu.findItem(R.id.putxero_menu).isVisible=true
 
         }else{
-            Toast.makeText(this, "${Sharedapp.partida.partida}", Toast.LENGTH_SHORT).show()
+
             menu.findItem(R.id.puente_admin).isVisible=false
             menu.findItem(R.id.kolitxa_menu).isVisible=false
             menu.findItem(R.id.jauregi_menu).isVisible=false
@@ -153,22 +152,25 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             MarcadorJuego(marker.title.toString())
             true
          }
-        gmap!!.isMyLocationEnabled=true
-        gmap!!.uiSettings.isZoomControlsEnabled=true
-        gmap!!.uiSettings.isCompassEnabled=true
-        //Cuando se aceptan los permisos
-        fusedLocation.lastLocation.addOnSuccessListener {
-            if (it != null) {
-                val ubicacion = LatLng(it.latitude, it.longitude)
-                gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
-            }
+        if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="profesor"){
+            gmap!!.isMyLocationEnabled=true
+            gmap!!.uiSettings.isZoomControlsEnabled=true
+            gmap!!.uiSettings.isCompassEnabled=true
+            //Cuando se aceptan los permisos
+            fusedLocation.lastLocation.addOnSuccessListener {
+                if (it != null) {
+                    val ubicacion = LatLng(it.latitude, it.longitude)
+                    gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
+                }
 
+            }
+            //Localización a tiempo real
+            gmap!!.setOnMyLocationChangeListener{
+                val ubicacion = LatLng(it.latitude, it.longitude)
+                gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
+            }
         }
-        //Localización a tiempo real
-        gmap!!.setOnMyLocationChangeListener{
-            val ubicacion = LatLng(it.latitude, it.longitude)
-            gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
-        }
+
     }
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
@@ -224,7 +226,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.acerca_de_menu -> {abrirActivityMenu("a_acercade","puchero")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START)
-                Toast.makeText(this, "dsfs", Toast.LENGTH_SHORT).show()}
+              }
             R.id.modo_profesor_menuAdmin -> { modo_porfesor()  }
             R.id.desconectar_menu -> {abrirActivityMenu("MainActivity","")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
