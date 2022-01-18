@@ -104,6 +104,7 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
         mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         mPaint.style = Paint.Style.STROKE
         mPaint.color = Color.RED
+        mPaint.strokeWidth=10f
     }
 
 }

@@ -28,6 +28,7 @@ class NavFrag {
         var contador=0
         var pantalla_inicio=true
         var terminado_unir=false
+        var gune=0
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){

@@ -38,13 +38,7 @@ class f_txapelaunir2 : Fragment() {
         super.onActivityCreated(savedInstanceState)
         NavFrag.contador=4
         NavFrag.atras_lugar="Juego2"
-        binding.btnsiguiente.setOnClickListener {
-            Sharedapp.gune.gune = "5.Gunea"
-            mostrarDialogoPersonalizado()
-        }
-
-
-
+        Sharedapp.gune.gune="5.Gunea"
         //parar animacion cuando pare el audio
         //    mediaplayer!!.setOnCompletionListener {
         //   NavFrag.animacion_dantzaris_parar(binding.imglogo)        }

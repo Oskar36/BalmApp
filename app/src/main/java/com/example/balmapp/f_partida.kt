@@ -23,8 +23,8 @@ class f_partida : Fragment() {
             binding.btnpartidaContinuar.isVisible=false
         }
       binding.btnpartidaNueva.setOnClickListener{
-          Toast.makeText(requireContext(), Sharedapp.usuario.usuario, Toast.LENGTH_SHORT).show()
           BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
+          BD.cargarPartida(Sharedapp.nombre.nombre)
               NavFrag.IniciarActivity(requireContext(),"a_mapa")
               requireActivity().finish()
       }
@@ -43,9 +43,5 @@ class f_partida : Fragment() {
         // Inflate the layout for this fragment
         _binding = LPartidaBinding.inflate(inflater, container, false)
         return  binding.root
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

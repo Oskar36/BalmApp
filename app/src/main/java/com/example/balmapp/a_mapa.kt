@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.BitmapFactory
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
@@ -12,6 +13,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -25,6 +27,7 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.navigation.NavigationBarItemView
 import com.google.android.material.navigation.NavigationView
@@ -37,12 +40,15 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     private lateinit var fusedLocation: FusedLocationProviderClient
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-
+    private var marcadores:MutableList<MarkerOptions> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LMapaBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        if(marcadores.size!=0){
+            marcadores.removeAll(marcadores)
+        }
         fusedLocation= LocationServices.getFusedLocationProviderClient(this)
         var mapViewBundle: Bundle? = null
         if (savedInstanceState != null) {
@@ -152,7 +158,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             MarcadorJuego(marker.title.toString())
             true
          }
-        if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="profesor"){
+        if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="libre"){
             gmap!!.isMyLocationEnabled=true
             gmap!!.uiSettings.isZoomControlsEnabled=true
             gmap!!.uiSettings.isCompassEnabled=true
@@ -162,20 +168,31 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                     val ubicacion = LatLng(it.latitude, it.longitude)
                     gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
                 }
-
             }
             //Localización a tiempo real
             gmap!!.setOnMyLocationChangeListener{
                 val ubicacion = LatLng(it.latitude, it.longitude)
                 gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
+                comprobarubicacion(it)
             }
         }
-
+    }
+    private fun comprobarubicacion(location: Location) {
+        var localizacion=marcadores[NavFrag.gune].position
+        var location_gune=Location("a")
+        location_gune.latitude=localizacion.latitude
+        location_gune.longitude=localizacion.longitude
+        if(location.distanceTo(location_gune)<=50){
+            Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+        }
     }
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
         marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         mapa.addMarker(marcador)
+        marcadores.add(marcador)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -251,7 +268,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         dialog
             .setView(view)
             .setPositiveButton(R.string.continuar,
-
                 DialogInterface.OnClickListener { dialog, id ->
                     val no = view.findViewById<EditText>(R.id.contraseña)
                     val contraseña= no?.text?.toString() ?: " "
