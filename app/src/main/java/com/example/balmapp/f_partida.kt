@@ -19,9 +19,6 @@ class f_partida : Fragment() {
         super.onActivityCreated(savedInstanceState)
         NavFrag.pantalla_inicio=false
         Sharedapp.partida.partida="guiado"
-        if (Sharedapp.usuario.usuario == "Nuevo"){
-            binding.btnpartidaContinuar.isVisible=false
-        }
       binding.btnpartidaNueva.setOnClickListener{
           BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
           BD.cargarPartida(Sharedapp.nombre.nombre)

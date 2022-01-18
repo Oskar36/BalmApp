@@ -87,9 +87,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
        // binding.toolbar.inflateMenu(R.menu.menu_admin)
 
         binding.floatingActionButton.setOnClickListener {
-
          binding.drawerLayout.openDrawer(GravityCompat.START)
-
         }
         navigationView.setNavigationItemSelectedListener(this)
 
@@ -173,29 +171,63 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             gmap!!.setOnMyLocationChangeListener{
                 val ubicacion = LatLng(it.latitude, it.longitude)
                 gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
-                comprobarubicacion(it)
+                comprobarubicacion(it,Sharedapp.partida.partida)
             }
         }
     }
-    private fun comprobarubicacion(location: Location) {
+    private fun comprobarubicacion(location: Location, modo:String) {
         var localizacion=marcadores[NavFrag.gune].position
         var location_gune=Location("a")
         location_gune.latitude=localizacion.latitude
         location_gune.longitude=localizacion.longitude
-        if(location.distanceTo(location_gune)<=50){
-            Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show()
-        }else{
-            Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+        if(modo=="guiado"){
+            if(location.distanceTo(location_gune)<=50){
+                Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+            }
+        }else if(modo=="libre"){
+            for (i in 0 .. marcadores.size){
+                localizacion=marcadores[i].position
+                location_gune=Location("a")
+                location_gune.latitude=localizacion.latitude
+                location_gune.longitude=localizacion.longitude
+                if(location.distanceTo(location_gune)<=50){
+                    marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                    break
+                }else{
+                    Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+    }
+    private fun MarcadorJuego(gune: String){
+        when (gune){
+            "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
+            "2.Gunea helmuga" ->      abrirActivityMenu("a_juegos","kolitza")
+            "3.Gunea" ->      abrirActivityMenu("a_juegos","jauregi")
+            "4.Gunea" ->    abrirActivityMenu("a_juegos","procesion")
+            "5.Gunea helmuga" ->      abrirActivityMenu("a_juegos","boina")
+            "6.Gunea" ->   abrirActivityMenu("a_juegos","san felipe")
+            "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
         }
     }
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
-        marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        if(Sharedapp.partida.partida=="guiado"){
+            marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        }else if(Sharedapp.partida.partida=="libre"){
+            marcador.icon(BitmapDescriptorFactory.defaultMarker(R.color.gris as Float))
+        }else{
+            for (i in 0 .. (Sharedapp.gune.gune.toInt())){
+
+            }
+        }
         mapa.addMarker(marcador)
         marcadores.add(marcador)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         when (item.itemId){
             R.id.puente_admin ->      abrirActivityMenu("a_juegos","puente")
             R.id.kolitxa_menu ->      abrirActivityMenu("a_juegos","kolitza")
@@ -213,17 +245,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
     }
-    private fun MarcadorJuego(gune: String){
-        when (gune){
-            "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
-            "2.Gunea helmuga" ->      abrirActivityMenu("a_juegos","kolitza")
-            "3.Gunea" ->      abrirActivityMenu("a_juegos","jauregi")
-            "4.Gunea" ->    abrirActivityMenu("a_juegos","procesion")
-            "5.Gunea helmuga" ->      abrirActivityMenu("a_juegos","boina")
-            "6.Gunea" ->   abrirActivityMenu("a_juegos","san felipe")
-            "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
-        }
-    }
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -260,43 +282,32 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     private fun modo_porfesor(){
         val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
 
-
-       var dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
-
+        var dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
         var view = LayoutInflater.from(this).inflate(R.layout.l_dialogo_profesor, null)
-
         dialog
             .setView(view)
             .setPositiveButton(R.string.continuar,
                 DialogInterface.OnClickListener { dialog, id ->
                     val no = view.findViewById<EditText>(R.id.contraseña)
                     val contraseña= no?.text?.toString() ?: " "
-
                     if (contraseña.trim()=="123456Aa"){
                         Sharedapp.partida.partida="profesor"
-
                         finish()
                         NavFrag.IniciarActivity(this,"a_mapa")
-
+                        dialog.dismiss()
+                    }else{
+                        Toast.makeText(this, R.string.pasahitzavacia, Toast.LENGTH_SHORT).show()
                     }
-
-
-
-                     dialog.dismiss()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.cancel,
                 DialogInterface.OnClickListener { dialog, id ->
-
-
-
-                    dialog.dismiss()
+                   dialog.dismiss()
                     // sign in the user ...
                 })
             .setCancelable(false)
             .create()
             .show()
-
     }
 }
 

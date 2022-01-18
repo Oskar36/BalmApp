@@ -32,7 +32,7 @@
 
     <string name="puente">ZUBI ZAHARRA</string>
 
-    <string name="kolitxa">KOLITXA MENDIA</string>
+    <string name="kolitxa">KOLITZA MENDIA</string>
 
     <string name="jauregi">HORCASITAS JAUREGIA</string>
 
@@ -283,4 +283,6 @@
     <string name="txtpuente_puzzle_titulo">ZUBIAREN PUZZLEA</string>
 
     <string name="contraseña">Pasahitza</string>
+
+    <string name="pasahitzavacia">Pasahitza ez da egokia edo hutsik dago</string>
 </resources>

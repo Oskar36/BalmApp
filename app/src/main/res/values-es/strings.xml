@@ -219,7 +219,7 @@
 
     <string name="apodocompr">El apodo ya existe.</string>
 
-    <string name="camposvacios">El apodo no puede estar.</string>
+    <string name="camposvacios">El apodo no puede estar vacio</string>
 
     <string name="nuevapartida">¿QUIERES EMPEZAR NUEVA PARTIDA?</string>
 
@@ -276,4 +276,6 @@
     <string name="txtpuente_puzzle_titulo">PUZZLE DEL PUENTE</string>
 
     <string name="contraseña">Contraseña</string>
+
+    <string name="pasahitzavacia">La contraseña es incorrecta o esta vacia</string>
 </resources>

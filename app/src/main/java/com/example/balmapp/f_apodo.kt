@@ -35,14 +35,13 @@ class f_apodo : Fragment() {
             doc.get()
                 .addOnSuccessListener { document ->
                     if(document.exists()){
-                        Sharedapp.usuario.usuario=" "
                         val fragment:Fragment=f_partida()
                         NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
                     }else{
-                        Sharedapp.usuario.usuario="Nuevo"
                         BD.insertarApodo(binding.txtapodoApodo.text.toString().toLowerCase())
-                        val fragment:Fragment=f_partida()
-                        NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
+                        Sharedapp.partida.partida="guiado"
+                        NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                        requireActivity().finish()
                     }
                 }
                 .addOnFailureListener(){
