@@ -14,12 +14,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isGone
 import com.example.balmapp.databinding.LJauregiUnirBinding
+import org.w3c.dom.Text
 
 
 private var _binding: LJauregiUnirBinding? = null
 private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 private var linea: Linea? =null
+
 
 class f_jauregi_unirjuego : Fragment() {
 
@@ -70,6 +72,7 @@ class f_jauregi_unirjuego : Fragment() {
         binding.txtTextoFatxada.setOnClickListener{
             crearLinea(binding.txtTextoFatxada,binding.txtTextoGambara)
         }
+
     }
 
     private fun crearLinea(txtinicion:TextView, textfin:TextView){

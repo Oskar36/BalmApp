@@ -24,6 +24,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import android.media.AudioManager
+import android.media.ToneGenerator.MAX_VOLUME
 import android.os.Handler
 
 
@@ -107,6 +108,7 @@ class f_putxero_juego : Fragment() {
                 binding.imgZanahoria.setOnTouchListener(touchListener)
                 binding.imgTomate.setOnTouchListener(touchListener)
                 mediaplayerTren!!.start()
+                mediaplayerTren!!.setVolume(0.7F, 0.7F)
                 saltar=true
                 terminar=true
 
