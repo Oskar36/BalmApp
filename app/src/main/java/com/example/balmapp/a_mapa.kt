@@ -182,9 +182,9 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         location_gune.longitude=localizacion.longitude
         if(modo=="guiado"){
             if(location.distanceTo(location_gune)<=50){
-                Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show()
+               // Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
             }
         }else if(modo=="libre"){
             for (i in 0 .. marcadores.size){
@@ -196,7 +196,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                     marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                     break
                 }else{
-                    Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -215,13 +215,18 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     }
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
-        if(Sharedapp.partida.partida=="guiado"){
+        if(Sharedapp.partida.partida=="profesor"){
             marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         }else if(Sharedapp.partida.partida=="libre"){
-            marcador.icon(BitmapDescriptorFactory.defaultMarker(R.color.gris as Float))
-        }else{
-            for (i in 0 .. (Sharedapp.gune.gune.toInt())){
 
+            marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+        }else{
+            if(NavFrag.gune<marcadores.size){
+                marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+            }else if(NavFrag.gune==marcadores.size){
+                marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+            }else{
+                marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
             }
         }
         mapa.addMarker(marcador)
