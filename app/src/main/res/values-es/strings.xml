@@ -61,7 +61,7 @@
 
     <string name="putxero">PUCHERA</string>
 
-    <string name="txtkolitza_juego_explicacion_titulo">UNE LAS IMAGENES CON LAS PALABRAS</string>
+    <string name="txtkolitza_juego_explicacion_titulo">UNE LOS BOTONES CON LAS PALABRAS</string>
 
     <string name="txttxapela_juego_explicacion_titulo">UNE LAS IMAGENES CON LOS AUDIOS</string>
 
@@ -278,4 +278,8 @@
     <string name="contraseña">Contraseña</string>
 
     <string name="pasahitzavacia">La contraseña es incorrecta o esta vacia</string>
+
+    <string name="fin">¡Enhorabuena! ¡Habéis conseguido terminar el recorrido!</string>
+
+    <string name="Salir">Salir</string>
 </resources>

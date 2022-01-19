@@ -15,9 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BalmApp">
         <activity
+            android:name=".a_findejuego"
+            android:exported="false" />
+        <activity
             android:name=".a_juegos"
             android:exported="true"
-            android:screenOrientation="portrait"  />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".a_acercade"
             android:exported="true" />
@@ -30,16 +33,16 @@
             android:name=".a_mapa"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.BalmApp"/>
+            android:theme="@style/Theme.BalmApp" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".splash"
             android:exported="true"
-            android:theme="@style/splashTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/splashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

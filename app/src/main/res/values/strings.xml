@@ -46,7 +46,7 @@
 
     <string name="procesion_explicacion">PROZESIOAREN HISTORIA</string>
 
-    <string name="txtkolitza_juego_explicacion_titulo">LOTU IRUDIAK HITZEKIN</string>
+    <string name="txtkolitza_juego_explicacion_titulo">LOTU BOTOIAK HITZEKIN</string>
 
     <string name="txttxapela_juego_explicacion_titulo">LOTU IRUDIAK AUDIOEKIN</string>
 
@@ -285,4 +285,8 @@
     <string name="contraseña">Pasahitza</string>
 
     <string name="pasahitzavacia">Pasahitza ez da egokia edo hutsik dago</string>
+
+    <string name="fin">Zorionak! Ibilbidea amaitzea lortu duzue!</string>
+
+    <string name="Salir">Atera</string>
 </resources>
