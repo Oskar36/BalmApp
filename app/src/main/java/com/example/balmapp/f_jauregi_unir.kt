@@ -22,14 +22,16 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 private var linea: Linea? =null
 
-
 class f_jauregi_unirjuego : Fragment() {
-
+    val posiciones  = mutableListOf <Int>()
+    val posiciones2 = mutableListOf<TextView> ()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
+
+
         _binding = LJauregiUnirBinding.inflate(inflater, container, false)
         return  binding.root
     }
@@ -60,6 +62,15 @@ class f_jauregi_unirjuego : Fragment() {
             }
         }
 
+       /* sacar_y(binding.txtTextoGelakEgongelak)
+       sacar_y(binding.txtTextoGelakEgongelak)
+        sacar_y(binding.txtTextoBalkoi)
+        sacar_y(binding.txtTextoSotoa)
+        sacar_y(binding.txtTextoGambara)
+        posiciones.shuffle()
+        posiciones2.forEach{
+            it.y= posiciones[posiciones2.indexOf(it)].toFloat()
+        }*/
         binding.txtTextoBehekoSolairuak.setOnClickListener{
             crearLinea(binding.txtTextoBehekoSolairuak,binding.txtTextoGelakEgongelak)
         }
@@ -74,7 +85,6 @@ class f_jauregi_unirjuego : Fragment() {
         }
 
     }
-
     private fun crearLinea(txtinicion:TextView, textfin:TextView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true
@@ -125,4 +135,10 @@ class f_jauregi_unirjuego : Fragment() {
             .show()
 
     }
+    /*fun sacar_y(txt: TextView){
+        posiciones2.add(txt)
+        posiciones.add((txt.y).toInt())
+        Toast.makeText(requireContext(), "${txt.y}", Toast.LENGTH_SHORT).show()
+        binding.txtTextoGelakEgongelak.y
+    }*/
 }

@@ -37,7 +37,7 @@
 
     <string name="puente_explicacion">HISTORIA DEL PUENTE</string>
 
-    <string name="monte_explicacion">HISTORIA DEL MONTE KOLITXA</string>
+    <string name="monte_explicacion">HISTORIA DEL MONTE COLIZA</string>
 
     <string name="jauregi_explicacion">HISTORIA DEL PALACIO HORCASITAS</string>
 
@@ -49,7 +49,7 @@
 
     <string name="puente">PUENTE VIEJO</string>
 
-    <string name="kolitxa">MONTE KOLITXA</string>
+    <string name="kolitxa">MONTE COLIZA</string>
 
     <string name="jauregi">PALACIO HORCASITAS</string>
 
@@ -245,7 +245,7 @@
 
     <string name="juicio">El juicio de Jesus</string>
 
-    <string name="descargar_texto">¿QUIERES DESCARGAR LA IMAGEN??</string>
+    <string name="descargar_texto">¿QUIERES DESCARGAR LA IMAGEN?</string>
 
     <string name="desgargado">Imagen del puzzle descargada</string>
 

@@ -187,7 +187,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                 //Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
             }
         }else if(modo=="libre"){
-            for (i in 0 .. marcadores.size){
+            for (i in 0 .. marcadores.size-1){
                 localizacion=marcadores[i].position
                 location_gune=Location("a")
                 location_gune.latitude=localizacion.latitude
