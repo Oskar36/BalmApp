@@ -68,10 +68,10 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                         NavFrag.terminado_unir=true
                         dentro=true
                         if(scroll!=null && txtfin==null){
-                            endX=scroll!!.x + (scroll!!.width/2)
+                            endX=scroll!!.x 
                             endY=scroll!!.y + (scroll!!.height/2)
                         }else{
-                            endX=txtfin!!.x + (txtfin!!.width/2)
+                            endX=txtfin!!.x
                             endY=txtfin!!.y + (txtfin!!.height/2)
                         }
 
@@ -85,6 +85,10 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                                 NavFrag.replaceFragment(fragment,activity!!,view!!.id,"Juego1")
                             }else{
                                 NavFrag.mostrarDialogoPersonalizado(layoutInflater!!,context!!,activity!!,view!!)
+                                if(Sharedapp.partida.partida=="guiado"){
+                                    NavFrag.gune++
+                                    BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+                                }
                             }
                         }
 

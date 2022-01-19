@@ -8,8 +8,6 @@ import android.graphics.BitmapFactory
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
-import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.EditText
@@ -17,7 +15,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.balmapp.NavFrag.Companion.mostrarDialogoPersonalizado
 import com.example.balmapp.databinding.LMapaBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -27,9 +24,7 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.material.navigation.NavigationBarItemView
 import com.google.android.material.navigation.NavigationView
 
 class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigationItemSelectedListener  {
@@ -40,7 +35,10 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     private lateinit var fusedLocation: FusedLocationProviderClient
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
+    private var enrango=false
+    private var toast1=false
     private var marcadores:MutableList<MarkerOptions> = mutableListOf()
+    private var gunes_activos= mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LMapaBinding.inflate(layoutInflater)
@@ -69,7 +67,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             menu.findItem(R.id.putxero_menu).isVisible=true
 
         }else{
-
             menu.findItem(R.id.puente_admin).isVisible=false
             menu.findItem(R.id.kolitxa_menu).isVisible=false
             menu.findItem(R.id.jauregi_menu).isVisible=false
@@ -137,12 +134,12 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     override fun onMapReady(googleMap: GoogleMap) {
         gmap = googleMap
         insertarGune(LatLng(   43.192611, -3.195056),"1.Gunea","Balmasedako Zubi Zaharra",gmap!!)
-        insertarGune(LatLng(   43.201861, -3.249361),"2.Gunea","Kolitzako igoera",gmap!!)
-        insertarGune(LatLng(   43.199778, -3.214444),"2.Gunea helmuga","Kolitza mendia",gmap!!)
+        //insertarGune(LatLng(   43.201861, -3.249361),"2.Gunea","Kolitzako igoera",gmap!!)
+        insertarGune(LatLng(   43.199778, -3.214444),"2.Gunea ","Kolitza mendia",gmap!!)
         insertarGune(LatLng(   43.194064, -3.194186),"3.Gunea","Horcasitas Jauregia",gmap!!)
         insertarGune(LatLng(   43.192489, -3.197533),"4.Gunea","Aste Santuko Prozesioak",gmap!!)
-        insertarGune(LatLng(   43.176194, -3.212556),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
-        insertarGune(LatLng(    43.188778, -3.200028),"5.Gunea helmuga","Boinas la Encartada Fabrika museoa",gmap!!)
+        //insertarGune(LatLng(   43.176194, -3.212556),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
+        insertarGune(LatLng(    43.188778, -3.200028),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
         insertarGune(LatLng(    43.193611, -3.194861),"6.Gunea","San Felipe y Santiago eguna",gmap!!)
         insertarGune(LatLng(     43.196250, -3.192639),"7.Gunea","Balmasedako zaindariaren jaia: San Severino. Putxerak",gmap!!)
         gmap!!.setMinZoomPreference(12f)
@@ -153,7 +150,21 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             } else {
                 marker.showInfoWindow()
             }
-            MarcadorJuego(marker.title.toString())
+            if (Sharedapp.partida.partida=="guiado"){
+                if(enrango){
+                    MarcadorJuego(marker.title.toString().trim())
+                }
+            }else if(Sharedapp.partida.partida=="libre"){
+                if(gunes_activos.size!=0){
+                    for(i in 0 .. gunes_activos.size){
+                        if (marker.title.equals(gunes_activos[i])){
+                            MarcadorJuego(marker.title.toString().trim())
+                            break
+                        }
+                    }
+                    gunes_activos.removeAll(gunes_activos)
+                }
+            }
             true
          }
         if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="libre"){
@@ -169,8 +180,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             }
             //Localización a tiempo real
             gmap!!.setOnMyLocationChangeListener{
-                val ubicacion = LatLng(it.latitude, it.longitude)
-                gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,20f))
                 comprobarubicacion(it,Sharedapp.partida.partida)
             }
         }
@@ -182,33 +191,45 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         location_gune.longitude=localizacion.longitude
         if(modo=="guiado"){
             if(location.distanceTo(location_gune)<=50){
-               // Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show()
+                enrango=true
+                if(!toast1){
+                    Toast.makeText(this, R.string.iniciarjuego, Toast.LENGTH_SHORT).show()
+                    toast1=true
+                }
             }else{
-                //Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+                enrango=false
+                toast1=false
             }
         }else if(modo=="libre"){
-            for (i in 0 .. marcadores.size-1){
+            for (i in 0 until marcadores.size){
                 localizacion=marcadores[i].position
                 location_gune=Location("a")
                 location_gune.latitude=localizacion.latitude
                 location_gune.longitude=localizacion.longitude
                 if(location.distanceTo(location_gune)<=50){
-                    marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-                    break
+                    //marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                    gunes_activos.add(marcadores[i].title!!)
+                    enrango=true
+                    if(!toast1){
+                        Toast.makeText(this, R.string.iniciarjuego, Toast.LENGTH_SHORT).show()
+                        toast1=true
+                    }
                 }else{
-                    //Toast.makeText(this, "uwu", Toast.LENGTH_SHORT).show()
+                    marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                    enrango=false
                 }
             }
         }
 
     }
     private fun MarcadorJuego(gune: String){
+        //Toast.makeText(this, "$gune", Toast.LENGTH_SHORT).show()
         when (gune){
             "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
-            "2.Gunea helmuga" ->      abrirActivityMenu("a_juegos","kolitza")
+            "2.Gunea" ->      abrirActivityMenu("a_juegos","kolitza")
             "3.Gunea" ->      abrirActivityMenu("a_juegos","jauregi")
             "4.Gunea" ->    abrirActivityMenu("a_juegos","procesion")
-            "5.Gunea helmuga" ->      abrirActivityMenu("a_juegos","boina")
+            "5.Gunea" ->      abrirActivityMenu("a_juegos","boina")
             "6.Gunea" ->   abrirActivityMenu("a_juegos","san felipe")
             "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
         }
@@ -218,14 +239,13 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         if(Sharedapp.partida.partida=="profesor"){
             marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         }else if(Sharedapp.partida.partida=="libre"){
-
             marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
         }else{
             if(NavFrag.gune<marcadores.size){
                 marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
             }else if(NavFrag.gune==marcadores.size){
                 marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-            }else{
+            }else if(NavFrag.gune>marcadores.size){
                 marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
             }
         }

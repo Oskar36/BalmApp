@@ -34,6 +34,11 @@ class BD {
                 }
                 .addOnFailureListener { }
         }
+        fun actualizar_gune(gune:Int,nombre: String){
+            val db: FirebaseFirestore= FirebaseFirestore.getInstance()
+            db.collection("apodos").document(nombre)
+                .update("gune",gune)
+        }
     }
 }
 

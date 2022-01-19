@@ -36,16 +36,6 @@ class f_kolitzajuego : Fragment() {
         NavFrag.contador=6
         NavFrag.atras_lugar="Juego2"
         Sharedapp.gune.gune="2.Gunea 2"
-        binding.btnfinalizarKolitza.setOnClickListener{
-            mostrarDialogoPersonalizado()
-           /* val fragment:Fragment=f_fin()
-            NavFrag.replaceFragmen
-            t(fragment,requireActivity(),((view as ViewGroup).parent as View).id)*/
-
-        }
-
-
-
         binding.imgtxapelaJuegoImg1.setOnClickListener{
             crearLinea(binding.imgtxapelaJuegoImg1,binding.txtTextoPentekoste)
         }

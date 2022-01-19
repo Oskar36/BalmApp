@@ -131,8 +131,11 @@ class f_puente_puzzle : Fragment() {
             pieza.isVisible =false
             contador++
             if (contador==9){
-
                 descargar()
+                if(Sharedapp.partida.partida=="guiado"){
+                    NavFrag.gune++
+                    BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+                }
             }
         }else{
             pieza.x=x1

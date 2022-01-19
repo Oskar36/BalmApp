@@ -71,7 +71,6 @@ class f_putxero_explicacion : Fragment() {
         super.onStart()
         //Iniciamos el audio
         mediaplayer!!.start()
-
     }
 
 

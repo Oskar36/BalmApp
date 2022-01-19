@@ -111,14 +111,14 @@ class f_procesion_ordenar : Fragment() {
             binding.spinner4.setBackgroundColor(Color.parseColor("#ad0a15"))
             comprob=0
         }
-
-
-
-
         if(comprob==1){
             Sharedapp.gune.gune="4.Gunea 2"
             //paramos el audio
             mediaplayer!!.stop()
+            if(Sharedapp.partida.partida=="guiado"){
+                NavFrag.gune++
+                BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+            }
             mostrarDialogoPersonalizado()
 
         }

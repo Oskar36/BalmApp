@@ -234,6 +234,10 @@ class f_putxero_juego : Fragment() {
             mediaplayerFallo!!.stop()
             mediaplayerTren!!.stop()
             Sharedapp.gune.gune="7.Gunea"
+            if(Sharedapp.partida.partida=="guiado"){
+                NavFrag.gune++
+                BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+            }
             SystemClock.sleep(1000)
             mostrarDialogoPersonalizado()
             victoria=true

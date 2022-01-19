@@ -110,6 +110,10 @@ class f_sanfelipe_cancion : Fragment() {
             binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
             binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
             if(binding.text1.text.toString().trim().toLowerCase()==("mocos") && binding.text2.text.toString().trim().toLowerCase()==("pocos")) {
+                if(Sharedapp.partida.partida=="guiado"){
+                    NavFrag.gune++
+                    BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+                }
                 mostrarDialogoPersonalizado()
                 //Abrir fragment repetir juego
                 Sharedapp.gune.gune="6.Gunea"
