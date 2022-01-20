@@ -40,6 +40,7 @@ private var terminar=false
 private lateinit var   moveLefttoRight:TranslateAnimation
 class f_putxero_juego : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

@@ -15,6 +15,7 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_puente_explicacion : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -24,6 +25,7 @@ class f_puente_explicacion : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        //Cuando clikemos en el boton JUGAR nos llevara al puzzle
         binding.btnpuenteExplicacionJugar.setOnClickListener{
             NavFrag.atras_lugar="Juego1"
             val fragment:Fragment=f_puente_puzzle()

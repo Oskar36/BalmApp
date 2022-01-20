@@ -41,12 +41,14 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
         mediaplayerexp!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgprocesionExplicacionLogo)
         }
+        //Cuando clickemos en el boton FINALIZAR nos llevara a la segunda parte del juego
         binding.btnfinalizar.setOnClickListener{
             val fragment:Fragment=f_procesion_juego_adivinarPenitenteak()
             NavFrag.EleccionJuego(binding.jesusRadio,fragment,requireActivity(),requireView(),requireContext())
         }
     }
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -61,10 +63,11 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     }
 
     override fun onResume() {
+        //Esto es la funcion de los botones PLAY y PAUSE
+        //Esto reproducira y parara el audio del personaje
         super.onResume()
         mediaplayer = MediaPlayer.create(context, R.raw.jesus)
         binding.imgaudioplay1.setOnClickListener{
-
             if(mediaplayer!!.isPlaying){
                 mediaplayer!!.seekTo(0)
             } else {
@@ -86,6 +89,6 @@ class f_procesion_juego_adivinar_Jesus : Fragment() {
     }
 
 
-    }
+}
 
 

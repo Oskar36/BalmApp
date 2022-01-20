@@ -23,6 +23,7 @@ private var linea: Linea? =null
 private val binding get() = _binding!!
 class f_kolitzajuego : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

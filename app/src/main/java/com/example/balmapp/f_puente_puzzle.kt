@@ -27,6 +27,7 @@ private var mediaplayer: MediaPlayer? = null
 private var contador=0
 class f_puente_puzzle : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

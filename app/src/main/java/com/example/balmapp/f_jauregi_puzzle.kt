@@ -36,6 +36,7 @@ private var aciertos:Int=0
 
 class f_jauregi_puzzle : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

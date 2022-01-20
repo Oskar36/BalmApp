@@ -14,6 +14,7 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 class f_monte_explicacion : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -22,6 +23,7 @@ class f_monte_explicacion : Fragment() {
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        //Cuando clickemos en el boton JUGAR nos llevara a la sopa de letras
         super.onActivityCreated(savedInstanceState)
         binding.btnmonteExplicacionJugar.setOnClickListener{
             NavFrag.atras_lugar="Juego1"

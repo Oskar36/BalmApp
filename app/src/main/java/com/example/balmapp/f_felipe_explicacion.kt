@@ -16,6 +16,7 @@ private val binding get() = _binding!!
 private var mediaplayer: MediaPlayer? = null
 class f_felipe_explicacion : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -25,6 +26,7 @@ class f_felipe_explicacion : Fragment() {
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        //Cuando clickemos en el boton JUGAR nos llevara a la cancion
         super.onActivityCreated(savedInstanceState)
         binding.btnfelipeExplicacionJugar.setOnClickListener(){
             NavFrag.atras_lugar="Juego1"
@@ -40,10 +42,11 @@ class f_felipe_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.sanfelipe_azalpena)
 
 
-
+        //parar animacion cuando pare el audio
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
         }
+        //parar y continuar el audio
         binding.imgfelipeExplicacionLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)

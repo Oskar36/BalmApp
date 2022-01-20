@@ -26,6 +26,7 @@ class f_jauregi_unirjuego : Fragment() {
     val posiciones  = mutableListOf <Int>()
     val posiciones2 = mutableListOf<TextView> ()
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

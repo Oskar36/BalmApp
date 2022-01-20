@@ -27,6 +27,7 @@ private var linea: Linea? =null
 class f_txapelaunir2 : Fragment() {
 
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

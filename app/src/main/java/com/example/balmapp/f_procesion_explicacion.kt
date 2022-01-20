@@ -16,6 +16,7 @@ private var mediaplayer: MediaPlayer? = null
 class f_procesion_explicacion : Fragment() {
 
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -24,6 +25,7 @@ class f_procesion_explicacion : Fragment() {
         return  binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        //Clickando en el boton, nos llevara al primer juego, en este caso ADIVINAR
         super.onActivityCreated(savedInstanceState)
         binding.btnprocesionExplicacionJugar.setOnClickListener{
             NavFrag.atras_lugar="Juego1"

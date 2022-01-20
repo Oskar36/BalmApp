@@ -27,6 +27,7 @@ private var linea: Linea? =null
 class f_juego_txapela_unir : Fragment() {
 
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -40,8 +41,8 @@ class f_juego_txapela_unir : Fragment() {
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
         //parar animacion cuando pare el audio
-        //    mediaplayer!!.setOnCompletionListener {
-         //   NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
+        //mediaplayer!!.setOnCompletionListener {
+        //NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
 
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)

@@ -14,6 +14,7 @@ private val binding get() = _binding!!
 class f_fin : Fragment() {
 
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

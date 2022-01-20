@@ -38,6 +38,7 @@ private var swipeState = SwipeState.Undefined
 private var cellWidth = 0
 class f_kolitza_juego_sopaletras : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

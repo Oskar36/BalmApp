@@ -14,6 +14,7 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_txapela_explicacion : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -35,8 +36,8 @@ class f_txapela_explicacion : Fragment() {
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgtxapelaExplicacionLogo)
         }
+        //Cuando clickemos en el boton JUGAR nos llevara al juego de unir
         binding.btntxapelaExplicacionJugar.setOnClickListener{
-
             val fragment:Fragment=f_juego_txapela_unir()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")
             //paramos el audio

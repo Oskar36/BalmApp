@@ -11,6 +11,7 @@ private var _binding:LFinIntermedioBinding?=null
 private val binding get() = _binding!!
 class f_fin_intermedio : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

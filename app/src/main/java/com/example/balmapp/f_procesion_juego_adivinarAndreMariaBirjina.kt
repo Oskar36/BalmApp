@@ -23,6 +23,7 @@ private var mediaplayer: MediaPlayer? = null
 class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
 
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -31,14 +32,16 @@ class f_procesion_juego_adivinarAndreMariaBirjina : Fragment() {
         return  binding.root
 
     }
+    //Esto lo que hace es  comprobar que este bien seleccionado
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnfinalizar.setOnClickListener{
+            //Si esta bien seleccionado nos llevara de vuelta al mapa enseñandonos antes el dialogo
             if (binding.mariaRadio.isChecked) {
                 Sharedapp.gune.gune="4.Gunea 1"
                 mostrarDialogoPersonalizado()
-
             }else{
+                //Si esta mal nos saltara un texto de error
                 Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
             }
         }

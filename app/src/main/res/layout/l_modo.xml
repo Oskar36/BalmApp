@@ -11,8 +11,10 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnmodo_libre"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_width="112dp"
+        android:layout_height="59dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:text="@string/modo_libre"
         android:textColor="@color/secondaryColor"
         app:cornerRadius="50dp"

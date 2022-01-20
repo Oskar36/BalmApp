@@ -15,6 +15,7 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_putxero_explicacion : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -25,6 +26,7 @@ class f_putxero_explicacion : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.atras_lugar="Juego1"
+        //Cuando clickemos en el boton JUGAR nos llevara al juego del puchero
         binding.btnputxeroExplicacionJugar.setOnClickListener{
             val fragment:Fragment=f_putxero_juego()
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Explicacion")

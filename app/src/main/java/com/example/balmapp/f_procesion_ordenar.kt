@@ -21,6 +21,7 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_procesion_ordenar : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -28,6 +29,7 @@ class f_procesion_ordenar : Fragment() {
         _binding = LProcesionJuegoOrdenarBinding.inflate(inflater, container, false)
         return  binding.root
     }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.atras_lugar="Juego2"
@@ -56,7 +58,6 @@ class f_procesion_ordenar : Fragment() {
         binding.btnprocesionordenar.setOnClickListener {
         comprobar()
         }
-
     }
 
     override fun onStop() {
@@ -65,9 +66,8 @@ class f_procesion_ordenar : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
     }
+    //Esta funcion nos cargara los datos en el spinner
     fun cargar_spinner(){
-
-
         val s0= resources.getString(R.string.elegir)
         val s1= resources.getString(R.string.camino)
         val s2= resources.getString(R.string.muerte)
@@ -81,6 +81,9 @@ class f_procesion_ordenar : Fragment() {
         binding.spinner3.adapter=adaptador
         binding.spinner4.adapter=adaptador
     }
+    //Esta funcion comprobara si los spinners estan bien ordenados
+    //Si estan bien ordenados nos saldran en verde.
+    //En caso de que alguno este mal ordenado nos aparecera el spinner en rojo
     fun comprobar(){
         val guru= resources.getString(R.string.camino)
         val judas= resources.getString(R.string.muerte)
@@ -111,23 +114,18 @@ class f_procesion_ordenar : Fragment() {
             binding.spinner4.setBackgroundColor(Color.parseColor("#ad0a15"))
             comprob=0
         }
+
+        //Cuando los spinners esten todos bien nos saltara el dialogo.
         if(comprob==1){
             Sharedapp.gune.gune="4.Gunea 2"
             //paramos el audio
             mediaplayer!!.stop()
-            if(Sharedapp.partida.partida=="guiado"){
-                NavFrag.gune++
-                BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
-            }
             mostrarDialogoPersonalizado()
-
         }
-
-
     }
 
+    //Esto hace saltar el dialogo para poder elegir volver al mapa o volver a jugar de nuevo.
     private fun mostrarDialogoPersonalizado(){
-
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,

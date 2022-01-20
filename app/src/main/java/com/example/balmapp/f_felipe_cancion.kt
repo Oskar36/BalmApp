@@ -27,6 +27,7 @@ private data class TestErantz(val texto:TextView,val respuesta: String)
 private  lateinit var lista:List<TestErantz>
 class f_sanfelipe_cancion : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {

@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 
 class a_juegos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        //asignacion del layout
         super.onCreate(savedInstanceState)
         setContentView(R.layout.a_juegos)
+        //iniciar el metodo
         seleccionjuego()
     }
     private fun seleccionjuego(){

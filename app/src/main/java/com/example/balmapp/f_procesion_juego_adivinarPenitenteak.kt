@@ -15,6 +15,7 @@ private var mediaplayer: MediaPlayer? = null
 
 class f_procesion_juego_adivinarPenitenteak : Fragment() {
     override fun onCreateView(
+        //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -22,6 +23,7 @@ class f_procesion_juego_adivinarPenitenteak : Fragment() {
         _binding = LProcesionJuegoAdivinarPenitenteakBinding.inflate(inflater, container, false)
         return  binding.root
     }
+    //Cuando demos al boton FINALIZAR nos llevara a la tercera parte del juego
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.atras_lugar=""
