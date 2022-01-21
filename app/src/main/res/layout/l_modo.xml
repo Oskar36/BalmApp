@@ -18,6 +18,7 @@
         android:text="@string/modo_libre"
         android:textColor="@color/secondaryColor"
         app:cornerRadius="50dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
