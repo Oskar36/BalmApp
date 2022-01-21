@@ -57,7 +57,7 @@ class f_modo : Fragment() {
             binding.cartelImg.setBackgroundResource(R.drawable.hasiera)
         }
 
-
+//cuando le das click en el texto sale un dialogo con la informacion
         binding.info.setOnClickListener {
             mostrarDialogoPersonalizado()
         }
