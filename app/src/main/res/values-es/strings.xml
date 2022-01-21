@@ -284,4 +284,6 @@
     <string name="fin">¡Enhorabuena! ¡Habéis conseguido terminar el recorrido!</string>
 
     <string name="Salir">Salir</string>
+
+    <string name="info"> Información de los modos.</string>
 </resources>

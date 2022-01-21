@@ -57,5 +57,23 @@ class f_modo : Fragment() {
             binding.cartelImg.setBackgroundResource(R.drawable.hasiera)
         }
 
+
+        binding.info.setOnClickListener {
+            mostrarDialogoPersonalizado()
+        }
+    }
+    private fun mostrarDialogoPersonalizado(){
+
+        androidx.appcompat.app.AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
+            .setView(layoutInflater.inflate(R.layout.l_info,null))
+            .setPositiveButton(R.string.txt_finalizar,
+                DialogInterface.OnClickListener { dialog, id ->
+                
+                })
+
+            .setCancelable(false)
+            .create()
+            .show()
+
     }
 }
