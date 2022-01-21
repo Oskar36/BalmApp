@@ -4,6 +4,7 @@ package com.example.balmapp
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.os.Bundle
 import android.os.SystemClock
 import android.provider.MediaStore
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import com.example.balmapp.databinding.LModoBinding
 import java.util.*
@@ -64,6 +66,7 @@ class f_modo : Fragment() {
     }
     private fun mostrarDialogoPersonalizado(){
 
+
         androidx.appcompat.app.AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_info,null))
             .setPositiveButton(R.string.txt_finalizar,
@@ -74,6 +77,7 @@ class f_modo : Fragment() {
             .setCancelable(false)
             .create()
             .show()
+
 
     }
 }
