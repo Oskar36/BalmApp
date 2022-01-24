@@ -2,10 +2,8 @@ package com.example.balmapp
 
 
 import android.content.DialogInterface
-import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.*
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
@@ -13,11 +11,8 @@ import androidx.fragment.app.Fragment
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
 import com.example.balmapp.databinding.LFelipeCancionBinding
-import java.util.*
+
 
 
 private var _binding: LFelipeCancionBinding? = null

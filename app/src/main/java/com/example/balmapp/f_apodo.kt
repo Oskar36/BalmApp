@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.balmapp.databinding.LApodoBinding
-import com.google.firebase.FirebaseApp
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.coroutines.Delay
 
 private var _binding: LApodoBinding? = null
 private val binding get() = _binding!!

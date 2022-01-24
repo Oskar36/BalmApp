@@ -53,7 +53,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav)
         navigationView.bringToFront()
-        var menu=navigationView.menu
+        val menu=navigationView.menu
 
         if(Sharedapp.partida.partida=="profesor"){
             menu.findItem(R.id.puente_admin).isVisible=true
@@ -305,8 +305,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         finish()
     }
     private fun modo_Profesor(){
-        var dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
-        var view = LayoutInflater.from(this).inflate(R.layout.l_dialogo_profesor, null)
+        val dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
+        val view = LayoutInflater.from(this).inflate(R.layout.l_dialogo_profesor, null)
         dialog
             .setView(view)
             .setPositiveButton(R.string.continuar,
