@@ -29,6 +29,7 @@ class NavFrag {
         var pantalla_inicio=true
         var terminado_unir=false
         var gune=0
+        var modo_libre= mutableListOf<String>()
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){
@@ -147,13 +148,19 @@ class NavFrag {
                 .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
                 .setPositiveButton(R.string.txt_finalizar,
                     DialogInterface.OnClickListener { dialog, id ->
+                        if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                            if (modo_libre.contains(juego_modo_libre(Sharedapp.gune.gune).trim())){
+                                modo_libre.add(juego_modo_libre(Sharedapp.gune.gune).trim())
+                            }
+                        }else{
+                            modo_libre.add(juego_modo_libre(Sharedapp.gune.gune).trim())
+                        }
                         NavFrag.IniciarActivity(context,"a_mapa")
                         activity.finish()
                         // sign in the user ...
                     })
                 .setNeutralButton(R.string.repetir,
                     DialogInterface.OnClickListener { dialog, id ->
-                        println(Sharedapp.gune.gune)
                         val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                         replaceFragment(fragment,activity,view.id)
                         // sign in the user ...
@@ -162,6 +169,16 @@ class NavFrag {
                 .create()
                 .show()
 
+        }
+        private fun juego_modo_libre(juego:String):String{
+            var gune=""
+            when (juego){
+                "2.Gunea 2" ->   gune="2.Gunea"
+                "3.Gunea 2" ->   gune="3.Gunea"
+                "4.Gunea 2" ->   gune="4.Gunea"
+            }
+
+            return gune.trim()
         }
     }
 }

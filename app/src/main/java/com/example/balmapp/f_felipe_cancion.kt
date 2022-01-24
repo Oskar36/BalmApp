@@ -49,6 +49,8 @@ class f_sanfelipe_cancion : Fragment() {
                     binding.txtsanfelipeCancion.setText(textos.get(0))
                     if(binding.text1.text.toString().trim().toLowerCase()==("mayo") && binding.text2.text.toString().trim().toLowerCase()==("abril")) {
                         binding.txtsanfelipeCancion.setText(textos.get(1))
+                        binding.text2.clearFocus()
+                        binding.text1.requestFocus()
                         binding.text1.setText("")
                         binding.text2.setText("")
                         contador++
@@ -66,6 +68,8 @@ class f_sanfelipe_cancion : Fragment() {
 
                 2 -> { if(binding.text1.text.toString().trim().toLowerCase()==("buena") && binding.text2.text.toString().trim().toLowerCase()==("comer")) {
                     binding.txtsanfelipeCancion.setText(textos.get(2))
+                    binding.text2.clearFocus()
+                    binding.text1.requestFocus()
                     binding.text1.setText("")
                     binding.text2.setText("")
                     contador++
@@ -84,6 +88,8 @@ class f_sanfelipe_cancion : Fragment() {
                 3 -> {
                     if(binding.text1.text.toString().trim().toLowerCase()==("señorita") && binding.text2.text.toString().trim().toLowerCase()==("peseta")) {
                         binding.txtsanfelipeCancion.setText(textos.get(3))
+                        binding.text2.clearFocus()
+                        binding.text1.requestFocus()
                         binding.text1.setText("")
                         binding.text2.setText("")
                         contador++
@@ -114,6 +120,13 @@ class f_sanfelipe_cancion : Fragment() {
                 if(Sharedapp.partida.partida=="guiado"){
                     NavFrag.gune++
                     BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+                }
+                if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                    if (!NavFrag.modo_libre.contains("6.Gunea".trim())){
+                        NavFrag.modo_libre.add("6.Gunea".trim())
+                    }
+                }else{
+                    NavFrag.modo_libre.add("6.Gunea".trim())
                 }
                 mostrarDialogoPersonalizado()
                 //Abrir fragment repetir juego

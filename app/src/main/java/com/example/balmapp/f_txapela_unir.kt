@@ -24,6 +24,8 @@ private var mediaplayeraudio3: MediaPlayer? = null
 private var mediaplayeraudio4: MediaPlayer? = null
 private var mediaplayer_azal: MediaPlayer? = null
 private var linea: Linea? =null
+private var posiciones= mutableListOf(609,851,1157,1464)
+
 class f_juego_txapela_unir : Fragment() {
 
     override fun onCreateView(
@@ -37,13 +39,14 @@ class f_juego_txapela_unir : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        val txt= listOf(binding.scrollView5, binding.scrollView6, binding.scrollView7, binding.scrollView8)
+        randomPos(txt)
         NavFrag.contador=4
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
         //parar animacion cuando pare el audio
         //mediaplayer!!.setOnCompletionListener {
         //NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
-
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
         //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
@@ -81,6 +84,12 @@ class f_juego_txapela_unir : Fragment() {
             crearLinea(binding.txapelaimagen3,binding.txt4Unir,binding.scrollView8)
         }
     }
+    private fun randomPos( lista:List<ScrollView>){
+        posiciones.shuffle()
+        posiciones.forEach{
+            lista[posiciones.indexOf(it)].y=it.toFloat()
+        }
+    }
     private fun crearLinea(txtinicion: TextView, textfin:TextView,scrollView: ScrollView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true
@@ -108,8 +117,6 @@ class f_juego_txapela_unir : Fragment() {
         mediaplayeraudio2 = MediaPlayer.create(context, R.raw.txapelaaudio2)
         mediaplayeraudio3 = MediaPlayer.create(context, R.raw.txapelaaudio3)
         mediaplayeraudio4 = MediaPlayer.create(context, R.raw.txapelaaudio4)
-
-
         //funcion para controlar audio1
         binding.playaudio1.setOnClickListener{
             pararaudios()

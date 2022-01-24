@@ -120,6 +120,13 @@ class f_procesion_ordenar : Fragment() {
             Sharedapp.gune.gune="4.Gunea 2"
             //paramos el audio
             mediaplayer!!.stop()
+            if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                if (!NavFrag.modo_libre.contains("4.Gunea".trim())){
+                    NavFrag.modo_libre.add("4.Gunea".trim())
+                }
+            }else{
+                NavFrag.modo_libre.add("4.Gunea".trim())
+            }
             mostrarDialogoPersonalizado()
         }
     }

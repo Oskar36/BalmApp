@@ -42,7 +42,7 @@ class f_felipe_explicacion : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.sanfelipe_azalpena)
 
 
-        //parar animacion cuando pare el audio
+
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imgfelipeExplicacionLogo)
         }

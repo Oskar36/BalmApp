@@ -13,14 +13,8 @@ class a_findejuego : AppCompatActivity() {
         binding = LFindejuegoBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-
-
         NavFrag.animacion_dantzaris(binding.imageButton)
         mediaplayer = MediaPlayer.create(this, R.raw.pertsonaia)
-
-
-
         mediaplayer!!.setOnCompletionListener {
             NavFrag.animacion_dantzaris_parar(binding.imageButton)
         }
@@ -36,6 +30,21 @@ class a_findejuego : AppCompatActivity() {
                 NavFrag.animacion_dantzaris(binding.imageButton)
             }
         }
+        binding.btnrepetir.setOnClickListener{
+            BD.insertarNuevaPartida(Sharedapp.nombre.nombre)
+            BD.cargarPartida(Sharedapp.nombre.nombre)
+            NavFrag.IniciarActivity(this,"a_mapa")
+            finish()
+        }
+        binding.btnfin.setOnClickListener{
+            NavFrag.IniciarActivity(this,"MainActivity")
+            finish()
+        }
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        NavFrag.IniciarActivity(this,"MainActivity")
+        finish()
     }
 }

@@ -3,8 +3,6 @@ package com.example.balmapp
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
-import android.content.Intent
-import android.graphics.BitmapFactory
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -65,7 +63,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             menu.findItem(R.id.txapela_menu).isVisible=true
             menu.findItem(R.id.san_felipe_menu).isVisible=true
             menu.findItem(R.id.putxero_menu).isVisible=true
-
+            menu.findItem(R.id.modo_profesor_menuAdmin).isVisible=false
         }else{
             menu.findItem(R.id.puente_admin).isVisible=false
             menu.findItem(R.id.kolitxa_menu).isVisible=false
@@ -75,8 +73,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             menu.findItem(R.id.san_felipe_menu).isVisible=false
             menu.findItem(R.id.putxero_menu).isVisible=false
         }
-
-
         mapView =binding.mapa
         //Binding
         mapView!!.onCreate(mapViewBundle)
@@ -142,7 +138,12 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         insertarGune(LatLng(    43.188778, -3.200028),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
         insertarGune(LatLng(    43.193611, -3.194861),"6.Gunea","San Felipe y Santiago eguna",gmap!!)
         insertarGune(LatLng(     43.196250, -3.192639),"7.Gunea","Balmasedako zaindariaren jaia: San Severino. Putxerak",gmap!!)
-        gmap!!.setMinZoomPreference(12f)
+        if(NavFrag.gune==7 && Sharedapp.partida.partida=="guiado"){
+            NavFrag.IniciarActivity(this,"a_findejuego")
+            finish()
+        }
+
+        gmap!!.setMinZoomPreference(13f)
         gmap!!.moveCamera(CameraUpdateFactory.newLatLng(LatLng(     43.196250, -3.192639)))
         gmap!!.setOnMarkerClickListener { marker ->
             if (marker.isInfoWindowShown) {
@@ -156,7 +157,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                 }
             }else if(Sharedapp.partida.partida=="libre"){
                 if(gunes_activos.size!=0){
-                    for(i in 0 .. gunes_activos.size){
+                    for(i in 0 until gunes_activos.size){
                         if (marker.title.equals(gunes_activos[i])){
                             MarcadorJuego(marker.title.toString().trim())
                             break
@@ -164,6 +165,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                     }
                     gunes_activos.removeAll(gunes_activos)
                 }
+            }else{
+                MarcadorJuego(marker.title.toString().trim())
             }
             true
          }
@@ -171,13 +174,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             gmap!!.isMyLocationEnabled=true
             gmap!!.uiSettings.isZoomControlsEnabled=true
             gmap!!.uiSettings.isCompassEnabled=true
-            //Cuando se aceptan los permisos
-            fusedLocation.lastLocation.addOnSuccessListener {
-                if (it != null) {
-                    val ubicacion = LatLng(it.latitude, it.longitude)
-                    gmap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 12f))
-                }
-            }
             //Localización a tiempo real
             gmap!!.setOnMyLocationChangeListener{
                 comprobarubicacion(it,Sharedapp.partida.partida)
@@ -185,45 +181,46 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         }
     }
     private fun comprobarubicacion(location: Location, modo:String) {
-        var localizacion=marcadores[NavFrag.gune].position
-        var location_gune=Location("a")
-        location_gune.latitude=localizacion.latitude
-        location_gune.longitude=localizacion.longitude
-        if(modo=="guiado"){
-            if(location.distanceTo(location_gune)<=50){
-                enrango=true
-                if(!toast1){
-                    Toast.makeText(this, R.string.iniciarjuego, Toast.LENGTH_SHORT).show()
-                    toast1=true
-                }
-            }else{
-                enrango=false
-                toast1=false
-            }
-        }else if(modo=="libre"){
-            for (i in 0 until marcadores.size){
-                localizacion=marcadores[i].position
-                location_gune=Location("a")
-                location_gune.latitude=localizacion.latitude
-                location_gune.longitude=localizacion.longitude
+        if(NavFrag.gune < marcadores.size-1){
+            var localizacion=marcadores[NavFrag.gune].position
+            var location_gune=Location("a")
+            location_gune.latitude=localizacion.latitude
+            location_gune.longitude=localizacion.longitude
+            if(modo=="guiado"){
                 if(location.distanceTo(location_gune)<=50){
-                    //marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-                    gunes_activos.add(marcadores[i].title!!)
                     enrango=true
                     if(!toast1){
                         Toast.makeText(this, R.string.iniciarjuego, Toast.LENGTH_SHORT).show()
                         toast1=true
                     }
                 }else{
-                    marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
                     enrango=false
+                    toast1=false
                 }
-            }
+            }else if(modo=="libre"){
+                for (i in 0 until marcadores.size){
+                    localizacion=marcadores[i].position
+                    location_gune=Location("a")
+                    location_gune.latitude=localizacion.latitude
+                    location_gune.longitude=localizacion.longitude
+                    if(location.distanceTo(location_gune)<=50){
+                        //marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                        gunes_activos.add(marcadores[i].title!!)
+                        marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                        enrango=true
+                        if(!toast1){
+                            Toast.makeText(this, R.string.iniciarjuego, Toast.LENGTH_SHORT).show()
+                            toast1=true
+                        }
+                    }else{
+                       // marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                        enrango=false
+                    }
+                }
         }
-
+        }
     }
     private fun MarcadorJuego(gune: String){
-        //Toast.makeText(this, "$gune", Toast.LENGTH_SHORT).show()
         when (gune){
             "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
             "2.Gunea" ->      abrirActivityMenu("a_juegos","kolitza")
@@ -239,7 +236,13 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         if(Sharedapp.partida.partida=="profesor"){
             marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         }else if(Sharedapp.partida.partida=="libre"){
-            marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+            if(NavFrag.modo_libre.size!=0){
+                if (NavFrag.modo_libre.contains(marcador.title.toString().trim())){
+                    marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                }else{
+                    marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                }
+            }
         }else{
             if(NavFrag.gune<marcadores.size){
                 marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
@@ -270,8 +273,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
     }
-
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.puente_admin -> {abrirActivityMenu("a_juegos","puente")
@@ -291,7 +292,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             R.id.acerca_de_menu -> {abrirActivityMenu("a_acercade","puchero")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START)
               }
-            R.id.modo_profesor_menuAdmin -> { modo_porfesor()  }
+            R.id.modo_profesor_menuAdmin -> { modo_Profesor()  }
             R.id.desconectar_menu -> {abrirActivityMenu("MainActivity","")
                                    binding.drawerLayout.closeDrawer(GravityCompat.START) }
         }
@@ -300,13 +301,10 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
 
     override fun onBackPressed() {
         super.onBackPressed()
-        val intent=Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        NavFrag.IniciarActivity(this,"MainActivity")
         finish()
     }
-    private fun modo_porfesor(){
-        val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
-
+    private fun modo_Profesor(){
         var dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
         var view = LayoutInflater.from(this).inflate(R.layout.l_dialogo_profesor, null)
         dialog
@@ -333,6 +331,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             .setCancelable(false)
             .create()
             .show()
+
     }
 }
 

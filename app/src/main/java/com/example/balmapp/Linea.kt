@@ -11,10 +11,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ScrollView
-import android.widget.TextView
+import android.widget.*
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -89,6 +86,7 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
                                     NavFrag.gune++
                                     BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
                                 }
+
                             }
                         }
 
@@ -104,6 +102,7 @@ class Linea @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = 
         }
         return true
     }
+
     init {
         mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         mPaint.style = Paint.Style.STROKE

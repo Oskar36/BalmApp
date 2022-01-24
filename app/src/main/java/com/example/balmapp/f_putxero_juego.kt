@@ -257,6 +257,13 @@ class f_putxero_juego : Fragment() {
             .setPositiveButton(R.string.txt_finalizar,
                 DialogInterface.OnClickListener { dialog, id ->
                     moveLefttoRight.cancel()
+                    if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                        if (!NavFrag.modo_libre.contains("7.Gunea".trim())){
+                            NavFrag.modo_libre.add("7.Gunea".trim())
+                        }
+                    }else{
+                        NavFrag.modo_libre.add("7.Gunea".trim())
+                    }
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     requireActivity().finish()
                     // sign in the user ...
@@ -265,11 +272,6 @@ class f_putxero_juego : Fragment() {
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
-                    // sign in the user ...
-                })
-            .setPositiveButton(R.string.volver_mapa,
-                DialogInterface.OnClickListener { dialog, id ->
-                    requireActivity().finish()
                     // sign in the user ...
                 })
             .setCancelable(false)

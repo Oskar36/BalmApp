@@ -137,6 +137,13 @@ class f_puente_puzzle : Fragment() {
                     NavFrag.gune++
                     BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
                 }
+                if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                    if (!NavFrag.modo_libre.contains("1.Gunea".trim())){
+                        NavFrag.modo_libre.add("1.Gunea".trim())
+                    }
+                }else{
+                    NavFrag.modo_libre.add("1.Gunea".trim())
+                }
             }
         }else{
             pieza.x=x1
