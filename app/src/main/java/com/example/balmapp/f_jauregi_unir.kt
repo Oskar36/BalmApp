@@ -72,6 +72,8 @@ class f_jauregi_unirjuego : Fragment() {
         posiciones2.forEach{
             it.y= posiciones[posiciones2.indexOf(it)].toFloat()
         }*/
+
+        //el inicio y el final correcto de cada linea
         binding.txtTextoBehekoSolairuak.setOnClickListener{
             crearLinea(binding.txtTextoBehekoSolairuak,binding.txtTextoGelakEgongelak)
         }
@@ -86,6 +88,7 @@ class f_jauregi_unirjuego : Fragment() {
         }
 
     }
+    //crea la linea teneiendo en cuenta el inicio y el final correcto
     private fun crearLinea(txtinicion:TextView, textfin:TextView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true
@@ -116,16 +119,20 @@ class f_jauregi_unirjuego : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
     }
+
+    //el dialogo de fin de juego
     fun mostrarDialogoPersonalizado(){
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
+                //te lleva al mapa
                 DialogInterface.OnClickListener { dialog, id ->
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     requireActivity().finish()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
+                //repite la pantalla
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)

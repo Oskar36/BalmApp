@@ -54,7 +54,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         navigationView = findViewById(R.id.nav)
         navigationView.bringToFront()
         val menu=navigationView.menu
-
+//si el modo profesor esta activo se ven los elementos del menu o no
         if(Sharedapp.partida.partida=="profesor"){
             menu.findItem(R.id.puente_admin).isVisible=true
             menu.findItem(R.id.kolitxa_menu).isVisible=true
@@ -78,7 +78,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         mapView!!.onCreate(mapViewBundle)
         mapView!!.getMapAsync(this)
        // binding.toolbar.inflateMenu(R.menu.menu_admin)
-
+        // abre el menu clickando el boton flotante
         binding.floatingActionButton.setOnClickListener {
          binding.drawerLayout.openDrawer(GravityCompat.START)
         }
@@ -142,7 +142,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             NavFrag.IniciarActivity(this,"a_findejuego")
             finish()
         }
-
+        //el zoom del mapa y la camara se pone en la coordenada
         gmap!!.setMinZoomPreference(13f)
         gmap!!.moveCamera(CameraUpdateFactory.newLatLng(LatLng(     43.196250, -3.192639)))
         gmap!!.setOnMarkerClickListener { marker ->
@@ -180,6 +180,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             }
         }
     }
+
+    //comprueba la ubicacion y si esta a menos de 50 metros de el punto sale un mensaje de que ya se puede juegar
     private fun comprobarubicacion(location: Location, modo:String) {
         if(NavFrag.gune < marcadores.size-1){
             var localizacion=marcadores[NavFrag.gune].position
@@ -220,6 +222,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         }
         }
     }
+
+    // abre la pantalla correspondiente clickando en el marcador de cada juego en el mapa
     private fun MarcadorJuego(gune: String){
         when (gune){
             "1.Gunea" ->      abrirActivityMenu("a_juegos","puente")
@@ -231,6 +235,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             "7.Gunea" ->      abrirActivityMenu("a_juegos","puchero")
         }
     }
+
+    //dependiendo si esta en modo profesor o modo libre se pone de un color o otro los marcadores del mapa
     private fun insertarGune(location:LatLng, title:String, snippet:String, mapa:GoogleMap){
         val marcador = MarkerOptions().position(location).title(title).snippet(snippet)
         if(Sharedapp.partida.partida=="profesor"){
@@ -255,6 +261,8 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         mapa.addMarker(marcador)
         marcadores.add(marcador)
     }
+
+    //al abrir menu las opciones que tiene te llevan a cada pantalla
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.puente_admin ->      abrirActivityMenu("a_juegos","puente")
@@ -269,10 +277,14 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         }
         return true
     }
+
+    //abre la pantalla que se le pase
     private fun abrirActivityMenu(activity: String, juego:String){
         Sharedapp.prefs.juego=juego
         NavFrag.IniciarActivity(this,activity)
     }
+
+    //dependiendo de que opcion del menu des te llevara al respectiva pantalla y abrira el dialogo de el modo profesor
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.puente_admin -> {abrirActivityMenu("a_juegos","puente")
@@ -298,12 +310,14 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         }
         return true
     }
-
+//si le das al boton para tras te lleva a el main activity
     override fun onBackPressed() {
         super.onBackPressed()
         NavFrag.IniciarActivity(this,"MainActivity")
         finish()
     }
+
+    //este dialog tiene un plain text en el cual si es la contraseña correcta se pone el modo profesor
     private fun modo_Profesor(){
         val dialog = AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
         val view = LayoutInflater.from(this).inflate(R.layout.l_dialogo_profesor, null)
