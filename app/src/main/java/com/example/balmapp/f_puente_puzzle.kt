@@ -42,6 +42,7 @@ class f_puente_puzzle : Fragment() {
         mediaplayer = MediaPlayer.create(context, R.raw.azalpena_jokoa_zubia)
         //Iniciamos el audio
         mediaplayer!!.start()
+        //hace que se puedan usar las piezas al tocarla
         binding.puzzle11.setOnTouchListener(touchListener)
         binding.puzzle12.setOnTouchListener(touchListener)
         binding.puzzle13.setOnTouchListener(touchListener)
@@ -113,7 +114,7 @@ class f_puente_puzzle : Fragment() {
 
     }
 
-
+//se comprueba si la pieza esta en el sitio correcto
     fun comp_puzzle_pieza(bien:ImageView,pieza:View, x1:Float,y1:Float) {
         val bienanchura=bien.width
         val bienaltura=bien.height
@@ -152,18 +153,20 @@ class f_puente_puzzle : Fragment() {
             y0=0.0f
         }
     }
-
+//dialogo de fin de juego
     private fun mostrarDialogoPersonalizado(){
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
                 DialogInterface.OnClickListener { dialog, id ->
+                    //te lleba a el mapa
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     requireActivity().finish()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
+                    //repite el juego
                     Sharedapp.gune.gune="1.Gunea"
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
@@ -174,6 +177,8 @@ class f_puente_puzzle : Fragment() {
             .show()
 
     }
+
+    //con esta funcio sale el dialogo de descargar la imagen del puente
     private fun descargar(){
         val bm = BitmapFactory.decodeResource(resources, R.drawable.puente_puzzle_img)
 
@@ -182,20 +187,22 @@ class f_puente_puzzle : Fragment() {
             .setPositiveButton(R.string.si,
                 DialogInterface.OnClickListener { dialog, id ->
 
-
+                    //descarga la imagen y abre el dialogo de fin de juego
                     MediaStore.Images.Media.insertImage(requireActivity().contentResolver,bm, "Puzzle" , "Puzzle puente")
                     dialog.dismiss()
                     Toast.makeText(requireContext(), resources.getString(R.string.desgargado), Toast.LENGTH_SHORT).show()
                     SystemClock.sleep(1000)
                     mostrarDialogoPersonalizado()
-                    // sign in the user ...
+
                 })
             .setNeutralButton(R.string.no,
                 DialogInterface.OnClickListener { dialog, id ->
+
+                    //cierra el dialogo espera 1 segundo y abre el dialogo de fin de juego
                     dialog.dismiss()
                     SystemClock.sleep(1000)
                     mostrarDialogoPersonalizado()
-                    // sign in the user ...
+
                 })
             .setCancelable(false)
             .create()

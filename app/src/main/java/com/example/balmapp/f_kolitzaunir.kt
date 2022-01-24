@@ -1,6 +1,6 @@
 package com.example.balmapp
 
-import android.content.Context
+
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,8 +11,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import com.example.balmapp.databinding.LKolitzaunirBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.firebase.firestore.FirebaseFirestore
 
 
 private var _binding: LKolitzaunirBinding? = null
@@ -37,6 +35,9 @@ class f_kolitzajuego : Fragment() {
         NavFrag.contador=6
         NavFrag.atras_lugar="Juego2"
         Sharedapp.gune.gune="2.Gunea 2"
+
+
+        // esto es para decir cual es el inicio y el final de la linea
         binding.imgtxapelaJuegoImg1.setOnClickListener{
             crearLinea(binding.imgtxapelaJuegoImg1,binding.txtTextoPentekoste)
         }
@@ -56,6 +57,8 @@ class f_kolitzajuego : Fragment() {
             crearLinea(binding.imgtxapelaJuegoImg4,binding.txtTextoBazkaria)
         }
     }
+
+    //con esta funcion se crea la linea dependiendo de la x y de inicio y del final
     private fun crearLinea(txtinicion: TextView, textfin: TextView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true
@@ -78,7 +81,7 @@ class f_kolitzajuego : Fragment() {
 
 
 
-
+// dialogo personalizado si le das a positivebutton te lleva al mapa y si le das a al neurtral button te repite el juego
 private fun mostrarDialogoPersonalizado(){
 
 AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)

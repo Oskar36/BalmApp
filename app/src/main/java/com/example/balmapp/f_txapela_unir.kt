@@ -71,6 +71,8 @@ class f_juego_txapela_unir : Fragment() {
                 NavFrag.animacion_dantzaris(binding.imglogo)
             }
         }
+
+        //el inicio y el final correcto de cada linea
         binding.txapelaimagen4.setOnClickListener{
             crearLinea(binding.txapelaimagen4,binding.txt1Unir, binding.scrollView5)
         }
@@ -84,12 +86,15 @@ class f_juego_txapela_unir : Fragment() {
             crearLinea(binding.txapelaimagen3,binding.txt4Unir,binding.scrollView8)
         }
     }
+    //hace que las posiciones sean aleatorias
     private fun randomPos( lista:List<ScrollView>){
         posiciones.shuffle()
         posiciones.forEach{
             lista[posiciones.indexOf(it)].y=it.toFloat()
         }
     }
+
+    //crea la linea teneiendo en cuenta el inicio y el final correcto
     private fun crearLinea(txtinicion: TextView, textfin:TextView,scrollView: ScrollView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true
@@ -111,6 +116,8 @@ class f_juego_txapela_unir : Fragment() {
         NavFrag.terminado_unir=false
         linea!!.txapela=true
     }
+
+    //crea los reproductores de audo y si esta sonando lo para y resetea
     override fun onResume() {
         super.onResume()
         mediaplayeraudio1 = MediaPlayer.create(context, R.raw.txapelaaudio1)
@@ -161,7 +168,7 @@ class f_juego_txapela_unir : Fragment() {
             }
         }
     }
-
+//para los audios
     override fun onDestroyView() {
         super.onDestroyView()
         mediaplayer_azal!!.pause()
@@ -171,7 +178,7 @@ class f_juego_txapela_unir : Fragment() {
         mediaplayeraudio4!!.pause()
 
     }
-
+//para el audio que esta reproduciendo
     private fun pararaudios(){
 
         if (mediaplayeraudio1!!.isPlaying){

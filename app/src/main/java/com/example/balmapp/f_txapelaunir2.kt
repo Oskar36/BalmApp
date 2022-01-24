@@ -45,7 +45,7 @@ class f_txapelaunir2 : Fragment() {
         //   NavFrag.animacion_dantzaris_parar(binding.imglogo)        }
 
 
-
+        //el inicio y el final correcto de cada linea
         binding.txapelaimagen8.setOnClickListener{
             crearLinea(binding.txapelaimagen8,binding.txt1Unir, binding.scrollView5)
         }
@@ -60,6 +60,8 @@ class f_txapelaunir2 : Fragment() {
         }
 
     }
+
+    //crea la linea teneiendo en cuenta el inicio y el final correcto
     private fun crearLinea(txtinicion: TextView, textfin: TextView, scrollView: ScrollView){
         if(linea!=null && !NavFrag.terminado_unir){
             linea!!.isGone=true
@@ -130,7 +132,7 @@ class f_txapelaunir2 : Fragment() {
         }
 
     }
-
+//para los audios
     override fun onDestroyView() {
         super.onDestroyView()
         mediaplayeraudio5!!.pause()
@@ -139,7 +141,7 @@ class f_txapelaunir2 : Fragment() {
         mediaplayeraudio8!!.pause()
 
     }
-
+//para los audios que se esten reproduciendo
     private fun pararaudios(){
 
         if (mediaplayeraudio5!!.isPlaying){
@@ -163,26 +165,5 @@ class f_txapelaunir2 : Fragment() {
 
     }
 
-    private fun mostrarDialogoPersonalizado(){
-
-        AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
-            .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
-            .setPositiveButton(R.string.txt_finalizar,
-                DialogInterface.OnClickListener { dialog, id ->
-                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
-                    requireActivity().finish()
-                    // sign in the user ...
-                })
-            .setNeutralButton(R.string.repetir,
-                DialogInterface.OnClickListener { dialog, id ->
-
-                    val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
-                    NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
-                    // sign in the user ...
-                })
-            .setCancelable(false)
-            .create()
-            .show()
-    }
 
 }
