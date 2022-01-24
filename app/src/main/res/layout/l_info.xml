@@ -15,16 +15,18 @@
             android:gravity="center"
             android:padding="8dp"
             android:src="@drawable/logodantzaris1" />
-        <TextView
-            android:id="@+id/text_dialogpregunta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="42dp"
-            android:gravity="center"
-            android:text="esta es la info de los modos"
-            android:textStyle="bold"
-            android:textColor="@android:color/background_dark"
-            android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/text_dialogpregunta"
+        style="@style/texto_simple_explicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="42dp"
+        android:gravity="center"
+        android:text="@string/informacion"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
 
     </LinearLayout>

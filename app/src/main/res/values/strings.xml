@@ -293,4 +293,16 @@
     <string name="iniciarjuego">Klikatu jokatzeko!</string>
 
     <string name="info">Moduen informazioa. </string>
+
+    <string name="txt_cancelar">ITXI</string>
+
+    <string name="informacion">
+        \n<b>MODU GIDATUA:\n</b>
+        Hau ibilbide zehatz bat jarraituz jolasten saiatzen da. Aktibatuta dagoena bakarrik jolastu ahal izango da,
+        eta bertara sartzeko gutxienez tokitik 50m egon beharko dugu. Partidada jokatuko dugun azken puntuan gordeko da.\n
+
+        \n<b>MODU LIBREA:\n</b>
+        Hau nahi dugun ordenan jolastea da, sartzeko baldintza bakarra tokitik gutxienez 50m egotea da. Partida
+        horiek ez dira gordeko, eta, beraz, aurrerapena galdu egingo da.\n
+    </string>
 </resources>

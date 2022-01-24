@@ -62,7 +62,7 @@ class f_modo : Fragment() {
 
         androidx.appcompat.app.AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_info,null))
-            .setPositiveButton(R.string.txt_finalizar,
+            .setPositiveButton(R.string.txt_cancelar,
                 DialogInterface.OnClickListener { dialog, id ->
                 
                 })

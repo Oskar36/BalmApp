@@ -285,5 +285,17 @@
 
     <string name="Salir">Salir</string>
 
-    <string name="info"> Información de los modos.</string>
+    <string name="info">Información de los modos. </string>
+
+    <string name="informacion">
+        \n<b>MODO GUIADO:\n</b>
+        Este trata de jugar siguiendo una ruta definida. Solo se podra jugar el que este activado y para acceder a el
+        tendremos que estar al menos a 50m del lugar. La partiada se guardara en el ultimo punto al que juguemos.\n
+
+        \n<b>MODO LIBRE:\n</b>
+        Este trata de jugar en el orden que queramos, la unica condicion para acceder a ellos es estar al menos
+        a 50m del lugar. Estas partidas no seran guardadas, por lo cual el progreso se perdera.\n
+    </string>
+
+    <string name="txt_cancelar">CANCELAR</string>
 </resources>
