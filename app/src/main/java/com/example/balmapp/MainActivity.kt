@@ -39,35 +39,27 @@ class MainActivity : AppCompatActivity() {
             .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         NavFrag.theme=currentNightMode.toString()
         //pide los permisos que necesita la aplicacion
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),1)
-            return
-        }
+
         NavFrag.idioma=Locale.getDefault().language
     }
-//se controla la pulsación del boton atras en el caso que si cierra la aplicacion  en caso que no, no pasa nada
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-    var cerrar1 = false
-    if (NavFrag.pantalla_inicio){
-        android.app.AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
-            .setView(layoutInflater.inflate(R.layout.l_dialogo_cerrar, null))
-            .setPositiveButton(R.string.si,
-                DialogInterface.OnClickListener { dialog, id ->
-                    finish()
-                    cerrar1 = super.onKeyDown(keyCode, event)
-                })
-            .setNeutralButton(R.string.cancel,
-                DialogInterface.OnClickListener { dialog, id ->
-                    dialog.dismiss()
-                })
-            .setCancelable(false)
-            .create()
-            .show()
-    }else{
-        cerrar1 = super.onKeyDown(keyCode, event)
+    //se controla la pulsación del boton atras en el caso que si cierra la aplicacion  en caso que no, no pasa nada
+    override fun onBackPressed() {
+        if (NavFrag.pantalla_inicio){
+            android.app.AlertDialog.Builder(this, R.style.DialogBasicCustomStyle)
+                .setView(layoutInflater.inflate(R.layout.l_dialogo_cerrar, null))
+                .setPositiveButton(R.string.si,
+                    DialogInterface.OnClickListener { dialog, id ->
+                        finish()
+                    })
+                .setNeutralButton(R.string.cancel,
+                    DialogInterface.OnClickListener { dialog, id ->
+                        dialog.dismiss()
+                    })
+                .setCancelable(false)
+                .create()
+                .show()
+        }else{
+            super.onBackPressed()
+        }
     }
-        return cerrar1
-    }
-
 }

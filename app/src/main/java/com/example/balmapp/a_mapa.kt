@@ -3,6 +3,7 @@ package com.example.balmapp
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
+import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.view.MenuItem
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.balmapp.databinding.LMapaBinding
@@ -77,7 +79,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         //Binding
         mapView!!.onCreate(mapViewBundle)
         mapView!!.getMapAsync(this)
-       // binding.toolbar.inflateMenu(R.menu.menu_admin)
+        // binding.toolbar.inflateMenu(R.menu.menu_admin)
         // abre el menu clickando el boton flotante
         binding.floatingActionButton.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
@@ -138,45 +140,50 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         insertarGune(LatLng(    43.188778, -3.200028),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
         insertarGune(LatLng(    43.193611, -3.194861),"6.Gunea","San Felipe y Santiago eguna",gmap!!)
         insertarGune(LatLng(     43.196250, -3.192639),"7.Gunea","Balmasedako zaindariaren jaia: San Severino. Putxerak",gmap!!)
-        if(NavFrag.gune==7 && Sharedapp.partida.partida=="guiado"){
-            NavFrag.IniciarActivity(this,"a_findejuego")
-            finish()
-        }
         //el zoom del mapa y la camara se pone en la coordenada
         gmap!!.setMinZoomPreference(13f)
         gmap!!.moveCamera(CameraUpdateFactory.newLatLng(LatLng(     43.196250, -3.192639)))
-        gmap!!.setOnMarkerClickListener { marker ->
-            if (marker.isInfoWindowShown) {
-                marker.hideInfoWindow()
-            } else {
-                marker.showInfoWindow()
+        if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED){
+            if(NavFrag.gune==7 && Sharedapp.partida.partida=="guiado"){
+                NavFrag.IniciarActivity(this,"a_findejuego")
+                finish()
             }
-            if (Sharedapp.partida.partida=="guiado"){
-                if(enrango && marker.title.toString().trim()==marcadores[NavFrag.gune].title.toString().trim()){
+
+
+            gmap!!.setOnMarkerClickListener { marker ->
+                if (marker.isInfoWindowShown) {
+                    marker.hideInfoWindow()
+                } else {
+                    marker.showInfoWindow()
+                }
+                if (Sharedapp.partida.partida=="guiado"){
+                    if(enrango && marker.title.toString().trim()==marcadores[NavFrag.gune].title.toString().trim()){
+                        MarcadorJuego(marker.title.toString().trim())
+                    }
+                }else if(Sharedapp.partida.partida=="libre"){
+                    if(gunes_activos.size!=0){
+                        for(i in 0 until gunes_activos.size){
+                            if (marker.title.equals(gunes_activos[i])){
+                                MarcadorJuego(marker.title.toString().trim())
+                                break
+                            }
+                        }
+                        gunes_activos.removeAll(gunes_activos)
+                    }
+                }else{
                     MarcadorJuego(marker.title.toString().trim())
                 }
-            }else if(Sharedapp.partida.partida=="libre"){
-                if(gunes_activos.size!=0){
-                    for(i in 0 until gunes_activos.size){
-                        if (marker.title.equals(gunes_activos[i])){
-                            MarcadorJuego(marker.title.toString().trim())
-                            break
-                        }
-                    }
-                    gunes_activos.removeAll(gunes_activos)
-                }
-            }else{
-                MarcadorJuego(marker.title.toString().trim())
+                true
             }
-            true
-        }
-        if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="libre"){
-            gmap!!.isMyLocationEnabled=true
-            gmap!!.uiSettings.isZoomControlsEnabled=true
-            gmap!!.uiSettings.isCompassEnabled=true
-            //Localización a tiempo real
-            gmap!!.setOnMyLocationChangeListener{
-                comprobarubicacion(it,Sharedapp.partida.partida)
+            if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="libre"){
+                gmap!!.isMyLocationEnabled=true
+                gmap!!.uiSettings.isZoomControlsEnabled=true
+                gmap!!.uiSettings.isCompassEnabled=true
+                //Localización a tiempo real
+                gmap!!.setOnMyLocationChangeListener{
+                    comprobarubicacion(it,Sharedapp.partida.partida)
+                }
             }
         }
     }
@@ -215,7 +222,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                             toast1=true
                         }
                     }else{
-                       // marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                        // marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
                         enrango=false
                     }
                 }
@@ -310,7 +317,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         }
         return true
     }
-//si le das al boton para tras te lleva a el main activity
+    //si le das al boton para tras te lleva a el main activity
     override fun onBackPressed() {
         super.onBackPressed()
         NavFrag.IniciarActivity(this,"MainActivity")

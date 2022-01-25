@@ -3,11 +3,14 @@ package com.example.balmapp
 
 
 import android.content.DialogInterface
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
+import androidx.core.view.isVisible
 import com.example.balmapp.databinding.LModoBinding
 import java.util.*
 
@@ -29,6 +32,13 @@ class f_modo : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         NavFrag.pantalla_inicio=true
+        if (ActivityCompat.checkSelfPermission(requireContext(), android.Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(requireActivity(), arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),1)
+            binding.btnmodoGuiado.isVisible=false
+        }else{
+            binding.btnmodoGuiado.isVisible=true
+        }
         //El boton MODO LIBRE nos llevara al mapa donde todos los pines estaran disponible para juegar
         //La unica condicion sera a estar a 50m como mucho del punto
         binding.btnmodoLibre.setOnClickListener{
@@ -64,7 +74,7 @@ class f_modo : Fragment() {
             .setView(layoutInflater.inflate(R.layout.l_info,null))
             .setPositiveButton(R.string.txt_cancelar,
                 DialogInterface.OnClickListener { dialog, id ->
-                
+
                 })
 
             .setCancelable(false)
