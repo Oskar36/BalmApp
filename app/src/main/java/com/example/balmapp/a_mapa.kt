@@ -80,7 +80,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
        // binding.toolbar.inflateMenu(R.menu.menu_admin)
         // abre el menu clickando el boton flotante
         binding.floatingActionButton.setOnClickListener {
-         binding.drawerLayout.openDrawer(GravityCompat.START)
+            binding.drawerLayout.openDrawer(GravityCompat.START)
         }
         navigationView.setNavigationItemSelectedListener(this)
 
@@ -152,7 +152,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                 marker.showInfoWindow()
             }
             if (Sharedapp.partida.partida=="guiado"){
-                if(enrango){
+                if(enrango && marker.title.toString().trim()==marcadores[NavFrag.gune].title.toString().trim()){
                     MarcadorJuego(marker.title.toString().trim())
                 }
             }else if(Sharedapp.partida.partida=="libre"){
@@ -169,7 +169,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                 MarcadorJuego(marker.title.toString().trim())
             }
             true
-         }
+        }
         if(Sharedapp.partida.partida=="guiado"||Sharedapp.partida.partida=="libre"){
             gmap!!.isMyLocationEnabled=true
             gmap!!.uiSettings.isZoomControlsEnabled=true
@@ -219,7 +219,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                         enrango=false
                     }
                 }
-        }
+            }
         }
     }
 
@@ -288,25 +288,25 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.puente_admin -> {abrirActivityMenu("a_juegos","puente")
-                                  binding.drawerLayout.closeDrawer(GravityCompat.START)}
+                binding.drawerLayout.closeDrawer(GravityCompat.START)}
             R.id.kolitxa_menu -> {abrirActivityMenu("a_juegos","kolitza")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.jauregi_menu ->  {abrirActivityMenu("a_juegos","jauregi")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.procesion_menu -> {abrirActivityMenu("a_juegos","procesion")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.txapela_menu -> {   abrirActivityMenu("a_juegos","boina")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.san_felipe_menu -> {abrirActivityMenu("a_juegos","san felipe")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.putxero_menu -> {abrirActivityMenu("a_juegos","puchero")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
             R.id.acerca_de_menu -> {abrirActivityMenu("a_acercade","puchero")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START)
-              }
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
+            }
             R.id.modo_profesor_menuAdmin -> { modo_Profesor()  }
             R.id.desconectar_menu -> {abrirActivityMenu("MainActivity","")
-                                   binding.drawerLayout.closeDrawer(GravityCompat.START) }
+                binding.drawerLayout.closeDrawer(GravityCompat.START) }
         }
         return true
     }
@@ -326,14 +326,14 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             .setPositiveButton(R.string.continuar,
                 DialogInterface.OnClickListener { dialog, id ->
 
-                        Sharedapp.partida.partida="profesor"
-                        finish()
-                        NavFrag.IniciarActivity(this,"a_mapa")
-                        dialog.dismiss()
+                    Sharedapp.partida.partida="profesor"
+                    finish()
+                    NavFrag.IniciarActivity(this,"a_mapa")
+                    dialog.dismiss()
                 })
             .setNeutralButton(R.string.cancel,
                 DialogInterface.OnClickListener { dialog, id ->
-                   dialog.dismiss()
+                    dialog.dismiss()
                     // sign in the user ...
                 })
             .setCancelable(false)
@@ -342,5 +342,3 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
 
     }
 }
-
-

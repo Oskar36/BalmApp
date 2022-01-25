@@ -25,13 +25,17 @@ class f_apodo : Fragment() {
         super.onResume()
         NavFrag.pantalla_inicio=false
         database = FirebaseFirestore.getInstance()
+
+        //este boton comprueba si existe un usuario creado o no
         binding.btnapodoJugar.setOnClickListener(){
+            // si se ha rellenado el texto para poner usuario se guarda
             if(binding.txtapodoApodo.text.toString().isNotEmpty()){
                 Sharedapp.nombre.nombre=binding.txtapodoApodo.text.toString().toLowerCase()
             var doc=database.collection("apodos")
                 .document(binding.txtapodoApodo.text.toString().trim().toLowerCase())
             doc.get()
                 .addOnSuccessListener { document ->
+                    // si el usuario existe se cambiea el fragment a partida si no te lleva directamente al mapa
                     if(document.exists()){
                         val fragment:Fragment=f_partida()
                         NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
@@ -45,7 +49,9 @@ class f_apodo : Fragment() {
                 .addOnFailureListener(){
                     Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
                 }
-            }else{
+            }
+            //si no introduces nada en el texto de usuario salta un mensaje de error
+            else{
                 Toast.makeText(requireContext(), R.string.camposvacios, Toast.LENGTH_SHORT).show()
             }
         }

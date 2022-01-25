@@ -160,7 +160,7 @@ class NavFrag {
                     DialogInterface.OnClickListener { dialog, id ->
                         //temina el juego y te lleva a  el mapa
                         if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
-                            if (modo_libre.contains(juego_modo_libre(Sharedapp.gune.gune).trim())){
+                            if (!modo_libre.contains(juego_modo_libre(Sharedapp.gune.gune).trim())){
                                 modo_libre.add(juego_modo_libre(Sharedapp.gune.gune).trim())
                             }
                         }else{

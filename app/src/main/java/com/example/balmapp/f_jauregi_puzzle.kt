@@ -180,7 +180,7 @@ class f_jauregi_puzzle : Fragment() {
     }
 
 
-
+//se cambia la imagen en blanco y negro por  la imagen correcta en color
     private fun poner_filtro_normal(nombre:String) {
 
         when (nombre) {
@@ -231,17 +231,21 @@ class f_jauregi_puzzle : Fragment() {
 
 
     }
+
+    //dialogo de fin de juego
     private fun mostrarDialogoPersonalizado(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_siguientejuego,
                 DialogInterface.OnClickListener { dialog, id ->
+                    //si le das a sigiente juego se carga el fragment de el siguiente juego
                     val fragment:Fragment=NavFrag.AbrirSiguiente(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
+                // si le das a repetir se recarga la pantalla
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofinintermedio(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
@@ -265,7 +269,7 @@ class f_jauregi_puzzle : Fragment() {
         return true
     }
 
-
+//es el dialog de descargar
     private fun descargar(){
         val bm = BitmapFactory.decodeResource(resources, R.drawable.palaciohorcasitasbalmaseda)
 
@@ -274,7 +278,7 @@ class f_jauregi_puzzle : Fragment() {
             .setPositiveButton(R.string.si,
                 DialogInterface.OnClickListener { dialog, id ->
 
-
+                // si le das al boton descargar se te descarga la imagen del puzzle bien hecha y te abre el dialogo de fin de juego
                     MediaStore.Images.Media.insertImage(requireActivity().contentResolver,bm, "Puzzle" , "Puzzle jauregi")
                     dialog.dismiss()
                     Toast.makeText(requireContext(), resources.getString(R.string.desgargado), Toast.LENGTH_SHORT).show()
@@ -282,6 +286,7 @@ class f_jauregi_puzzle : Fragment() {
                     mostrarDialogoPersonalizado()
                     // sign in the user ...
                 })
+                // te abre el dialogo de fin de juego
             .setNeutralButton(R.string.no,
                 DialogInterface.OnClickListener { dialog, id ->
                     dialog.dismiss()
