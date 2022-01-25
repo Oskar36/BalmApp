@@ -24,10 +24,12 @@ class f_fin : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        //si le das al boton siguiente te lleva al mapa
         binding.btnfinSiguiente.setOnClickListener{
                 NavFrag.IniciarActivity(requireContext(),"a_mapa")
                 requireActivity().finish()
         }
+        //si le das al boton repetir te cambia el fragment a el gune en el que esta 
         binding.btnfinRepetir.setOnClickListener{
             val fragment:Fragment=MarcadorJuego(Sharedapp.gune.gune)
             NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Repetir","Juego")
@@ -37,6 +39,7 @@ class f_fin : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+    //carga el fragmente que se le pasa
     private fun MarcadorJuego(gune: String):Fragment{
         var fragment:Fragment?=null
         when (gune){

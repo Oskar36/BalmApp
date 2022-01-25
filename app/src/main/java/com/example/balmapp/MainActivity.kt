@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        //carga el fragment de modo
         val fragment= f_modo()
         NavFrag.Abrirfragment(fragment,this,R.id.fl_main)
 
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val currentNightMode: Int = this.resources
             .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         NavFrag.theme=currentNightMode.toString()
+        //pide los permisos que necesita la aplicacion
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
             != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),1)
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         }
         NavFrag.idioma=Locale.getDefault().language
     }
-//se controla la pulsación del boton atras
+//se controla la pulsación del boton atras en el caso que si cierra la aplicacion  en caso que no, no pasa nada
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
     var cerrar1 = false
     if (NavFrag.pantalla_inicio){

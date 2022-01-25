@@ -12,6 +12,7 @@ class a_juegos : AppCompatActivity() {
         //iniciar el metodo
         seleccionjuego()
     }
+    //carga el fragment corespondiente
     private fun seleccionjuego(){
         val juego:String=Sharedapp.prefs.juego
         var fragment: Fragment? =null
@@ -26,7 +27,7 @@ class a_juegos : AppCompatActivity() {
         }
         NavFrag.Abrirfragment(fragment!!,this,R.id.framejuegos)
     }
-
+//controlamos el boton atras si estas en el juego 1 te lleva a la explicacion y si estas en el juego 2 te lleva al primer juego
     override fun onBackPressed() {
         super.onBackPressed()
         if(NavFrag.atras_lugar=="Juego1"){
