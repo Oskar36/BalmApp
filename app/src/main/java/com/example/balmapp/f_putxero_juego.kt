@@ -154,7 +154,7 @@ class f_putxero_juego : Fragment() {
     private var x0=0.0f
     private var y0=0.0f
     @SuppressLint("ClickableViewAccessibility")
-    //sadsasd
+    //si
     val touchListener = View.OnTouchListener { view, event ->
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
