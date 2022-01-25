@@ -72,6 +72,8 @@ class NavFrag {
                 }
             }
         }
+
+        //hace que el logo se anime
         fun animacion_dantzaris(imagen: ImageView){
             val dantzaris = imagen.apply {
                 setBackgroundResource(R.drawable.animaciondantzaris)
@@ -80,6 +82,7 @@ class NavFrag {
             animacion.start()
 
         }
+        //animacion de la cuenta atras de el puchero
         fun animacion_numero(imagen: ImageView){
             val numero = imagen.apply {
                 setBackgroundResource(R.drawable.animacion_numeros)
@@ -88,6 +91,8 @@ class NavFrag {
             animacion.start()
 
         }
+
+        //para la animacion de los dantzaris
         fun animacion_dantzaris_parar(imagen: ImageView){
             imagen.apply {
                 setBackgroundResource(R.drawable.animaciondantzaris)
@@ -97,6 +102,7 @@ class NavFrag {
             animacion.stop()
 
         }
+
         fun MarcadorJuegofin(gune: String):Fragment{
             var fragment:Fragment?=null
             when (gune){
@@ -123,6 +129,8 @@ class NavFrag {
             }
             return fragment!!
         }
+
+        //te lleva al siguiente juego
         fun  MarcadorJuegofinintermedio(gune: String):Fragment{
             var fragment:Fragment?=null
             when (gune){
@@ -142,12 +150,15 @@ class NavFrag {
                 Toast.makeText(context, R.string.error_toast, Toast.LENGTH_SHORT).show()
             }
         }
+
+        //dialogo fin de juego
         fun mostrarDialogoPersonalizado(layoutInflater:LayoutInflater,context: Context,activity:FragmentActivity,view: View){
 
             AlertDialog.Builder(context, R.style.DialogBasicCustomStyle)
                 .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
                 .setPositiveButton(R.string.txt_finalizar,
                     DialogInterface.OnClickListener { dialog, id ->
+                        //temina el juego y te lleva a  el mapa
                         if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
                             if (modo_libre.contains(juego_modo_libre(Sharedapp.gune.gune).trim())){
                                 modo_libre.add(juego_modo_libre(Sharedapp.gune.gune).trim())
@@ -160,6 +171,7 @@ class NavFrag {
                         // sign in the user ...
                     })
                 .setNeutralButton(R.string.repetir,
+                    //repite la pantalla en la que esta
                     DialogInterface.OnClickListener { dialog, id ->
                         val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                         replaceFragment(fragment,activity,view.id)

@@ -325,17 +325,11 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             .setView(view)
             .setPositiveButton(R.string.continuar,
                 DialogInterface.OnClickListener { dialog, id ->
-                    val no = view.findViewById<EditText>(R.id.contraseña)
-                    val contraseña= no?.text?.toString() ?: " "
-                    if (contraseña.trim()=="123456Aa"){
+
                         Sharedapp.partida.partida="profesor"
                         finish()
                         NavFrag.IniciarActivity(this,"a_mapa")
                         dialog.dismiss()
-                    }else{
-                        Toast.makeText(this, R.string.pasahitzavacia, Toast.LENGTH_SHORT).show()
-                    }
-                    // sign in the user ...
                 })
             .setNeutralButton(R.string.cancel,
                 DialogInterface.OnClickListener { dialog, id ->

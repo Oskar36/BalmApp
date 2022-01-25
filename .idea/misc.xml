@@ -54,7 +54,7 @@
         <entry key="..\:/Users/ik_2dm3/AndroidStudioProjects/BalmApp/app/src/main/res/menu/menu_admin.xml" value="0.1" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/a_juegos.xml" value="0.12708333333333333" />
-        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/activity_main.xml" value="0.1827956989247312" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/dialogo_descargar.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/header.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_acercade.xml" value="0.12708333333333333" />
@@ -65,7 +65,9 @@
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_cancion.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_felipe_explicacion.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_fin.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_fin_intermedio.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_findejuego.xml" value="0.25" />
+        <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_info.xml" value="0.25" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_explicacion.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_puzzle.xml" value="0.264" />
         <entry key="..\:/Users/ikerc/AndroidStudioProjects/BalmApp/app/src/main/res/layout/l_jauregi_unir.xml" value="0.25" />
