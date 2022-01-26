@@ -2,21 +2,11 @@ package com.example.balmapp
 
 
 import android.content.DialogInterface
-import android.content.Intent
-import android.content.pm.PackageManager
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
-import android.view.KeyEvent
-import android.view.KeyEvent.KEYCODE_BACK
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.view.isInvisible
 import com.example.balmapp.databinding.ActivityMainBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.util.*
 
 

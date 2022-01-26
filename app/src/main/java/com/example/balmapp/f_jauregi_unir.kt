@@ -3,18 +3,14 @@ package com.example.balmapp
 import android.content.DialogInterface
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isGone
 import com.example.balmapp.databinding.LJauregiUnirBinding
-import org.w3c.dom.Text
 
 
 private var _binding: LJauregiUnirBinding? = null
@@ -23,8 +19,6 @@ private var mediaplayer: MediaPlayer? = null
 private var linea: Linea? =null
 
 class f_jauregi_unirjuego : Fragment() {
-    val posiciones  = mutableListOf <Int>()
-    val posiciones2 = mutableListOf<TextView> ()
     override fun onCreateView(
         //asignacion del layout
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,15 +57,6 @@ class f_jauregi_unirjuego : Fragment() {
             }
         }
 
-       /* sacar_y(binding.txtTextoGelakEgongelak)
-       sacar_y(binding.txtTextoGelakEgongelak)
-        sacar_y(binding.txtTextoBalkoi)
-        sacar_y(binding.txtTextoSotoa)
-        sacar_y(binding.txtTextoGambara)
-        posiciones.shuffle()
-        posiciones2.forEach{
-            it.y= posiciones[posiciones2.indexOf(it)].toFloat()
-        }*/
 
         //el inicio y el final correcto de cada linea
         binding.txtTextoBehekoSolairuak.setOnClickListener{

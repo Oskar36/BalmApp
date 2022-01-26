@@ -5,7 +5,6 @@ import android.content.DialogInterface
 import android.graphics.BitmapFactory
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.Handler
 import android.os.SystemClock
 import android.provider.MediaStore
 import androidx.fragment.app.Fragment
@@ -19,7 +18,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.example.balmapp.databinding.LPuentePuzzleBinding
-import java.time.Clock
+
 
 private var _binding: LPuentePuzzleBinding? = null
 private val binding get() = _binding!!

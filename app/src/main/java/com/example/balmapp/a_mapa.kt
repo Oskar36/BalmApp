@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
@@ -332,7 +331,6 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
             .setView(view)
             .setPositiveButton(R.string.continuar,
                 DialogInterface.OnClickListener { dialog, id ->
-
                     Sharedapp.partida.partida="profesor"
                     finish()
                     NavFrag.IniciarActivity(this,"a_mapa")

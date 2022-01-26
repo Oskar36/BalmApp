@@ -1,9 +1,7 @@
 package com.example.balmapp
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.DialogInterface
-import android.graphics.drawable.AnimationDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.SystemClock
