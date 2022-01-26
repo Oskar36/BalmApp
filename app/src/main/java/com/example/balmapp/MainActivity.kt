@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+
         //carga el fragment de modo
         val fragment= f_modo()
         NavFrag.Abrirfragment(fragment,this,R.id.fl_main)

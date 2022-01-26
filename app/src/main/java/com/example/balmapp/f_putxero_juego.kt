@@ -121,7 +121,7 @@ class f_putxero_juego : Fragment() {
 
                 override fun onAnimationRepeat(animation: Animation) {
                 }
-
+//cuando la animacion acaba para los audios de el juego y si pierde saca el dialogo de derrota
                 override fun onAnimationEnd(animation: Animation) {
                     // Pass the Intent to switch to other Activity
                     NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
@@ -137,7 +137,7 @@ class f_putxero_juego : Fragment() {
             })
 
         }
-
+        //si no ha terminado el audio lo pasa hasta el final haciendo que se acabe y los dantzaris dejan de moverse
         binding.saltar.setOnClickListener {
             if (!terminar){
                 saltar=false
@@ -154,7 +154,6 @@ class f_putxero_juego : Fragment() {
     private var x0=0.0f
     private var y0=0.0f
     @SuppressLint("ClickableViewAccessibility")
-    //si
     val touchListener = View.OnTouchListener { view, event ->
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
@@ -169,7 +168,7 @@ class f_putxero_juego : Fragment() {
                 yDelta = y - lParams.topMargin
             }
 
-
+//cuando se clicka en cualquier alimento hace que se puedo mover y que se puedo poner en el sitio correcto que en este caso es el xy del puchero
             MotionEvent.ACTION_UP -> {
                 val x_ingrediente=view.x
                 val y_ingrediente=view.y
@@ -250,12 +249,13 @@ class f_putxero_juego : Fragment() {
         }
         return true
     }
-
+    //dialogo de fin de juego
     private fun mostrarDialogoPersonalizado(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
+                //el boton de finalizar lo que hace es para el tren y pone a el usuario en el gune 7 cierra la activity
                 DialogInterface.OnClickListener { dialog, id ->
                     moveLefttoRight.cancel()
                     if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
@@ -270,6 +270,7 @@ class f_putxero_juego : Fragment() {
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
+                //es el boton repetir lo que hace es recargar el fragment
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id,"Juego1")
@@ -280,21 +281,24 @@ class f_putxero_juego : Fragment() {
             .show()
 
     }
-
+//dialogo de derrota
     private fun mostrarDialogoDerrota(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuegoderrota,null))
-
+//este es el boton de repetir juego
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
+                    //se recarga el fragent y te carga es snackbar de saltar el audio de explicacion
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)
                     // sign in the user ...
                     buildSnackbar()
                 })
+                //este es el boton de volver al mapa
             .setPositiveButton(R.string.volver_mapa,
                 DialogInterface.OnClickListener { dialog, id ->
+                    //cierra la actividad y te vuelve al mapa
                 requireActivity().finish()
                 // sign in the user ...
             })
@@ -303,7 +307,7 @@ class f_putxero_juego : Fragment() {
             .show()
 
     }
-
+// el snack bar de cuando acabas el juego y le das a repetir te saca un mensaje de que si quieres saltar el audio y te lo salta
     private fun buildSnackbar() {
         val snackbar = Snackbar.make(
             binding.frameLayout11,
