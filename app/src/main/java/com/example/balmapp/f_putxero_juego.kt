@@ -279,12 +279,12 @@ class f_putxero_juego : Fragment() {
             .show()
 
     }
-//dialogo de derrota
+    //dialogo de derrota
     private fun mostrarDialogoDerrota(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuegoderrota,null))
-//este es el boton de repetir juego
+    //este es el boton de repetir juego
             .setNeutralButton(R.string.repetir,
                 DialogInterface.OnClickListener { dialog, id ->
                     //se recarga el fragent y te carga es snackbar de saltar el audio de explicacion
@@ -305,7 +305,7 @@ class f_putxero_juego : Fragment() {
             .show()
 
     }
-// el snack bar de cuando acabas el juego y le das a repetir te saca un mensaje de que si quieres saltar el audio y te lo salta
+    // el snack bar de cuando acabas el juego y le das a repetir te saca un mensaje de que si quieres saltar el audio y te lo salta
     private fun buildSnackbar() {
         val snackbar = Snackbar.make(
             binding.frameLayout11,

@@ -37,8 +37,8 @@ class f_sanfelipe_cancion : Fragment() {
         val textos = arrayOf( R.string.felipe_cancion_letra1,R.string.felipe_cancion_letra2,R.string.felipe_cancion_letra3,R.string.felipe_cancion_letra4)
         var contador=1
         binding.siguiente.setOnClickListener {
-            binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
-            binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            binding.text1.setTextColor(resources.getColor(R.color.primaryTextColor))
+            binding.text2.setTextColor(resources.getColor(R.color.primaryTextColor))
             when (contador) {
                 //dependiendo donde esta el contador mira cuales son las palabras correctas correspondientes
                     //si no las palabras que no se hayan puesto bien se pondran en rojo
@@ -55,10 +55,10 @@ class f_sanfelipe_cancion : Fragment() {
                     else{
                         Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
                         if(binding.text1.text.toString().trim().toLowerCase()!=("mayo") ){
-                            binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                            binding.text1.setTextColor(resources.getColor(R.color.rojo))
                         }
                             if(binding.text2.text.toString().trim().toLowerCase()!=("abril")) {
-                                binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                                binding.text2.setTextColor(resources.getColor(R.color.rojo))
                     }
                 }
                 }
@@ -74,10 +74,10 @@ class f_sanfelipe_cancion : Fragment() {
                 else{
                     Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
                     if(binding.text1.text.toString().trim().toLowerCase()!=("buena") ){
-                        binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                        binding.text1.setTextColor(resources.getColor(R.color.rojo))
                     }
                     if(binding.text2.text.toString().trim().toLowerCase()!=("comer")) {
-                        binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                        binding.text2.setTextColor(resources.getColor(R.color.rojo))
                     }
                 }
 
@@ -113,8 +113,8 @@ class f_sanfelipe_cancion : Fragment() {
 //comprueba si las ultimas palabras son correctas, si es asi sale el dialogo de fin de jueg y se cargar el mapa y el gune que es en la base de datos
 // si no son correctas las palabras que se han puesto la que no estan bien puestas se pondran en rojo
         binding.btncorregir.setOnClickListener {
-            binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
-            binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            binding.text1.setTextColor(resources.getColor(R.color.primaryTextColor))
+            binding.text2.setTextColor(resources.getColor(R.color.primaryTextColor))
             if(binding.text1.text.toString().trim().toLowerCase()==("mocos") && binding.text2.text.toString().trim().toLowerCase()==("pocos")) {
                 if(Sharedapp.partida.partida=="guiado"){
                     NavFrag.gune++
@@ -177,7 +177,10 @@ class f_sanfelipe_cancion : Fragment() {
             .setPositiveButton(R.string.txt_finalizar,
                 //al dar a terminar te lleva al mapa
                 DialogInterface.OnClickListener { dialog, id ->
-                    NavFrag.IniciarActivity(requireContext(),"a_mapa")
+                    NavFrag.IniciarActivity(
+                        requireContext(),
+                        "a_mapa"
+                    )
                     requireActivity().finish()
                     // sign in the user ...
                 })
