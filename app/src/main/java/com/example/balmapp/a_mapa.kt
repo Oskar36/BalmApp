@@ -79,7 +79,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         mapView!!.onCreate(mapViewBundle)
         mapView!!.getMapAsync(this)
         // binding.toolbar.inflateMenu(R.menu.menu_admin)
-        // abre el menu clickando el boton flotante
+        // abre el menu clickando el botón flotante
         binding.floatingActionButton.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
@@ -96,7 +96,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         }
         mapView!!.onSaveInstanceState(mapViewBundle)
     }
-    //Funciones obligatorias de tener para que le mapa funcione
+    //Funciones obligatorias de tener para que el mapa funcione
     override fun onResume() {
         super.onResume()
         mapView!!.onResume()
@@ -130,37 +130,40 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
     @SuppressLint("MissingPermission")
     override fun onMapReady(googleMap: GoogleMap) {
         gmap = googleMap
+        //insercciones de los marcadores
         insertarGune(LatLng(   43.192611, -3.195056),"1.Gunea","Balmasedako Zubi Zaharra",gmap!!)
-        //insertarGune(LatLng(   43.201861, -3.249361),"2.Gunea","Kolitzako igoera",gmap!!)
         insertarGune(LatLng(   43.199778, -3.214444),"2.Gunea ","Kolitza mendia",gmap!!)
         insertarGune(LatLng(   43.194064, -3.194186),"3.Gunea","Horcasitas Jauregia",gmap!!)
         insertarGune(LatLng(   43.192489, -3.197533),"4.Gunea","Aste Santuko Prozesioak",gmap!!)
-        //insertarGune(LatLng(   43.176194, -3.212556),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
         insertarGune(LatLng(    43.188778, -3.200028),"5.Gunea","Boinas la Encartada Fabrika museoa",gmap!!)
         insertarGune(LatLng(    43.193611, -3.194861),"6.Gunea","San Felipe y Santiago eguna",gmap!!)
         insertarGune(LatLng(     43.196250, -3.192639),"7.Gunea","Balmasedako zaindariaren jaia: San Severino. Putxerak",gmap!!)
-        //el zoom del mapa y la camara se pone en la coordenada
+        //el zoom del mapa y la camara
         gmap!!.setMinZoomPreference(13f)
         gmap!!.moveCamera(CameraUpdateFactory.newLatLng(LatLng(     43.196250, -3.192639)))
+        //comprueba si se han aceptado los permisos
         if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
             == PackageManager.PERMISSION_GRANTED){
+                //en caso de que esté en modo guiado y ya se haya pasado los puntos abrirá directamente la pantalla de final de juego
             if(NavFrag.gune==7 && Sharedapp.partida.partida=="guiado"){
                 NavFrag.IniciarActivity(this,"a_findejuego")
                 finish()
             }
-
-
             gmap!!.setOnMarkerClickListener { marker ->
                 if (marker.isInfoWindowShown) {
                     marker.hideInfoWindow()
                 } else {
                     marker.showInfoWindow()
                 }
+                //si está en un rango de 50 metros del punto que toque, podrá abrir el juego clickando el marcador
                 if (Sharedapp.partida.partida=="guiado"){
                     if(enrango && marker.title.toString().trim()==marcadores[NavFrag.gune].title.toString().trim()){
                         MarcadorJuego(marker.title.toString().trim())
                     }
-                }else if(Sharedapp.partida.partida=="libre"){
+
+                }
+                //si está en un rango de 50 metros del punto que toque, podrá abrir el juego clickando el marcador
+                else if(Sharedapp.partida.partida=="libre"){
                     if(gunes_activos.size!=0){
                         for(i in 0 until gunes_activos.size){
                             if (marker.title.equals(gunes_activos[i])){
@@ -171,6 +174,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                         gunes_activos.removeAll(gunes_activos)
                     }
                 }else{
+                    //si está en modo profesor podrá abrir cualquiera
                     MarcadorJuego(marker.title.toString().trim())
                 }
                 true
@@ -206,13 +210,13 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                     toast1=false
                 }
             }else if(modo=="libre"){
+                //se guardan todos los puntos que estén a 50 metros o menos
                 for (i in 0 until marcadores.size){
                     localizacion=marcadores[i].position
                     location_gune=Location("a")
                     location_gune.latitude=localizacion.latitude
                     location_gune.longitude=localizacion.longitude
                     if(location.distanceTo(location_gune)<=50){
-                        //marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                         gunes_activos.add(marcadores[i].title!!)
                         marcadores[i].icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                         enrango=true
@@ -248,6 +252,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
         if(Sharedapp.partida.partida=="profesor"){
             marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         }else if(Sharedapp.partida.partida=="libre"){
+            //poner colores al marcador en modo libre
             if(NavFrag.modo_libre.size!=0){
                 if (NavFrag.modo_libre.contains(marcador.title.toString().trim())){
                     marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
@@ -256,6 +261,7 @@ class a_mapa : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigat
                 }
             }
         }else{
+            //poner colores al marcador en modo guiado
             if(NavFrag.gune<marcadores.size){
                 marcador.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
             }else if(NavFrag.gune==marcadores.size){

@@ -61,7 +61,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
 
-        // Adjusting height fo the grid
+        // Ajustar la altura del layout
         val params = binding.wordsGrid.layoutParams as ConstraintLayout.LayoutParams
         params.height = resources.displayMetrics.widthPixels
         binding.wordsGrid.layoutParams = params
@@ -101,6 +101,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
         mediaplayer?.release()
         mediaplayer = null
     }
+    //dialogo de victoria
     private fun mostrarDialogoPersonalizado(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
@@ -126,14 +127,14 @@ class f_kolitza_juego_sopaletras : Fragment() {
     val touchListener = View.OnTouchListener { v, event ->
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                // User started selecting cells
+                // El usuario selecciona las celdas
                 v.background = ContextCompat.getDrawable(requireContext(), R.drawable.borde)
                 xInitial = event.x
                 yInitial = event.y
             }
 
             MotionEvent.ACTION_MOVE -> {
-                // User's still selecting cells
+                // El usuario continua seleccionando las celdas
                 if(xInitial != -1f && yInitial != -1f){
 
                     val tag = v.tag.toString()
@@ -146,7 +147,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
                     if(swipeState == SwipeState.Undefined || swipeState == SwipeState.Horizontal){
                         when {
                             xDiff > cellWidth -> {
-                                // moving left
+                                // en caso de que mueva hacia la izquierda
                                 if(prevXDiff == -1f || prevXDiff != -1f && prevXDiff < xDiff){
                                     selectSingleCell((tagInt - (xDiff / cellWidth).toInt()).toString())
                                     swipeState = SwipeState.Horizontal
@@ -155,7 +156,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
                                 }
                             }
                             (-1) * xDiff > cellWidth -> {
-                                // moving right
+                                // en caso de que mueva hacia la derecha
                                 if(prevXDiff == -1f || prevXDiff != -1f && prevXDiff > xDiff){
                                     selectSingleCell((tagInt + -1 * (xDiff / cellWidth).toInt()).toString())
                                     swipeState = SwipeState.Horizontal
@@ -169,7 +170,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
                     if(swipeState == SwipeState.Undefined || swipeState == SwipeState.Vertical){
                         when {
                             yDiff > cellWidth -> {
-                                // moving up
+                                // en caso de que mueva hacia la arriba
                                 if(prevYDiff == -1f || prevYDiff != -1f && prevYDiff < yDiff){
                                     selectSingleCell((tagInt - 10*(yDiff/cellWidth).toInt()).toString())
                                     swipeState = SwipeState.Vertical
@@ -178,7 +179,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
                                 }
                             }
                             (-1)*yDiff > cellWidth -> {
-                                // moving down
+                                // en caso de que mueva hacia la abajo
                                 if(prevYDiff == -1f || prevYDiff != -1f && prevYDiff > yDiff){
                                     selectSingleCell((tagInt + -10*(yDiff/cellWidth).toInt()).toString())
                                     swipeState = SwipeState.Vertical
@@ -194,7 +195,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
 
             MotionEvent.ACTION_UP -> {
-                // User's done selecting cells
+                // cuando se termina de seleccionar las celdas
                 val tag = v.tag.toString()
                 val tagInt = tag.toInt()
                 var finalTag = tag
@@ -225,13 +226,13 @@ class f_kolitza_juego_sopaletras : Fragment() {
         }
          true
     }
+    //funcion para saber si el rango es valido o no
     private fun checkIfRangeIsValid(initTag: String, endTag: String){
         var found = false
         for(wordObj in wordArray){
             if(wordObj.checkLoc(initTag.toInt(), endTag.toInt(), swipeState == SwipeState.Horizontal)){
-                // we got a match
                 if(wordObj.found){
-                    // the word has been already found
+                    // la palabra es correcta
                     xInitial = -1f
                     yInitial = -1f
                     xDiff = -1f
@@ -247,6 +248,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
                 break
             }
         }
+        //en caso de que lo encuentre
         if (found){
             binding.greenCheck.visibility = View.VISIBLE
             Timer("delay", false).schedule(500) {
@@ -261,15 +263,14 @@ class f_kolitza_juego_sopaletras : Fragment() {
                     break
                 }
             }
+            //en caso de que haya encontrado todas las palabras
             if (showCongrats){
-                //congrats_layout.visibility = View.VISIBLE
                 mediaplayer!!.stop()
                 Sharedapp.gune.gune="2.Gunea 1"
                 mostrarDialogoPersonalizado()
             }
 
         } else {
-            //redX.visibility = View.VISIBLE
             Timer("delay", false).schedule(500) {
                 requireActivity().runOnUiThread{
                     //redX.visibility = View.GONE
@@ -278,13 +279,14 @@ class f_kolitza_juego_sopaletras : Fragment() {
             unselectCellRange(initTag.toInt(), endTag.toInt(), swipeState == SwipeState.Horizontal)
         }
 
-        // resetting values
+        // reseteo de variables
         xInitial = -1f
         yInitial = -1f
         xDiff = -1f
         yDiff = -1f
         swipeState = SwipeState.Undefined
     }
+    //deseleccionar mas de una celda
     private fun unselectCellRange(initTag: Int, endTag: Int, isHorizontal: Boolean){
         var start = initTag
         var end = endTag
@@ -302,6 +304,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
     }
+    //seleccionar una sola celda
     private fun selectSingleCell(tag: String){
         val childCount = binding.wordsGrid.childCount
         for (i in 0 until childCount){
@@ -314,6 +317,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
     }
+    //deseleccionar una sola celda
     private fun unselectSingleCell(tag: String){
         var tagInt = tag.toInt()
         val childCount = binding.wordsGrid.childCount
@@ -329,6 +333,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
     }
+    //marcar las celdas como correctas
     private fun markCellsAsFound(initTag: Int, endTag: Int, isHorizontal: Boolean){
         var start = initTag
         var end = endTag
@@ -355,6 +360,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
     }*/
+    //generar las letras de manera aleatoria
     private fun generateRandomLetters(){
         gridFlags = Array(gridSize) { BooleanArray(gridSize) { false } }
         foundWordsFlags = Array(gridSize) { BooleanArray(gridSize) { false } }
@@ -367,7 +373,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
 
-        // Positioning words to be found
+        // Posicionando las palabras para que puedan ser encontradas
         for (w in 0 until words.size){
             var found = false
             while (!found){
@@ -378,32 +384,32 @@ class f_kolitza_juego_sopaletras : Fragment() {
                     // maybe throw exception ?
                     break
                 }
-                // checking all rows or columns depending on the toggle value
+                // comprobar las líneas y columnas
                 var start = rnd.nextInt(gridSize - 1)
                 for (n in 0 until gridSize){
                     var _n = (n + start) % gridSize
                     // checking if the row or column is empty enough to place the word
                     for (i in r until r + words[w].length ) {
                         if(toggle){
-                            // looking along the row
+                            // revisar las filas
                             if(gridFlags[_n][i] && gridLetters[_n][i] != words[w][i-r].toString()) {
                                 break
                             } else if (i == r + words[w].length - 1) {
-                                // we've reached the end
+                                // al terminar
                                 found = true
                             }
                         } else {
-                            // looking at along the column
+                            // revisar las columnas
                             if(gridFlags[i][_n]&& gridLetters[i][_n] != words[w][i-r].toString()) {
                                 break
                             } else if (i == r + words[w].length - 1) {
-                                // we've reached the end
+                                // al terminar
                                 found = true
                             }
                         }
                     }
                     if(found) {
-                        // Registering location in Word object
+                        // guardar la localizacion de la palabra correcta
                         if(toggle){
                             wordArray[w].setLoc(_n*10 + r, toggle)
                         } else {
@@ -412,11 +418,9 @@ class f_kolitza_juego_sopaletras : Fragment() {
 
                         for (i in r until r + words[w].length ) {
                             if(toggle){
-                                // filling along the row
                                 gridLetters[_n][i] = words[w][i-r].toString()
                                 gridFlags[_n][i] = true
                             } else {
-                                // filling at along the column
                                 gridLetters[i][_n] = words[w][i-r].toString()
                                 gridFlags[i][_n] = true
                             }
@@ -428,7 +432,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
             }
         }
 
-        // displaying letters
+        // mostrando las palabras
         val childCount = binding.wordsGrid.childCount
         for (i in 0 until childCount){
             val linearLayout: LinearLayout = binding.wordsGrid.getChildAt(i) as LinearLayout
@@ -449,6 +453,7 @@ class f_kolitza_juego_sopaletras : Fragment() {
 
         val wordArray = Array<Letra>(numWords) { Letra("") }
         val words = wordarray()
+        //depende el idioma se pondrán las palabras en castellano o en euskera
         private fun wordarray():Array<String>{
             val words:Array<String>
             if(Locale.getDefault().language=="es"){
