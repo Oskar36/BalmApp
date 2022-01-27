@@ -40,8 +40,6 @@ class f_sanfelipe_cancion : Fragment() {
             binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
             binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
             when (contador) {
-                //dependiendo donde esta el contador mira cuales son las palabras correctas correspondientes
-                    //si no las palabras que no se hayan puesto bien se pondran en rojo
                 1 -> {
                     binding.txtsanfelipeCancion.setText(textos.get(0))
                     if(binding.text1.text.toString().trim().toLowerCase()==("mayo") && binding.text2.text.toString().trim().toLowerCase()==("abril")) {
@@ -57,10 +55,10 @@ class f_sanfelipe_cancion : Fragment() {
                         if(binding.text1.text.toString().trim().toLowerCase()!=("mayo") ){
                             binding.text1.setTextColor(getResources().getColor(R.color.rojo))
                         }
-                            if(binding.text2.text.toString().trim().toLowerCase()!=("abril")) {
-                                binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                        if(binding.text2.text.toString().trim().toLowerCase()!=("abril")) {
+                            binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                        }
                     }
-                }
                 }
 
                 2 -> { if(binding.text1.text.toString().trim().toLowerCase()==("buena") && binding.text2.text.toString().trim().toLowerCase()==("comer")) {
@@ -90,17 +88,16 @@ class f_sanfelipe_cancion : Fragment() {
                         binding.text1.setText("")
                         binding.text2.setText("")
                         contador++
-                        // al ser al ultima hace desaparecer el boton siguiente y hace visible el boton corregir
                         binding.siguiente.visibility = INVISIBLE
                         binding.btncorregir.visibility = VISIBLE
                     }
                     else{
                         Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
                         if(binding.text1.text.toString().trim().toLowerCase()!=("señorita") ){
-                            binding.text1.setTextColor(getResources().getColor(R.color.rojo))
+                            binding.text1.setTextColor(resources.getColor(R.color.rojo))
                         }
                         if(binding.text2.text.toString().trim().toLowerCase()!=("peseta")) {
-                            binding.text2.setTextColor(getResources().getColor(R.color.rojo))
+                            binding.text2.setTextColor(resources.getColor(R.color.rojo))
                         }
                     }
 
@@ -110,26 +107,14 @@ class f_sanfelipe_cancion : Fragment() {
         }
 
 
-//comprueba si las ultimas palabras son correctas, si es asi sale el dialogo de fin de jueg y se cargar el mapa y el gune que es en la base de datos
-// si no son correctas las palabras que se han puesto la que no estan bien puestas se pondran en rojo
+
         binding.btncorregir.setOnClickListener {
-            binding.text1.setTextColor(getResources().getColor(R.color.primaryTextColor))
-            binding.text2.setTextColor(getResources().getColor(R.color.primaryTextColor))
+            binding.text1.setTextColor(resources.getColor(R.color.primaryTextColor))
+            binding.text2.setTextColor(resources.getColor(R.color.primaryTextColor))
             if(binding.text1.text.toString().trim().toLowerCase()==("mocos") && binding.text2.text.toString().trim().toLowerCase()==("pocos")) {
-                if(Sharedapp.partida.partida=="guiado"){
-                    NavFrag.gune++
-                    BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
-                }
-                if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
-                    if (!NavFrag.modo_libre.contains("6.Gunea".trim())){
-                        NavFrag.modo_libre.add("6.Gunea".trim())
-                    }
-                }else{
-                    NavFrag.modo_libre.add("6.Gunea".trim())
-                }
-                mostrarDialogoPersonalizado()
                 //Abrir fragment repetir juego
                 Sharedapp.gune.gune="6.Gunea"
+                mostrarDialogoPersonalizado()
             }
             else{
                 Toast.makeText(requireContext(), R.string.error_toast, Toast.LENGTH_SHORT).show()
@@ -140,49 +125,57 @@ class f_sanfelipe_cancion : Fragment() {
                     binding.text2.setTextColor(resources.getColor(R.color.rojo))
                 }
 
-        }
+
+            }
 
         }
+
+
 
     }
-    //cuando vuelves si esta reproduciendo audio se reinicia y si no sigue
     override fun onResume() {
         super.onResume()
-         mediaPlayer = MediaPlayer.create(context, R.raw.felipe_cancion)
-       binding.play.setOnClickListener{
-           if(mediaPlayer!!.isPlaying){
-               mediaPlayer!!.seekTo(0)
-           } else {
-               mediaPlayer!!.start()
-           }
-       }
-        //si se esta reproduciendo audio se para
+        mediaPlayer = MediaPlayer.create(context, R.raw.felipe_cancion)
+        binding.play.setOnClickListener{
+            if(mediaPlayer!!.isPlaying){
+                mediaPlayer!!.seekTo(0)
+            } else {
+                mediaPlayer!!.start()
+            }
+        }
         binding.pause.setOnClickListener{
             if(mediaPlayer!!.isPlaying){
                 mediaPlayer!!.pause()
             }
         }
     }
-//se para el mediaplayer cuando se cierra
+
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer!!.stop()
     }
-
-    //dialogo de fin de juego
     private fun mostrarDialogoPersonalizado(){
 
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
-                //al dar a terminar te lleva al mapa
                 DialogInterface.OnClickListener { dialog, id ->
+                    if(Sharedapp.partida.partida=="guiado"){
+                        NavFrag.gune++
+                        BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+                    }
+                    if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                        if (!NavFrag.modo_libre.contains("6.Gunea".trim())){
+                            NavFrag.modo_libre.add("6.Gunea".trim())
+                        }
+                    }else{
+                        NavFrag.modo_libre.add("6.Gunea".trim())
+                    }
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     requireActivity().finish()
                     // sign in the user ...
                 })
             .setNeutralButton(R.string.repetir,
-                //al dar a repetir se recarga la pantalla en la que estamos
                 DialogInterface.OnClickListener { dialog, id ->
                     val fragment:Fragment=NavFrag.MarcadorJuegofin(Sharedapp.gune.gune)
                     NavFrag.replaceFragment(fragment,requireActivity(),((view as ViewGroup).parent as View).id)

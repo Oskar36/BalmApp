@@ -4,11 +4,13 @@ import android.content.DialogInterface
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.balmapp.databinding.LProcesionJuegoOrdenarBinding
 
@@ -54,7 +56,7 @@ class f_procesion_ordenar : Fragment() {
         }
         cargar_spinner()
         binding.btnprocesionordenar.setOnClickListener {
-        comprobar()
+            comprobar()
         }
     }
 
@@ -118,13 +120,6 @@ class f_procesion_ordenar : Fragment() {
             Sharedapp.gune.gune="4.Gunea 2"
             //paramos el audio
             mediaplayer!!.stop()
-            if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
-                if (!NavFrag.modo_libre.contains("4.Gunea".trim())){
-                    NavFrag.modo_libre.add("4.Gunea".trim())
-                }
-            }else{
-                NavFrag.modo_libre.add("4.Gunea".trim())
-            }
             mostrarDialogoPersonalizado()
         }
     }
@@ -135,6 +130,17 @@ class f_procesion_ordenar : Fragment() {
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,
                 DialogInterface.OnClickListener { dialog, id ->
+                    if(NavFrag.modo_libre.size!=0 && Sharedapp.partida.partida =="libre"){
+                        if (!NavFrag.modo_libre.contains("4.Gunea".trim())){
+                            NavFrag.modo_libre.add("4.Gunea".trim())
+                        }
+                    }else{
+                        NavFrag.modo_libre.add("4.Gunea".trim())
+                    }
+                    if(Sharedapp.partida.partida=="guiado"){
+                        NavFrag.gune++
+                        BD.actualizar_gune(NavFrag.gune+1,Sharedapp.nombre.nombre.trim())
+                    }
                     NavFrag.IniciarActivity(requireContext(),"a_mapa")
                     requireActivity().finish()
                     // sign in the user ...
