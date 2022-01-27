@@ -64,8 +64,7 @@ class f_putxero_juego : Fragment() {
         moveLefttoRight = TranslateAnimation(600F, -120F, 0F, 0F)
         moveLefttoRight.duration = 50000
         moveLefttoRight.fillAfter = true
-
-        //Toast.makeText(requireContext(), moveLefttoRight.duration.toString() , Toast.LENGTH_SHORT).show()
+    //parar animación cuando pare el audio
         binding.imgputxeroJuegoLogo.setOnClickListener{
             if(mediaplayer!!.isPlaying){
                 NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
@@ -121,7 +120,6 @@ class f_putxero_juego : Fragment() {
                 }
 //cuando la animacion acaba para los audios de el juego y si pierde saca el dialogo de derrota
                 override fun onAnimationEnd(animation: Animation) {
-                    // Pass the Intent to switch to other Activity
                     NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
                     mediaplayer!!.stop()
                     mediaplayerFallo!!.stop()
@@ -156,11 +154,13 @@ class f_putxero_juego : Fragment() {
         val x = event.rawX.toInt()
         val y = event.rawY.toInt()
         if(x0==0.0f){
+            //guarda la posicion inicial de la view
             x0=view.x
             y0=view.y
         }
         when (event.action and MotionEvent.ACTION_MASK) {
             MotionEvent.ACTION_DOWN -> {
+                //le cambia la posicion de la view teniendo en cuenta el movimiento del evento
                 val lParams = view.layoutParams as ConstraintLayout.LayoutParams
                 xDelta = x - lParams.leftMargin
                 yDelta = y - lParams.topMargin
@@ -193,6 +193,7 @@ class f_putxero_juego : Fragment() {
                     x0=0.0f
                 }
             }
+            //cambia los parametros de la view
             MotionEvent.ACTION_MOVE -> {
                 val layoutParams = view
                     .layoutParams as ConstraintLayout.LayoutParams
@@ -249,7 +250,6 @@ class f_putxero_juego : Fragment() {
     }
     //dialogo de fin de juego
     private fun mostrarDialogoPersonalizado(){
-
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogofindejuego,null))
             .setPositiveButton(R.string.txt_finalizar,

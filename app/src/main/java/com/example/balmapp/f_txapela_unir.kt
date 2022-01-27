@@ -82,6 +82,9 @@ class f_juego_txapela_unir : Fragment() {
         binding.txapelaimagen3.setOnClickListener{
             crearLinea(binding.txapelaimagen3,binding.txt4Unir,binding.scrollView8)
         }
+
+
+
     }
     //hace que las posiciones sean aleatorias
     private fun randomPos( lista:List<ScrollView>){

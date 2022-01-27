@@ -6,6 +6,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.drawable.AnimationDrawable
+import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +30,7 @@ class NavFrag {
         var terminado_unir=false
         var gune=0
         var modo_libre= mutableListOf<String>()
+        //función para optimizar el replace fragment y controlar el botón para atras
         fun replaceFragment(someFragment: Fragment, f_activity: FragmentActivity, id:Int,nombre:String?=null,nomdestino:String?=null) {
             val fragment: Fragment =someFragment
             if (nombre.equals("Repetir")){
@@ -38,16 +40,17 @@ class NavFrag {
                 f_activity.supportFragmentManager.beginTransaction().replace(id, fragment).addToBackStack(nombre).commit()
             }
         }
+        //función para optimizar el startActivity
         fun IniciarActivity(context: Context,actividad:String){
             val nombreclase= "com.example.balmapp.$actividad"
             val clase = Class.forName(nombreclase)
             val intent = Intent(context, clase)
             context.startActivity(intent)
         }
+        //función para opyimizar el abrir el fragment y controlar el cambio de idioma y cambio de modo
         fun Abrirfragment(fragment: Fragment,activity: AppCompatActivity,layout: Int) {
             val currentNightMode: Int = activity.resources
                 .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-
             if(theme=="" || idioma==""){
                 val transaction= activity.supportFragmentManager.beginTransaction()
                 transaction.add(layout, fragment)
@@ -101,7 +104,7 @@ class NavFrag {
             animacion.stop()
 
         }
-
+        //para saber que fragmento debe abrir
         fun MarcadorJuegofin(gune: String):Fragment{
             var fragment:Fragment?=null
             when (gune){
@@ -115,7 +118,7 @@ class NavFrag {
             }
             return fragment!!
         }
-
+        //para saber que fragmento debe abrir dado que es el primer juego
         fun AbrirSiguiente(gune: String):Fragment {
             var fragment:Fragment?=null
             when (gune){
@@ -142,6 +145,7 @@ class NavFrag {
             }
             return fragment!!
         }
+        //juego de seleccionar con radiobuttons,comprueba que sea el correcto
         fun EleccionJuego(radioubutton: RadioButton, fragment: Fragment, activity: FragmentActivity, view: View, context: Context){
             if(radioubutton.isChecked){
                 replaceFragment(fragment,activity,((view as ViewGroup).parent as View).id,"Juego1","Explicacion")
@@ -165,7 +169,11 @@ class NavFrag {
                         }else{
                             modo_libre.add(juego_modo_libre(Sharedapp.gune.gune).trim())
                         }
-                        NavFrag.IniciarActivity(context,"a_mapa")
+                        if(Sharedapp.partida.partida=="guiado"){
+                            gune++
+                            BD.actualizar_gune(gune+1,Sharedapp.nombre.nombre.trim())
+                        }
+                        IniciarActivity(context,"a_mapa")
                         activity.finish()
                         // sign in the user ...
                     })
@@ -181,6 +189,7 @@ class NavFrag {
                 .show()
 
         }
+        //funcion para quitar el 2 para que funcione el modo libre correctamente
         private fun juego_modo_libre(juego:String):String{
             var gune=""
             when (juego){
@@ -188,7 +197,6 @@ class NavFrag {
                 "3.Gunea 2" ->   gune="3.Gunea"
                 "4.Gunea 2" ->   gune="4.Gunea"
             }
-
             return gune.trim()
         }
     }
