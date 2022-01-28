@@ -21,7 +21,6 @@ private var mediaplayeraudio3: MediaPlayer? = null
 private var mediaplayeraudio4: MediaPlayer? = null
 private var mediaplayer_azal: MediaPlayer? = null
 private var linea: Linea? =null
-private var posiciones= mutableListOf(609,851,1157,1464)
 
 class f_juego_txapela_unir : Fragment() {
 
@@ -36,8 +35,6 @@ class f_juego_txapela_unir : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val txt= listOf(binding.scrollView5, binding.scrollView6, binding.scrollView7, binding.scrollView8)
-        randomPos(txt)
         NavFrag.contador=4
         //inicio de la animacion
         NavFrag.animacion_dantzaris(binding.imglogo)
@@ -81,16 +78,6 @@ class f_juego_txapela_unir : Fragment() {
         }
         binding.txapelaimagen3.setOnClickListener{
             crearLinea(binding.txapelaimagen3,binding.txt4Unir,binding.scrollView8)
-        }
-
-
-
-    }
-    //hace que las posiciones sean aleatorias
-    private fun randomPos( lista:List<ScrollView>){
-        posiciones.shuffle()
-        posiciones.forEach{
-            lista[posiciones.indexOf(it)].y=it.toFloat()
         }
     }
 

@@ -304,5 +304,11 @@
         \n<b>MODU LIBREA:\n</b>
         Hau nahi dugun ordenan jolastea da, sartzeko baldintza bakarra tokitik gutxienez 50m egotea da. Partida
         horiek ez dira gordeko, eta, beraz, aurrerapena galdu egingo da.\n
+
+        \n<b>IRAKASLE MODUA:\n</b>
+        Irakasle modua beste moduetatik bereizten da, ez duelako 50 metroko murrizketarik joko bat hasteko eta norberak
+        aukeratu ahal izateko.\n
     </string>
+
+    <string name="txt_salir">ITXI</string>
 </resources>

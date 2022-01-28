@@ -295,7 +295,13 @@
         \n<b>MODO LIBRE:\n</b>
         Este trata de jugar en el orden que queramos, la unica condicion para acceder a ellos es estar al menos
         a 50m del lugar. Estas partidas no seran guardadas, por lo cual el progreso se perdera.\n
+
+        \n<b>MODO PROFESOR/A:\n</b>
+        El modo profesor se distinge de los otros modos por no tener la restricción de los 50m para iniciar un juego y
+        poder acceder a ellos por elección propia.\n
     </string>
 
     <string name="txt_cancelar">CANCELAR</string>
+
+    <string name="txt_salir">CERRAR</string>
 </resources>

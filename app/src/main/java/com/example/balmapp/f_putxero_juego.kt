@@ -133,15 +133,6 @@ class f_putxero_juego : Fragment() {
             })
 
         }
-        //si no ha terminado el audio lo pasa hasta el final haciendo que se acabe y los dantzaris dejan de moverse
-        binding.saltar.setOnClickListener {
-            if (!terminar){
-                saltar=false
-                mediaplayer!!.seekTo(mediaplayer!!.duration)
-                NavFrag.animacion_dantzaris_parar(binding.imgputxeroJuegoLogo)
-            }
-        }
-
 
     }
 
