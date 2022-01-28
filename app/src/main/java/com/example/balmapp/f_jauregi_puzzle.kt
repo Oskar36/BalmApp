@@ -258,7 +258,7 @@ class f_jauregi_puzzle : Fragment() {
         if (aciertos==6){
             mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 1"
-            SystemClock.sleep(1000)
+
             descargar()
         }
         return true
