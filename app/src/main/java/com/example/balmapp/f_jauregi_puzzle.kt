@@ -258,7 +258,6 @@ class f_jauregi_puzzle : Fragment() {
         if (aciertos==6){
             mediaplayer!!.stop()
             Sharedapp.gune.gune="3.Gunea 1"
-
             descargar()
         }
         return true
@@ -266,8 +265,8 @@ class f_jauregi_puzzle : Fragment() {
 
 //es el dialog de descargar
     private fun descargar(){
-        val bm = BitmapFactory.decodeResource(resources, R.drawable.palaciohorcasitasbalmaseda)
 
+        val bm = BitmapFactory.decodeResource(resources, R.drawable.palaciohorcasitasbalmaseda)
         AlertDialog.Builder(requireContext(), R.style.DialogBasicCustomStyle)
             .setView(layoutInflater.inflate(R.layout.l_dialogo_descargar,null))
             .setPositiveButton(R.string.si,
