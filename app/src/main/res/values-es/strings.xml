@@ -300,6 +300,7 @@
         El modo profesor se distingue de los otros modos por no tener la restricción de los 50m para iniciar un juego y
         poder acceder a ellos por elección propia.\n
     </string>
+
     <string name="txt_cancelar">CANCELAR</string>
 
     <string name="txt_salir">CERRAR</string>
