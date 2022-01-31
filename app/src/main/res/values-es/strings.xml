@@ -27,7 +27,7 @@
 
     <string name="correccion_toast">No todas son correctas</string>
 
-    <string name="ordenar">ORDENA CRONOLOGICAMENTE</string>
+    <string name="ordenar">ORDENA CRONOLÓGICAMENTE</string>
 
     <string name="dialog_findejuegopregunta">¿QUE QUIERES HACER?</string>
 
@@ -153,7 +153,7 @@
 
     <string name="putxero_juego">JUEGO DE LA PUCHERA</string>
 
-    <string name="azalpena_sanfelipe">Hay tres elementos distintivos de la Balmaseda "San Felipe y Santiago" que se celebra el 1 de mayo: el santo, el canto y los sombreros. Además, el XIX. es una tradición del siglo XIX, pero se cree que comenzó hace muchos años.
+    <string name="azalpena_sanfelipe">Hay tres elementos distintivos de la Balmaseda "San Felipe y Santiago" que se celebra el 1 de mayo: el santo, el canto y los sombreros. Además, el XIX. Es una tradición del siglo XIX, pero se cree que comenzó hace muchos años.
     "San Felipe y Santiago" forma parte de una tradición religiosa de carácter infantil que se remonta a nuestros antepasados. Esta tradición consiste en que un santo, en este caso el Niño Jesús de Praga, tome la excusa de una petición como santo.
     Cada año, en la mañana del 1 de mayo, grupos de 4 o 6 niñas y niños de entre 12 y 13 años, el "grupo San Felipe", recorren las calles de Balmaseda y, para ello, cargan con una plataforma de madera. Ahí va una pequeña imagen del Niño Jesús en Praga, rodeado de flores o ramas verdes.
     Mientras cruzan las calles de Balmaseda, cantan partes de la canción “San Felipe y Santiago”. A los adultos les piden dinero diciendo “una peseta para San Felipe y Santiago” y se reparte el pedido entre los niños para que lo gasten cuando quieran. </string>
@@ -163,13 +163,13 @@
     El palacio tiene cuatro pisos y está rodeado por un jardín. Las plantas bajas se utilizaron para sótanos y para almacenar animales (especialmente caballos). Arriba estaban los dormitorios y las salas de estar.
     En el piso superior estaba el ático. Finalmente, en la fachada, allí estaba el balcón principal y alrededor de él la familia Horcasitas oculto. El balcón estaba asegurado con dos grandes vigas, para no caer.</string>
 
-    <string name="azalpena_kolitza"> El segundo patrimonio es la subida de Kolitza (romería popular). El Libro de Historia de Balmaseda afirma que esta tradición se remonta al siglo XVI. siglo, porque hubo terribles epidemias. En lo alto del monte Kolitza se encontraba la ermita de San Sebastián. En esa montaña se realizó una procesión para pedir protección. Pero al ver que las muertes no terminaban, las autoridades reforzaron la santidad de la ermita, ofreciéndola también a San Roque. Por eso ahora se llama Ermita de San Sebastián y San Roque.
-    El monte Kolitza es el monte más significativo de las Encartaciones y uno de los más bellos de Bizkaia. Tiene 879 metros de altura y sobre los valles se divisa el límite entre Balmaseda, Artzentales y el Valle de Mena.
-    En su cima se encuentra la ermita románica de San Sebastián y San Roque, construida en el siglo XIII. o XIV. construida en el siglo XVI. El monte Kolitza se eleva en vísperas de Pentecostés y significa la venida del Espíritu Santo. Esto sucede después del Domingo de Resurrección y el Domingo de la Resurrección de Jesús.
-    Esta peregrinación se realizaba siempre en sábado, siempre en Pentecostés. porque se hace el domingo. Sin embargo, el Ayuntamiento de Balmaseda está celebrando decidió cambiar al sábado. Romería por la mañana comienza y se celebra una misa en la ermita. Al final de la misa, se prepara una comida rural. Al anochecer desciende la música de la fanfarria, y los jóvenes,
+    <string name="azalpena_kolitza"> El segundo patrimonio es la subida de Coliza (romería popular). El Libro de Historia de Balmaseda afirma que esta tradición se remonta al siglo XVI. Siglo, porque hubo terribles epidemias. En lo alto del monte Coliza se encontraba la ermita de San Sebastián. En esa montaña se realizó una procesión para pedir protección. Pero al ver que las muertes no terminaban, las autoridades reforzaron la santidad de la ermita, ofreciéndola también a San Roque. Por eso ahora se llama Ermita de San Sebastián y San Roque.
+    El monte Coliza es el monte más significativo de las Encartaciones y uno de los más bellos de Bizkaia. Tiene 879 metros de altura y sobre los valles se divisa el límite entre Balmaseda, Artzentales y el Valle de Mena.
+    En su cima se encuentra la ermita románica de San Sebastián y San Roque, construida en el siglo XIII. O XIV. Construida en el siglo XVI. El monte Coliza se eleva en vísperas de Pentecostés y significa la venida del Espíritu Santo. Esto sucede después del Domingo de Resurrección y el Domingo de la Resurrección de Jesús.
+    Esta peregrinación se realizaba siempre en sábado, siempre en Pentecostés. Porque se hace el domingo. Sin embargo, el Ayuntamiento de Balmaseda está celebrando decidió cambiar al sábado. Romería por la mañana comienza y se celebra una misa en la ermita. Al final de la misa, se prepara una comida rural. Al anochecer desciende la música de la fanfarria, y los jóvenes.
     al pasar por el pueblo, piden agua a sus vecinos. Fiestas continúa hasta el anochecer. </string>
 
-    <string name="azalpena_procesion"> El Vía Crucis Vivientea de Balmaseda recibe el nombre de procesión de Semana Santa. En estas procesiones, las niñas y los niños de este pueblo son los protagonistas. Hoy en día, participan en estas procesiones más de 700 personas, algunas influenciadas por la tradición o la religión, y todas como Balmaseda. Además, esta tradición se remonta a la infancia, participando en encrucijadas infantiles en los barrios de Santo Domingo y La Magdalena. Se constata que con el tiempo los personajes y la decoración han ido mejorando y esta tradición se remonta al siglo XVII. se inició en el siglo XVI, manteniéndolo hasta nuestros días. Todo comienza la noche del Jueves Santo, cuando se realizan la “Última Cena”, la “Oración en el jardín” y “El Principio de Jesús”. El día siguiente, que es Viernes Santo, serán los tambores de la guardia romana.
+    <string name="azalpena_procesion"> El Vía Crucis Viviente de Balmaseda recibe el nombre de procesión de Semana Santa. En estas procesiones, las niñas y los niños de este pueblo son los protagonistas. Hoy en día, participan en estas procesiones más de 700 personas, algunas influenciadas por la tradición o la religión, y todas como Balmaseda. Además, esta tradición se remonta a la infancia, participando en encrucijadas infantiles en los barrios de Santo Domingo y La Magdalena. Se constata que con el tiempo los personajes y la decoración han ido mejorando y esta tradición se remonta al siglo XVII. Se inició en el siglo XVI, manteniéndolo hasta nuestros días. Todo comienza la noche del Jueves Santo, cuando se realizan la “Última Cena”, la “Oración en el jardín” y “El Principio de Jesús”. El día siguiente, que es Viernes Santo, serán los tambores de la guardia romana.
     En este sentido, las siguientes procesiones son las siguientes. Procesión de Primeros Pasos, Jueves Santo. La procesión partirá de la plaza San Severino. Junto a los pasos van los romanos y los penitentes. Estos últimos llevan sombrero y andan descalzos, con cruces al cuello. La segunda, el mismo día, es la última cena, y en esta se realiza una representación del juicio ante los sacerdotes. Por otro lado, el juicio de Pilato tiene lugar el Viernes Santo. Primero, matan a Judas. Entonces juzgarán a Jesús y castigarán a Jesús. El mismo día se celebra el Vía Crucis. Habrá Magdalena, la Virgen María y otros personajes. Allí, Jesús dirá las últimas palabras antes de morir. Una vez descendidos de la cruz, serán llevados al sepulcro.
     Además, también hay una Procesión del Entierro, donde la apariencia oscura de los pasos y personajes entristece mucho la procesión. Finalmente, la ruta comienza en la plaza San Severino y vuelve a la plaza. Para finalizar el día se celebra la Procesión del Silencio, que es la más especial. Los romanos ayudan en el silencio sepulcral. Allí, después de una breve oración, se coloca el paso de Cristo en una de las paredes de la iglesia. La ruta comienza en la Plaza San Severino, terminando camino al cementerio.</string>
 
@@ -192,9 +192,9 @@
 
     <string name="procesion_adivinar_explicacion">¡Hola, amigos! ¿Os atrevéis a jugar con El personaje inventado? Si es así, os aparecerá la descripción de un personaje y tendréis algunas opciones para adivinar quién es el personaje. ¿Listo? ¡Pues adelante!</string>
 
-    <string name="procesion_ordenar_explicacion">¿Verdad que la actividad anterior era sencilla? Para ir adelante tendréis que hacer una última misión. ¡Si habéis estado atentos lo haréis en la PRIMERA! Sólo tenéis que ordenar los eventos que aparecen del más antigua al más reciente.</string>
+    <string name="procesion_ordenar_explicacion">¿Verdad que la actividad anterior era sencilla? Para ir adelante tendréis que hacer una última misión. ¡Si habéis estado atentos lo haréis en la PRIMERA! Solo tenéis que ordenar los eventos que aparecen del más antigua al más reciente.</string>
 
-    <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradciciones que tiene Balmaseda hoy en dia.\n
+    <string name="nosotros">Somos un grupo de estudiantes de Magisterio de la Universidad UPV que juntos a otros alumnos del instituto CIFP Txurdinaga LHII hemos llevado acabo nuestra idea de una aplicación de juegos para que niños de primaria puedan aprender de una manera distinta la historia y las tradiciones que tiene Balmaseda hoy en día.\n
         \n<b>Productores y directores del proyecto:\n</b>
         - Olatz Arisqueta Núñez\n
         - Jone Etxeberria Obieta\n
@@ -203,7 +203,7 @@
         - Leire Otero Sarralde\n
         - Maider Santamaría Jiménez\n
 
-    \n<b>Desarroladores:\n</b>
+    \n<b>Desarrolladores:\n</b>
         - Oskar Llaguno Illera\n
         - Iker Caballero Cano\n
         - Alba Olano Barquin\n
@@ -219,7 +219,7 @@
 
     <string name="apodocompr">El apodo ya existe.</string>
 
-    <string name="camposvacios">El apodo no puede estar vacio</string>
+    <string name="camposvacios">El apodo no puede estar vacío</string>
 
     <string name="nuevapartida">¿QUIERES EMPEZAR NUEVA PARTIDA?</string>
 
@@ -235,7 +235,7 @@
 
     <string name="descargar">Descargar</string>
 
-    <string name="elegir">Eligir una opcion</string>
+    <string name="elegir">Elegir una opción</string>
 
     <string name="camino">El camino de la cruz</string>
 
@@ -251,7 +251,7 @@
 
     <string name="cerrar_texto">¿QUIERES CERRAR LA APLICACIÓN?</string>
 
-    <string name="saltar_texto">¿Quieres saltar la explicacion?</string>
+    <string name="saltar_texto">¿Quieres saltar la explicación?</string>
 
     <string name="volver_mapa">VOLVER AL MAPA</string>
 
@@ -277,9 +277,9 @@
 
     <string name="contraseña">Contraseña</string>
 
-    <string name="pasahitzavacia">La contraseña es incorrecta o esta vacia</string>
+    <string name="pasahitzavacia">La contraseña es incorrecta o esta vacía</string>
 
-    <string name="iniciarjuego">Clicka para jugar!</string>
+    <string name="iniciarjuego">¡Clicka para jugar!</string>
 
     <string name="fin">¡HABÉIS CONSEGUIDO TERMINAR EL RECORRIDO! ¡FELICIDADES!</string>
 
@@ -289,15 +289,15 @@
 
     <string name="informacion">
         \n<b>MODO GUIADO:\n</b>
-        Este trata de jugar siguiendo una ruta definida. Solo se podra jugar el que este activado y para acceder a el
-        tendremos que estar al menos a 50m del lugar. La partiada se guardara en el ultimo punto al que juguemos.\n
+        Este trata de jugar siguiendo una ruta definida. Solo se podrá jugar el que este activado y para acceder a el
+        tendremos que estar al menos a 50m del lugar. La partida se guardara en el último punto al que juguemos.\n
 
         \n<b>MODO LIBRE:\n</b>
-        Este trata de jugar en el orden que queramos, la unica condicion para acceder a ellos es estar al menos
-        a 50m del lugar. Estas partidas no seran guardadas, por lo cual el progreso se perdera.\n
+        Este trata de jugar en el orden que queramos, la unica condición para acceder a ellos es estar al menos
+        a 50m del lugar. Estas partidas no serán guardadas, por lo cual el progreso se perderá.\n
 
         \n<b>MODO PROFESOR/A:\n</b>
-        El modo profesor se distinge de los otros modos por no tener la restricción de los 50m para iniciar un juego y
+        El modo profesor se distingue de los otros modos por no tener la restricción de los 50m para iniciar un juego y
         poder acceder a ellos por elección propia.\n
     </string>
 
