@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         val currentNightMode: Int = this.resources
             .configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         NavFrag.theme=currentNightMode.toString()
-        //pide los permisos que necesita la aplicacion
-
         NavFrag.idioma=Locale.getDefault().language
     }
     //se controla la pulsación del boton atras en el caso que si cierra la aplicacion  en caso que no, no pasa nada
